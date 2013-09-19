@@ -8,6 +8,7 @@ var NAVTREE =
       [ "vafmcircuits_math::opAdd", "classvafmcircuits__math_1_1op_add.html", null ],
       [ "vafmcircuits_math::opLinC", "classvafmcircuits__math_1_1op_lin_c.html", null ],
       [ "vafmcircuits_math::opMul", "classvafmcircuits__math_1_1op_mul.html", null ],
+      [ "vafmcircuits_math::opSub", "classvafmcircuits__math_1_1op_sub.html", null ],
       [ "vafmcircuits::output", "classvafmcircuits_1_1output.html", null ],
       [ "vafmcore::VAFM", "classvafmcore_1_1_v_a_f_m.html", null ],
       [ "vafmcircuits::waver", "classvafmcircuits_1_1waver.html", null ]
@@ -20,7 +21,8 @@ var NAVTREE =
         [ "vafmcircuits::waver", "classvafmcircuits_1_1waver.html", null ],
         [ "vafmcircuits_math::opAdd", "classvafmcircuits__math_1_1op_add.html", null ],
         [ "vafmcircuits_math::opLinC", "classvafmcircuits__math_1_1op_lin_c.html", null ],
-        [ "vafmcircuits_math::opMul", "classvafmcircuits__math_1_1op_mul.html", null ]
+        [ "vafmcircuits_math::opMul", "classvafmcircuits__math_1_1op_mul.html", null ],
+        [ "vafmcircuits_math::opSub", "classvafmcircuits__math_1_1op_sub.html", null ]
       ] ],
       [ "vafmbase::Feed", "classvafmbase_1_1_feed.html", null ],
       [ "vafmcore::VAFM", "classvafmcore_1_1_v_a_f_m.html", null ]

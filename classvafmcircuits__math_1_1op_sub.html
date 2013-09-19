@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
-<title>pyVAFM: vafmcircuits_math::opAdd Class Reference</title>
+<title>pyVAFM: vafmcircuits_math::opSub Class Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/search.js"></script>
@@ -75,73 +75,68 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   </div>
 </div>
 <script type="text/javascript">
-  initNavTree('classvafmcircuits__math_1_1op_add.html','');
+  initNavTree('classvafmcircuits__math_1_1op_sub.html','');
 </script>
 <div id="doc-content">
 <div class="header">
   <div class="summary">
-<a href="#pub-methods">Public Member Functions</a> &#124;
-<a href="#pub-attribs">Public Attributes</a>  </div>
+<a href="#pub-methods">Public Member Functions</a>  </div>
   <div class="headertitle">
-<div class="title">vafmcircuits_math::opAdd Class Reference</div>  </div>
+<div class="title">vafmcircuits_math::opSub Class Reference</div>  </div>
 </div>
 <div class="contents">
-<!-- doxytag: class="vafmcircuits_math::opAdd" --><!-- doxytag: inherits="vafmbase::Circuit" -->
-<p>Arithmetic sum circuit.  
- <a href="classvafmcircuits__math_1_1op_add.html#details">More...</a></p>
+<!-- doxytag: class="vafmcircuits_math::opSub" --><!-- doxytag: inherits="vafmbase::Circuit" -->
+<p>Arithmetic subtraction circuit.  
+ <a href="classvafmcircuits__math_1_1op_sub.html#details">More...</a></p>
 <div class="dynheader">
-Inheritance diagram for vafmcircuits_math::opAdd:</div>
+Inheritance diagram for vafmcircuits_math::opSub:</div>
 <div class="dyncontent">
  <div class="center">
-  <img src="classvafmcircuits__math_1_1op_add.png" usemap="#vafmcircuits_math::opAdd_map" alt=""/>
-  <map id="vafmcircuits_math::opAdd_map" name="vafmcircuits_math::opAdd_map">
-<area href="classvafmbase_1_1_circuit.html" alt="vafmbase::Circuit" shape="rect" coords="0,0,156,24"/>
+  <img src="classvafmcircuits__math_1_1op_sub.png" usemap="#vafmcircuits_math::opSub_map" alt=""/>
+  <map id="vafmcircuits_math::opSub_map" name="vafmcircuits_math::opSub_map">
+<area href="classvafmbase_1_1_circuit.html" alt="vafmbase::Circuit" shape="rect" coords="0,0,155,24"/>
 </map>
  </div></div>
 
-<p><a href="classvafmcircuits__math_1_1op_add-members.html">List of all members.</a></p>
+<p><a href="classvafmcircuits__math_1_1op_sub-members.html">List of all members.</a></p>
 <table class="memberdecls">
 <tr><td colspan="2"><h2><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvafmcircuits__math_1_1op_add.html#aa1ace25ba5c1e7a1f957f8ae6e4fe1f9">__init__</a></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvafmcircuits__math_1_1op_add.html#a52de5b3b556ac49a0743981963a3277b">Initialize</a></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvafmcircuits__math_1_1op_add.html#acd151bd6d60e0209c7c422d83c388646">Update</a></td></tr>
-<tr><td colspan="2"><h2><a name="pub-attribs"></a>
-Public Attributes</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvafmcircuits__math_1_1op_add.html#ae2a4de818d224ed3dc69edb2b4e46474">factors</a></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvafmcircuits__math_1_1op_sub.html#aa44eb0baed643c07694b9650d940ab1c">__init__</a></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvafmcircuits__math_1_1op_sub.html#a7ab8a70a87e83bc43f47bf6598df2e83">Initialize</a></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvafmcircuits__math_1_1op_sub.html#a01e2290c4fa523bd154c6593378fa33c">Update</a></td></tr>
 </table>
 <hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
-<div class="textblock"><p>Arithmetic sum circuit. </p>
-<p>Sums up the input signals 'in#' and outputs the result in 'out'. The amount of input signals is set with the 'factors=#' argument when the circuit is created.</p>
+<div class="textblock"><p>Arithmetic subtraction circuit. </p>
+<p>Outputs the difference between two input signals 'in#' in the output 'out'.</p>
 <ul>
 <li>Initialisation parameters:<ul>
-<li>factors = # number of input channels</li>
 <li>pushed = True|False push the output buffer immediately if True</li>
 </ul>
 </li>
 </ul>
 <ul>
 <li>Input channels:<ul>
-<li><img class="formulaInl" alt="$in1, in2, ..., inx$" src="form_8.png"/> incoming signals</li>
+<li><img class="formulaInl" alt="$in1, in2$" src="form_14.png"/> input signals</li>
 </ul>
 </li>
 </ul>
 <ul>
 <li>Output channels:<br/>
 <ul>
-<li><img class="formulaInl" alt="$out = \sum_i^{factors} in_i $" src="form_9.png"/> </li>
+<li><img class="formulaInl" alt="$out = in_1 - in_2 $" src="form_15.png"/> </li>
 </ul>
 </li>
 </ul>
 
-<p>Definition at line <a class="el" href="vafmcircuits__math_8py_source.html#l00020">20</a> of file <a class="el" href="vafmcircuits__math_8py_source.html">vafmcircuits_math.py</a>.</p>
+<p>Definition at line <a class="el" href="vafmcircuits__math_8py_source.html#l00072">72</a> of file <a class="el" href="vafmcircuits__math_8py_source.html">vafmcircuits_math.py</a>.</p>
 </div><hr/><h2>Constructor &amp; Destructor Documentation</h2>
-<a class="anchor" id="aa1ace25ba5c1e7a1f957f8ae6e4fe1f9"></a><!-- doxytag: member="vafmcircuits_math::opAdd::__init__" ref="aa1ace25ba5c1e7a1f957f8ae6e4fe1f9" args="" -->
+<a class="anchor" id="aa44eb0baed643c07694b9650d940ab1c"></a><!-- doxytag: member="vafmcircuits_math::opSub::__init__" ref="aa44eb0baed643c07694b9650d940ab1c" args="" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">def vafmcircuits_math::opAdd::__init__ </td>
+          <td class="memname">def vafmcircuits_math::opSub::__init__ </td>
           <td>(</td>
           <td class="paramtype">&#160;</td>
           <td class="paramname"><em>self</em>, </td>
@@ -173,17 +168,17 @@ Public Attributes</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="vafmcircuits__math_8py_source.html#l00023">23</a> of file <a class="el" href="vafmcircuits__math_8py_source.html">vafmcircuits_math.py</a>.</p>
+<p>Definition at line <a class="el" href="vafmcircuits__math_8py_source.html#l00075">75</a> of file <a class="el" href="vafmcircuits__math_8py_source.html">vafmcircuits_math.py</a>.</p>
 
 </div>
 </div>
 <hr/><h2>Member Function Documentation</h2>
-<a class="anchor" id="a52de5b3b556ac49a0743981963a3277b"></a><!-- doxytag: member="vafmcircuits_math::opAdd::Initialize" ref="a52de5b3b556ac49a0743981963a3277b" args="" -->
+<a class="anchor" id="a7ab8a70a87e83bc43f47bf6598df2e83"></a><!-- doxytag: member="vafmcircuits_math::opSub::Initialize" ref="a7ab8a70a87e83bc43f47bf6598df2e83" args="" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">def vafmcircuits_math::opAdd::Initialize </td>
+          <td class="memname">def vafmcircuits_math::opSub::Initialize </td>
           <td>(</td>
           <td class="paramtype">&#160;</td>
           <td class="paramname"><em>self</em></td><td>)</td>
@@ -195,16 +190,16 @@ Public Attributes</h2></td></tr>
 
 <p>Reimplemented from <a class="el" href="classvafmbase_1_1_circuit.html#a6da843ab94dccf3b845e71522268bfb1">vafmbase::Circuit</a>.</p>
 
-<p>Definition at line <a class="el" href="vafmcircuits__math_8py_source.html#l00044">44</a> of file <a class="el" href="vafmcircuits__math_8py_source.html">vafmcircuits_math.py</a>.</p>
+<p>Definition at line <a class="el" href="vafmcircuits__math_8py_source.html#l00088">88</a> of file <a class="el" href="vafmcircuits__math_8py_source.html">vafmcircuits_math.py</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="acd151bd6d60e0209c7c422d83c388646"></a><!-- doxytag: member="vafmcircuits_math::opAdd::Update" ref="acd151bd6d60e0209c7c422d83c388646" args="" -->
+<a class="anchor" id="a01e2290c4fa523bd154c6593378fa33c"></a><!-- doxytag: member="vafmcircuits_math::opSub::Update" ref="a01e2290c4fa523bd154c6593378fa33c" args="" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">def vafmcircuits_math::opAdd::Update </td>
+          <td class="memname">def vafmcircuits_math::opSub::Update </td>
           <td>(</td>
           <td class="paramtype">&#160;</td>
           <td class="paramname"><em>self</em></td><td>)</td>
@@ -216,23 +211,7 @@ Public Attributes</h2></td></tr>
 
 <p>Reimplemented from <a class="el" href="classvafmbase_1_1_circuit.html#af2a0a4c01abd1cac89d3202e12b26826">vafmbase::Circuit</a>.</p>
 
-<p>Definition at line <a class="el" href="vafmcircuits__math_8py_source.html#l00051">51</a> of file <a class="el" href="vafmcircuits__math_8py_source.html">vafmcircuits_math.py</a>.</p>
-
-</div>
-</div>
-<hr/><h2>Member Data Documentation</h2>
-<a class="anchor" id="ae2a4de818d224ed3dc69edb2b4e46474"></a><!-- doxytag: member="vafmcircuits_math::opAdd::factors" ref="ae2a4de818d224ed3dc69edb2b4e46474" args="" -->
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="classvafmcircuits__math_1_1op_add.html#ae2a4de818d224ed3dc69edb2b4e46474">vafmcircuits_math::opAdd::factors</a></td>
-        </tr>
-      </table>
-</div>
-<div class="memdoc">
-
-<p>Definition at line <a class="el" href="vafmcircuits__math_8py_source.html#l00023">23</a> of file <a class="el" href="vafmcircuits__math_8py_source.html">vafmcircuits_math.py</a>.</p>
+<p>Definition at line <a class="el" href="vafmcircuits__math_8py_source.html#l00093">93</a> of file <a class="el" href="vafmcircuits__math_8py_source.html">vafmcircuits_math.py</a>.</p>
 
 </div>
 </div>
@@ -244,7 +223,7 @@ Public Attributes</h2></td></tr>
   <div id="nav-path" class="navpath">
     <ul>
       <li class="navelem"><a class="el" href="namespacevafmcircuits__math.html">vafmcircuits_math</a>      </li>
-      <li class="navelem"><a class="el" href="classvafmcircuits__math_1_1op_add.html">opAdd</a>      </li>
+      <li class="navelem"><a class="el" href="classvafmcircuits__math_1_1op_sub.html">opSub</a>      </li>
       <li class="footer">Generated on Fri Sep 20 2013 07:02:06 for pyVAFM by&#160;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.4 </li>

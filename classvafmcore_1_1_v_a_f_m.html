@@ -103,6 +103,8 @@ Public Member Functions</h2></td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Find a channel given its name and the name of the circuit.  <a href="#ac829bf6c36dcc85d8feadf5ad902b43f"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvafmcore_1_1_v_a_f_m.html#adb62619c1945f2626c03d6a37a384b1d">Connect</a></td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Connect the output of a circuit to the input of another.  <a href="#adb62619c1945f2626c03d6a37a384b1d"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvafmcore_1_1_v_a_f_m.html#a78bb97b0dc4ee5d137de1157300b587b">Connects</a></td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Connect the output of a circuit to the input of another.  <a href="#a78bb97b0dc4ee5d137de1157300b587b"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvafmcore_1_1_v_a_f_m.html#aa82a20f286779f4322451085c60a27a0">Disconnect</a></td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Disconnect an input channel.  <a href="#aa82a20f286779f4322451085c60a27a0"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvafmcore_1_1_v_a_f_m.html#a2ec8d5e97258d591537cd99629afea7a">Initialize</a></td></tr>
@@ -238,6 +240,44 @@ Public Attributes</h2></td></tr>
 
 </div>
 </div>
+<a class="anchor" id="a78bb97b0dc4ee5d137de1157300b587b"></a><!-- doxytag: member="vafmcore::VAFM::Connects" ref="a78bb97b0dc4ee5d137de1157300b587b" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">def vafmcore::VAFM::Connects </td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>self</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>args</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Connect the output of a circuit to the input of another. </p>
+<p>The I/O channels to connect are specified with the syntax: "circuit.channel", in the *args arguments array. The first element has to be the output channel to use as source, while all the following elements refer to the destination channels. </p>
+<dl><dt><b>Parameters:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">*args</td><td>Name of the channels to connect: "circuit.channel" </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Definition at line <a class="el" href="vafmcore_8py_source.html#l00133">133</a> of file <a class="el" href="vafmcore_8py_source.html">vafmcore.py</a>.</p>
+
+</div>
+</div>
 <a class="anchor" id="aa82a20f286779f4322451085c60a27a0"></a><!-- doxytag: member="vafmcore::VAFM::Disconnect" ref="aa82a20f286779f4322451085c60a27a0" args="" -->
 <div class="memitem">
 <div class="memproto">
@@ -272,7 +312,7 @@ Public Attributes</h2></td></tr>
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="vafmcore_8py_source.html#l00133">133</a> of file <a class="el" href="vafmcore_8py_source.html">vafmcore.py</a>.</p>
+<p>Definition at line <a class="el" href="vafmcore_8py_source.html#l00161">161</a> of file <a class="el" href="vafmcore_8py_source.html">vafmcore.py</a>.</p>
 
 </div>
 </div>
@@ -339,7 +379,7 @@ Public Attributes</h2></td></tr>
 <p>Initialization. </p>
 <p>Use this after all circuits and connections are setup. Calls the initialize on each circuit... this is actually useless at the moment! </p>
 
-<p>Definition at line <a class="el" href="vafmcore_8py_source.html#l00153">153</a> of file <a class="el" href="vafmcore_8py_source.html">vafmcore.py</a>.</p>
+<p>Definition at line <a class="el" href="vafmcore_8py_source.html#l00181">181</a> of file <a class="el" href="vafmcore_8py_source.html">vafmcore.py</a>.</p>
 
 </div>
 </div>
@@ -361,7 +401,7 @@ Public Attributes</h2></td></tr>
 <p>Post Update cycle. </p>
 <p>Called after the Update is finished, to push all buffers. </p>
 
-<p>Definition at line <a class="el" href="vafmcore_8py_source.html#l00178">178</a> of file <a class="el" href="vafmcore_8py_source.html">vafmcore.py</a>.</p>
+<p>Definition at line <a class="el" href="vafmcore_8py_source.html#l00206">206</a> of file <a class="el" href="vafmcore_8py_source.html">vafmcore.py</a>.</p>
 
 </div>
 </div>
@@ -404,7 +444,7 @@ Public Attributes</h2></td></tr>
 <p>Update cycle. </p>
 <p>Calls the update routine of each circuit in the setup. </p>
 
-<p>Definition at line <a class="el" href="vafmcore_8py_source.html#l00161">161</a> of file <a class="el" href="vafmcore_8py_source.html">vafmcore.py</a>.</p>
+<p>Definition at line <a class="el" href="vafmcore_8py_source.html#l00189">189</a> of file <a class="el" href="vafmcore_8py_source.html">vafmcore.py</a>.</p>
 
 </div>
 </div>
@@ -467,7 +507,7 @@ Public Attributes</h2></td></tr>
     <ul>
       <li class="navelem"><a class="el" href="namespacevafmcore.html">vafmcore</a>      </li>
       <li class="navelem"><a class="el" href="classvafmcore_1_1_v_a_f_m.html">VAFM</a>      </li>
-      <li class="footer">Generated on Fri Sep 20 2013 01:54:07 for pyVAFM by&#160;
+      <li class="footer">Generated on Fri Sep 20 2013 07:02:06 for pyVAFM by&#160;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.4 </li>
     </ul>

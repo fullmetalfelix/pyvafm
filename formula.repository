@@ -12,3 +12,5 @@
 \form#11:$ina1, ina2, ..., inax$
 \form#12:$inb1, inb2, ..., inbx$
 \form#13:$out = \sum_i^{factors} ina_i\times inb_i $
+\form#14:$in1, in2$
+\form#15:$out = in_1 - in_2 $
