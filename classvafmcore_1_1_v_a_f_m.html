@@ -156,18 +156,6 @@ Public Attributes</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">&#160;</td>
-          <td class="paramname"><em>ctype</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">&#160;</td>
-          <td class="paramname"><em>name</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">&#160;</td>
           <td class="paramname"><em>argkw</em>&#160;</td>
         </tr>
         <tr>
@@ -180,18 +168,26 @@ Public Attributes</h2></td></tr>
 <div class="memdoc">
 
 <p>Add a circuit of type 'ctype' named 'name' to the setup. </p>
-<p>This looks into all the loaded modules whose name starts with 'vafmcircuits' and finds the first class named 'ctype'. It then instantiate the class. </p>
+<p>This looks into all the loaded modules whose name starts with 'vafmcircuits' and finds the first class named 'ctype'. It then instantiate the class.</p>
+<ul>
+<li>Mandatory arguments:<br/>
+<ul>
+<li>type = string: type name of the circuit class<br/>
+</li>
+<li>name = string: name to use for the new instance of the circuit<br/>
+</li>
+</ul>
+</li>
+</ul>
 <dl><dt><b>Parameters:</b></dt><dd>
   <table class="params">
-    <tr><td class="paramname">ctype</td><td>Name of the class of the circuit to add. </td></tr>
-    <tr><td class="paramname">name</td><td>Name of the circuit in the setup. </td></tr>
     <tr><td class="paramname">**argkw</td><td>Keyworded arguments for circuit initialisation. </td></tr>
   </table>
   </dd>
 </dl>
 <dl class="return"><dt><b>Returns:</b></dt><dd>Reference to the created circuit. </dd></dl>
 
-<p>Definition at line <a class="el" href="vafmcore_8py_source.html#l00046">46</a> of file <a class="el" href="vafmcore_8py_source.html">vafmcore.py</a>.</p>
+<p>Definition at line <a class="el" href="vafmcore_8py_source.html#l00049">49</a> of file <a class="el" href="vafmcore_8py_source.html">vafmcore.py</a>.</p>
 
 </div>
 </div>
@@ -236,7 +232,7 @@ Public Attributes</h2></td></tr>
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="vafmcore_8py_source.html#l00096">96</a> of file <a class="el" href="vafmcore_8py_source.html">vafmcore.py</a>.</p>
+<p>Definition at line <a class="el" href="vafmcore_8py_source.html#l00107">107</a> of file <a class="el" href="vafmcore_8py_source.html">vafmcore.py</a>.</p>
 
 </div>
 </div>
@@ -281,7 +277,7 @@ Public Attributes</h2></td></tr>
 </dl>
 <dl class="return"><dt><b>Returns:</b></dt><dd>Reference to the channel. </dd></dl>
 
-<p>Definition at line <a class="el" href="vafmcore_8py_source.html#l00082">82</a> of file <a class="el" href="vafmcore_8py_source.html">vafmcore.py</a>.</p>
+<p>Definition at line <a class="el" href="vafmcore_8py_source.html#l00093">93</a> of file <a class="el" href="vafmcore_8py_source.html">vafmcore.py</a>.</p>
 
 </div>
 </div>
@@ -303,7 +299,7 @@ Public Attributes</h2></td></tr>
 <p>Initialization. </p>
 <p>Use this after all circuits and connections are setup. Calls the initialize on each circuit... this is actually useless at the moment! </p>
 
-<p>Definition at line <a class="el" href="vafmcore_8py_source.html#l00121">121</a> of file <a class="el" href="vafmcore_8py_source.html">vafmcore.py</a>.</p>
+<p>Definition at line <a class="el" href="vafmcore_8py_source.html#l00132">132</a> of file <a class="el" href="vafmcore_8py_source.html">vafmcore.py</a>.</p>
 
 </div>
 </div>
@@ -325,7 +321,7 @@ Public Attributes</h2></td></tr>
 <p>Post Update cycle. </p>
 <p>Called after the Update is finished, to push all buffers. </p>
 
-<p>Definition at line <a class="el" href="vafmcore_8py_source.html#l00146">146</a> of file <a class="el" href="vafmcore_8py_source.html">vafmcore.py</a>.</p>
+<p>Definition at line <a class="el" href="vafmcore_8py_source.html#l00157">157</a> of file <a class="el" href="vafmcore_8py_source.html">vafmcore.py</a>.</p>
 
 </div>
 </div>
@@ -368,7 +364,7 @@ Public Attributes</h2></td></tr>
 <p>Update cycle. </p>
 <p>Calls the update routine of each circuit in the setup. </p>
 
-<p>Definition at line <a class="el" href="vafmcore_8py_source.html#l00129">129</a> of file <a class="el" href="vafmcore_8py_source.html">vafmcore.py</a>.</p>
+<p>Definition at line <a class="el" href="vafmcore_8py_source.html#l00140">140</a> of file <a class="el" href="vafmcore_8py_source.html">vafmcore.py</a>.</p>
 
 </div>
 </div>
@@ -431,7 +427,7 @@ Public Attributes</h2></td></tr>
     <ul>
       <li class="navelem"><a class="el" href="namespacevafmcore.html">vafmcore</a>      </li>
       <li class="navelem"><a class="el" href="classvafmcore_1_1_v_a_f_m.html">VAFM</a>      </li>
-      <li class="footer">Generated on Thu Sep 19 2013 23:50:49 for pyVAFM by&#160;
+      <li class="footer">Generated on Fri Sep 20 2013 00:33:05 for pyVAFM by&#160;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.4 </li>
     </ul>
