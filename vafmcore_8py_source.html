@@ -171,72 +171,75 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l00089"></a>00089                             
 <a name="l00090"></a>00090                             <span class="keywordflow">return</span> self.<a class="code" href="classvafmcore_1_1_v_a_f_m.html#a35302226d174668efa3381633ff2de64" title="Ordered dictionary of the circuits in the setup.">circuits</a>[cname].GetChannel(chname)
 <a name="l00091"></a>00091               
-<a name="l00092"></a>00092               
-<a name="l00093"></a><a class="code" href="classvafmcore_1_1_v_a_f_m.html#adb62619c1945f2626c03d6a37a384b1d">00093</a>               <span class="keyword">def </span><a class="code" href="classvafmcore_1_1_v_a_f_m.html#adb62619c1945f2626c03d6a37a384b1d">Connect</a>(self, O, I):
-<a name="l00094"></a>00094                             
-<a name="l00095"></a>00095                             onames = O.split(<span class="stringliteral">&quot;.&quot;</span>,1)
-<a name="l00096"></a>00096                             inames = I.split(<span class="stringliteral">&quot;.&quot;</span>,1)
+<a name="l00092"></a>00092               <span class="comment">## Connect the output of a circuit to the input of another.</span>
+<a name="l00093"></a>00093               <span class="comment"># The I/O channels to connect are specified with the syntax: &quot;circuit.channel&quot;</span>
+<a name="l00094"></a>00094         <span class="comment"># @param O Name of the output channel (source signal) given as string: &quot;circuit.channel&quot;</span>
+<a name="l00095"></a>00095         <span class="comment"># @param I Name of the input channel (destination) given as string: &quot;circuit.channel&quot;</span>
+<a name="l00096"></a><a class="code" href="classvafmcore_1_1_v_a_f_m.html#adb62619c1945f2626c03d6a37a384b1d">00096</a>               <span class="keyword">def </span><a class="code" href="classvafmcore_1_1_v_a_f_m.html#adb62619c1945f2626c03d6a37a384b1d" title="Connect the output of a circuit to the input of another.">Connect</a>(self, O, I):
 <a name="l00097"></a>00097                             
-<a name="l00098"></a>00098                             <span class="keywordflow">print</span> <span class="stringliteral">&quot;connecting &quot;</span> + O + <span class="stringliteral">&quot; -&gt; &quot;</span> + I
-<a name="l00099"></a>00099                             
-<a name="l00100"></a>00100                             <span class="comment">#check existence of circuits</span>
-<a name="l00101"></a>00101                             <span class="keywordflow">if</span> <span class="keywordflow">not</span>(onames[0] <span class="keywordflow">in</span> self.<a class="code" href="classvafmcore_1_1_v_a_f_m.html#a35302226d174668efa3381633ff2de64" title="Ordered dictionary of the circuits in the setup.">circuits</a>.keys()):
-<a name="l00102"></a>00102                                           <span class="keywordflow">raise</span> NameError( <span class="stringliteral">&quot;Connection error: circuit &quot;</span>+onames[0]+<span class="stringliteral">&quot; not found.&quot;</span> )
-<a name="l00103"></a>00103                             <span class="keywordflow">if</span> <span class="keywordflow">not</span>(inames[0] <span class="keywordflow">in</span> self.<a class="code" href="classvafmcore_1_1_v_a_f_m.html#a35302226d174668efa3381633ff2de64" title="Ordered dictionary of the circuits in the setup.">circuits</a>.keys()):
-<a name="l00104"></a>00104                                           <span class="keywordflow">raise</span> NameError( <span class="stringliteral">&quot;Connection error: circuit &quot;</span>+inames[0]+<span class="stringliteral">&quot; not found.&quot;</span> )
-<a name="l00105"></a>00105                             
-<a name="l00106"></a>00106                             <span class="comment">#check existence of channels</span>
-<a name="l00107"></a>00107                             <span class="keywordflow">if</span> <span class="keywordflow">not</span>(onames[1] <span class="keywordflow">in</span> self.<a class="code" href="classvafmcore_1_1_v_a_f_m.html#a35302226d174668efa3381633ff2de64" title="Ordered dictionary of the circuits in the setup.">circuits</a>[onames[0]].O.keys()):
-<a name="l00108"></a>00108                                           <span class="keywordflow">raise</span> NameError( <span class="stringliteral">&quot;Connection error: channel &quot;</span>+onames[1]+<span class="stringliteral">&quot; not found.&quot;</span> )
-<a name="l00109"></a>00109                             <span class="keywordflow">if</span> <span class="keywordflow">not</span>(inames[1] <span class="keywordflow">in</span> self.<a class="code" href="classvafmcore_1_1_v_a_f_m.html#a35302226d174668efa3381633ff2de64" title="Ordered dictionary of the circuits in the setup.">circuits</a>[inames[0]].I.keys()):
-<a name="l00110"></a>00110                                           <span class="keywordflow">raise</span> NameError( <span class="stringliteral">&quot;Connection error: channel &quot;</span>+inames[1]+<span class="stringliteral">&quot; not found.&quot;</span> )
-<a name="l00111"></a>00111                             
-<a name="l00112"></a>00112                             self.<a class="code" href="classvafmcore_1_1_v_a_f_m.html#a35302226d174668efa3381633ff2de64" title="Ordered dictionary of the circuits in the setup.">circuits</a>[inames[0]].I[inames[1]].signal = self.<a class="code" href="classvafmcore_1_1_v_a_f_m.html#a35302226d174668efa3381633ff2de64" title="Ordered dictionary of the circuits in the setup.">circuits</a>[onames[0]].O[onames[1]].signal
-<a name="l00113"></a>00113               
-<a name="l00114"></a>00114               <span class="comment">## Initialization.</span>
-<a name="l00115"></a>00115               <span class="comment">#</span>
-<a name="l00116"></a>00116               <span class="comment"># Use this after all circuits and connections are setup.</span>
-<a name="l00117"></a>00117               <span class="comment"># Calls the initialize on each circuit... this is actually useless at the moment!</span>
-<a name="l00118"></a><a class="code" href="classvafmcore_1_1_v_a_f_m.html#a2ec8d5e97258d591537cd99629afea7a">00118</a>               <span class="keyword">def </span><a class="code" href="classvafmcore_1_1_v_a_f_m.html#a2ec8d5e97258d591537cd99629afea7a" title="Initialization.">Initialize</a>(self):
-<a name="l00119"></a>00119                             
-<a name="l00120"></a>00120                             <span class="keywordflow">for</span> kw <span class="keywordflow">in</span> self.<a class="code" href="classvafmcore_1_1_v_a_f_m.html#a35302226d174668efa3381633ff2de64" title="Ordered dictionary of the circuits in the setup.">circuits</a>.keys():
-<a name="l00121"></a>00121                                           self.<a class="code" href="classvafmcore_1_1_v_a_f_m.html#a35302226d174668efa3381633ff2de64" title="Ordered dictionary of the circuits in the setup.">circuits</a>[kw].Initialize()
-<a name="l00122"></a>00122               
-<a name="l00123"></a>00123               <span class="comment">## Update cycle.</span>
-<a name="l00124"></a>00124               <span class="comment">#</span>
-<a name="l00125"></a>00125               <span class="comment"># Calls the update routine of each circuit in the setup.</span>
-<a name="l00126"></a><a class="code" href="classvafmcore_1_1_v_a_f_m.html#ad2418278e2ed527a536a9d40bdc21d12">00126</a>               <span class="keyword">def </span><a class="code" href="classvafmcore_1_1_v_a_f_m.html#ad2418278e2ed527a536a9d40bdc21d12" title="Update cycle.">Update</a>(self):
-<a name="l00127"></a>00127                             
-<a name="l00128"></a>00128                             <span class="keywordflow">for</span> kw <span class="keywordflow">in</span> self.<a class="code" href="classvafmcore_1_1_v_a_f_m.html#a35302226d174668efa3381633ff2de64" title="Ordered dictionary of the circuits in the setup.">circuits</a>.keys():
-<a name="l00129"></a>00129                                           
-<a name="l00130"></a>00130                                           self.<a class="code" href="classvafmcore_1_1_v_a_f_m.html#a35302226d174668efa3381633ff2de64" title="Ordered dictionary of the circuits in the setup.">circuits</a>[kw].Update()
-<a name="l00131"></a>00131                                           
-<a name="l00132"></a>00132                                           <span class="keywordflow">if</span> self.<a class="code" href="classvafmcore_1_1_v_a_f_m.html#a35302226d174668efa3381633ff2de64" title="Ordered dictionary of the circuits in the setup.">circuits</a>[kw].pushed: <span class="comment">#push if needed</span>
-<a name="l00133"></a>00133                                                         self.<a class="code" href="classvafmcore_1_1_v_a_f_m.html#a35302226d174668efa3381633ff2de64" title="Ordered dictionary of the circuits in the setup.">circuits</a>[kw].Push()
-<a name="l00134"></a>00134                             
-<a name="l00135"></a>00135                             self.<a class="code" href="classvafmcore_1_1_v_a_f_m.html#a22a1a55d145bf6582b5fd75ef4fbb83c" title="Integer number of update steps so far.">_idt</a> += 1
-<a name="l00136"></a>00136                             self.<a class="code" href="classvafmcore_1_1_v_a_f_m.html#ae39f0ff66b99c6036a293c1a1b7eb2e5">O</a>[<span class="stringliteral">&#39;time&#39;</span>].Set(self.<a class="code" href="classvafmcore_1_1_v_a_f_m.html#a1b4382f7e9a8f88a78d85cec6a387a0e" title="Total simulation time.">time</a>)
+<a name="l00098"></a>00098                             onames = O.split(<span class="stringliteral">&quot;.&quot;</span>,1)
+<a name="l00099"></a>00099                             inames = I.split(<span class="stringliteral">&quot;.&quot;</span>,1)
+<a name="l00100"></a>00100                             
+<a name="l00101"></a>00101                             <span class="keywordflow">print</span> <span class="stringliteral">&quot;connecting &quot;</span> + O + <span class="stringliteral">&quot; -&gt; &quot;</span> + I
+<a name="l00102"></a>00102                             
+<a name="l00103"></a>00103                             <span class="comment">#check existence of circuits</span>
+<a name="l00104"></a>00104                             <span class="keywordflow">if</span> <span class="keywordflow">not</span>(onames[0] <span class="keywordflow">in</span> self.<a class="code" href="classvafmcore_1_1_v_a_f_m.html#a35302226d174668efa3381633ff2de64" title="Ordered dictionary of the circuits in the setup.">circuits</a>.keys()):
+<a name="l00105"></a>00105                                           <span class="keywordflow">raise</span> NameError( <span class="stringliteral">&quot;Connection error: circuit &quot;</span>+onames[0]+<span class="stringliteral">&quot; not found.&quot;</span> )
+<a name="l00106"></a>00106                             <span class="keywordflow">if</span> <span class="keywordflow">not</span>(inames[0] <span class="keywordflow">in</span> self.<a class="code" href="classvafmcore_1_1_v_a_f_m.html#a35302226d174668efa3381633ff2de64" title="Ordered dictionary of the circuits in the setup.">circuits</a>.keys()):
+<a name="l00107"></a>00107                                           <span class="keywordflow">raise</span> NameError( <span class="stringliteral">&quot;Connection error: circuit &quot;</span>+inames[0]+<span class="stringliteral">&quot; not found.&quot;</span> )
+<a name="l00108"></a>00108                             
+<a name="l00109"></a>00109                             <span class="comment">#check existence of channels</span>
+<a name="l00110"></a>00110                             <span class="keywordflow">if</span> <span class="keywordflow">not</span>(onames[1] <span class="keywordflow">in</span> self.<a class="code" href="classvafmcore_1_1_v_a_f_m.html#a35302226d174668efa3381633ff2de64" title="Ordered dictionary of the circuits in the setup.">circuits</a>[onames[0]].O.keys()):
+<a name="l00111"></a>00111                                           <span class="keywordflow">raise</span> NameError( <span class="stringliteral">&quot;Connection error: channel &quot;</span>+onames[1]+<span class="stringliteral">&quot; not found.&quot;</span> )
+<a name="l00112"></a>00112                             <span class="keywordflow">if</span> <span class="keywordflow">not</span>(inames[1] <span class="keywordflow">in</span> self.<a class="code" href="classvafmcore_1_1_v_a_f_m.html#a35302226d174668efa3381633ff2de64" title="Ordered dictionary of the circuits in the setup.">circuits</a>[inames[0]].I.keys()):
+<a name="l00113"></a>00113                                           <span class="keywordflow">raise</span> NameError( <span class="stringliteral">&quot;Connection error: channel &quot;</span>+inames[1]+<span class="stringliteral">&quot; not found.&quot;</span> )
+<a name="l00114"></a>00114                             
+<a name="l00115"></a>00115                             self.<a class="code" href="classvafmcore_1_1_v_a_f_m.html#a35302226d174668efa3381633ff2de64" title="Ordered dictionary of the circuits in the setup.">circuits</a>[inames[0]].I[inames[1]].signal = self.<a class="code" href="classvafmcore_1_1_v_a_f_m.html#a35302226d174668efa3381633ff2de64" title="Ordered dictionary of the circuits in the setup.">circuits</a>[onames[0]].O[onames[1]].signal
+<a name="l00116"></a>00116               
+<a name="l00117"></a>00117               <span class="comment">## Initialization.</span>
+<a name="l00118"></a>00118               <span class="comment">#</span>
+<a name="l00119"></a>00119               <span class="comment"># Use this after all circuits and connections are setup.</span>
+<a name="l00120"></a>00120               <span class="comment"># Calls the initialize on each circuit... this is actually useless at the moment!</span>
+<a name="l00121"></a><a class="code" href="classvafmcore_1_1_v_a_f_m.html#a2ec8d5e97258d591537cd99629afea7a">00121</a>               <span class="keyword">def </span><a class="code" href="classvafmcore_1_1_v_a_f_m.html#a2ec8d5e97258d591537cd99629afea7a" title="Initialization.">Initialize</a>(self):
+<a name="l00122"></a>00122                             
+<a name="l00123"></a>00123                             <span class="keywordflow">for</span> kw <span class="keywordflow">in</span> self.<a class="code" href="classvafmcore_1_1_v_a_f_m.html#a35302226d174668efa3381633ff2de64" title="Ordered dictionary of the circuits in the setup.">circuits</a>.keys():
+<a name="l00124"></a>00124                                           self.<a class="code" href="classvafmcore_1_1_v_a_f_m.html#a35302226d174668efa3381633ff2de64" title="Ordered dictionary of the circuits in the setup.">circuits</a>[kw].Initialize()
+<a name="l00125"></a>00125               
+<a name="l00126"></a>00126               <span class="comment">## Update cycle.</span>
+<a name="l00127"></a>00127               <span class="comment">#</span>
+<a name="l00128"></a>00128               <span class="comment"># Calls the update routine of each circuit in the setup.</span>
+<a name="l00129"></a><a class="code" href="classvafmcore_1_1_v_a_f_m.html#ad2418278e2ed527a536a9d40bdc21d12">00129</a>               <span class="keyword">def </span><a class="code" href="classvafmcore_1_1_v_a_f_m.html#ad2418278e2ed527a536a9d40bdc21d12" title="Update cycle.">Update</a>(self):
+<a name="l00130"></a>00130                             
+<a name="l00131"></a>00131                             <span class="keywordflow">for</span> kw <span class="keywordflow">in</span> self.<a class="code" href="classvafmcore_1_1_v_a_f_m.html#a35302226d174668efa3381633ff2de64" title="Ordered dictionary of the circuits in the setup.">circuits</a>.keys():
+<a name="l00132"></a>00132                                           
+<a name="l00133"></a>00133                                           self.<a class="code" href="classvafmcore_1_1_v_a_f_m.html#a35302226d174668efa3381633ff2de64" title="Ordered dictionary of the circuits in the setup.">circuits</a>[kw].Update()
+<a name="l00134"></a>00134                                           
+<a name="l00135"></a>00135                                           <span class="keywordflow">if</span> self.<a class="code" href="classvafmcore_1_1_v_a_f_m.html#a35302226d174668efa3381633ff2de64" title="Ordered dictionary of the circuits in the setup.">circuits</a>[kw].pushed: <span class="comment">#push if needed</span>
+<a name="l00136"></a>00136                                                         self.<a class="code" href="classvafmcore_1_1_v_a_f_m.html#a35302226d174668efa3381633ff2de64" title="Ordered dictionary of the circuits in the setup.">circuits</a>[kw].Push()
 <a name="l00137"></a>00137                             
-<a name="l00138"></a>00138                             self.<a class="code" href="classvafmcore_1_1_v_a_f_m.html#a22f335767c3fc2a96cbb1acbd318a2bd" title="Post Update cycle.">PostUpdate</a>()
-<a name="l00139"></a>00139               
-<a name="l00140"></a>00140               <span class="comment">## Post Update cycle.</span>
-<a name="l00141"></a>00141               <span class="comment">#</span>
-<a name="l00142"></a>00142               <span class="comment"># Called after the Update is finished, to push all buffers.</span>
-<a name="l00143"></a><a class="code" href="classvafmcore_1_1_v_a_f_m.html#a22f335767c3fc2a96cbb1acbd318a2bd">00143</a>               <span class="keyword">def </span><a class="code" href="classvafmcore_1_1_v_a_f_m.html#a22f335767c3fc2a96cbb1acbd318a2bd" title="Post Update cycle.">PostUpdate</a>(self):
-<a name="l00144"></a>00144                             
-<a name="l00145"></a>00145                             <span class="keywordflow">for</span> kw <span class="keywordflow">in</span> self.<a class="code" href="classvafmcore_1_1_v_a_f_m.html#a35302226d174668efa3381633ff2de64" title="Ordered dictionary of the circuits in the setup.">circuits</a>.keys():
-<a name="l00146"></a>00146                                           self.<a class="code" href="classvafmcore_1_1_v_a_f_m.html#a35302226d174668efa3381633ff2de64" title="Ordered dictionary of the circuits in the setup.">circuits</a>[kw].Push()
-<a name="l00147"></a>00147               
-<a name="l00148"></a>00148 
-<a name="l00149"></a>00149 
-<a name="l00150"></a>00150 
+<a name="l00138"></a>00138                             self.<a class="code" href="classvafmcore_1_1_v_a_f_m.html#a22a1a55d145bf6582b5fd75ef4fbb83c" title="Integer number of update steps so far.">_idt</a> += 1
+<a name="l00139"></a>00139                             self.<a class="code" href="classvafmcore_1_1_v_a_f_m.html#ae39f0ff66b99c6036a293c1a1b7eb2e5">O</a>[<span class="stringliteral">&#39;time&#39;</span>].Set(self.<a class="code" href="classvafmcore_1_1_v_a_f_m.html#a1b4382f7e9a8f88a78d85cec6a387a0e" title="Total simulation time.">time</a>)
+<a name="l00140"></a>00140                             
+<a name="l00141"></a>00141                             self.<a class="code" href="classvafmcore_1_1_v_a_f_m.html#a22f335767c3fc2a96cbb1acbd318a2bd" title="Post Update cycle.">PostUpdate</a>()
+<a name="l00142"></a>00142               
+<a name="l00143"></a>00143               <span class="comment">## Post Update cycle.</span>
+<a name="l00144"></a>00144               <span class="comment">#</span>
+<a name="l00145"></a>00145               <span class="comment"># Called after the Update is finished, to push all buffers.</span>
+<a name="l00146"></a><a class="code" href="classvafmcore_1_1_v_a_f_m.html#a22f335767c3fc2a96cbb1acbd318a2bd">00146</a>               <span class="keyword">def </span><a class="code" href="classvafmcore_1_1_v_a_f_m.html#a22f335767c3fc2a96cbb1acbd318a2bd" title="Post Update cycle.">PostUpdate</a>(self):
+<a name="l00147"></a>00147                             
+<a name="l00148"></a>00148                             <span class="keywordflow">for</span> kw <span class="keywordflow">in</span> self.<a class="code" href="classvafmcore_1_1_v_a_f_m.html#a35302226d174668efa3381633ff2de64" title="Ordered dictionary of the circuits in the setup.">circuits</a>.keys():
+<a name="l00149"></a>00149                                           self.<a class="code" href="classvafmcore_1_1_v_a_f_m.html#a35302226d174668efa3381633ff2de64" title="Ordered dictionary of the circuits in the setup.">circuits</a>[kw].Push()
+<a name="l00150"></a>00150               
 <a name="l00151"></a>00151 
+<a name="l00152"></a>00152 
+<a name="l00153"></a>00153 
+<a name="l00154"></a>00154 
 </pre></div></div>
 </div>
   <div id="nav-path" class="navpath">
     <ul>
       <li class="navelem"><a class="el" href="vafmcore_8py.html">vafmcore.py</a>      </li>
-      <li class="footer">Generated on Thu Sep 19 2013 23:01:30 for pyVAFM by&#160;
+      <li class="footer">Generated on Thu Sep 19 2013 23:50:49 for pyVAFM by&#160;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.4 </li>
     </ul>

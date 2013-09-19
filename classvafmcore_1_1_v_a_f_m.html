@@ -102,6 +102,7 @@ Public Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvafmcore_1_1_v_a_f_m.html#ac829bf6c36dcc85d8feadf5ad902b43f">GetChannel</a></td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Find a channel given its name and the name of the circuit.  <a href="#ac829bf6c36dcc85d8feadf5ad902b43f"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvafmcore_1_1_v_a_f_m.html#adb62619c1945f2626c03d6a37a384b1d">Connect</a></td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Connect the output of a circuit to the input of another.  <a href="#adb62619c1945f2626c03d6a37a384b1d"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvafmcore_1_1_v_a_f_m.html#a2ec8d5e97258d591537cd99629afea7a">Initialize</a></td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialization.  <a href="#a2ec8d5e97258d591537cd99629afea7a"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvafmcore_1_1_v_a_f_m.html#ad2418278e2ed527a536a9d40bdc21d12">Update</a></td></tr>
@@ -225,7 +226,17 @@ Public Attributes</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="vafmcore_8py_source.html#l00093">93</a> of file <a class="el" href="vafmcore_8py_source.html">vafmcore.py</a>.</p>
+<p>Connect the output of a circuit to the input of another. </p>
+<p>The I/O channels to connect are specified with the syntax: "circuit.channel" </p>
+<dl><dt><b>Parameters:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">O</td><td>Name of the output channel (source signal) given as string: "circuit.channel" </td></tr>
+    <tr><td class="paramname">I</td><td>Name of the input channel (destination) given as string: "circuit.channel" </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Definition at line <a class="el" href="vafmcore_8py_source.html#l00096">96</a> of file <a class="el" href="vafmcore_8py_source.html">vafmcore.py</a>.</p>
 
 </div>
 </div>
@@ -292,7 +303,7 @@ Public Attributes</h2></td></tr>
 <p>Initialization. </p>
 <p>Use this after all circuits and connections are setup. Calls the initialize on each circuit... this is actually useless at the moment! </p>
 
-<p>Definition at line <a class="el" href="vafmcore_8py_source.html#l00118">118</a> of file <a class="el" href="vafmcore_8py_source.html">vafmcore.py</a>.</p>
+<p>Definition at line <a class="el" href="vafmcore_8py_source.html#l00121">121</a> of file <a class="el" href="vafmcore_8py_source.html">vafmcore.py</a>.</p>
 
 </div>
 </div>
@@ -314,7 +325,7 @@ Public Attributes</h2></td></tr>
 <p>Post Update cycle. </p>
 <p>Called after the Update is finished, to push all buffers. </p>
 
-<p>Definition at line <a class="el" href="vafmcore_8py_source.html#l00143">143</a> of file <a class="el" href="vafmcore_8py_source.html">vafmcore.py</a>.</p>
+<p>Definition at line <a class="el" href="vafmcore_8py_source.html#l00146">146</a> of file <a class="el" href="vafmcore_8py_source.html">vafmcore.py</a>.</p>
 
 </div>
 </div>
@@ -357,7 +368,7 @@ Public Attributes</h2></td></tr>
 <p>Update cycle. </p>
 <p>Calls the update routine of each circuit in the setup. </p>
 
-<p>Definition at line <a class="el" href="vafmcore_8py_source.html#l00126">126</a> of file <a class="el" href="vafmcore_8py_source.html">vafmcore.py</a>.</p>
+<p>Definition at line <a class="el" href="vafmcore_8py_source.html#l00129">129</a> of file <a class="el" href="vafmcore_8py_source.html">vafmcore.py</a>.</p>
 
 </div>
 </div>
@@ -420,7 +431,7 @@ Public Attributes</h2></td></tr>
     <ul>
       <li class="navelem"><a class="el" href="namespacevafmcore.html">vafmcore</a>      </li>
       <li class="navelem"><a class="el" href="classvafmcore_1_1_v_a_f_m.html">VAFM</a>      </li>
-      <li class="footer">Generated on Thu Sep 19 2013 23:01:30 for pyVAFM by&#160;
+      <li class="footer">Generated on Thu Sep 19 2013 23:50:49 for pyVAFM by&#160;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.4 </li>
     </ul>
