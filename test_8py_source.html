@@ -90,47 +90,38 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l00008"></a>00008               
 <a name="l00009"></a>00009               machine = vafmcore.VAFM();
 <a name="l00010"></a>00010 
-<a name="l00011"></a>00011               <span class="comment">#waver = circs.Wave(machine, &#39;waver&#39;);</span>
+<a name="l00011"></a>00011         
 <a name="l00012"></a>00012               
-<a name="l00013"></a>00013               <span class="comment">#machine.circuits[&#39;waver&#39;] = waver</span>
-<a name="l00014"></a>00014               
-<a name="l00015"></a>00015               <span class="comment">#print machine.circuits</span>
-<a name="l00016"></a>00016               <span class="comment">##print machine.circuits[&#39;asd&#39;]</span>
-<a name="l00017"></a>00017 
-<a name="l00018"></a>00018               <span class="comment">#waver.I[&#39;freq&#39;].Set(1);</span>
-<a name="l00019"></a>00019               <span class="comment">#waver.I[&#39;amp&#39;].Set(1);</span>
-<a name="l00020"></a>00020 
-<a name="l00021"></a>00021               <span class="comment">#print waver.asder</span>
-<a name="l00022"></a>00022               <span class="comment">#print str(waver)</span>
+<a name="l00013"></a>00013               machine.AddCircuit(type=<span class="stringliteral">&#39;opAdd&#39;</span>,name=<span class="stringliteral">&#39;adder2&#39;</span>, factors=3, pushed=<span class="keyword">True</span>)
+<a name="l00014"></a>00014               machine.AddCircuit(type=<span class="stringliteral">&#39;opAdd&#39;</span>,name=<span class="stringliteral">&#39;adder1&#39;</span>, pushed=<span class="keyword">True</span>)
+<a name="l00015"></a>00015               machine.AddCircuit(type=<span class="stringliteral">&#39;opMul&#39;</span>,name=<span class="stringliteral">&#39;mult1&#39;</span>)
+<a name="l00016"></a>00016               out1 = machine.AddCircuit(type=<span class="stringliteral">&#39;output&#39;</span>,name=<span class="stringliteral">&#39;out1&#39;</span>, file=<span class="stringliteral">&#39;log.log&#39;</span>, dump=1)
+<a name="l00017"></a>00017               
+<a name="l00018"></a>00018               machine.AddCircuit(type=<span class="stringliteral">&#39;waver&#39;</span>,name=<span class="stringliteral">&#39;wave&#39;</span>, freq=10, amp=1)
+<a name="l00019"></a>00019               
+<a name="l00020"></a>00020               out1.RegisterChannel([<span class="stringliteral">&#39;machine.time&#39;</span>, <span class="stringliteral">&#39;wave.cos&#39;</span>, <span class="stringliteral">&#39;wave.sin&#39;</span>,<span class="stringliteral">&#39;adder1.out&#39;</span>])
+<a name="l00021"></a>00021               
+<a name="l00022"></a>00022               machine.Initialize()
 <a name="l00023"></a>00023               
-<a name="l00024"></a>00024               machine.AddCircuit_test(type=<span class="stringliteral">&#39;opAdd&#39;</span>,name=<span class="stringliteral">&#39;adder2&#39;</span>, factors=3, pushed=<span class="keyword">True</span>)
-<a name="l00025"></a>00025               machine.AddCircuit(<span class="stringliteral">&#39;opAdd&#39;</span>,<span class="stringliteral">&#39;adder1&#39;</span>, pushed=<span class="keyword">True</span>)
-<a name="l00026"></a>00026               machine.AddCircuit(<span class="stringliteral">&#39;opMul&#39;</span>,<span class="stringliteral">&#39;mult1&#39;</span>)
-<a name="l00027"></a>00027               out1 = machine.AddCircuit(<span class="stringliteral">&#39;output&#39;</span>,<span class="stringliteral">&#39;out1&#39;</span>, file=<span class="stringliteral">&#39;log.log&#39;</span>, dump=1)
-<a name="l00028"></a>00028               
-<a name="l00029"></a>00029               machine.AddCircuit(<span class="stringliteral">&#39;waver&#39;</span>,<span class="stringliteral">&#39;wave&#39;</span>, freq=10, amp=1)
-<a name="l00030"></a>00030               
-<a name="l00031"></a>00031               out1.RegisterChannel([<span class="stringliteral">&#39;machine.time&#39;</span>, <span class="stringliteral">&#39;wave.cos&#39;</span>, <span class="stringliteral">&#39;wave.sin&#39;</span>,<span class="stringliteral">&#39;adder1.out&#39;</span>])
-<a name="l00032"></a>00032               
-<a name="l00033"></a>00033               machine.Initialize()
-<a name="l00034"></a>00034               
-<a name="l00035"></a>00035               machine.Connect(<span class="stringliteral">&quot;wave.sin&quot;</span>,<span class="stringliteral">&quot;adder1.in1&quot;</span>)
-<a name="l00036"></a>00036               machine.Connect(<span class="stringliteral">&quot;wave.cos&quot;</span>,<span class="stringliteral">&quot;adder1.in2&quot;</span>)
-<a name="l00037"></a>00037               
-<a name="l00038"></a>00038               <span class="keywordflow">for</span> i <span class="keywordflow">in</span> range(100):
-<a name="l00039"></a>00039                             <span class="comment">#print machine.time, machine.circuits[&#39;wave&#39;].O[&#39;cos&#39;].value</span>
-<a name="l00040"></a>00040                             machine.Update()
-<a name="l00041"></a>00041               
-<a name="l00042"></a>00042               
-<a name="l00043"></a>00043 
-<a name="l00044"></a>00044 <span class="keywordflow">if</span> __name__ == <span class="stringliteral">&#39;__main__&#39;</span>:
-<a name="l00045"></a>00045               main()
+<a name="l00024"></a>00024               machine.Connect(<span class="stringliteral">&quot;wave.sin&quot;</span>,<span class="stringliteral">&quot;adder1.in1&quot;</span>)
+<a name="l00025"></a>00025               machine.Connect(<span class="stringliteral">&quot;wave.cos&quot;</span>,<span class="stringliteral">&quot;adder1.in2&quot;</span>)
+<a name="l00026"></a>00026               
+<a name="l00027"></a>00027               <span class="keywordflow">for</span> i <span class="keywordflow">in</span> range(100):
+<a name="l00028"></a>00028                             <span class="comment">#print machine.time, machine.circuits[&#39;wave&#39;].O[&#39;cos&#39;].value</span>
+<a name="l00029"></a>00029                             machine.Update()
+<a name="l00030"></a>00030               machine.Disconnect(<span class="stringliteral">&quot;adder1.in1&quot;</span>)
+<a name="l00031"></a>00031               <span class="keywordflow">for</span> i <span class="keywordflow">in</span> range(100):
+<a name="l00032"></a>00032                             machine.Update()            
+<a name="l00033"></a>00033 
+<a name="l00034"></a>00034 
+<a name="l00035"></a>00035 <span class="keywordflow">if</span> __name__ == <span class="stringliteral">&#39;__main__&#39;</span>:
+<a name="l00036"></a>00036               main()
 </pre></div></div>
 </div>
   <div id="nav-path" class="navpath">
     <ul>
       <li class="navelem"><a class="el" href="test_8py.html">test.py</a>      </li>
-      <li class="footer">Generated on Fri Sep 20 2013 00:33:05 for pyVAFM by&#160;
+      <li class="footer">Generated on Fri Sep 20 2013 01:54:07 for pyVAFM by&#160;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.4 </li>
     </ul>
