@@ -35,7 +35,6 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
-      <li><a href="namespaces.html"><span>Namespaces</span></a></li>
       <li class="current"><a href="annotated.html"><span>Classes</span></a></li>
       <li><a href="files.html"><span>Files</span></a></li>
       <li id="searchli">
@@ -86,7 +85,10 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="title">vafmbase::Circuit Class Reference</div>  </div>
 </div>
 <div class="contents">
-<!-- doxytag: class="vafmbase::Circuit" --><div class="dynheader">
+<!-- doxytag: class="vafmbase::Circuit" -->
+<p>Abstract circuit class.  
+ <a href="classvafmbase_1_1_circuit.html#details">More...</a></p>
+<div class="dynheader">
 Inheritance diagram for vafmbase::Circuit:</div>
 <div class="dyncontent">
  <div class="center">
@@ -95,9 +97,10 @@ Inheritance diagram for vafmbase::Circuit:</div>
 <area href="classvafmcircuits_1_1output.html" title="Output circuit." alt="vafmcircuits::output" shape="rect" coords="0,56,159,80"/>
 <area href="classvafmcircuits_1_1waver.html" title="Oscillator circuit." alt="vafmcircuits::waver" shape="rect" coords="169,56,328,80"/>
 <area href="classvafmcircuits__math_1_1op_add.html" title="Arithmetic sum circuit." alt="vafmcircuits_math::opAdd" shape="rect" coords="338,56,497,80"/>
-<area href="classvafmcircuits__math_1_1op_lin_c.html" title="Arithmetic linear-combo circuit." alt="vafmcircuits_math::opLinC" shape="rect" coords="507,56,666,80"/>
-<area href="classvafmcircuits__math_1_1op_mul.html" title="Arithmetic multiplier circuit." alt="vafmcircuits_math::opMul" shape="rect" coords="676,56,835,80"/>
-<area href="classvafmcircuits__math_1_1op_sub.html" title="Arithmetic subtraction circuit." alt="vafmcircuits_math::opSub" shape="rect" coords="845,56,1004,80"/>
+<area href="classvafmcircuits__math_1_1op_div.html" title="Arithmetic division circuit." alt="vafmcircuits_math::opDiv" shape="rect" coords="507,56,666,80"/>
+<area href="classvafmcircuits__math_1_1op_lin_c.html" title="Arithmetic linear-combo circuit." alt="vafmcircuits_math::opLinC" shape="rect" coords="676,56,835,80"/>
+<area href="classvafmcircuits__math_1_1op_mul.html" title="Arithmetic multiplier circuit." alt="vafmcircuits_math::opMul" shape="rect" coords="845,56,1004,80"/>
+<area href="classvafmcircuits__math_1_1op_sub.html" title="Arithmetic subtraction circuit." alt="vafmcircuits_math::opSub" shape="rect" coords="1014,56,1173,80"/>
 </map>
  </div></div>
 
@@ -117,9 +120,6 @@ Public Member Functions</h2></td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Find a channel by name.  <a href="#a489622e374ad43d542341c7281810cf7"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvafmbase_1_1_circuit.html#ac65016f555652ace6ee9875c87618e59">Push</a></td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Push the buffered value for all output channels.  <a href="#ac65016f555652ace6ee9875c87618e59"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvafmbase_1_1_circuit.html#aa2f6ef7a8aca1747fb156ea5f765ad3a">__str__</a></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvafmbase_1_1_circuit.html#a6da843ab94dccf3b845e71522268bfb1">Initialize</a></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvafmbase_1_1_circuit.html#af2a0a4c01abd1cac89d3202e12b26826">Update</a></td></tr>
 <tr><td colspan="2"><h2><a name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvafmbase_1_1_circuit.html#a4b3c6a90a4fafd5605c2e6ab07428645">name</a></td></tr>
@@ -128,14 +128,17 @@ Public Attributes</h2></td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Reference to the virtual machine.  <a href="#ae2f238a53c20bf5e3c16d50e42853863"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvafmbase_1_1_circuit.html#aa179e3e87e22966ba297bf79b36f70ec">pushed</a></td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Push output buffer at the end of Update.  <a href="#aa179e3e87e22966ba297bf79b36f70ec"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvafmbase_1_1_circuit.html#ad6d3339906f53bd9bbbe84fbe5fed10c">I</a></td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Dictionary of input channels.  <a href="#ad6d3339906f53bd9bbbe84fbe5fed10c"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvafmbase_1_1_circuit.html#a1a7f98a8528ad6b7434279a0c120aea8">O</a></td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Dictionary of output channels.  <a href="#a1a7f98a8528ad6b7434279a0c120aea8"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad6d3339906f53bd9bbbe84fbe5fed10c"></a><!-- doxytag: member="vafmbase::Circuit::I" ref="ad6d3339906f53bd9bbbe84fbe5fed10c" args="" -->
+&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvafmbase_1_1_circuit.html#ad6d3339906f53bd9bbbe84fbe5fed10c">I</a></td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Dictionary of input channels. <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a1a7f98a8528ad6b7434279a0c120aea8"></a><!-- doxytag: member="vafmbase::Circuit::O" ref="a1a7f98a8528ad6b7434279a0c120aea8" args="" -->
+&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvafmbase_1_1_circuit.html#a1a7f98a8528ad6b7434279a0c120aea8">O</a></td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Dictionary of output channels. <br/></td></tr>
 </table>
 <hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
-<div class="textblock">
-<p>Definition at line <a class="el" href="vafmbase_8py_source.html#l00064">64</a> of file <a class="el" href="vafmbase_8py_source.html">vafmbase.py</a>.</p>
+<div class="textblock"><p>Abstract circuit class. </p>
+
+<p>Definition at line <a class="el" href="vafmbase_8py_source.html#l00067">67</a> of file <a class="el" href="vafmbase_8py_source.html">vafmbase.py</a>.</p>
 </div><hr/><h2>Constructor &amp; Destructor Documentation</h2>
 <a class="anchor" id="a2c39995d088378806ff9579c6873fd3f"></a><!-- doxytag: member="vafmbase::Circuit::__init__" ref="a2c39995d088378806ff9579c6873fd3f" args="" -->
 <div class="memitem">
@@ -177,30 +180,11 @@ Public Attributes</h2></td></tr>
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="vafmbase_8py_source.html#l00072">72</a> of file <a class="el" href="vafmbase_8py_source.html">vafmbase.py</a>.</p>
+<p>Definition at line <a class="el" href="vafmbase_8py_source.html#l00075">75</a> of file <a class="el" href="vafmbase_8py_source.html">vafmbase.py</a>.</p>
 
 </div>
 </div>
 <hr/><h2>Member Function Documentation</h2>
-<a class="anchor" id="aa2f6ef7a8aca1747fb156ea5f765ad3a"></a><!-- doxytag: member="vafmbase::Circuit::__str__" ref="aa2f6ef7a8aca1747fb156ea5f765ad3a" args="" -->
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">def vafmbase::Circuit::__str__ </td>
-          <td>(</td>
-          <td class="paramtype">&#160;</td>
-          <td class="paramname"><em>self</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div>
-<div class="memdoc">
-
-<p>Definition at line <a class="el" href="vafmbase_8py_source.html#l00146">146</a> of file <a class="el" href="vafmbase_8py_source.html">vafmbase.py</a>.</p>
-
-</div>
-</div>
 <a class="anchor" id="a8e9aa4274c0a7eb233b3b0153644f29b"></a><!-- doxytag: member="vafmbase::Circuit::AddInput" ref="a8e9aa4274c0a7eb233b3b0153644f29b" args="" -->
 <div class="memitem">
 <div class="memproto">
@@ -234,7 +218,7 @@ Public Attributes</h2></td></tr>
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="vafmbase_8py_source.html#l00113">113</a> of file <a class="el" href="vafmbase_8py_source.html">vafmbase.py</a>.</p>
+<p>Definition at line <a class="el" href="vafmbase_8py_source.html#l00116">116</a> of file <a class="el" href="vafmbase_8py_source.html">vafmbase.py</a>.</p>
 
 </div>
 </div>
@@ -271,7 +255,7 @@ Public Attributes</h2></td></tr>
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="vafmbase_8py_source.html#l00119">119</a> of file <a class="el" href="vafmbase_8py_source.html">vafmbase.py</a>.</p>
+<p>Definition at line <a class="el" href="vafmbase_8py_source.html#l00122">122</a> of file <a class="el" href="vafmbase_8py_source.html">vafmbase.py</a>.</p>
 
 </div>
 </div>
@@ -309,28 +293,7 @@ Public Attributes</h2></td></tr>
 </dl>
 <dl class="return"><dt><b>Returns:</b></dt><dd>Reference to the channel. </dd></dl>
 
-<p>Definition at line <a class="el" href="vafmbase_8py_source.html#l00126">126</a> of file <a class="el" href="vafmbase_8py_source.html">vafmbase.py</a>.</p>
-
-</div>
-</div>
-<a class="anchor" id="a6da843ab94dccf3b845e71522268bfb1"></a><!-- doxytag: member="vafmbase::Circuit::Initialize" ref="a6da843ab94dccf3b845e71522268bfb1" args="" -->
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">def vafmbase::Circuit::Initialize </td>
-          <td>(</td>
-          <td class="paramtype">&#160;</td>
-          <td class="paramname"><em>self</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div>
-<div class="memdoc">
-
-<p>Reimplemented in <a class="el" href="classvafmcircuits_1_1waver.html#a97321035d4769d44428e093f5d1712da">vafmcircuits::waver</a>, <a class="el" href="classvafmcircuits_1_1output.html#a7e0122286d8030daf9c3cc380509dff7">vafmcircuits::output</a>, <a class="el" href="classvafmcircuits__math_1_1op_add.html#a52de5b3b556ac49a0743981963a3277b">vafmcircuits_math::opAdd</a>, <a class="el" href="classvafmcircuits__math_1_1op_sub.html#a7ab8a70a87e83bc43f47bf6598df2e83">vafmcircuits_math::opSub</a>, <a class="el" href="classvafmcircuits__math_1_1op_mul.html#a77cbcd7dec519059718b92875c81a88b">vafmcircuits_math::opMul</a>, and <a class="el" href="classvafmcircuits__math_1_1op_lin_c.html#af221bc819c74a4612fca7515ff89ee63">vafmcircuits_math::opLinC</a>.</p>
-
-<p>Definition at line <a class="el" href="vafmbase_8py_source.html#l00149">149</a> of file <a class="el" href="vafmbase_8py_source.html">vafmbase.py</a>.</p>
+<p>Definition at line <a class="el" href="vafmbase_8py_source.html#l00129">129</a> of file <a class="el" href="vafmbase_8py_source.html">vafmbase.py</a>.</p>
 
 </div>
 </div>
@@ -351,7 +314,7 @@ Public Attributes</h2></td></tr>
 
 <p>Push the buffered value for all output channels. </p>
 
-<p>Definition at line <a class="el" href="vafmbase_8py_source.html#l00141">141</a> of file <a class="el" href="vafmbase_8py_source.html">vafmbase.py</a>.</p>
+<p>Definition at line <a class="el" href="vafmbase_8py_source.html#l00144">144</a> of file <a class="el" href="vafmbase_8py_source.html">vafmbase.py</a>.</p>
 
 </div>
 </div>
@@ -389,49 +352,11 @@ Public Attributes</h2></td></tr>
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="vafmbase_8py_source.html#l00095">95</a> of file <a class="el" href="vafmbase_8py_source.html">vafmbase.py</a>.</p>
-
-</div>
-</div>
-<a class="anchor" id="af2a0a4c01abd1cac89d3202e12b26826"></a><!-- doxytag: member="vafmbase::Circuit::Update" ref="af2a0a4c01abd1cac89d3202e12b26826" args="" -->
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">def vafmbase::Circuit::Update </td>
-          <td>(</td>
-          <td class="paramtype">&#160;</td>
-          <td class="paramname"><em>self</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div>
-<div class="memdoc">
-
-<p>Reimplemented in <a class="el" href="classvafmcircuits_1_1waver.html#a912bdc5903af618df459fdfa69657277">vafmcircuits::waver</a>, <a class="el" href="classvafmcircuits_1_1output.html#a9979c32831632bc5f14f5851b1c5b684">vafmcircuits::output</a>, <a class="el" href="classvafmcircuits__math_1_1op_add.html#acd151bd6d60e0209c7c422d83c388646">vafmcircuits_math::opAdd</a>, <a class="el" href="classvafmcircuits__math_1_1op_sub.html#a01e2290c4fa523bd154c6593378fa33c">vafmcircuits_math::opSub</a>, <a class="el" href="classvafmcircuits__math_1_1op_mul.html#a958231c270d85b811b52baa56a4c6c21">vafmcircuits_math::opMul</a>, and <a class="el" href="classvafmcircuits__math_1_1op_lin_c.html#ac07792b44e42ef18a352e9532888b5cb">vafmcircuits_math::opLinC</a>.</p>
-
-<p>Definition at line <a class="el" href="vafmbase_8py_source.html#l00152">152</a> of file <a class="el" href="vafmbase_8py_source.html">vafmbase.py</a>.</p>
+<p>Definition at line <a class="el" href="vafmbase_8py_source.html#l00098">98</a> of file <a class="el" href="vafmbase_8py_source.html">vafmbase.py</a>.</p>
 
 </div>
 </div>
 <hr/><h2>Member Data Documentation</h2>
-<a class="anchor" id="ad6d3339906f53bd9bbbe84fbe5fed10c"></a><!-- doxytag: member="vafmbase::Circuit::I" ref="ad6d3339906f53bd9bbbe84fbe5fed10c" args="" -->
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="classvafmbase_1_1_circuit.html#ad6d3339906f53bd9bbbe84fbe5fed10c">vafmbase::Circuit::I</a></td>
-        </tr>
-      </table>
-</div>
-<div class="memdoc">
-
-<p>Dictionary of input channels. </p>
-
-<p>Definition at line <a class="el" href="vafmbase_8py_source.html#l00079">79</a> of file <a class="el" href="vafmbase_8py_source.html">vafmbase.py</a>.</p>
-
-</div>
-</div>
 <a class="anchor" id="ae2f238a53c20bf5e3c16d50e42853863"></a><!-- doxytag: member="vafmbase::Circuit::machine" ref="ae2f238a53c20bf5e3c16d50e42853863" args="" -->
 <div class="memitem">
 <div class="memproto">
@@ -445,7 +370,7 @@ Public Attributes</h2></td></tr>
 
 <p>Reference to the virtual machine. </p>
 
-<p>Definition at line <a class="el" href="vafmbase_8py_source.html#l00074">74</a> of file <a class="el" href="vafmbase_8py_source.html">vafmbase.py</a>.</p>
+<p>Definition at line <a class="el" href="vafmbase_8py_source.html#l00077">77</a> of file <a class="el" href="vafmbase_8py_source.html">vafmbase.py</a>.</p>
 
 </div>
 </div>
@@ -462,24 +387,7 @@ Public Attributes</h2></td></tr>
 
 <p>Name of the circuit. </p>
 
-<p>Definition at line <a class="el" href="vafmbase_8py_source.html#l00073">73</a> of file <a class="el" href="vafmbase_8py_source.html">vafmbase.py</a>.</p>
-
-</div>
-</div>
-<a class="anchor" id="a1a7f98a8528ad6b7434279a0c120aea8"></a><!-- doxytag: member="vafmbase::Circuit::O" ref="a1a7f98a8528ad6b7434279a0c120aea8" args="" -->
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="classvafmbase_1_1_circuit.html#a1a7f98a8528ad6b7434279a0c120aea8">vafmbase::Circuit::O</a></td>
-        </tr>
-      </table>
-</div>
-<div class="memdoc">
-
-<p>Dictionary of output channels. </p>
-
-<p>Definition at line <a class="el" href="vafmbase_8py_source.html#l00080">80</a> of file <a class="el" href="vafmbase_8py_source.html">vafmbase.py</a>.</p>
+<p>Definition at line <a class="el" href="vafmbase_8py_source.html#l00076">76</a> of file <a class="el" href="vafmbase_8py_source.html">vafmbase.py</a>.</p>
 
 </div>
 </div>
@@ -497,7 +405,7 @@ Public Attributes</h2></td></tr>
 <p>Push output buffer at the end of Update. </p>
 <p>If the circuit is pushed, all the output channels will expose the computed value right after the Update routine. </p>
 
-<p>Definition at line <a class="el" href="vafmbase_8py_source.html#l00078">78</a> of file <a class="el" href="vafmbase_8py_source.html">vafmbase.py</a>.</p>
+<p>Definition at line <a class="el" href="vafmbase_8py_source.html#l00081">81</a> of file <a class="el" href="vafmbase_8py_source.html">vafmbase.py</a>.</p>
 
 </div>
 </div>
@@ -508,9 +416,9 @@ Public Attributes</h2></td></tr>
 </div>
   <div id="nav-path" class="navpath">
     <ul>
-      <li class="navelem"><a class="el" href="namespacevafmbase.html">vafmbase</a>      </li>
+      <li class="navelem"><b>vafmbase</b>      </li>
       <li class="navelem"><a class="el" href="classvafmbase_1_1_circuit.html">Circuit</a>      </li>
-      <li class="footer">Generated on Fri Sep 20 2013 07:02:06 for pyVAFM by&#160;
+      <li class="footer">Generated on Fri Sep 20 2013 16:30:24 for pyVAFM by&#160;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.4 </li>
     </ul>
@@ -520,7 +428,7 @@ Public Attributes</h2></td></tr>
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Properties</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Variables</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">

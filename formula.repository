@@ -14,3 +14,5 @@
 \form#13:$out = \sum_i^{factors} ina_i\times inb_i $
 \form#14:$in1, in2$
 \form#15:$out = in_1 - in_2 $
+\form#16:$amp \omega $
+\form#17:$out = in_1 / in_2 $

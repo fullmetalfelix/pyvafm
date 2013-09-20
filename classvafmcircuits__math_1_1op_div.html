@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
-<title>pyVAFM: Member List</title>
+<title>pyVAFM: vafmcircuits_math::opDiv Class Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/search.js"></script>
@@ -74,30 +74,63 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   </div>
 </div>
 <script type="text/javascript">
-  initNavTree('classvafmcircuits__math_1_1op_lin_c.html','');
+  initNavTree('classvafmcircuits__math_1_1op_div.html','');
 </script>
 <div id="doc-content">
 <div class="header">
   <div class="headertitle">
-<div class="title">vafmcircuits_math::opLinC Member List</div>  </div>
+<div class="title">vafmcircuits_math::opDiv Class Reference</div>  </div>
 </div>
 <div class="contents">
-This is the complete list of members for <a class="el" href="classvafmcircuits__math_1_1op_lin_c.html">vafmcircuits_math::opLinC</a>, including all inherited members.<table>
-  <tr class="memlist"><td><a class="el" href="classvafmbase_1_1_circuit.html#a2c39995d088378806ff9579c6873fd3f">vafmbase::Circuit::__init__</a></td><td><a class="el" href="classvafmbase_1_1_circuit.html">vafmbase::Circuit</a></td><td></td></tr>
-  <tr class="memlist"><td><a class="el" href="classvafmbase_1_1_circuit.html#a8e9aa4274c0a7eb233b3b0153644f29b">AddInput</a></td><td><a class="el" href="classvafmbase_1_1_circuit.html">vafmbase::Circuit</a></td><td></td></tr>
-  <tr class="memlist"><td><a class="el" href="classvafmbase_1_1_circuit.html#a24741decd8cff1a7e81f3b842bafe430">AddOutput</a></td><td><a class="el" href="classvafmbase_1_1_circuit.html">vafmbase::Circuit</a></td><td></td></tr>
-  <tr class="memlist"><td><a class="el" href="classvafmbase_1_1_circuit.html#a489622e374ad43d542341c7281810cf7">GetChannel</a></td><td><a class="el" href="classvafmbase_1_1_circuit.html">vafmbase::Circuit</a></td><td></td></tr>
-  <tr class="memlist"><td><a class="el" href="classvafmbase_1_1_circuit.html#ad6d3339906f53bd9bbbe84fbe5fed10c">I</a></td><td><a class="el" href="classvafmbase_1_1_circuit.html">vafmbase::Circuit</a></td><td></td></tr>
-  <tr class="memlist"><td><a class="el" href="classvafmbase_1_1_circuit.html#ae2f238a53c20bf5e3c16d50e42853863">machine</a></td><td><a class="el" href="classvafmbase_1_1_circuit.html">vafmbase::Circuit</a></td><td></td></tr>
-  <tr class="memlist"><td><a class="el" href="classvafmbase_1_1_circuit.html#a4b3c6a90a4fafd5605c2e6ab07428645">name</a></td><td><a class="el" href="classvafmbase_1_1_circuit.html">vafmbase::Circuit</a></td><td></td></tr>
-  <tr class="memlist"><td><a class="el" href="classvafmbase_1_1_circuit.html#a1a7f98a8528ad6b7434279a0c120aea8">O</a></td><td><a class="el" href="classvafmbase_1_1_circuit.html">vafmbase::Circuit</a></td><td></td></tr>
-  <tr class="memlist"><td><a class="el" href="classvafmbase_1_1_circuit.html#ac65016f555652ace6ee9875c87618e59">Push</a></td><td><a class="el" href="classvafmbase_1_1_circuit.html">vafmbase::Circuit</a></td><td></td></tr>
-  <tr class="memlist"><td><a class="el" href="classvafmbase_1_1_circuit.html#aa179e3e87e22966ba297bf79b36f70ec">pushed</a></td><td><a class="el" href="classvafmbase_1_1_circuit.html">vafmbase::Circuit</a></td><td></td></tr>
-  <tr class="memlist"><td><a class="el" href="classvafmbase_1_1_circuit.html#ad0a34276dde1f1f741860b0ecec38a40">SetInputs</a></td><td><a class="el" href="classvafmbase_1_1_circuit.html">vafmbase::Circuit</a></td><td></td></tr>
-</table></div>
+<!-- doxytag: class="vafmcircuits_math::opDiv" --><!-- doxytag: inherits="vafmbase::Circuit" -->
+<p>Arithmetic division circuit.  
+ <a href="classvafmcircuits__math_1_1op_div.html#details">More...</a></p>
+<div class="dynheader">
+Inheritance diagram for vafmcircuits_math::opDiv:</div>
+<div class="dyncontent">
+ <div class="center">
+  <img src="classvafmcircuits__math_1_1op_div.png" usemap="#vafmcircuits_math::opDiv_map" alt=""/>
+  <map id="vafmcircuits_math::opDiv_map" name="vafmcircuits_math::opDiv_map">
+<area href="classvafmbase_1_1_circuit.html" title="Abstract circuit class." alt="vafmbase::Circuit" shape="rect" coords="0,0,152,24"/>
+</map>
+ </div></div>
+
+<p><a href="classvafmcircuits__math_1_1op_div-members.html">List of all members.</a></p>
+<table class="memberdecls">
+</table>
+<hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
+<div class="textblock"><p>Arithmetic division circuit. </p>
+<p>Outputs the ratio between two input signals 'in#' in the output 'out'.</p>
+<ul>
+<li>Initialisation parameters:<ul>
+<li>pushed = True|False push the output buffer immediately if True</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li>Input channels:<ul>
+<li><img class="formulaInl" alt="$in1, in2$" src="form_14.png"/> input signals</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li>Output channels:<br/>
+<ul>
+<li><img class="formulaInl" alt="$out = in_1 / in_2 $" src="form_17.png"/> </li>
+</ul>
+</li>
+</ul>
+
+<p>Definition at line <a class="el" href="vafmcircuits__math_8py_source.html#l00166">166</a> of file <a class="el" href="vafmcircuits__math_8py_source.html">vafmcircuits_math.py</a>.</p>
+</div><hr/>The documentation for this class was generated from the following file:<ul>
+<li><a class="el" href="vafmcircuits__math_8py_source.html">vafmcircuits_math.py</a></li>
+</ul>
+</div>
 </div>
   <div id="nav-path" class="navpath">
     <ul>
+      <li class="navelem"><b>vafmcircuits_math</b>      </li>
+      <li class="navelem"><a class="el" href="classvafmcircuits__math_1_1op_div.html">opDiv</a>      </li>
       <li class="footer">Generated on Fri Sep 20 2013 16:30:24 for pyVAFM by&#160;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.4 </li>
