@@ -2,8 +2,6 @@ var NAVTREE =
 [
   [ "pyVAFM", "index.html", [
     [ "Class List", "annotated.html", [
-      [ "vafmbase::Channel", "classvafmbase_1_1_channel.html", null ],
-      [ "vafmbase::Circuit", "classvafmbase_1_1_circuit.html", null ],
       [ "vafmbase::Feed", "classvafmbase_1_1_feed.html", null ],
       [ "vafmcircuits_math::opAdd", "classvafmcircuits__math_1_1op_add.html", null ],
       [ "vafmcircuits_math::opLinC", "classvafmcircuits__math_1_1op_lin_c.html", null ],
@@ -14,34 +12,13 @@ var NAVTREE =
       [ "vafmcircuits::waver", "classvafmcircuits_1_1waver.html", null ]
     ] ],
     [ "Class Index", "classes.html", null ],
-    [ "Class Hierarchy", "hierarchy.html", [
-      [ "vafmbase::Channel", "classvafmbase_1_1_channel.html", null ],
-      [ "vafmbase::Circuit", "classvafmbase_1_1_circuit.html", [
-        [ "vafmcircuits::output", "classvafmcircuits_1_1output.html", null ],
-        [ "vafmcircuits::waver", "classvafmcircuits_1_1waver.html", null ],
-        [ "vafmcircuits_math::opAdd", "classvafmcircuits__math_1_1op_add.html", null ],
-        [ "vafmcircuits_math::opLinC", "classvafmcircuits__math_1_1op_lin_c.html", null ],
-        [ "vafmcircuits_math::opMul", "classvafmcircuits__math_1_1op_mul.html", null ],
-        [ "vafmcircuits_math::opSub", "classvafmcircuits__math_1_1op_sub.html", null ]
-      ] ],
-      [ "vafmbase::Feed", "classvafmbase_1_1_feed.html", null ],
-      [ "vafmcore::VAFM", "classvafmcore_1_1_v_a_f_m.html", null ]
-    ] ],
     [ "Class Members", "functions.html", null ],
-    [ "Namespace List", "namespaces.html", [
-      [ "test", "namespacetest.html", null ],
-      [ "vafmbase", "namespacevafmbase.html", null ],
-      [ "vafmcircuits", "namespacevafmcircuits.html", null ],
-      [ "vafmcircuits_math", "namespacevafmcircuits__math.html", null ],
-      [ "vafmcore", "namespacevafmcore.html", null ]
-    ] ],
-    [ "Namespace Members", "namespacemembers.html", null ],
     [ "File List", "files.html", [
-      [ "test.py", "test_8py.html", null ],
-      [ "vafmbase.py", "vafmbase_8py.html", null ],
-      [ "vafmcircuits.py", "vafmcircuits_8py.html", null ],
-      [ "vafmcircuits_math.py", "vafmcircuits__math_8py.html", null ],
-      [ "vafmcore.py", "vafmcore_8py.html", null ]
+      [ "test.py", null, null ],
+      [ "vafmbase.py", null, null ],
+      [ "vafmcircuits.py", null, null ],
+      [ "vafmcircuits_math.py", null, null ],
+      [ "vafmcore.py", null, null ]
     ] ]
   ] ]
 ];
