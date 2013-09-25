@@ -1,0 +1,26 @@
+\form#0:$amp$
+\form#1:$freq$
+\form#2:$offset$
+\form#3:$sin$
+\form#4:$ = amp\cdot\sin(2 \pi freq\cdot t) + offset $
+\form#5:$cos$
+\form#6:$ = amp\cdot\cos(2 \pi freq\cdot t) + offset $
+\form#7:$record$
+\form#8:$in$
+\form#9:$out = !in$
+\form#10:$in1, in2, ..., inx$
+\form#11:$out = in_1 \land in_2 \land ... \land in_x $
+\form#12:$in1 in2$
+\form#13:$out$
+\form#14:$out = \sum_i^{factors} in_i $
+\form#15:$in1, in2$
+\form#16:$out = in_1 - in_2 $
+\form#17:$out = \prod_i^{factors} in_i $
+\form#18:$out = in_1 / in_2 $
+\form#19:$ina1, ina2, ..., inax$
+\form#20:$inb1, inb2, ..., inbx$
+\form#21:$out = \sum_i^{factors} ina_i\times inb_i $
+\form#22:$inf$ - Output channels:\n - $
+\form#23:$inf$ -$
+\form#24:$max = maximum value over the given peroid $ - $
+\form#25:$amp = \frac{max-min}{2} $ - $
