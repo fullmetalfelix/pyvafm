@@ -9,8 +9,8 @@ var annotated =
       [ "output", "classvafmcircuits_1_1output.html", "classvafmcircuits_1_1output" ]
     ] ],
     [ "vafmcircuits_Logic", null, [
-      [ "NotGate", "classvafmcircuits___logic_1_1_not_gate.html", null ],
-      [ "AndGate", "classvafmcircuits___logic_1_1_and_gate.html", null ],
+      [ "Not", "classvafmcircuits___logic_1_1_not.html", null ],
+      [ "And", "classvafmcircuits___logic_1_1_and.html", null ],
       [ "OrGate", "classvafmcircuits___logic_1_1_or_gate.html", null ],
       [ "XOrGate", "classvafmcircuits___logic_1_1_x_or_gate.html", null ],
       [ "NORGate", "classvafmcircuits___logic_1_1_n_o_r_gate.html", null ]

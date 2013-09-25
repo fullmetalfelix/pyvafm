@@ -3,9 +3,9 @@ var hierarchy =
     [ "vafmbase.Circuit", "classvafmbase_1_1_circuit.html", [
       [ "vafmcircuits.output", "classvafmcircuits_1_1output.html", null ],
       [ "vafmcircuits.waver", "classvafmcircuits_1_1waver.html", null ],
-      [ "vafmcircuits_Logic.AndGate", "classvafmcircuits___logic_1_1_and_gate.html", null ],
+      [ "vafmcircuits_Logic.And", "classvafmcircuits___logic_1_1_and.html", null ],
       [ "vafmcircuits_Logic.NORGate", "classvafmcircuits___logic_1_1_n_o_r_gate.html", null ],
-      [ "vafmcircuits_Logic.NotGate", "classvafmcircuits___logic_1_1_not_gate.html", null ],
+      [ "vafmcircuits_Logic.Not", "classvafmcircuits___logic_1_1_not.html", null ],
       [ "vafmcircuits_Logic.OrGate", "classvafmcircuits___logic_1_1_or_gate.html", null ],
       [ "vafmcircuits_Logic.XOrGate", "classvafmcircuits___logic_1_1_x_or_gate.html", null ],
       [ "vafmcircuits_math.OpAbs", "classvafmcircuits__math_1_1_op_abs.html", null ],

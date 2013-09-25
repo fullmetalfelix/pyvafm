@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.5"/>
-<title>pyVAFM: vafmcircuits_math.OpAbs Class Reference</title>
+<title>pyVAFM: vafmcircuits_Logic.And Class Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -84,7 +84,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   </div>
 </div>
 <script type="text/javascript">
-$(document).ready(function(){initNavTree('classvafmcircuits__math_1_1_op_abs.html','');});
+$(document).ready(function(){initNavTree('classvafmcircuits___logic_1_1_and.html','');});
 </script>
 <div id="doc-content">
 <!-- window showing the filter options -->
@@ -103,21 +103,21 @@ $(document).ready(function(){initNavTree('classvafmcircuits__math_1_1_op_abs.htm
 
 <div class="header">
   <div class="summary">
-<a href="classvafmcircuits__math_1_1_op_abs-members.html">List of all members</a>  </div>
+<a href="classvafmcircuits___logic_1_1_and-members.html">List of all members</a>  </div>
   <div class="headertitle">
-<div class="title">vafmcircuits_math.OpAbs Class Reference</div>  </div>
+<div class="title">vafmcircuits_Logic.And Class Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
 
-<p>Absolute value circuit.  
- <a href="classvafmcircuits__math_1_1_op_abs.html#details">More...</a></p>
+<p><a class="el" href="classvafmcircuits___logic_1_1_and.html" title="And Gate Takes any amount of incoming signals and output 1 if they are all strictily positve...">And</a> Gate Takes any amount of incoming signals and output 1 if they are all strictily positve, 0 otherwise.  
+ <a href="classvafmcircuits___logic_1_1_and.html#details">More...</a></p>
 <div class="dynheader">
-Inheritance diagram for vafmcircuits_math.OpAbs:</div>
+Inheritance diagram for vafmcircuits_Logic.And:</div>
 <div class="dyncontent">
  <div class="center">
-  <img src="classvafmcircuits__math_1_1_op_abs.png" usemap="#vafmcircuits_math.OpAbs_map" alt=""/>
-  <map id="vafmcircuits_math.OpAbs_map" name="vafmcircuits_math.OpAbs_map">
-<area href="classvafmbase_1_1_circuit.html" title="Abstract circuit class. " alt="vafmbase.Circuit" shape="rect" coords="0,0,156,24"/>
+  <img src="classvafmcircuits___logic_1_1_and.png" usemap="#vafmcircuits_Logic.And_map" alt=""/>
+  <map id="vafmcircuits_Logic.And_map" name="vafmcircuits_Logic.And_map">
+<area href="classvafmbase_1_1_circuit.html" title="Abstract circuit class. " alt="vafmbase.Circuit" shape="rect" coords="0,0,145,24"/>
 </map>
  </div></div>
 <table class="memberdecls">
@@ -162,31 +162,33 @@ Additional Inherited Members</h2></td></tr>
 <tr class="separator:ac4eee26b1ca7587ec960e311f86113ec inherit pub_attribs_classvafmbase_1_1_circuit"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Absolute value circuit. </p>
-<p>Takes in an inpute and returns the Absolute vcalue of it</p>
+<div class="textblock"><p><a class="el" href="classvafmcircuits___logic_1_1_and.html" title="And Gate Takes any amount of incoming signals and output 1 if they are all strictily positve...">And</a> Gate Takes any amount of incoming signals and output 1 if they are all strictily positve, 0 otherwise. </p>
 <ul>
-<li>Initialisation parameters:<br/>
-<ul>
+<li>Initialisation parameters:<ul>
 <li>pushed = True|False push the output buffer immediately if True</li>
 </ul>
 </li>
-<li>Input channels:<br/>
+<li>Input channels:<ul>
+<li><img class="formulaInl" alt="$in1, in2, ..., inx$" src="form_8.png"/> incoming signals</li>
+</ul>
+</li>
+<li>Output channels:<br/>
 <ul>
-<li><img class="formulaInl" alt="$inf$ - Output channels:\n - $" src="form_20.png"/>$ </li>
+<li><img class="formulaInl" alt="$out = in_1 \land in_2 \land ... \land in_x $" src="form_25.png"/> </li>
 </ul>
 </li>
 </ul>
 
-<p>Definition at line <a class="el" href="vafmcircuits__math_8py_source.html#l00264">264</a> of file <a class="el" href="vafmcircuits__math_8py_source.html">vafmcircuits_math.py</a>.</p>
+<p>Definition at line <a class="el" href="vafmcircuits___logic_8py_source.html#l00056">56</a> of file <a class="el" href="vafmcircuits___logic_8py_source.html">vafmcircuits_Logic.py</a>.</p>
 </div><hr/>The documentation for this class was generated from the following file:<ul>
-<li><a class="el" href="vafmcircuits__math_8py_source.html">vafmcircuits_math.py</a></li>
+<li><a class="el" href="vafmcircuits___logic_8py_source.html">vafmcircuits_Logic.py</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><b>vafmcircuits_math</b></li><li class="navelem"><a class="el" href="classvafmcircuits__math_1_1_op_abs.html">OpAbs</a></li>
+    <li class="navelem"><b>vafmcircuits_Logic</b></li><li class="navelem"><a class="el" href="classvafmcircuits___logic_1_1_and.html">And</a></li>
     <li class="footer">Generated on Wed Sep 25 2013 22:44:01 for pyVAFM by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.5 </li>

@@ -22,3 +22,5 @@
 \form#21:$inf$ -$
 \form#22:$max = maximum value over the given peroid $ - $
 \form#23:$amp = \frac{max-min}{2} $ - $
+\form#24:$out = !in$
+\form#25:$out = in_1 \land in_2 \land ... \land in_x $
