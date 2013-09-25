@@ -15,3 +15,10 @@
 \form#14:$ina1, ina2, ..., inax$
 \form#15:$inb1, inb2, ..., inbx$
 \form#16:$out = \sum_i^{factors} ina_i\times inb_i $
+\form#17:$in$
+\form#18:$out$
+\form#19:$in1 in2$
+\form#20:$inf$ - Output channels:\n - $
+\form#21:$inf$ -$
+\form#22:$max = maximum value over the given peroid $ - $
+\form#23:$amp = \frac{max-min}{2} $ - $
