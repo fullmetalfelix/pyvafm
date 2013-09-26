@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['setinputs',['SetInputs',['../classvafmbase_1_1_circuit.html#ab8ffc3f4428dec41f9e6958a1a16d8c1',1,'vafmbase::Circuit']]]
+  ['registerchannel',['RegisterChannel',['../classvafmcircuits_1_1output.html#a8592d79330f01fb2fc020fb7e48cb150',1,'vafmcircuits::output']]]
 ];

@@ -3,6 +3,7 @@ var hierarchy =
     [ "vafmbase.Circuit", "classvafmbase_1_1_circuit.html", [
       [ "vafmcircuits.output", "classvafmcircuits_1_1output.html", null ],
       [ "vafmcircuits.waver", "classvafmcircuits_1_1waver.html", null ],
+      [ "vafmcircuits_composite.composite", "classvafmcircuits__composite_1_1composite.html", null ],
       [ "vafmcircuits_Logic.And", "classvafmcircuits___logic_1_1_and.html", null ],
       [ "vafmcircuits_Logic.NORGate", "classvafmcircuits___logic_1_1_n_o_r_gate.html", null ],
       [ "vafmcircuits_Logic.Not", "classvafmcircuits___logic_1_1_not.html", null ],

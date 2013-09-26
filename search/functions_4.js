@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['getchannel',['GetChannel',['../classvafmbase_1_1_circuit.html#a0b502fd742c639ef2ba783601b9ed267',1,'vafmbase.Circuit.GetChannel()'],['../classvafmcore_1_1_v_a_f_m.html#a7cf07ed96dd7e37a81e9b95bfc568dbb',1,'vafmcore.VAFM.GetChannel()']]]
+  ['disconnect',['Disconnect',['../classvafmcore_1_1_v_a_f_m.html#a5d73527618351db5e12f4d35ebf4f24f',1,'vafmcore::VAFM']]],
+  ['disconnects',['Disconnects',['../classvafmcore_1_1_v_a_f_m.html#a56396241e8880e07d9824b41963b1c02',1,'vafmcore::VAFM']]]
 ];

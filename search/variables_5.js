@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['o',['O',['../classvafmbase_1_1_circuit.html#ac4eee26b1ca7587ec960e311f86113ec',1,'vafmbase::Circuit']]]
+  ['name',['name',['../classvafmbase_1_1_circuit.html#a7d7090783a4c7f01b6d215284e1fab3f',1,'vafmbase::Circuit']]]
 ];

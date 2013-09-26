@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['initialize',['Initialize',['../classvafmcore_1_1_v_a_f_m.html#a90e93ac05815dcb5288b2f789a296a51',1,'vafmcore::VAFM']]]
+  ['getchannel',['GetChannel',['../classvafmbase_1_1_circuit.html#a0b502fd742c639ef2ba783601b9ed267',1,'vafmbase.Circuit.GetChannel()'],['../classvafmcore_1_1_v_a_f_m.html#a7cf07ed96dd7e37a81e9b95bfc568dbb',1,'vafmcore.VAFM.GetChannel()']]]
 ];

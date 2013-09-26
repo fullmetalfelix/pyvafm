@@ -8,6 +8,9 @@ var annotated =
       [ "waver", "classvafmcircuits_1_1waver.html", null ],
       [ "output", "classvafmcircuits_1_1output.html", "classvafmcircuits_1_1output" ]
     ] ],
+    [ "vafmcircuits_composite", null, [
+      [ "composite", "classvafmcircuits__composite_1_1composite.html", "classvafmcircuits__composite_1_1composite" ]
+    ] ],
     [ "vafmcircuits_Logic", null, [
       [ "Not", "classvafmcircuits___logic_1_1_not.html", null ],
       [ "And", "classvafmcircuits___logic_1_1_and.html", null ],
@@ -16,7 +19,7 @@ var annotated =
       [ "NORGate", "classvafmcircuits___logic_1_1_n_o_r_gate.html", null ]
     ] ],
     [ "vafmcircuits_math", null, [
-      [ "opAdd", "classvafmcircuits__math_1_1op_add.html", null ],
+      [ "opAdd", "classvafmcircuits__math_1_1op_add.html", "classvafmcircuits__math_1_1op_add" ],
       [ "opSub", "classvafmcircuits__math_1_1op_sub.html", null ],
       [ "opMul", "classvafmcircuits__math_1_1op_mul.html", null ],
       [ "opDiv", "classvafmcircuits__math_1_1op_div.html", null ],
