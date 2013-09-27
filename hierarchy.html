@@ -92,7 +92,7 @@ $(document).ready(function(){initNavTree('hierarchy.html','');});
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Variables</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -126,9 +126,9 @@ $(document).ready(function(){initNavTree('hierarchy.html','');});
 <tr id="row_0_14_"><td class="entry"><img src="ftv2vertline.png" alt="|" width="16" height="22" /><img src="ftv2node.png" alt="o" width="16" height="22" /><img src="ftv2cl.png" alt="C" width="24" height="22" /><a class="el" href="classvafmcircuits__math_1_1op_sub.html" target="_self">vafmcircuits_math.opSub</a></td><td class="desc">Arithmetic subtraction circuit </td></tr>
 <tr id="row_0_15_" class="even"><td class="entry"><img src="ftv2vertline.png" alt="|" width="16" height="22" /><img src="ftv2node.png" alt="o" width="16" height="22" /><img src="ftv2cl.png" alt="C" width="24" height="22" /><a class="el" href="classvafmcircuits__signal__processing_1_1derivative.html" target="_self">vafmcircuits_signal_processing.derivative</a></td><td class="desc">Differentation circuit </td></tr>
 <tr id="row_0_16_"><td class="entry"><img src="ftv2vertline.png" alt="|" width="16" height="22" /><img src="ftv2node.png" alt="o" width="16" height="22" /><img src="ftv2cl.png" alt="C" width="24" height="22" /><a class="el" href="classvafmcircuits__signal__processing_1_1integral.html" target="_self">vafmcircuits_signal_processing.integral</a></td><td class="desc">Integration circuit </td></tr>
-<tr id="row_0_17_" class="even"><td class="entry"><img src="ftv2vertline.png" alt="|" width="16" height="22" /><img src="ftv2lastnode.png" alt="\" width="16" height="22" /><img src="ftv2cl.png" alt="C" width="24" height="22" /><a class="el" href="classvafmcircuits__signal__processing_1_1minmax.html" target="_self">vafmcircuits_signal_processing.minmax</a></td><td class="desc">Min/Max value circuit </td></tr>
-<tr id="row_1_"><td class="entry"><img src="ftv2node.png" alt="o" width="16" height="22" /><img src="ftv2cl.png" alt="C" width="24" height="22" /><a class="el" href="classvafmbase_1_1_feed.html" target="_self">vafmbase.Feed</a></td><td class="desc"><a class="el" href="classvafmbase_1_1_feed.html" title="Feed object. ">Feed</a> object </td></tr>
-<tr id="row_2_" class="even"><td class="entry"><img src="ftv2lastnode.png" alt="\" width="16" height="22" /><img src="ftv2cl.png" alt="C" width="24" height="22" /><a class="el" href="classvafmcore_1_1_v_a_f_m.html" target="_self">vafmcore.VAFM</a></td><td class="desc">Virtual Machine class </td></tr>
+<tr id="row_0_17_" class="even"><td class="entry"><img src="ftv2vertline.png" alt="|" width="16" height="22" /><img src="ftv2node.png" alt="o" width="16" height="22" /><img src="ftv2cl.png" alt="C" width="24" height="22" /><a class="el" href="classvafmcircuits__signal__processing_1_1minmax.html" target="_self">vafmcircuits_signal_processing.minmax</a></td><td class="desc">Min/Max value circuit </td></tr>
+<tr id="row_0_18_"><td class="entry"><img src="ftv2vertline.png" alt="|" width="16" height="22" /><img src="ftv2lastnode.png" alt="\" width="16" height="22" /><img src="ftv2cl.png" alt="C" width="24" height="22" /><a class="el" href="classvafmcore_1_1_v_a_f_m.html" target="_self">vafmcore.VAFM</a></td><td class="desc">Virtual Machine class </td></tr>
+<tr id="row_1_" class="even"><td class="entry"><img src="ftv2lastnode.png" alt="\" width="16" height="22" /><img src="ftv2cl.png" alt="C" width="24" height="22" /><a class="el" href="classvafmbase_1_1_feed.html" target="_self">vafmbase.Feed</a></td><td class="desc"><a class="el" href="classvafmbase_1_1_feed.html" title="Feed object. ">Feed</a> object </td></tr>
 </table>
 </div><!-- directory -->
 </div><!-- contents -->
@@ -136,7 +136,7 @@ $(document).ready(function(){initNavTree('hierarchy.html','');});
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Generated on Thu Sep 26 2013 14:35:50 for pyVAFM by
+    <li class="footer">Generated on Fri Sep 27 2013 10:09:30 for pyVAFM by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.5 </li>
   </ul>

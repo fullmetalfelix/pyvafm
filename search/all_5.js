@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['factors',['factors',['../classvafmcircuits__math_1_1op_add.html#aef9ce01880f244f461176d26f3a63afc',1,'vafmcircuits_math::opAdd']]],
-  ['feed',['Feed',['../classvafmbase_1_1_feed.html',1,'vafmbase']]]
+  ['getchannel',['GetChannel',['../classvafmbase_1_1_circuit.html#a0b502fd742c639ef2ba783601b9ed267',1,'vafmbase::Circuit']]],
+  ['getinternalchannel',['GetInternalChannel',['../classvafmcore_1_1_v_a_f_m.html#aa7eab3d6eabe005137f8c932c7aee710',1,'vafmcore::VAFM']]]
 ];

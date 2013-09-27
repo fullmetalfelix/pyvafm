@@ -92,7 +92,7 @@ $(document).ready(function(){initNavTree('classvafmbase_1_1_circuit.html','');})
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Variables</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -137,6 +137,7 @@ Inheritance diagram for vafmbase.Circuit:</div>
 <area href="classvafmcircuits__signal__processing_1_1derivative.html" title="Differentation circuit. " alt="vafmcircuits_signal_processing.derivative" shape="rect" coords="259,896,508,920"/>
 <area href="classvafmcircuits__signal__processing_1_1integral.html" title="Integration circuit. " alt="vafmcircuits_signal_processing.integral" shape="rect" coords="259,952,508,976"/>
 <area href="classvafmcircuits__signal__processing_1_1minmax.html" title="Min/Max value circuit. " alt="vafmcircuits_signal_processing.minmax" shape="rect" coords="259,1008,508,1032"/>
+<area href="classvafmcore_1_1_v_a_f_m.html" title="Virtual Machine class. " alt="vafmcore.VAFM" shape="rect" coords="259,1064,508,1088"/>
 </map>
  </div></div>
 <table class="memberdecls">
@@ -184,7 +185,7 @@ Public Attributes</h2></td></tr>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Abstract circuit class. </p>
 
-<p>Definition at line <a class="el" href="vafmbase_8py_source.html#l00067">67</a> of file <a class="el" href="vafmbase_8py_source.html">vafmbase.py</a>.</p>
+<p>Definition at line <a class="el" href="vafmbase_8py_source.html#l00072">72</a> of file <a class="el" href="vafmbase_8py_source.html">vafmbase.py</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a class="anchor" id="a572654f6e9cd1473d502b5e74cc69924"></a>
 <div class="memitem">
@@ -225,7 +226,7 @@ Public Attributes</h2></td></tr>
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="vafmbase_8py_source.html#l00075">75</a> of file <a class="el" href="vafmbase_8py_source.html">vafmbase.py</a>.</p>
+<p>Definition at line <a class="el" href="vafmbase_8py_source.html#l00080">80</a> of file <a class="el" href="vafmbase_8py_source.html">vafmbase.py</a>.</p>
 
 </div>
 </div>
@@ -262,7 +263,7 @@ Public Attributes</h2></td></tr>
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="vafmbase_8py_source.html#l00116">116</a> of file <a class="el" href="vafmbase_8py_source.html">vafmbase.py</a>.</p>
+<p>Definition at line <a class="el" href="vafmbase_8py_source.html#l00122">122</a> of file <a class="el" href="vafmbase_8py_source.html">vafmbase.py</a>.</p>
 
 </div>
 </div>
@@ -298,7 +299,7 @@ Public Attributes</h2></td></tr>
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="vafmbase_8py_source.html#l00122">122</a> of file <a class="el" href="vafmbase_8py_source.html">vafmbase.py</a>.</p>
+<p>Definition at line <a class="el" href="vafmbase_8py_source.html#l00131">131</a> of file <a class="el" href="vafmbase_8py_source.html">vafmbase.py</a>.</p>
 
 </div>
 </div>
@@ -335,7 +336,7 @@ Public Attributes</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>Reference to the channel. </dd></dl>
 
-<p>Definition at line <a class="el" href="vafmbase_8py_source.html#l00129">129</a> of file <a class="el" href="vafmbase_8py_source.html">vafmbase.py</a>.</p>
+<p>Definition at line <a class="el" href="vafmbase_8py_source.html#l00140">140</a> of file <a class="el" href="vafmbase_8py_source.html">vafmbase.py</a>.</p>
 
 </div>
 </div>
@@ -355,7 +356,7 @@ Public Attributes</h2></td></tr>
 
 <p>Push the buffered value for all output channels. </p>
 
-<p>Definition at line <a class="el" href="vafmbase_8py_source.html#l00144">144</a> of file <a class="el" href="vafmbase_8py_source.html">vafmbase.py</a>.</p>
+<p>Definition at line <a class="el" href="vafmbase_8py_source.html#l00155">155</a> of file <a class="el" href="vafmbase_8py_source.html">vafmbase.py</a>.</p>
 
 </div>
 </div>
@@ -392,7 +393,7 @@ Public Attributes</h2></td></tr>
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="vafmbase_8py_source.html#l00098">98</a> of file <a class="el" href="vafmbase_8py_source.html">vafmbase.py</a>.</p>
+<p>Definition at line <a class="el" href="vafmbase_8py_source.html#l00103">103</a> of file <a class="el" href="vafmbase_8py_source.html">vafmbase.py</a>.</p>
 
 </div>
 </div>
@@ -409,7 +410,7 @@ Public Attributes</h2></td></tr>
 
 <p>Reference to the virtual machine. </p>
 
-<p>Definition at line <a class="el" href="vafmbase_8py_source.html#l00080">80</a> of file <a class="el" href="vafmbase_8py_source.html">vafmbase.py</a>.</p>
+<p>Definition at line <a class="el" href="vafmbase_8py_source.html#l00085">85</a> of file <a class="el" href="vafmbase_8py_source.html">vafmbase.py</a>.</p>
 
 </div>
 </div>
@@ -425,7 +426,7 @@ Public Attributes</h2></td></tr>
 
 <p>Name of the circuit. </p>
 
-<p>Definition at line <a class="el" href="vafmbase_8py_source.html#l00078">78</a> of file <a class="el" href="vafmbase_8py_source.html">vafmbase.py</a>.</p>
+<p>Definition at line <a class="el" href="vafmbase_8py_source.html#l00083">83</a> of file <a class="el" href="vafmbase_8py_source.html">vafmbase.py</a>.</p>
 
 </div>
 </div>
@@ -442,7 +443,7 @@ Public Attributes</h2></td></tr>
 <p>Push output buffer at the end of Update. </p>
 <p>If the circuit is pushed, all the output channels will expose the computed value right after the Update routine. </p>
 
-<p>Definition at line <a class="el" href="vafmbase_8py_source.html#l00085">85</a> of file <a class="el" href="vafmbase_8py_source.html">vafmbase.py</a>.</p>
+<p>Definition at line <a class="el" href="vafmbase_8py_source.html#l00090">90</a> of file <a class="el" href="vafmbase_8py_source.html">vafmbase.py</a>.</p>
 
 </div>
 </div>
@@ -455,7 +456,7 @@ Public Attributes</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><b>vafmbase</b></li><li class="navelem"><a class="el" href="classvafmbase_1_1_circuit.html">Circuit</a></li>
-    <li class="footer">Generated on Thu Sep 26 2013 14:35:50 for pyVAFM by
+    <li class="footer">Generated on Fri Sep 27 2013 10:09:30 for pyVAFM by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.5 </li>
   </ul>

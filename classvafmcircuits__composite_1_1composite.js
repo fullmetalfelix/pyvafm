@@ -1,5 +1,5 @@
 var classvafmcircuits__composite_1_1composite =
 [
-    [ "Build", "classvafmcircuits__composite_1_1composite.html#ac3996305e2dda1c838c90e067c5b8a45", null ],
-    [ "typename", "classvafmcircuits__composite_1_1composite.html#aeee479c13bd3e72e4cbc996ef01415cb", null ]
+    [ "AddCircuit", "classvafmcircuits__composite_1_1composite.html#ab9d6745c8c3487b87700f0ed81337cba", null ],
+    [ "Connect", "classvafmcircuits__composite_1_1composite.html#a1b3b8e299acfa9903cfd8e55929b89f3", null ]
 ];

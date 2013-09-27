@@ -99,7 +99,7 @@ $(document).ready(function(){initNavTree('functions.html','');});
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Variables</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -113,17 +113,18 @@ $(document).ready(function(){initNavTree('functions.html','');});
 <li>__init__()
 : <a class="el" href="classvafmbase_1_1_circuit.html#a572654f6e9cd1473d502b5e74cc69924">vafmbase.Circuit</a>
 </li>
+<li>AddChannel()
+: <a class="el" href="classvafmcore_1_1_v_a_f_m.html#a9c58d60a8934db303de28da12cd04d6a">vafmcore.VAFM</a>
+</li>
 <li>AddCircuit()
-: <a class="el" href="classvafmcore_1_1_v_a_f_m.html#a1dc2fa45f5352ba00192be5c2241a73f">vafmcore.VAFM</a>
+: <a class="el" href="classvafmcircuits__composite_1_1composite.html#ab9d6745c8c3487b87700f0ed81337cba">vafmcircuits_composite.composite</a>
+, <a class="el" href="classvafmcore_1_1_v_a_f_m.html#a1dc2fa45f5352ba00192be5c2241a73f">vafmcore.VAFM</a>
 </li>
 <li>AddInput()
 : <a class="el" href="classvafmbase_1_1_circuit.html#a60c3a2fc29e6ae2172ab8015082079d5">vafmbase.Circuit</a>
 </li>
 <li>AddOutput()
 : <a class="el" href="classvafmbase_1_1_circuit.html#a5d0148cfd41ea0e3039afc677b3186ad">vafmbase.Circuit</a>
-</li>
-<li>Build()
-: <a class="el" href="classvafmcircuits__composite_1_1composite.html#ac3996305e2dda1c838c90e067c5b8a45">vafmcircuits_composite.composite</a>
 </li>
 <li>channels
 : <a class="el" href="classvafmcircuits_1_1output.html#a8222b0473f7b872f8abdb580a93c2eb0">vafmcircuits.output</a>
@@ -132,16 +133,11 @@ $(document).ready(function(){initNavTree('functions.html','');});
 : <a class="el" href="classvafmcore_1_1_v_a_f_m.html#ae3b64ddc188dd12415bbd9811d301a55">vafmcore.VAFM</a>
 </li>
 <li>Connect()
-: <a class="el" href="classvafmcore_1_1_v_a_f_m.html#aff791a7256b7a50b8eb1fbeb6c331be3">vafmcore.VAFM</a>
-</li>
-<li>Connects()
-: <a class="el" href="classvafmcore_1_1_v_a_f_m.html#a8fadcc7abc8c4be6f10da0a954c04a99">vafmcore.VAFM</a>
+: <a class="el" href="classvafmcircuits__composite_1_1composite.html#a1b3b8e299acfa9903cfd8e55929b89f3">vafmcircuits_composite.composite</a>
+, <a class="el" href="classvafmcore_1_1_v_a_f_m.html#aff791a7256b7a50b8eb1fbeb6c331be3">vafmcore.VAFM</a>
 </li>
 <li>Disconnect()
 : <a class="el" href="classvafmcore_1_1_v_a_f_m.html#a5d73527618351db5e12f4d35ebf4f24f">vafmcore.VAFM</a>
-</li>
-<li>Disconnects()
-: <a class="el" href="classvafmcore_1_1_v_a_f_m.html#a56396241e8880e07d9824b41963b1c02">vafmcore.VAFM</a>
 </li>
 <li>dt
 : <a class="el" href="classvafmcore_1_1_v_a_f_m.html#a0c5a008c805077169a1b27ef0239facd">vafmcore.VAFM</a>
@@ -154,7 +150,9 @@ $(document).ready(function(){initNavTree('functions.html','');});
 </li>
 <li>GetChannel()
 : <a class="el" href="classvafmbase_1_1_circuit.html#a0b502fd742c639ef2ba783601b9ed267">vafmbase.Circuit</a>
-, <a class="el" href="classvafmcore_1_1_v_a_f_m.html#a7cf07ed96dd7e37a81e9b95bfc568dbb">vafmcore.VAFM</a>
+</li>
+<li>GetInternalChannel()
+: <a class="el" href="classvafmcore_1_1_v_a_f_m.html#aa7eab3d6eabe005137f8c932c7aee710">vafmcore.VAFM</a>
 </li>
 <li>I
 : <a class="el" href="classvafmbase_1_1_circuit.html#a50ad09fd57c1eca9cbd5516d6da92b20">vafmbase.Circuit</a>
@@ -189,9 +187,6 @@ $(document).ready(function(){initNavTree('functions.html','');});
 <li>time()
 : <a class="el" href="classvafmcore_1_1_v_a_f_m.html#a39b25269c842eaacd2e71c4cbadfe777">vafmcore.VAFM</a>
 </li>
-<li>typename
-: <a class="el" href="classvafmcircuits__composite_1_1composite.html#aeee479c13bd3e72e4cbc996ef01415cb">vafmcircuits_composite.composite</a>
-</li>
 <li>Update()
 : <a class="el" href="classvafmcore_1_1_v_a_f_m.html#abab96b8ae85437a8448ca06013631749">vafmcore.VAFM</a>
 </li>
@@ -201,7 +196,7 @@ $(document).ready(function(){initNavTree('functions.html','');});
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Generated on Thu Sep 26 2013 14:35:51 for pyVAFM by
+    <li class="footer">Generated on Fri Sep 27 2013 10:09:30 for pyVAFM by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.5 </li>
   </ul>

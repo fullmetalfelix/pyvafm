@@ -1,6 +1,13 @@
 var searchData=
 [
-  ['name',['name',['../classvafmbase_1_1_circuit.html#a7d7090783a4c7f01b6d215284e1fab3f',1,'vafmbase::Circuit']]],
-  ['norgate',['NORGate',['../classvafmcircuits___logic_1_1_n_o_r_gate.html',1,'vafmcircuits_Logic']]],
-  ['not',['Not',['../classvafmcircuits___logic_1_1_not.html',1,'vafmcircuits_Logic']]]
+  ['o',['O',['../classvafmbase_1_1_circuit.html#ac4eee26b1ca7587ec960e311f86113ec',1,'vafmbase::Circuit']]],
+  ['opabs',['OpAbs',['../classvafmcircuits__math_1_1_op_abs.html',1,'vafmcircuits_math']]],
+  ['opadd',['opAdd',['../classvafmcircuits__math_1_1op_add.html',1,'vafmcircuits_math']]],
+  ['opdiv',['opDiv',['../classvafmcircuits__math_1_1op_div.html',1,'vafmcircuits_math']]],
+  ['oplinc',['opLinC',['../classvafmcircuits__math_1_1op_lin_c.html',1,'vafmcircuits_math']]],
+  ['opmul',['opMul',['../classvafmcircuits__math_1_1op_mul.html',1,'vafmcircuits_math']]],
+  ['oppower',['OpPower',['../classvafmcircuits__math_1_1_op_power.html',1,'vafmcircuits_math']]],
+  ['opsub',['opSub',['../classvafmcircuits__math_1_1op_sub.html',1,'vafmcircuits_math']]],
+  ['orgate',['OrGate',['../classvafmcircuits___logic_1_1_or_gate.html',1,'vafmcircuits_Logic']]],
+  ['output',['output',['../classvafmcircuits_1_1output.html',1,'vafmcircuits']]]
 ];

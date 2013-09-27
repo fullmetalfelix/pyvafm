@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['initialize',['Initialize',['../classvafmcore_1_1_v_a_f_m.html#a90e93ac05815dcb5288b2f789a296a51',1,'vafmcore::VAFM']]]
+  ['postupdate',['PostUpdate',['../classvafmcore_1_1_v_a_f_m.html#ab261114d38c3473cfb8f6fa36743132a',1,'vafmcore::VAFM']]],
+  ['push',['Push',['../classvafmbase_1_1_circuit.html#a87a2532550d65bfada3c3aceb413acad',1,'vafmbase::Circuit']]]
 ];

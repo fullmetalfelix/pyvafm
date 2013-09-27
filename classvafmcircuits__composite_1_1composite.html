@@ -92,7 +92,7 @@ $(document).ready(function(){initNavTree('classvafmcircuits__composite_1_1compos
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Variables</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -104,7 +104,6 @@ $(document).ready(function(){initNavTree('classvafmcircuits__composite_1_1compos
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
-<a href="#pub-attribs">Public Attributes</a> &#124;
 <a href="classvafmcircuits__composite_1_1composite-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">vafmcircuits_composite.composite Class Reference</div>  </div>
@@ -125,9 +124,12 @@ Inheritance diagram for vafmcircuits_composite.composite:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:ac3996305e2dda1c838c90e067c5b8a45"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvafmcircuits__composite_1_1composite.html#ac3996305e2dda1c838c90e067c5b8a45">Build</a></td></tr>
-<tr class="memdesc:ac3996305e2dda1c838c90e067c5b8a45"><td class="mdescLeft">&#160;</td><td class="mdescRight">Assemble the composite.  <a href="#ac3996305e2dda1c838c90e067c5b8a45">More...</a><br/></td></tr>
-<tr class="separator:ac3996305e2dda1c838c90e067c5b8a45"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab9d6745c8c3487b87700f0ed81337cba"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvafmcircuits__composite_1_1composite.html#ab9d6745c8c3487b87700f0ed81337cba">AddCircuit</a></td></tr>
+<tr class="memdesc:ab9d6745c8c3487b87700f0ed81337cba"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add a circuit of type 'ctype' named 'name' inside the composite circuit.  <a href="#ab9d6745c8c3487b87700f0ed81337cba">More...</a><br/></td></tr>
+<tr class="separator:ab9d6745c8c3487b87700f0ed81337cba"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1b3b8e299acfa9903cfd8e55929b89f3"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvafmcircuits__composite_1_1composite.html#a1b3b8e299acfa9903cfd8e55929b89f3">Connect</a></td></tr>
+<tr class="memdesc:a1b3b8e299acfa9903cfd8e55929b89f3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Connect the output of a circuit to the input of another.  <a href="#a1b3b8e299acfa9903cfd8e55929b89f3">More...</a><br/></td></tr>
+<tr class="separator:a1b3b8e299acfa9903cfd8e55929b89f3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_classvafmbase_1_1_circuit"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classvafmbase_1_1_circuit')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="classvafmbase_1_1_circuit.html">vafmbase.Circuit</a></td></tr>
 <tr class="memitem:a572654f6e9cd1473d502b5e74cc69924 inherit pub_methods_classvafmbase_1_1_circuit"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvafmbase_1_1_circuit.html#a572654f6e9cd1473d502b5e74cc69924">__init__</a></td></tr>
 <tr class="memdesc:a572654f6e9cd1473d502b5e74cc69924 inherit pub_methods_classvafmbase_1_1_circuit"><td class="mdescLeft">&#160;</td><td class="mdescRight">Common contructor for all circuits.  <a href="#a572654f6e9cd1473d502b5e74cc69924">More...</a><br/></td></tr>
@@ -148,11 +150,8 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:a87a2532550d65bfada3c3aceb413acad inherit pub_methods_classvafmbase_1_1_circuit"><td class="mdescLeft">&#160;</td><td class="mdescRight">Push the buffered value for all output channels.  <a href="#a87a2532550d65bfada3c3aceb413acad">More...</a><br/></td></tr>
 <tr class="separator:a87a2532550d65bfada3c3aceb413acad inherit pub_methods_classvafmbase_1_1_circuit"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
-Public Attributes</h2></td></tr>
-<tr class="memitem:aeee479c13bd3e72e4cbc996ef01415cb"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvafmcircuits__composite_1_1composite.html#aeee479c13bd3e72e4cbc996ef01415cb">typename</a></td></tr>
-<tr class="memdesc:aeee479c13bd3e72e4cbc996ef01415cb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Name of the composite template.  <a href="#aeee479c13bd3e72e4cbc996ef01415cb">More...</a><br/></td></tr>
-<tr class="separator:aeee479c13bd3e72e4cbc996ef01415cb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="inherited"></a>
+Additional Inherited Members</h2></td></tr>
 <tr class="inherit_header pub_attribs_classvafmbase_1_1_circuit"><td colspan="2" onclick="javascript:toggleInherit('pub_attribs_classvafmbase_1_1_circuit')"><img src="closed.png" alt="-"/>&#160;Public Attributes inherited from <a class="el" href="classvafmbase_1_1_circuit.html">vafmbase.Circuit</a></td></tr>
 <tr class="memitem:a7d7090783a4c7f01b6d215284e1fab3f inherit pub_attribs_classvafmbase_1_1_circuit"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvafmbase_1_1_circuit.html#a7d7090783a4c7f01b6d215284e1fab3f">name</a></td></tr>
 <tr class="memdesc:a7d7090783a4c7f01b6d215284e1fab3f inherit pub_attribs_classvafmbase_1_1_circuit"><td class="mdescLeft">&#160;</td><td class="mdescRight">Name of the circuit.  <a href="#a7d7090783a4c7f01b6d215284e1fab3f">More...</a><br/></td></tr>
@@ -174,47 +173,94 @@ Public Attributes</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Template composite circuit. </p>
-<p>Sums up the input signals 'in#' and outputs the result in 'out'. The amount of input signals is set with the 'factors=#' argument when the circuit is created.</p>
+<p>The composite circuit contains a reference to a new VAFM instance, where the subcircuits are added and connected.</p>
 <div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;asd</div>
 <div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;asd lol</div>
 </div><!-- fragment --> 
-<p>Definition at line <a class="el" href="vafmcircuits__composite_8py_source.html#l00017">17</a> of file <a class="el" href="vafmcircuits__composite_8py_source.html">vafmcircuits_composite.py</a>.</p>
+<p>Definition at line <a class="el" href="vafmcircuits__composite_8py_source.html#l00016">16</a> of file <a class="el" href="vafmcircuits__composite_8py_source.html">vafmcircuits_composite.py</a>.</p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
-<a class="anchor" id="ac3996305e2dda1c838c90e067c5b8a45"></a>
+<a class="anchor" id="ab9d6745c8c3487b87700f0ed81337cba"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">def vafmcircuits_composite.composite.Build </td>
+          <td class="memname">def vafmcircuits_composite.composite.AddCircuit </td>
           <td>(</td>
           <td class="paramtype">&#160;</td>
-          <td class="paramname"><em>self</em></td><td>)</td>
+          <td class="paramname"><em>self</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>argkw</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>Assemble the composite. </p>
-<p>This function is deliberately not implemented and the user <b>must</b> define it and replace the original one. </p>
+<p>Add a circuit of type 'ctype' named 'name' inside the composite circuit. </p>
+<p>This looks into all the loaded modules whose name starts with 'vafmcircuits' and finds the first class named 'ctype'. It then instantiate the class.</p>
+<ul>
+<li>Mandatory arguments:<br/>
+<ul>
+<li>type = string: type name of the circuit class<br/>
+</li>
+<li>name = string: name to use for the new instance of the circuit<br/>
+ <dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">**argkw</td><td>Keyworded arguments for circuit initialisation. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Reference to the created circuit. </dd></dl>
+</li>
+</ul>
+</li>
+</ul>
 
-<p>Definition at line <a class="el" href="vafmcircuits__composite_8py_source.html#l00037">37</a> of file <a class="el" href="vafmcircuits__composite_8py_source.html">vafmcircuits_composite.py</a>.</p>
+<p>Definition at line <a class="el" href="vafmcircuits__composite_8py_source.html#l00056">56</a> of file <a class="el" href="vafmcircuits__composite_8py_source.html">vafmcircuits_composite.py</a>.</p>
 
 </div>
 </div>
-<h2 class="groupheader">Member Data Documentation</h2>
-<a class="anchor" id="aeee479c13bd3e72e4cbc996ef01415cb"></a>
+<a class="anchor" id="a1b3b8e299acfa9903cfd8e55929b89f3"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">vafmcircuits_composite.composite.typename</td>
+          <td class="memname">def vafmcircuits_composite.composite.Connect </td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>self</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>args</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>Name of the composite template. </p>
+<p>Connect the output of a circuit to the input of another. </p>
+<p>The I/O channels to connect are specified with the syntax: "circuit.channel", in the *args arguments array. The first element has to be the output channel to use as source, while all the following elements refer to the destination channels. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">*args</td><td>Name of the channels to connect: "circuit.channel" </td></tr>
+  </table>
+  </dd>
+</dl>
 
-<p>Definition at line <a class="el" href="vafmcircuits__composite_8py_source.html#l00024">24</a> of file <a class="el" href="vafmcircuits__composite_8py_source.html">vafmcircuits_composite.py</a>.</p>
+<p>Definition at line <a class="el" href="vafmcircuits__composite_8py_source.html#l00065">65</a> of file <a class="el" href="vafmcircuits__composite_8py_source.html">vafmcircuits_composite.py</a>.</p>
 
 </div>
 </div>
@@ -227,7 +273,7 @@ Public Attributes</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><b>vafmcircuits_composite</b></li><li class="navelem"><a class="el" href="classvafmcircuits__composite_1_1composite.html">composite</a></li>
-    <li class="footer">Generated on Thu Sep 26 2013 14:35:50 for pyVAFM by
+    <li class="footer">Generated on Fri Sep 27 2013 10:09:30 for pyVAFM by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.5 </li>
   </ul>
