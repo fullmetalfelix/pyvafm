@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['disconnect',['Disconnect',['../classvafmcore_1_1_v_a_f_m.html#a5d73527618351db5e12f4d35ebf4f24f',1,'vafmcore::VAFM']]]
+  ['disconnect',['Disconnect',['../classvafmcircuits_1_1_machine.html#adfb65ef3a38875e2bece188204e83999',1,'vafmcircuits::Machine']]]
 ];

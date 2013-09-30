@@ -5,6 +5,7 @@ var annotated =
       [ "Circuit", "classvafmbase_1_1_circuit.html", "classvafmbase_1_1_circuit" ]
     ] ],
     [ "vafmcircuits", null, [
+      [ "Machine", "classvafmcircuits_1_1_machine.html", "classvafmcircuits_1_1_machine" ],
       [ "waver", "classvafmcircuits_1_1waver.html", null ],
       [ "output", "classvafmcircuits_1_1output.html", "classvafmcircuits_1_1output" ]
     ] ],
@@ -31,8 +32,5 @@ var annotated =
       [ "minmax", "classvafmcircuits__signal__processing_1_1minmax.html", null ],
       [ "derivative", "classvafmcircuits__signal__processing_1_1derivative.html", null ],
       [ "integral", "classvafmcircuits__signal__processing_1_1integral.html", null ]
-    ] ],
-    [ "vafmcore", null, [
-      [ "VAFM", "classvafmcore_1_1_v_a_f_m.html", "classvafmcore_1_1_v_a_f_m" ]
     ] ]
 ];

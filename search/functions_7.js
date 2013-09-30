@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['registerchannel',['RegisterChannel',['../classvafmcircuits_1_1output.html#a8592d79330f01fb2fc020fb7e48cb150',1,'vafmcircuits::output']]]
+  ['register',['Register',['../classvafmcircuits_1_1output.html#a91677bdfbd89b74daecd31e93e489854',1,'vafmcircuits::output']]]
 ];

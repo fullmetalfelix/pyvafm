@@ -46,6 +46,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
       <li class="current"><a href="annotated.html"><span>Classes</span></a></li>
       <li><a href="files.html"><span>Files</span></a></li>
+      <li><a href="examples.html"><span>Examples</span></a></li>
       <li>
         <div id="MSearchBox" class="MSearchBoxInactive">
         <span class="left">
@@ -125,9 +126,12 @@ Inheritance diagram for vafmcircuits.output:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a8592d79330f01fb2fc020fb7e48cb150"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvafmcircuits_1_1output.html#a8592d79330f01fb2fc020fb7e48cb150">RegisterChannel</a></td></tr>
-<tr class="memdesc:a8592d79330f01fb2fc020fb7e48cb150"><td class="mdescLeft">&#160;</td><td class="mdescRight">Register a channel for output.  <a href="#a8592d79330f01fb2fc020fb7e48cb150">More...</a><br/></td></tr>
-<tr class="separator:a8592d79330f01fb2fc020fb7e48cb150"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a91677bdfbd89b74daecd31e93e489854"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvafmcircuits_1_1output.html#a91677bdfbd89b74daecd31e93e489854">Register</a></td></tr>
+<tr class="memdesc:a91677bdfbd89b74daecd31e93e489854"><td class="mdescLeft">&#160;</td><td class="mdescRight">Register a channel for output.  <a href="#a91677bdfbd89b74daecd31e93e489854">More...</a><br/></td></tr>
+<tr class="separator:a91677bdfbd89b74daecd31e93e489854"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a415039630eedc752b535e6d2dfcd0d3b"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvafmcircuits_1_1output.html#a415039630eedc752b535e6d2dfcd0d3b">Unregister</a></td></tr>
+<tr class="memdesc:a415039630eedc752b535e6d2dfcd0d3b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Unregister a channel from the output.  <a href="#a415039630eedc752b535e6d2dfcd0d3b">More...</a><br/></td></tr>
+<tr class="separator:a415039630eedc752b535e6d2dfcd0d3b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_classvafmbase_1_1_circuit"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classvafmbase_1_1_circuit')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="classvafmbase_1_1_circuit.html">vafmbase.Circuit</a></td></tr>
 <tr class="memitem:a572654f6e9cd1473d502b5e74cc69924 inherit pub_methods_classvafmbase_1_1_circuit"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvafmbase_1_1_circuit.html#a572654f6e9cd1473d502b5e74cc69924">__init__</a></td></tr>
 <tr class="memdesc:a572654f6e9cd1473d502b5e74cc69924 inherit pub_methods_classvafmbase_1_1_circuit"><td class="mdescLeft">&#160;</td><td class="mdescRight">Common contructor for all circuits.  <a href="#a572654f6e9cd1473d502b5e74cc69924">More...</a><br/></td></tr>
@@ -177,7 +181,7 @@ Public Attributes</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Output circuit. </p>
-<p>Use this to dump the values of channels in a log file.</p>
+<p>Use this to dump the values of channels in a log file. The channel values that are printed to the file are added/removed using the RegisterChannel/Unregister functions The input channel 'record' if connected will make the circuit print to file only</p>
 <ul>
 <li>Initialisation parameters:<br/>
 <ul>
@@ -194,17 +198,20 @@ Public Attributes</h2></td></tr>
 </ul>
 </li>
 <li>Output channels:<br/>
- This circuit has no output channel. </li>
+ This circuit has no output channel.</li>
 </ul>
-
-<p>Definition at line <a class="el" href="vafmcircuits_8py_source.html#l00070">70</a> of file <a class="el" href="vafmcircuits_8py_source.html">vafmcircuits.py</a>.</p>
+<p><b>Example:</b> </p>
+<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;logger = machine.AddCircuit(type=<span class="stringliteral">&#39;output&#39;</span>, name=<span class="stringliteral">&#39;logger&#39;</span>, dump=1)</div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;logger = machine.AddCircuit(type=<span class="stringliteral">&#39;output&#39;</span>, name=<span class="stringliteral">&#39;logger&#39;</span>, dump=100)</div>
+</div><!-- fragment --> 
+<p>Definition at line <a class="el" href="vafmcircuits_8py_source.html#l00568">568</a> of file <a class="el" href="vafmcircuits_8py_source.html">vafmcircuits.py</a>.</p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
-<a class="anchor" id="a8592d79330f01fb2fc020fb7e48cb150"></a>
+<a class="anchor" id="a91677bdfbd89b74daecd31e93e489854"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">def vafmcircuits.output.RegisterChannel </td>
+          <td class="memname">def vafmcircuits.output.Register </td>
           <td>(</td>
           <td class="paramtype">&#160;</td>
           <td class="paramname"><em>self</em>, </td>
@@ -213,7 +220,7 @@ Public Attributes</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">&#160;</td>
-          <td class="paramname"><em>channel</em>&#160;</td>
+          <td class="paramname"><em>args</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -224,9 +231,60 @@ Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Register a channel for output. </p>
-<p>If the channel is already registered in this output circuit, it won't be registered again. </p>
+<p>If the channel is already registered in this output circuit, it won't be registered again.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">*args</td><td>Channel tags to be printed in the output.</td></tr>
+  </table>
+  </dd>
+</dl>
+<p><b>Example:</b> </p>
+<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;logger = machine.AddCircuit(type=<span class="stringliteral">&#39;output&#39;</span>, name=<span class="stringliteral">&#39;logger&#39;</span>, dump=100)</div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;logger.Register(<span class="stringliteral">&#39;global.time&#39;</span>,<span class="stringliteral">&#39;waver.sin&#39;</span>,<span class="stringliteral">&#39;adder.out&#39;</span>, ...)</div>
+</div><!-- fragment --> 
+<p>Definition at line <a class="el" href="vafmcircuits_8py_source.html#l00608">608</a> of file <a class="el" href="vafmcircuits_8py_source.html">vafmcircuits.py</a>.</p>
 
-<p>Definition at line <a class="el" href="vafmcircuits_8py_source.html#l00101">101</a> of file <a class="el" href="vafmcircuits_8py_source.html">vafmcircuits.py</a>.</p>
+</div>
+</div>
+<a class="anchor" id="a415039630eedc752b535e6d2dfcd0d3b"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">def vafmcircuits.output.Unregister </td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>self</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>args</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Unregister a channel from the output. </p>
+<p>If the channel is already unregistered, it won't be unregistered again.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">*args</td><td>Channel tags to be removed from the output.</td></tr>
+  </table>
+  </dd>
+</dl>
+<p><b>Example:</b> </p>
+<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;logger = machine.AddCircuit(type=<span class="stringliteral">&#39;output&#39;</span>, name=<span class="stringliteral">&#39;logger&#39;</span>, dump=100)</div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;logger.RegisterChannel(<span class="stringliteral">&#39;global.time&#39;</span>,<span class="stringliteral">&#39;waver.sin&#39;</span>,<span class="stringliteral">&#39;adder.out&#39;</span>, ...)</div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;...</div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;logger.Unregister(<span class="stringliteral">&#39;adder.out&#39;</span>, ...)</div>
+</div><!-- fragment --> 
+<p>Definition at line <a class="el" href="vafmcircuits_8py_source.html#l00634">634</a> of file <a class="el" href="vafmcircuits_8py_source.html">vafmcircuits.py</a>.</p>
 
 </div>
 </div>
@@ -243,7 +301,7 @@ Public Attributes</h2></td></tr>
 
 <p>List of channels to dump in the file. </p>
 
-<p>Definition at line <a class="el" href="vafmcircuits_8py_source.html#l00085">85</a> of file <a class="el" href="vafmcircuits_8py_source.html">vafmcircuits.py</a>.</p>
+<p>Definition at line <a class="el" href="vafmcircuits_8py_source.html#l00583">583</a> of file <a class="el" href="vafmcircuits_8py_source.html">vafmcircuits.py</a>.</p>
 
 </div>
 </div>
@@ -259,7 +317,7 @@ Public Attributes</h2></td></tr>
 
 <p>Dump rate. </p>
 
-<p>Definition at line <a class="el" href="vafmcircuits_8py_source.html#l00088">88</a> of file <a class="el" href="vafmcircuits_8py_source.html">vafmcircuits.py</a>.</p>
+<p>Definition at line <a class="el" href="vafmcircuits_8py_source.html#l00586">586</a> of file <a class="el" href="vafmcircuits_8py_source.html">vafmcircuits.py</a>.</p>
 
 </div>
 </div>
@@ -272,7 +330,7 @@ Public Attributes</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><b>vafmcircuits</b></li><li class="navelem"><a class="el" href="classvafmcircuits_1_1output.html">output</a></li>
-    <li class="footer">Generated on Fri Sep 27 2013 10:09:30 for pyVAFM by
+    <li class="footer">Generated on Mon Sep 30 2013 11:08:57 for pyVAFM by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.5 </li>
   </ul>

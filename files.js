@@ -1,7 +1,7 @@
 var files =
 [
     [ "comptest.py", "comptest_8py_source.html", null ],
-    [ "logictest.py", "logictest_8py_source.html", null ],
+    [ "example_composite.py", "example__composite_8py_source.html", null ],
     [ "vafmbase.py", "vafmbase_8py_source.html", null ],
     [ "vafmcircuits.py", "vafmcircuits_8py_source.html", null ],
     [ "vafmcircuits_Comparison.py", "vafmcircuits___comparison_8py_source.html", null ],
@@ -16,6 +16,5 @@ var files =
       [ "OpAbs", "classvafmcircuits__math_1_1_op_abs.html", null ],
       [ "OpPower", "classvafmcircuits__math_1_1_op_power.html", null ]
     ] ],
-    [ "vafmcircuits_signal_processing.py", "vafmcircuits__signal__processing_8py_source.html", null ],
-    [ "vafmcore.py", "vafmcore_8py_source.html", null ]
+    [ "vafmcircuits_signal_processing.py", "vafmcircuits__signal__processing_8py_source.html", null ]
 ];

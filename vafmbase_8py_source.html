@@ -46,6 +46,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
       <li><a href="annotated.html"><span>Classes</span></a></li>
       <li class="current"><a href="files.html"><span>Files</span></a></li>
+      <li><a href="examples.html"><span>Examples</span></a></li>
       <li>
         <div id="MSearchBox" class="MSearchBoxInactive">
         <span class="left">
@@ -103,196 +104,203 @@ $(document).ready(function(){initNavTree('vafmbase_8py_source.html','');});
 <div class="title">vafmbase.py</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">## Feed object.</span></div>
-<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment"># This class contains the numerical value of a channel</span></div>
-<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment"># and its buffered value.</span></div>
-<div class="line"><a name="l00004"></a><span class="lineno"><a class="line" href="classvafmbase_1_1_feed.html">    4</a></span>&#160;<span class="keyword">class </span><a class="code" href="classvafmbase_1_1_feed.html">Feed</a>(object):</div>
-<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;              </div>
-<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;              <span class="keyword">def </span>__init__(self, ownercircuit):</div>
-<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;                            </div>
-<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;                            self.<a class="code" href="classvafmbase_1_1_feed.html#a73f4e7a84b21af3bcb3821d87984de3e">owner</a> = ownercircuit</div>
-<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;                            </div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;                            self.<a class="code" href="classvafmbase_1_1_feed.html#a7095d2aa5545385473c63dc6156d6b32">_value</a> = 0.0</div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;                            self.<a class="code" href="classvafmbase_1_1_feed.html#afcd2f3aa4899fee3a0e99295a2a8da6e">_buff</a> = 0.0</div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;                            </div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;              <span class="comment">#@property</span></div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;              <span class="keyword">def </span>value_get(self):</div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;                            <span class="keywordflow">return</span> self.<a class="code" href="classvafmbase_1_1_feed.html#a7095d2aa5545385473c63dc6156d6b32">_value</a></div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;              </div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;              <span class="comment">#@value.setter</span></div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;              <span class="keyword">def </span>value_set(self,value):</div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;                            self.<a class="code" href="classvafmbase_1_1_feed.html#afcd2f3aa4899fee3a0e99295a2a8da6e">_buff</a> = value</div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;                            <span class="comment">#print &#39;buffering value &#39;+str(value)</span></div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;                            </div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;              value = property(value_get, value_set)</div>
+<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;</div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="keyword">def </span>enum(**enums):</div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;              <span class="keywordflow">return</span> type(<span class="stringliteral">&#39;Enum&#39;</span>, (), enums)</div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;              </div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;ChannelType = enum(Input=1, Output=2, Any=0)</div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;</div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;</div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="comment">## Feed object.</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="comment"># This class contains the numerical value of a channel</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="comment"># and its buffered value.</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno"><a class="line" href="classvafmbase_1_1_feed.html">   11</a></span>&#160;<span class="keyword">class </span><a class="code" href="classvafmbase_1_1_feed.html">Feed</a>(object):</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;              </div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;              <span class="keyword">def </span>__init__(self, ownercircuit):</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;                            </div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;                            self.<a class="code" href="classvafmbase_1_1_feed.html#a73f4e7a84b21af3bcb3821d87984de3e">owner</a> = ownercircuit</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;                            </div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;                            self.<a class="code" href="classvafmbase_1_1_feed.html#a7095d2aa5545385473c63dc6156d6b32">_value</a> = 0.0</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;                            self.<a class="code" href="classvafmbase_1_1_feed.html#afcd2f3aa4899fee3a0e99295a2a8da6e">_buff</a> = 0.0</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;                            </div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;              <span class="comment">#@property</span></div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;              <span class="keyword">def </span>value_get(self):</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;                            <span class="keywordflow">return</span> self.<a class="code" href="classvafmbase_1_1_feed.html#a7095d2aa5545385473c63dc6156d6b32">_value</a></div>
 <div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;              </div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;              <span class="keyword">def </span>Push(self):</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;                            </div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;                            <span class="comment">#print &#39;pushing &#39;+str(self._buff)+&#39; old(&#39;+str(self._value)+&quot;)&quot;</span></div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;                            self.<a class="code" href="classvafmbase_1_1_feed.html#a7095d2aa5545385473c63dc6156d6b32">_value</a> = self.<a class="code" href="classvafmbase_1_1_feed.html#afcd2f3aa4899fee3a0e99295a2a8da6e">_buff</a>;</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;              <span class="comment">#@value.setter</span></div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;              <span class="keyword">def </span>value_set(self,value):</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;                            self.<a class="code" href="classvafmbase_1_1_feed.html#afcd2f3aa4899fee3a0e99295a2a8da6e">_buff</a> = value</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;                            <span class="comment">#print &#39;buffering value &#39;+str(value)</span></div>
 <div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;                            </div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;              <span class="keyword">def </span>PushValue(self, value):</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;                            self.<a class="code" href="classvafmbase_1_1_feed.html#a7095d2aa5545385473c63dc6156d6b32">_value</a> = value</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;                            self.<a class="code" href="classvafmbase_1_1_feed.html#afcd2f3aa4899fee3a0e99295a2a8da6e">_buff</a> = value</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;              </div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;              <span class="keyword">def </span>__str__ (self):</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;                            <span class="keywordflow">return</span> str(self.<a class="code" href="classvafmbase_1_1_feed.html#a7095d2aa5545385473c63dc6156d6b32">_value</a>) <span class="comment"># + &quot;(&quot;+str(self._buff)+&quot;)&quot;</span></div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;<span class="keyword">class </span>Channel(object):</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;              </div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;              <span class="keyword">def </span>__init__(self, name, owner, isInput):</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;                            </div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;                            self.name = name</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;                            self.<a class="code" href="classvafmbase_1_1_feed.html#a73f4e7a84b21af3bcb3821d87984de3e">owner</a> = owner</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;                            self.signal = <a class="code" href="classvafmbase_1_1_feed.html">Feed</a>(owner)</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;                            self.isInput = isInput</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;              value = property(value_get, value_set)</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;              </div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;              <span class="keyword">def </span>Push(self):</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;                            </div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;                            <span class="comment">#print &#39;pushing &#39;+str(self._buff)+&#39; old(&#39;+str(self._value)+&quot;)&quot;</span></div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;                            self.<a class="code" href="classvafmbase_1_1_feed.html#a7095d2aa5545385473c63dc6156d6b32">_value</a> = self.<a class="code" href="classvafmbase_1_1_feed.html#afcd2f3aa4899fee3a0e99295a2a8da6e">_buff</a>;</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;                            </div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;              <span class="keyword">def </span>PushValue(self, value):</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;                            self.<a class="code" href="classvafmbase_1_1_feed.html#a7095d2aa5545385473c63dc6156d6b32">_value</a> = value</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;                            self.<a class="code" href="classvafmbase_1_1_feed.html#afcd2f3aa4899fee3a0e99295a2a8da6e">_buff</a> = value</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;              </div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;              <span class="keyword">def </span>__str__ (self):</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;                            <span class="keywordflow">return</span> str(self.<a class="code" href="classvafmbase_1_1_feed.html#a7095d2aa5545385473c63dc6156d6b32">_value</a>) <span class="comment"># + &quot;(&quot;+str(self._buff)+&quot;)&quot;</span></div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;<span class="keyword">class </span>Channel(object):</div>
 <div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;              </div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;              <span class="comment">#@property</span></div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;              <span class="keyword">def </span>value_get(self):</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;                            <span class="keywordflow">return</span> self.signal.value</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;              <span class="comment">#@value.setter</span></div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;              <span class="keyword">def </span>value_set(self,value):</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;                            self.signal.value = value</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;                            <span class="comment">#print &#39;setting value &#39;+str(value)</span></div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;                            </div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;              value = property(value_get, value_set);</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;              </div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;              <span class="keyword">def </span>Push(self):</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;                            self.signal.Push()</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;              </div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;              <span class="keyword">def </span>Set(self, value):</div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;                            self.signal.PushValue(value)</div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;</div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;              <span class="comment">## Renew the Feed object so that it is disconnected from everything.</span></div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;        <span class="keyword">def </span>Disconnect(self):</div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;            self.signal = <a class="code" href="classvafmbase_1_1_feed.html">Feed</a>(self.<a class="code" href="classvafmbase_1_1_feed.html#a73f4e7a84b21af3bcb3821d87984de3e">owner</a>)</div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;</div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;              <span class="keyword">def </span>__str__(self):</div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;                            <span class="keywordflow">return</span> self.owner.name+<span class="stringliteral">&quot;.&quot;</span>+self.name+<span class="stringliteral">&quot; = &quot;</span>+str(self.signal)</div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;                            </div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;</div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;<span class="comment">## Abstract circuit class.</span></div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;<span class="comment">#</span></div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;<span class="comment">#</span></div>
-<div class="line"><a name="l00072"></a><span class="lineno"><a class="line" href="classvafmbase_1_1_circuit.html">   72</a></span>&#160;<span class="keyword">class </span><a class="code" href="classvafmbase_1_1_circuit.html">Circuit</a>(object):</div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;</div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;              <span class="comment">#__metaclass__ = abc.ABCMeta;</span></div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;              </div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;              <span class="comment">## Common contructor for all circuits.</span></div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;              <span class="comment">#</span></div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;              <span class="comment"># @param machine Reference to the virtual machine.</span></div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;              <span class="comment"># @param name Name of this instance.</span></div>
-<div class="line"><a name="l00080"></a><span class="lineno"><a class="line" href="classvafmbase_1_1_circuit.html#a572654f6e9cd1473d502b5e74cc69924">   80</a></span>&#160;              <span class="keyword">def </span><a class="code" href="classvafmbase_1_1_circuit.html#a572654f6e9cd1473d502b5e74cc69924">__init__</a>(self, machine, name):</div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;                            </div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;                            <span class="comment">## Name of the circuit.</span></div>
-<div class="line"><a name="l00083"></a><span class="lineno"><a class="line" href="classvafmbase_1_1_circuit.html#a7d7090783a4c7f01b6d215284e1fab3f">   83</a></span>&#160;                            self.<a class="code" href="classvafmbase_1_1_circuit.html#a7d7090783a4c7f01b6d215284e1fab3f">name</a> = name</div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;                            <span class="comment">## Reference to the virtual machine.</span></div>
-<div class="line"><a name="l00085"></a><span class="lineno"><a class="line" href="classvafmbase_1_1_circuit.html#a1926c77ccd73b15132ae659d1ddb6760">   85</a></span>&#160;                            self.<a class="code" href="classvafmbase_1_1_circuit.html#a1926c77ccd73b15132ae659d1ddb6760">machine</a> = machine</div>
-<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;                            <span class="comment">## Push output buffer at the end of Update.</span></div>
-<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;                            <span class="comment">#</span></div>
-<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;                            <span class="comment"># If the circuit is pushed, all the output channels will</span></div>
-<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;                            <span class="comment"># expose the computed value right after the Update routine.</span></div>
-<div class="line"><a name="l00090"></a><span class="lineno"><a class="line" href="classvafmbase_1_1_circuit.html#aa3b0af8b8cf580f712b2a7ad4c166334">   90</a></span>&#160;                            self.<a class="code" href="classvafmbase_1_1_circuit.html#aa3b0af8b8cf580f712b2a7ad4c166334">pushed</a> = <span class="keyword">False</span></div>
-<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;                            </div>
-<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;                            <span class="comment">## Dictionary of input channels</span></div>
-<div class="line"><a name="l00093"></a><span class="lineno"><a class="line" href="classvafmbase_1_1_circuit.html#a50ad09fd57c1eca9cbd5516d6da92b20">   93</a></span>&#160;                            self.<a class="code" href="classvafmbase_1_1_circuit.html#a50ad09fd57c1eca9cbd5516d6da92b20">I</a> = {}</div>
-<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;                            <span class="comment">## Dictionary of output channels</span></div>
-<div class="line"><a name="l00095"></a><span class="lineno"><a class="line" href="classvafmbase_1_1_circuit.html#ac4eee26b1ca7587ec960e311f86113ec">   95</a></span>&#160;                            self.<a class="code" href="classvafmbase_1_1_circuit.html#ac4eee26b1ca7587ec960e311f86113ec">O</a> = {}</div>
-<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;                            </div>
-<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;</div>
-<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;              <span class="comment">## Default input channels initialisation.</span></div>
-<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;              <span class="comment">#</span></div>
-<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;              <span class="comment"># Use the keyward arguments **kwargs to set the initial value</span></div>
-<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;              <span class="comment"># of input channels. </span></div>
-<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;              <span class="comment"># @param **kwargs Keyworded arguments for circuit initialisation.</span></div>
-<div class="line"><a name="l00103"></a><span class="lineno"><a class="line" href="classvafmbase_1_1_circuit.html#ab8ffc3f4428dec41f9e6958a1a16d8c1">  103</a></span>&#160;              <span class="keyword">def </span><a class="code" href="classvafmbase_1_1_circuit.html#ab8ffc3f4428dec41f9e6958a1a16d8c1">SetInputs</a>(self, **kwargs):</div>
-<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;                            </div>
-<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;                            <span class="keywordflow">print</span> <span class="stringliteral">&#39;circuit &#39;</span>+self.<a class="code" href="classvafmbase_1_1_circuit.html#a7d7090783a4c7f01b6d215284e1fab3f">name</a>+<span class="stringliteral">&#39;(&#39;</span>+self.__class__.__name__+<span class="stringliteral">&#39;) created.&#39;</span></div>
-<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;                            </div>
-<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;                            <span class="keywordflow">for</span> key <span class="keywordflow">in</span> kwargs.keys():</div>
-<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;                                          </div>
-<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;                                          <span class="keywordflow">if</span> key <span class="keywordflow">in</span> self.I.keys():</div>
-<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;                                                        self.<a class="code" href="classvafmbase_1_1_circuit.html#a50ad09fd57c1eca9cbd5516d6da92b20">I</a>[key].Set(kwargs[key])</div>
-<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;                                                        <span class="keywordflow">print</span> <span class="stringliteral">&#39;   input &#39;</span>+key+<span class="stringliteral">&#39; -&gt; &#39;</span>+str(kwargs[key])</div>
-<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;                                          <span class="keywordflow">else</span>:</div>
-<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;                                                        <span class="comment">#print the init parameter even if not an input flag</span></div>
-<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;                                                        <span class="keywordflow">print</span> <span class="stringliteral">&quot;   &quot;</span> + key + <span class="stringliteral">&quot; &quot;</span> + str(kwargs[key])</div>
-<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;                            </div>
-<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;                            <span class="keywordflow">if</span> <span class="stringliteral">&#39;pushed&#39;</span> <span class="keywordflow">in</span> kwargs.keys():</div>
-<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;                                          self.<a class="code" href="classvafmbase_1_1_circuit.html#aa3b0af8b8cf580f712b2a7ad4c166334">pushed</a> = bool(kwargs[<span class="stringliteral">&#39;pushed&#39;</span>])</div>
-<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;                                          </div>
-<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;                            </div>
-<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;              <span class="comment">## Create an input channel with the given name.</span></div>
-<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;              <span class="comment"># @param name Name of the new input channel.</span></div>
-<div class="line"><a name="l00122"></a><span class="lineno"><a class="line" href="classvafmbase_1_1_circuit.html#a60c3a2fc29e6ae2172ab8015082079d5">  122</a></span>&#160;              <span class="keyword">def </span><a class="code" href="classvafmbase_1_1_circuit.html#a60c3a2fc29e6ae2172ab8015082079d5">AddInput</a>(self, name):</div>
-<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;                            </div>
-<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;                            <span class="keywordflow">if</span> name <span class="keywordflow">in</span> self.I.keys() <span class="keywordflow">or</span> name <span class="keywordflow">in</span> self.O.keys():</div>
-<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;                                          <span class="keywordflow">raise</span> NameError(<span class="stringliteral">&quot;A channel named &quot;</span>+name+<span class="stringliteral">&quot; already exists in circuit &quot;</span>+ str(self))</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;              <span class="keyword">def </span>__init__(self, name, owner, isInput):</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;                            </div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;                            self.name = name</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;                            self.<a class="code" href="classvafmbase_1_1_feed.html#a73f4e7a84b21af3bcb3821d87984de3e">owner</a> = owner</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;                            self.signal = <a class="code" href="classvafmbase_1_1_feed.html">Feed</a>(owner)</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;                            self.isInput = isInput</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;              </div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;              <span class="comment">#@property</span></div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;              <span class="keyword">def </span>value_get(self):</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;                            <span class="keywordflow">return</span> self.signal.value</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;              <span class="comment">#@value.setter</span></div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;              <span class="keyword">def </span>value_set(self,value):</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;                            self.signal.value = value</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;                            <span class="comment">#print &#39;setting value &#39;+str(value)</span></div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;                            </div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;              value = property(value_get, value_set);</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;              </div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;              <span class="keyword">def </span>Push(self):</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;                            self.signal.Push()</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;              </div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;              <span class="keyword">def </span>Set(self, value):</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;                            self.signal.PushValue(value)</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;              <span class="comment">## Renew the Feed object so that it is disconnected from everything.</span></div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;        <span class="keyword">def </span>Disconnect(self):</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;            self.signal = <a class="code" href="classvafmbase_1_1_feed.html">Feed</a>(self.<a class="code" href="classvafmbase_1_1_feed.html#a73f4e7a84b21af3bcb3821d87984de3e">owner</a>)</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;              <span class="keyword">def </span>__str__(self):</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;                            <span class="keywordflow">return</span> self.owner.name+<span class="stringliteral">&quot;.&quot;</span>+self.name+<span class="stringliteral">&quot; = &quot;</span>+str(self.signal)</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;                            </div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;<span class="comment">## Abstract circuit class.</span></div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;<span class="comment">#</span></div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;<span class="comment">#</span></div>
+<div class="line"><a name="l00079"></a><span class="lineno"><a class="line" href="classvafmbase_1_1_circuit.html">   79</a></span>&#160;<span class="keyword">class </span><a class="code" href="classvafmbase_1_1_circuit.html">Circuit</a>(object):</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;              <span class="comment">#__metaclass__ = abc.ABCMeta;</span></div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;              </div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;              <span class="comment">## Common contructor for all circuits.</span></div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;              <span class="comment">#</span></div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;              <span class="comment"># @param machine Reference to the virtual machine.</span></div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;              <span class="comment"># @param name Name of this instance.</span></div>
+<div class="line"><a name="l00087"></a><span class="lineno"><a class="line" href="classvafmbase_1_1_circuit.html#a572654f6e9cd1473d502b5e74cc69924">   87</a></span>&#160;              <span class="keyword">def </span><a class="code" href="classvafmbase_1_1_circuit.html#a572654f6e9cd1473d502b5e74cc69924">__init__</a>(self, machine, name):</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;                            </div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;                            <span class="comment">## Name of the circuit.</span></div>
+<div class="line"><a name="l00090"></a><span class="lineno"><a class="line" href="classvafmbase_1_1_circuit.html#a7d7090783a4c7f01b6d215284e1fab3f">   90</a></span>&#160;                            self.<a class="code" href="classvafmbase_1_1_circuit.html#a7d7090783a4c7f01b6d215284e1fab3f">name</a> = name</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;                            <span class="comment">## Reference to the virtual machine.</span></div>
+<div class="line"><a name="l00092"></a><span class="lineno"><a class="line" href="classvafmbase_1_1_circuit.html#a1926c77ccd73b15132ae659d1ddb6760">   92</a></span>&#160;                            self.<a class="code" href="classvafmbase_1_1_circuit.html#a1926c77ccd73b15132ae659d1ddb6760">machine</a> = machine</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;                            <span class="comment">## Push output buffer at the end of Update.</span></div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;                            <span class="comment">#</span></div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;                            <span class="comment"># If the circuit is pushed, all the output channels will</span></div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;                            <span class="comment"># expose the computed value right after the Update routine.</span></div>
+<div class="line"><a name="l00097"></a><span class="lineno"><a class="line" href="classvafmbase_1_1_circuit.html#aa3b0af8b8cf580f712b2a7ad4c166334">   97</a></span>&#160;                            self.<a class="code" href="classvafmbase_1_1_circuit.html#aa3b0af8b8cf580f712b2a7ad4c166334">pushed</a> = <span class="keyword">False</span></div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;                            </div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;                            <span class="comment">## Dictionary of input channels</span></div>
+<div class="line"><a name="l00100"></a><span class="lineno"><a class="line" href="classvafmbase_1_1_circuit.html#a50ad09fd57c1eca9cbd5516d6da92b20">  100</a></span>&#160;                            self.<a class="code" href="classvafmbase_1_1_circuit.html#a50ad09fd57c1eca9cbd5516d6da92b20">I</a> = {}</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;                            <span class="comment">## Dictionary of output channels</span></div>
+<div class="line"><a name="l00102"></a><span class="lineno"><a class="line" href="classvafmbase_1_1_circuit.html#ac4eee26b1ca7587ec960e311f86113ec">  102</a></span>&#160;                            self.<a class="code" href="classvafmbase_1_1_circuit.html#ac4eee26b1ca7587ec960e311f86113ec">O</a> = {}</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;                            </div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;              <span class="comment">## Default input channels initialisation.</span></div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;              <span class="comment">#</span></div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;              <span class="comment"># Use the keyward arguments **kwargs to set the initial value</span></div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;              <span class="comment"># of input channels. </span></div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;              <span class="comment"># @param **kwargs Keyworded arguments for circuit initialisation.</span></div>
+<div class="line"><a name="l00110"></a><span class="lineno"><a class="line" href="classvafmbase_1_1_circuit.html#ab8ffc3f4428dec41f9e6958a1a16d8c1">  110</a></span>&#160;              <span class="keyword">def </span><a class="code" href="classvafmbase_1_1_circuit.html#ab8ffc3f4428dec41f9e6958a1a16d8c1">SetInputs</a>(self, **kwargs):</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;                            </div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;                            <span class="keywordflow">print</span> <span class="stringliteral">&#39;circuit &#39;</span>+self.<a class="code" href="classvafmbase_1_1_circuit.html#a7d7090783a4c7f01b6d215284e1fab3f">name</a>+<span class="stringliteral">&#39;(&#39;</span>+self.__class__.__name__+<span class="stringliteral">&#39;) created.&#39;</span></div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;                            </div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;                            <span class="keywordflow">for</span> key <span class="keywordflow">in</span> kwargs.keys():</div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;                                          </div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;                                          <span class="keywordflow">if</span> key <span class="keywordflow">in</span> self.I.keys():</div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;                                                        self.<a class="code" href="classvafmbase_1_1_circuit.html#a50ad09fd57c1eca9cbd5516d6da92b20">I</a>[key].Set(kwargs[key])</div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;                                                        <span class="keywordflow">print</span> <span class="stringliteral">&#39;   input &#39;</span>+key+<span class="stringliteral">&#39; -&gt; &#39;</span>+str(kwargs[key])</div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;                                          <span class="keywordflow">else</span>:</div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;                                                        <span class="comment">#print the init parameter even if not an input flag</span></div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;                                                        <span class="keywordflow">print</span> <span class="stringliteral">&quot;   &quot;</span> + key + <span class="stringliteral">&quot; &quot;</span> + str(kwargs[key])</div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;                            </div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;                            <span class="keywordflow">if</span> <span class="stringliteral">&#39;pushed&#39;</span> <span class="keywordflow">in</span> kwargs.keys():</div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;                                          self.<a class="code" href="classvafmbase_1_1_circuit.html#aa3b0af8b8cf580f712b2a7ad4c166334">pushed</a> = bool(kwargs[<span class="stringliteral">&#39;pushed&#39;</span>])</div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;                                          </div>
 <div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;                            </div>
-<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;                            self.<a class="code" href="classvafmbase_1_1_circuit.html#a50ad09fd57c1eca9cbd5516d6da92b20">I</a>[name] = Channel(name,self,<span class="keyword">True</span>)</div>
-<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;              </div>
-<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;              <span class="comment">## Create an output channel with the given name.</span></div>
-<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;              <span class="comment"># @param name Name of the new output channel.</span></div>
-<div class="line"><a name="l00131"></a><span class="lineno"><a class="line" href="classvafmbase_1_1_circuit.html#a5d0148cfd41ea0e3039afc677b3186ad">  131</a></span>&#160;              <span class="keyword">def </span><a class="code" href="classvafmbase_1_1_circuit.html#a5d0148cfd41ea0e3039afc677b3186ad">AddOutput</a>(self, name):</div>
-<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;                            </div>
-<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;                            <span class="keywordflow">if</span> name <span class="keywordflow">in</span> self.I.keys() <span class="keywordflow">or</span> name <span class="keywordflow">in</span> self.O.keys():</div>
-<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;                                          <span class="keywordflow">raise</span> NameError(<span class="stringliteral">&quot;A channel named &quot;</span>+name+<span class="stringliteral">&quot; already exists in circuit &quot;</span>+ str(self))</div>
-<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;                            self.<a class="code" href="classvafmbase_1_1_circuit.html#ac4eee26b1ca7587ec960e311f86113ec">O</a>[name] = Channel(name,self,<span class="keyword">False</span>)</div>
-<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;</div>
-<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;              <span class="comment">## Find a channel by name.</span></div>
-<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;              <span class="comment"># @param chname Name of the channel to find.</span></div>
-<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;              <span class="comment"># @return Reference to the channel.</span></div>
-<div class="line"><a name="l00140"></a><span class="lineno"><a class="line" href="classvafmbase_1_1_circuit.html#a0b502fd742c639ef2ba783601b9ed267">  140</a></span>&#160;              <span class="keyword">def </span><a class="code" href="classvafmbase_1_1_circuit.html#a0b502fd742c639ef2ba783601b9ed267">GetChannel</a>(self, chname):</div>
-<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;                            </div>
-<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;                            isout = chname <span class="keywordflow">in</span> self.O.keys()</div>
-<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;                            isin = chname <span class="keywordflow">in</span> self.I.keys()</div>
-<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;                            </div>
-<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;                            <span class="keywordflow">if</span> not( isout <span class="keywordflow">or</span> isin ):</div>
-<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;                                          <span class="keywordflow">raise</span> NameError( <span class="stringliteral">&quot;Circuit.GetChannel error: channel &quot;</span>+chname+<span class="stringliteral">&quot; not found.&quot;</span> )</div>
-<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;                            </div>
-<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;                            <span class="keywordflow">if</span> isout:</div>
-<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;                                          <span class="keywordflow">return</span> self.<a class="code" href="classvafmbase_1_1_circuit.html#ac4eee26b1ca7587ec960e311f86113ec">O</a>[chname];</div>
-<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;                            <span class="keywordflow">if</span> isin:</div>
-<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;                                          <span class="keywordflow">return</span> self.<a class="code" href="classvafmbase_1_1_circuit.html#a50ad09fd57c1eca9cbd5516d6da92b20">I</a>[chname];</div>
-<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;              </div>
-<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;</div>
-<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;              <span class="comment">## Push the buffered value for all output channels.</span></div>
-<div class="line"><a name="l00155"></a><span class="lineno"><a class="line" href="classvafmbase_1_1_circuit.html#a87a2532550d65bfada3c3aceb413acad">  155</a></span>&#160;              <span class="keyword">def </span><a class="code" href="classvafmbase_1_1_circuit.html#a87a2532550d65bfada3c3aceb413acad">Push</a>(self):</div>
-<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;                            <span class="keywordflow">for</span> kw <span class="keywordflow">in</span> self.O.keys():</div>
-<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;                                          self.<a class="code" href="classvafmbase_1_1_circuit.html#ac4eee26b1ca7587ec960e311f86113ec">O</a>[kw].<a class="code" href="classvafmbase_1_1_circuit.html#a87a2532550d65bfada3c3aceb413acad">Push</a>()</div>
-<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;</div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;              <span class="comment">## Create an input channel with the given name.</span></div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;              <span class="comment"># @param name Name of the new input channel.</span></div>
+<div class="line"><a name="l00129"></a><span class="lineno"><a class="line" href="classvafmbase_1_1_circuit.html#a60c3a2fc29e6ae2172ab8015082079d5">  129</a></span>&#160;              <span class="keyword">def </span><a class="code" href="classvafmbase_1_1_circuit.html#a60c3a2fc29e6ae2172ab8015082079d5">AddInput</a>(self, name):</div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;                            </div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;                            <span class="keywordflow">if</span> name <span class="keywordflow">in</span> self.I.keys() <span class="keywordflow">or</span> name <span class="keywordflow">in</span> self.O.keys():</div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;                                          <span class="keywordflow">raise</span> NameError(<span class="stringliteral">&quot;A channel named &quot;</span>+name+<span class="stringliteral">&quot; already exists in circuit &quot;</span>+ str(self))</div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;                            </div>
+<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;                            self.<a class="code" href="classvafmbase_1_1_circuit.html#a50ad09fd57c1eca9cbd5516d6da92b20">I</a>[name] = Channel(name,self,<span class="keyword">True</span>)</div>
+<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;              </div>
+<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;              <span class="comment">## Create an output channel with the given name.</span></div>
+<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;              <span class="comment"># @param name Name of the new output channel.</span></div>
+<div class="line"><a name="l00138"></a><span class="lineno"><a class="line" href="classvafmbase_1_1_circuit.html#a5d0148cfd41ea0e3039afc677b3186ad">  138</a></span>&#160;              <span class="keyword">def </span><a class="code" href="classvafmbase_1_1_circuit.html#a5d0148cfd41ea0e3039afc677b3186ad">AddOutput</a>(self, name):</div>
+<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;                            </div>
+<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;                            <span class="keywordflow">if</span> name <span class="keywordflow">in</span> self.I.keys() <span class="keywordflow">or</span> name <span class="keywordflow">in</span> self.O.keys():</div>
+<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;                                          <span class="keywordflow">raise</span> NameError(<span class="stringliteral">&quot;A channel named &quot;</span>+name+<span class="stringliteral">&quot; already exists in circuit &quot;</span>+ str(self))</div>
+<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;                            self.<a class="code" href="classvafmbase_1_1_circuit.html#ac4eee26b1ca7587ec960e311f86113ec">O</a>[name] = Channel(name,self,<span class="keyword">False</span>)</div>
+<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;</div>
+<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;              <span class="comment">## Find a channel by name.</span></div>
+<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;              <span class="comment"># @param chname Name of the channel to find.</span></div>
+<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;              <span class="comment"># @return Reference to the channel.</span></div>
+<div class="line"><a name="l00147"></a><span class="lineno"><a class="line" href="classvafmbase_1_1_circuit.html#a0b502fd742c639ef2ba783601b9ed267">  147</a></span>&#160;              <span class="keyword">def </span><a class="code" href="classvafmbase_1_1_circuit.html#a0b502fd742c639ef2ba783601b9ed267">GetChannel</a>(self, chname):</div>
+<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;                            </div>
+<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;                            isout = chname <span class="keywordflow">in</span> self.O.keys()</div>
+<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;                            isin = chname <span class="keywordflow">in</span> self.I.keys()</div>
+<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;                            </div>
+<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;                            <span class="keywordflow">if</span> not( isout <span class="keywordflow">or</span> isin ):</div>
+<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;                                          <span class="keywordflow">raise</span> NameError( <span class="stringliteral">&quot;Circuit.GetChannel error: channel &quot;</span>+chname+<span class="stringliteral">&quot; not found.&quot;</span> )</div>
+<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;                            </div>
+<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;                            <span class="keywordflow">if</span> isout:</div>
+<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;                                          <span class="keywordflow">return</span> self.<a class="code" href="classvafmbase_1_1_circuit.html#ac4eee26b1ca7587ec960e311f86113ec">O</a>[chname];</div>
+<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;                            <span class="keywordflow">if</span> isin:</div>
+<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;                                          <span class="keywordflow">return</span> self.<a class="code" href="classvafmbase_1_1_circuit.html#a50ad09fd57c1eca9cbd5516d6da92b20">I</a>[chname];</div>
 <div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;              </div>
-<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;              <span class="keyword">def </span>__str__( self ):</div>
-<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;                            <span class="keywordflow">return</span> <span class="stringliteral">&quot;[&quot;</span>+self.__class__.__name__+<span class="stringliteral">&quot;]&quot;</span>+self.<a class="code" href="classvafmbase_1_1_circuit.html#a7d7090783a4c7f01b6d215284e1fab3f">name</a></div>
-<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;</div>
-<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;              <span class="keyword">def </span>Initialize (self):</div>
-<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;                            <span class="keywordflow">raise</span> NotImplementedError( <span class="stringliteral">&quot;Should have implemented this&quot;</span> )</div>
-<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;                            </div>
-<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;              <span class="keyword">def </span>Update (self):</div>
-<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;                            <span class="keywordflow">raise</span> NotImplementedError( <span class="stringliteral">&quot;Should have implemented this&quot;</span> )</div>
-<div class="ttc" id="classvafmbase_1_1_circuit_html_a5d0148cfd41ea0e3039afc677b3186ad"><div class="ttname"><a href="classvafmbase_1_1_circuit.html#a5d0148cfd41ea0e3039afc677b3186ad">vafmbase.Circuit.AddOutput</a></div><div class="ttdeci">def AddOutput</div><div class="ttdoc">Create an output channel with the given name. </div><div class="ttdef"><b>Definition:</b> <a href="vafmbase_8py_source.html#l00131">vafmbase.py:131</a></div></div>
-<div class="ttc" id="classvafmbase_1_1_circuit_html_a7d7090783a4c7f01b6d215284e1fab3f"><div class="ttname"><a href="classvafmbase_1_1_circuit.html#a7d7090783a4c7f01b6d215284e1fab3f">vafmbase.Circuit.name</a></div><div class="ttdeci">name</div><div class="ttdoc">Name of the circuit. </div><div class="ttdef"><b>Definition:</b> <a href="vafmbase_8py_source.html#l00083">vafmbase.py:83</a></div></div>
-<div class="ttc" id="classvafmbase_1_1_feed_html_a73f4e7a84b21af3bcb3821d87984de3e"><div class="ttname"><a href="classvafmbase_1_1_feed.html#a73f4e7a84b21af3bcb3821d87984de3e">vafmbase.Feed.owner</a></div><div class="ttdeci">owner</div><div class="ttdef"><b>Definition:</b> <a href="vafmbase_8py_source.html#l00008">vafmbase.py:8</a></div></div>
-<div class="ttc" id="classvafmbase_1_1_circuit_html_a87a2532550d65bfada3c3aceb413acad"><div class="ttname"><a href="classvafmbase_1_1_circuit.html#a87a2532550d65bfada3c3aceb413acad">vafmbase.Circuit.Push</a></div><div class="ttdeci">def Push</div><div class="ttdoc">Push the buffered value for all output channels. </div><div class="ttdef"><b>Definition:</b> <a href="vafmbase_8py_source.html#l00155">vafmbase.py:155</a></div></div>
-<div class="ttc" id="classvafmbase_1_1_circuit_html_a572654f6e9cd1473d502b5e74cc69924"><div class="ttname"><a href="classvafmbase_1_1_circuit.html#a572654f6e9cd1473d502b5e74cc69924">vafmbase.Circuit.__init__</a></div><div class="ttdeci">def __init__</div><div class="ttdoc">Common contructor for all circuits. </div><div class="ttdef"><b>Definition:</b> <a href="vafmbase_8py_source.html#l00080">vafmbase.py:80</a></div></div>
-<div class="ttc" id="classvafmbase_1_1_circuit_html_a0b502fd742c639ef2ba783601b9ed267"><div class="ttname"><a href="classvafmbase_1_1_circuit.html#a0b502fd742c639ef2ba783601b9ed267">vafmbase.Circuit.GetChannel</a></div><div class="ttdeci">def GetChannel</div><div class="ttdoc">Find a channel by name. </div><div class="ttdef"><b>Definition:</b> <a href="vafmbase_8py_source.html#l00140">vafmbase.py:140</a></div></div>
-<div class="ttc" id="classvafmbase_1_1_circuit_html_a50ad09fd57c1eca9cbd5516d6da92b20"><div class="ttname"><a href="classvafmbase_1_1_circuit.html#a50ad09fd57c1eca9cbd5516d6da92b20">vafmbase.Circuit.I</a></div><div class="ttdeci">I</div><div class="ttdoc">Dictionary of input channels. </div><div class="ttdef"><b>Definition:</b> <a href="vafmbase_8py_source.html#l00093">vafmbase.py:93</a></div></div>
-<div class="ttc" id="classvafmbase_1_1_circuit_html_ab8ffc3f4428dec41f9e6958a1a16d8c1"><div class="ttname"><a href="classvafmbase_1_1_circuit.html#ab8ffc3f4428dec41f9e6958a1a16d8c1">vafmbase.Circuit.SetInputs</a></div><div class="ttdeci">def SetInputs</div><div class="ttdoc">Default input channels initialisation. </div><div class="ttdef"><b>Definition:</b> <a href="vafmbase_8py_source.html#l00103">vafmbase.py:103</a></div></div>
-<div class="ttc" id="classvafmbase_1_1_circuit_html_ac4eee26b1ca7587ec960e311f86113ec"><div class="ttname"><a href="classvafmbase_1_1_circuit.html#ac4eee26b1ca7587ec960e311f86113ec">vafmbase.Circuit.O</a></div><div class="ttdeci">O</div><div class="ttdoc">Dictionary of output channels. </div><div class="ttdef"><b>Definition:</b> <a href="vafmbase_8py_source.html#l00095">vafmbase.py:95</a></div></div>
-<div class="ttc" id="classvafmbase_1_1_feed_html_afcd2f3aa4899fee3a0e99295a2a8da6e"><div class="ttname"><a href="classvafmbase_1_1_feed.html#afcd2f3aa4899fee3a0e99295a2a8da6e">vafmbase.Feed._buff</a></div><div class="ttdeci">_buff</div><div class="ttdef"><b>Definition:</b> <a href="vafmbase_8py_source.html#l00011">vafmbase.py:11</a></div></div>
-<div class="ttc" id="classvafmbase_1_1_feed_html_a7095d2aa5545385473c63dc6156d6b32"><div class="ttname"><a href="classvafmbase_1_1_feed.html#a7095d2aa5545385473c63dc6156d6b32">vafmbase.Feed._value</a></div><div class="ttdeci">_value</div><div class="ttdef"><b>Definition:</b> <a href="vafmbase_8py_source.html#l00010">vafmbase.py:10</a></div></div>
-<div class="ttc" id="classvafmbase_1_1_feed_html"><div class="ttname"><a href="classvafmbase_1_1_feed.html">vafmbase.Feed</a></div><div class="ttdoc">Feed object. </div><div class="ttdef"><b>Definition:</b> <a href="vafmbase_8py_source.html#l00004">vafmbase.py:4</a></div></div>
-<div class="ttc" id="classvafmbase_1_1_circuit_html_a1926c77ccd73b15132ae659d1ddb6760"><div class="ttname"><a href="classvafmbase_1_1_circuit.html#a1926c77ccd73b15132ae659d1ddb6760">vafmbase.Circuit.machine</a></div><div class="ttdeci">machine</div><div class="ttdoc">Reference to the virtual machine. </div><div class="ttdef"><b>Definition:</b> <a href="vafmbase_8py_source.html#l00085">vafmbase.py:85</a></div></div>
-<div class="ttc" id="classvafmbase_1_1_circuit_html"><div class="ttname"><a href="classvafmbase_1_1_circuit.html">vafmbase.Circuit</a></div><div class="ttdoc">Abstract circuit class. </div><div class="ttdef"><b>Definition:</b> <a href="vafmbase_8py_source.html#l00072">vafmbase.py:72</a></div></div>
-<div class="ttc" id="classvafmbase_1_1_circuit_html_a60c3a2fc29e6ae2172ab8015082079d5"><div class="ttname"><a href="classvafmbase_1_1_circuit.html#a60c3a2fc29e6ae2172ab8015082079d5">vafmbase.Circuit.AddInput</a></div><div class="ttdeci">def AddInput</div><div class="ttdoc">Create an input channel with the given name. </div><div class="ttdef"><b>Definition:</b> <a href="vafmbase_8py_source.html#l00122">vafmbase.py:122</a></div></div>
-<div class="ttc" id="classvafmbase_1_1_circuit_html_aa3b0af8b8cf580f712b2a7ad4c166334"><div class="ttname"><a href="classvafmbase_1_1_circuit.html#aa3b0af8b8cf580f712b2a7ad4c166334">vafmbase.Circuit.pushed</a></div><div class="ttdeci">pushed</div><div class="ttdoc">Push output buffer at the end of Update. </div><div class="ttdef"><b>Definition:</b> <a href="vafmbase_8py_source.html#l00090">vafmbase.py:90</a></div></div>
+<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;</div>
+<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;              <span class="comment">## Push the buffered value for all output channels.</span></div>
+<div class="line"><a name="l00162"></a><span class="lineno"><a class="line" href="classvafmbase_1_1_circuit.html#a87a2532550d65bfada3c3aceb413acad">  162</a></span>&#160;              <span class="keyword">def </span><a class="code" href="classvafmbase_1_1_circuit.html#a87a2532550d65bfada3c3aceb413acad">Push</a>(self):</div>
+<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;                            <span class="keywordflow">for</span> kw <span class="keywordflow">in</span> self.O.keys():</div>
+<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;                                          self.<a class="code" href="classvafmbase_1_1_circuit.html#ac4eee26b1ca7587ec960e311f86113ec">O</a>[kw].<a class="code" href="classvafmbase_1_1_circuit.html#a87a2532550d65bfada3c3aceb413acad">Push</a>()</div>
+<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;</div>
+<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;              </div>
+<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;              <span class="keyword">def </span>__str__( self ):</div>
+<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;                            <span class="keywordflow">return</span> <span class="stringliteral">&quot;[&quot;</span>+self.__class__.__name__+<span class="stringliteral">&quot;]&quot;</span>+self.<a class="code" href="classvafmbase_1_1_circuit.html#a7d7090783a4c7f01b6d215284e1fab3f">name</a></div>
+<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;</div>
+<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;              <span class="keyword">def </span>Initialize (self):</div>
+<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;                            <span class="keywordflow">raise</span> NotImplementedError( <span class="stringliteral">&quot;Should have implemented this&quot;</span> )</div>
+<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;                            </div>
+<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;              <span class="keyword">def </span>Update (self):</div>
+<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;                            <span class="keywordflow">raise</span> NotImplementedError( <span class="stringliteral">&quot;Should have implemented this&quot;</span> )</div>
+<div class="ttc" id="classvafmbase_1_1_circuit_html_a5d0148cfd41ea0e3039afc677b3186ad"><div class="ttname"><a href="classvafmbase_1_1_circuit.html#a5d0148cfd41ea0e3039afc677b3186ad">vafmbase.Circuit.AddOutput</a></div><div class="ttdeci">def AddOutput</div><div class="ttdoc">Create an output channel with the given name. </div><div class="ttdef"><b>Definition:</b> <a href="vafmbase_8py_source.html#l00138">vafmbase.py:138</a></div></div>
+<div class="ttc" id="classvafmbase_1_1_circuit_html_a7d7090783a4c7f01b6d215284e1fab3f"><div class="ttname"><a href="classvafmbase_1_1_circuit.html#a7d7090783a4c7f01b6d215284e1fab3f">vafmbase.Circuit.name</a></div><div class="ttdeci">name</div><div class="ttdoc">Name of the circuit. </div><div class="ttdef"><b>Definition:</b> <a href="vafmbase_8py_source.html#l00090">vafmbase.py:90</a></div></div>
+<div class="ttc" id="classvafmbase_1_1_feed_html_a73f4e7a84b21af3bcb3821d87984de3e"><div class="ttname"><a href="classvafmbase_1_1_feed.html#a73f4e7a84b21af3bcb3821d87984de3e">vafmbase.Feed.owner</a></div><div class="ttdeci">owner</div><div class="ttdef"><b>Definition:</b> <a href="vafmbase_8py_source.html#l00015">vafmbase.py:15</a></div></div>
+<div class="ttc" id="classvafmbase_1_1_circuit_html_a87a2532550d65bfada3c3aceb413acad"><div class="ttname"><a href="classvafmbase_1_1_circuit.html#a87a2532550d65bfada3c3aceb413acad">vafmbase.Circuit.Push</a></div><div class="ttdeci">def Push</div><div class="ttdoc">Push the buffered value for all output channels. </div><div class="ttdef"><b>Definition:</b> <a href="vafmbase_8py_source.html#l00162">vafmbase.py:162</a></div></div>
+<div class="ttc" id="classvafmbase_1_1_circuit_html_a572654f6e9cd1473d502b5e74cc69924"><div class="ttname"><a href="classvafmbase_1_1_circuit.html#a572654f6e9cd1473d502b5e74cc69924">vafmbase.Circuit.__init__</a></div><div class="ttdeci">def __init__</div><div class="ttdoc">Common contructor for all circuits. </div><div class="ttdef"><b>Definition:</b> <a href="vafmbase_8py_source.html#l00087">vafmbase.py:87</a></div></div>
+<div class="ttc" id="classvafmbase_1_1_circuit_html_a0b502fd742c639ef2ba783601b9ed267"><div class="ttname"><a href="classvafmbase_1_1_circuit.html#a0b502fd742c639ef2ba783601b9ed267">vafmbase.Circuit.GetChannel</a></div><div class="ttdeci">def GetChannel</div><div class="ttdoc">Find a channel by name. </div><div class="ttdef"><b>Definition:</b> <a href="vafmbase_8py_source.html#l00147">vafmbase.py:147</a></div></div>
+<div class="ttc" id="classvafmbase_1_1_circuit_html_a50ad09fd57c1eca9cbd5516d6da92b20"><div class="ttname"><a href="classvafmbase_1_1_circuit.html#a50ad09fd57c1eca9cbd5516d6da92b20">vafmbase.Circuit.I</a></div><div class="ttdeci">I</div><div class="ttdoc">Dictionary of input channels. </div><div class="ttdef"><b>Definition:</b> <a href="vafmbase_8py_source.html#l00100">vafmbase.py:100</a></div></div>
+<div class="ttc" id="classvafmbase_1_1_circuit_html_ab8ffc3f4428dec41f9e6958a1a16d8c1"><div class="ttname"><a href="classvafmbase_1_1_circuit.html#ab8ffc3f4428dec41f9e6958a1a16d8c1">vafmbase.Circuit.SetInputs</a></div><div class="ttdeci">def SetInputs</div><div class="ttdoc">Default input channels initialisation. </div><div class="ttdef"><b>Definition:</b> <a href="vafmbase_8py_source.html#l00110">vafmbase.py:110</a></div></div>
+<div class="ttc" id="classvafmbase_1_1_circuit_html_ac4eee26b1ca7587ec960e311f86113ec"><div class="ttname"><a href="classvafmbase_1_1_circuit.html#ac4eee26b1ca7587ec960e311f86113ec">vafmbase.Circuit.O</a></div><div class="ttdeci">O</div><div class="ttdoc">Dictionary of output channels. </div><div class="ttdef"><b>Definition:</b> <a href="vafmbase_8py_source.html#l00102">vafmbase.py:102</a></div></div>
+<div class="ttc" id="classvafmbase_1_1_feed_html_afcd2f3aa4899fee3a0e99295a2a8da6e"><div class="ttname"><a href="classvafmbase_1_1_feed.html#afcd2f3aa4899fee3a0e99295a2a8da6e">vafmbase.Feed._buff</a></div><div class="ttdeci">_buff</div><div class="ttdef"><b>Definition:</b> <a href="vafmbase_8py_source.html#l00018">vafmbase.py:18</a></div></div>
+<div class="ttc" id="classvafmbase_1_1_feed_html_a7095d2aa5545385473c63dc6156d6b32"><div class="ttname"><a href="classvafmbase_1_1_feed.html#a7095d2aa5545385473c63dc6156d6b32">vafmbase.Feed._value</a></div><div class="ttdeci">_value</div><div class="ttdef"><b>Definition:</b> <a href="vafmbase_8py_source.html#l00017">vafmbase.py:17</a></div></div>
+<div class="ttc" id="classvafmbase_1_1_feed_html"><div class="ttname"><a href="classvafmbase_1_1_feed.html">vafmbase.Feed</a></div><div class="ttdoc">Feed object. </div><div class="ttdef"><b>Definition:</b> <a href="vafmbase_8py_source.html#l00011">vafmbase.py:11</a></div></div>
+<div class="ttc" id="classvafmbase_1_1_circuit_html_a1926c77ccd73b15132ae659d1ddb6760"><div class="ttname"><a href="classvafmbase_1_1_circuit.html#a1926c77ccd73b15132ae659d1ddb6760">vafmbase.Circuit.machine</a></div><div class="ttdeci">machine</div><div class="ttdoc">Reference to the virtual machine. </div><div class="ttdef"><b>Definition:</b> <a href="vafmbase_8py_source.html#l00092">vafmbase.py:92</a></div></div>
+<div class="ttc" id="classvafmbase_1_1_circuit_html"><div class="ttname"><a href="classvafmbase_1_1_circuit.html">vafmbase.Circuit</a></div><div class="ttdoc">Abstract circuit class. </div><div class="ttdef"><b>Definition:</b> <a href="vafmbase_8py_source.html#l00079">vafmbase.py:79</a></div></div>
+<div class="ttc" id="classvafmbase_1_1_circuit_html_a60c3a2fc29e6ae2172ab8015082079d5"><div class="ttname"><a href="classvafmbase_1_1_circuit.html#a60c3a2fc29e6ae2172ab8015082079d5">vafmbase.Circuit.AddInput</a></div><div class="ttdeci">def AddInput</div><div class="ttdoc">Create an input channel with the given name. </div><div class="ttdef"><b>Definition:</b> <a href="vafmbase_8py_source.html#l00129">vafmbase.py:129</a></div></div>
+<div class="ttc" id="classvafmbase_1_1_circuit_html_aa3b0af8b8cf580f712b2a7ad4c166334"><div class="ttname"><a href="classvafmbase_1_1_circuit.html#aa3b0af8b8cf580f712b2a7ad4c166334">vafmbase.Circuit.pushed</a></div><div class="ttdeci">pushed</div><div class="ttdoc">Push output buffer at the end of Update. </div><div class="ttdef"><b>Definition:</b> <a href="vafmbase_8py_source.html#l00097">vafmbase.py:97</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><b>vafmbase.py</b></li>
-    <li class="footer">Generated on Fri Sep 27 2013 10:09:30 for pyVAFM by
+    <li class="footer">Generated on Mon Sep 30 2013 11:08:57 for pyVAFM by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.5 </li>
   </ul>

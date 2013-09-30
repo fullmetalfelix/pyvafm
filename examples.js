@@ -1,4 +1,4 @@
 var examples =
 [
-    [ "example_test.cpp", "example_test_8cpp-example.html", null ]
+    [ "example_composite.py", "example_composite_8py-example.html", null ]
 ];

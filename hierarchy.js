@@ -1,6 +1,7 @@
 var hierarchy =
 [
     [ "vafmbase.Circuit", "classvafmbase_1_1_circuit.html", [
+      [ "vafmcircuits.Machine", "classvafmcircuits_1_1_machine.html", null ],
       [ "vafmcircuits.output", "classvafmcircuits_1_1output.html", null ],
       [ "vafmcircuits.waver", "classvafmcircuits_1_1waver.html", null ],
       [ "vafmcircuits_composite.composite", "classvafmcircuits__composite_1_1composite.html", null ],
@@ -18,8 +19,7 @@ var hierarchy =
       [ "vafmcircuits_math.opSub", "classvafmcircuits__math_1_1op_sub.html", null ],
       [ "vafmcircuits_signal_processing.derivative", "classvafmcircuits__signal__processing_1_1derivative.html", null ],
       [ "vafmcircuits_signal_processing.integral", "classvafmcircuits__signal__processing_1_1integral.html", null ],
-      [ "vafmcircuits_signal_processing.minmax", "classvafmcircuits__signal__processing_1_1minmax.html", null ],
-      [ "vafmcore.VAFM", "classvafmcore_1_1_v_a_f_m.html", null ]
+      [ "vafmcircuits_signal_processing.minmax", "classvafmcircuits__signal__processing_1_1minmax.html", null ]
     ] ],
     [ "vafmbase.Feed", "classvafmbase_1_1_feed.html", null ]
 ];

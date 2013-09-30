@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['update',['Update',['../classvafmcore_1_1_v_a_f_m.html#abab96b8ae85437a8448ca06013631749',1,'vafmcore::VAFM']]]
+  ['unregister',['Unregister',['../classvafmcircuits_1_1output.html#a415039630eedc752b535e6d2dfcd0d3b',1,'vafmcircuits::output']]],
+  ['update',['Update',['../classvafmcircuits_1_1_machine.html#aa646ed99ee97628cff9f9bd25b1b4fe4',1,'vafmcircuits::Machine']]]
 ];

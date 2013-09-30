@@ -46,6 +46,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
       <li><a href="annotated.html"><span>Classes</span></a></li>
       <li class="current"><a href="files.html"><span>Files</span></a></li>
+      <li><a href="examples.html"><span>Examples</span></a></li>
       <li>
         <div id="MSearchBox" class="MSearchBoxInactive">
         <span class="left">
@@ -126,7 +127,7 @@ $(document).ready(function(){initNavTree('vafmcircuits__composite_8py_source.htm
 <div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;                            </div>
 <div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;                            </div>
 <div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;                            <span class="comment">## Virtual machine containing the subcircuits.</span></div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;                            self.<a class="code" href="classvafmcircuits__composite_1_1composite.html#ad919c3ee1e47997d444a7d2529690b30">_machine</a> = <a class="code" href="classvafmcore_1_1_v_a_f_m.html">vafmcore.VAFM</a>()</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;                            self.<a class="code" href="classvafmcircuits__composite_1_1composite.html#ad919c3ee1e47997d444a7d2529690b30">_machine</a> = vafmcore.VAFM()</div>
 <div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;                            </div>
 <div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;                            <span class="comment">#check if the amount of factors was given </span></div>
 <div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;                            <span class="keywordflow">if</span> <span class="keywordflow">not</span> (<span class="stringliteral">&#39;assembly&#39;</span> <span class="keywordflow">in</span> keys.keys()):</div>
@@ -190,18 +191,17 @@ $(document).ready(function(){initNavTree('vafmcircuits__composite_8py_source.htm
 <div class="ttc" id="classvafmcircuits__composite_1_1composite_html_ad919c3ee1e47997d444a7d2529690b30"><div class="ttname"><a href="classvafmcircuits__composite_1_1composite.html#ad919c3ee1e47997d444a7d2529690b30">vafmcircuits_composite.composite._machine</a></div><div class="ttdeci">_machine</div><div class="ttdoc">Virtual machine containing the subcircuits. </div><div class="ttdef"><b>Definition:</b> <a href="vafmcircuits__composite_8py_source.html#l00024">vafmcircuits_composite.py:24</a></div></div>
 <div class="ttc" id="classvafmcircuits__composite_1_1composite_html_a1b3b8e299acfa9903cfd8e55929b89f3"><div class="ttname"><a href="classvafmcircuits__composite_1_1composite.html#a1b3b8e299acfa9903cfd8e55929b89f3">vafmcircuits_composite.composite.Connect</a></div><div class="ttdeci">def Connect</div><div class="ttdoc">Connect the output of a circuit to the input of another. </div><div class="ttdef"><b>Definition:</b> <a href="vafmcircuits__composite_8py_source.html#l00065">vafmcircuits_composite.py:65</a></div></div>
 <div class="ttc" id="classvafmcircuits__composite_1_1composite_html_ab9d6745c8c3487b87700f0ed81337cba"><div class="ttname"><a href="classvafmcircuits__composite_1_1composite.html#ab9d6745c8c3487b87700f0ed81337cba">vafmcircuits_composite.composite.AddCircuit</a></div><div class="ttdeci">def AddCircuit</div><div class="ttdoc">Add a circuit of type &amp;#39;ctype&amp;#39; named &amp;#39;name&amp;#39; inside the composite circuit. </div><div class="ttdef"><b>Definition:</b> <a href="vafmcircuits__composite_8py_source.html#l00056">vafmcircuits_composite.py:56</a></div></div>
-<div class="ttc" id="classvafmcore_1_1_v_a_f_m_html"><div class="ttname"><a href="classvafmcore_1_1_v_a_f_m.html">vafmcore.VAFM</a></div><div class="ttdoc">Virtual Machine class. </div><div class="ttdef"><b>Definition:</b> <a href="vafmcore_8py_source.html#l00022">vafmcore.py:22</a></div></div>
-<div class="ttc" id="classvafmbase_1_1_circuit_html_ab8ffc3f4428dec41f9e6958a1a16d8c1"><div class="ttname"><a href="classvafmbase_1_1_circuit.html#ab8ffc3f4428dec41f9e6958a1a16d8c1">vafmbase.Circuit.SetInputs</a></div><div class="ttdeci">def SetInputs</div><div class="ttdoc">Default input channels initialisation. </div><div class="ttdef"><b>Definition:</b> <a href="vafmbase_8py_source.html#l00103">vafmbase.py:103</a></div></div>
+<div class="ttc" id="classvafmbase_1_1_circuit_html_ab8ffc3f4428dec41f9e6958a1a16d8c1"><div class="ttname"><a href="classvafmbase_1_1_circuit.html#ab8ffc3f4428dec41f9e6958a1a16d8c1">vafmbase.Circuit.SetInputs</a></div><div class="ttdeci">def SetInputs</div><div class="ttdoc">Default input channels initialisation. </div><div class="ttdef"><b>Definition:</b> <a href="vafmbase_8py_source.html#l00110">vafmbase.py:110</a></div></div>
 <div class="ttc" id="classvafmcircuits__composite_1_1composite_html"><div class="ttname"><a href="classvafmcircuits__composite_1_1composite.html">vafmcircuits_composite.composite</a></div><div class="ttdoc">Template composite circuit. </div><div class="ttdef"><b>Definition:</b> <a href="vafmcircuits__composite_8py_source.html#l00016">vafmcircuits_composite.py:16</a></div></div>
 <div class="ttc" id="classvafmcircuits__composite_1_1composite_html_a1178b6a822089ae441483ca3db840702"><div class="ttname"><a href="classvafmcircuits__composite_1_1composite.html#a1178b6a822089ae441483ca3db840702">vafmcircuits_composite.composite._Assemble</a></div><div class="ttdeci">_Assemble</div><div class="ttdef"><b>Definition:</b> <a href="vafmcircuits__composite_8py_source.html#l00030">vafmcircuits_composite.py:30</a></div></div>
-<div class="ttc" id="classvafmbase_1_1_circuit_html"><div class="ttname"><a href="classvafmbase_1_1_circuit.html">vafmbase.Circuit</a></div><div class="ttdoc">Abstract circuit class. </div><div class="ttdef"><b>Definition:</b> <a href="vafmbase_8py_source.html#l00072">vafmbase.py:72</a></div></div>
+<div class="ttc" id="classvafmbase_1_1_circuit_html"><div class="ttname"><a href="classvafmbase_1_1_circuit.html">vafmbase.Circuit</a></div><div class="ttdoc">Abstract circuit class. </div><div class="ttdef"><b>Definition:</b> <a href="vafmbase_8py_source.html#l00079">vafmbase.py:79</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><b>vafmcircuits_composite.py</b></li>
-    <li class="footer">Generated on Fri Sep 27 2013 10:09:30 for pyVAFM by
+    <li class="footer">Generated on Mon Sep 30 2013 11:08:57 for pyVAFM by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.5 </li>
   </ul>

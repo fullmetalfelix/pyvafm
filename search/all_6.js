@@ -1,6 +1,6 @@
 var searchData=
 [
   ['i',['I',['../classvafmbase_1_1_circuit.html#a50ad09fd57c1eca9cbd5516d6da92b20',1,'vafmbase::Circuit']]],
-  ['initialize',['Initialize',['../classvafmcore_1_1_v_a_f_m.html#a90e93ac05815dcb5288b2f789a296a51',1,'vafmcore::VAFM']]],
+  ['initialize',['Initialize',['../classvafmcircuits_1_1_machine.html#a4ed3515949eba51b5fd3f1c9908e657c',1,'vafmcircuits::Machine']]],
   ['integral',['integral',['../classvafmcircuits__signal__processing_1_1integral.html',1,'vafmcircuits_signal_processing']]]
 ];

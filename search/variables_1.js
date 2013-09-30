@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['dt',['dt',['../classvafmcore_1_1_v_a_f_m.html#a0c5a008c805077169a1b27ef0239facd',1,'vafmcore::VAFM']]],
+  ['dt',['dt',['../classvafmcircuits_1_1_machine.html#afdb52206688b7258ce77e815c86baead',1,'vafmcircuits::Machine']]],
   ['dump',['dump',['../classvafmcircuits_1_1output.html#a8a3aad954e78f98c989b567e1c6781c7',1,'vafmcircuits::output']]]
 ];
