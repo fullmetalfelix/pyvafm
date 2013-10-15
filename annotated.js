@@ -7,10 +7,24 @@ var annotated =
     [ "vafmcircuits", null, [
       [ "Machine", "classvafmcircuits_1_1_machine.html", "classvafmcircuits_1_1_machine" ],
       [ "waver", "classvafmcircuits_1_1waver.html", null ],
-      [ "output", "classvafmcircuits_1_1output.html", "classvafmcircuits_1_1output" ]
+      [ "output", "classvafmcircuits_1_1output.html", "classvafmcircuits_1_1output" ],
+      [ "Average", "classvafmcircuits_1_1_average.html", null ],
+      [ "Limiter", "classvafmcircuits_1_1_limiter.html", null ],
+      [ "PI", "classvafmcircuits_1_1_p_i.html", null ],
+      [ "PID", "classvafmcircuits_1_1_p_i_d.html", null ]
     ] ],
-    [ "vafmcircuits_composite", null, [
-      [ "composite", "classvafmcircuits__composite_1_1composite.html", "classvafmcircuits__composite_1_1composite" ]
+    [ "vafmcircuits_Filters", null, [
+      [ "ActiveLowPass", "classvafmcircuits___filters_1_1_active_low_pass.html", null ],
+      [ "ActiveHighPass", "classvafmcircuits___filters_1_1_active_high_pass.html", null ],
+      [ "ActiveBandPass", "classvafmcircuits___filters_1_1_active_band_pass.html", null ],
+      [ "PassiveLowPass", "classvafmcircuits___filters_1_1_passive_low_pass.html", null ],
+      [ "PassiveHighPass", "classvafmcircuits___filters_1_1_passive_high_pass.html", null ]
+    ] ],
+    [ "vafmcircuits_FlipFlop", null, [
+      [ "SRFlipFlop", "classvafmcircuits___flip_flop_1_1_s_r_flip_flop.html", null ],
+      [ "JKFlipFlop", "classvafmcircuits___flip_flop_1_1_j_k_flip_flop.html", null ],
+      [ "DFlipFlop", "classvafmcircuits___flip_flop_1_1_d_flip_flop.html", null ],
+      [ "DRFlipFlop", "classvafmcircuits___flip_flop_1_1_d_r_flip_flop.html", null ]
     ] ],
     [ "vafmcircuits_Logic", null, [
       [ "Not", "classvafmcircuits___logic_1_1_not.html", null ],
@@ -29,8 +43,13 @@ var annotated =
       [ "OpPower", "classvafmcircuits__math_1_1_op_power.html", null ]
     ] ],
     [ "vafmcircuits_signal_processing", null, [
+      [ "Gain", "classvafmcircuits__signal__processing_1_1_gain.html", null ],
       [ "minmax", "classvafmcircuits__signal__processing_1_1minmax.html", null ],
       [ "derivative", "classvafmcircuits__signal__processing_1_1derivative.html", null ],
-      [ "integral", "classvafmcircuits__signal__processing_1_1integral.html", null ]
+      [ "integral", "classvafmcircuits__signal__processing_1_1integral.html", null ],
+      [ "Delay", "classvafmcircuits__signal__processing_1_1_delay.html", null ],
+      [ "PeakDetector", "classvafmcircuits__signal__processing_1_1_peak_detector.html", null ],
+      [ "Phasor", "classvafmcircuits__signal__processing_1_1_phasor.html", null ],
+      [ "Flip", "classvafmcircuits__signal__processing_1_1_flip.html", null ]
     ] ]
 ];

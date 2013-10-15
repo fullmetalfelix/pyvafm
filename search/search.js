@@ -7,11 +7,12 @@
 
 var indexSectionsWithContent =
 {
-  0: "_acdfgimnoprstuvwx",
-  1: "acdfimnowx",
+  0: "_acdfgijlmnoprstuvwx",
+  1: "acdfgijlmnopswx",
   2: "v",
   3: "_acdgiprstu",
-  4: "cdfimnop"
+  4: "cdfimnop",
+  5: "t"
 };
 
 var indexSectionNames =
@@ -20,7 +21,8 @@ var indexSectionNames =
   1: "classes",
   2: "files",
   3: "functions",
-  4: "variables"
+  4: "variables",
+  5: "pages"
 };
 
 function convertToId(search)

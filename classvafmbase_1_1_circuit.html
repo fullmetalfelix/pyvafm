@@ -44,6 +44,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
+      <li><a href="pages.html"><span>Related&#160;Pages</span></a></li>
       <li class="current"><a href="annotated.html"><span>Classes</span></a></li>
       <li><a href="files.html"><span>Files</span></a></li>
       <li><a href="examples.html"><span>Examples</span></a></li>
@@ -93,7 +94,7 @@ $(document).ready(function(){initNavTree('classvafmbase_1_1_circuit.html','');})
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Pages</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -120,25 +121,42 @@ Inheritance diagram for vafmbase.Circuit:</div>
  <div class="center">
   <img src="classvafmbase_1_1_circuit.png" usemap="#vafmbase.Circuit_map" alt=""/>
   <map id="vafmbase.Circuit_map" name="vafmbase.Circuit_map">
-<area href="classvafmcircuits_1_1_machine.html" title="Virtual Machine main class. " alt="vafmcircuits.Machine" shape="rect" coords="259,56,508,80"/>
-<area href="classvafmcircuits_1_1output.html" title="Output circuit. " alt="vafmcircuits.output" shape="rect" coords="259,112,508,136"/>
-<area href="classvafmcircuits_1_1waver.html" title="Oscillator circuit. " alt="vafmcircuits.waver" shape="rect" coords="259,168,508,192"/>
-<area href="classvafmcircuits__composite_1_1composite.html" title="Template composite circuit. " alt="vafmcircuits_composite.composite" shape="rect" coords="259,224,508,248"/>
-<area href="classvafmcircuits___logic_1_1_and.html" title="And Gate Takes any amount of incoming signals and output 1 if they are all strictily positve..." alt="vafmcircuits_Logic.And" shape="rect" coords="259,280,508,304"/>
-<area href="classvafmcircuits___logic_1_1_n_o_r_gate.html" title="NOR Gate Takes in an Input Signal and will output 1 if in1 and in2 are negative. " alt="vafmcircuits_Logic.NORGate" shape="rect" coords="259,336,508,360"/>
-<area href="classvafmcircuits___logic_1_1_not.html" title="Not Gate Takes in an Input Signal and if this is greater than 0 it will output a 1. " alt="vafmcircuits_Logic.Not" shape="rect" coords="259,392,508,416"/>
-<area href="classvafmcircuits___logic_1_1_or_gate.html" title="Or Gate Takes in an Input Signal and will output 1 if in1 or in2 are positve numbers. " alt="vafmcircuits_Logic.OrGate" shape="rect" coords="259,448,508,472"/>
-<area href="classvafmcircuits___logic_1_1_x_or_gate.html" title="XOr Gate Takes in an Input Signal and will output 1 if in1 or in2 are positve numbers but will output..." alt="vafmcircuits_Logic.XOrGate" shape="rect" coords="259,504,508,528"/>
-<area href="classvafmcircuits__math_1_1_op_abs.html" title="Absolute value circuit. " alt="vafmcircuits_math.OpAbs" shape="rect" coords="259,560,508,584"/>
-<area href="classvafmcircuits__math_1_1op_add.html" title="Arithmetic sum circuit. " alt="vafmcircuits_math.opAdd" shape="rect" coords="259,616,508,640"/>
-<area href="classvafmcircuits__math_1_1op_div.html" title="Arithmetic division circuit. " alt="vafmcircuits_math.opDiv" shape="rect" coords="259,672,508,696"/>
-<area href="classvafmcircuits__math_1_1op_lin_c.html" title="Arithmetic linear-combo circuit. " alt="vafmcircuits_math.opLinC" shape="rect" coords="259,728,508,752"/>
-<area href="classvafmcircuits__math_1_1op_mul.html" title="Arithmetic multiplier circuit. " alt="vafmcircuits_math.opMul" shape="rect" coords="259,784,508,808"/>
-<area href="classvafmcircuits__math_1_1_op_power.html" title="Power value circuit. " alt="vafmcircuits_math.OpPower" shape="rect" coords="259,840,508,864"/>
-<area href="classvafmcircuits__math_1_1op_sub.html" title="Arithmetic subtraction circuit. " alt="vafmcircuits_math.opSub" shape="rect" coords="259,896,508,920"/>
-<area href="classvafmcircuits__signal__processing_1_1derivative.html" title="Differentation circuit. " alt="vafmcircuits_signal_processing.derivative" shape="rect" coords="259,952,508,976"/>
-<area href="classvafmcircuits__signal__processing_1_1integral.html" title="Integration circuit. " alt="vafmcircuits_signal_processing.integral" shape="rect" coords="259,1008,508,1032"/>
-<area href="classvafmcircuits__signal__processing_1_1minmax.html" title="Min/Max value circuit. " alt="vafmcircuits_signal_processing.minmax" shape="rect" coords="259,1064,508,1088"/>
+<area href="classvafmcircuits_1_1_average.html" title="Average circuit. " alt="vafmcircuits.Average" shape="rect" coords="279,56,548,80"/>
+<area href="classvafmcircuits_1_1_limiter.html" title="Limiter circuit. " alt="vafmcircuits.Limiter" shape="rect" coords="279,112,548,136"/>
+<area href="classvafmcircuits_1_1_machine.html" title="Virtual Machine main class. " alt="vafmcircuits.Machine" shape="rect" coords="279,168,548,192"/>
+<area href="classvafmcircuits_1_1output.html" title="Output circuit. " alt="vafmcircuits.output" shape="rect" coords="279,224,548,248"/>
+<area href="classvafmcircuits_1_1_p_i.html" title="PI circuit. " alt="vafmcircuits.PI" shape="rect" coords="279,280,548,304"/>
+<area href="classvafmcircuits_1_1_p_i_d.html" title="PID circuit. " alt="vafmcircuits.PID" shape="rect" coords="279,336,548,360"/>
+<area href="classvafmcircuits_1_1waver.html" title="Oscillator circuit. " alt="vafmcircuits.waver" shape="rect" coords="279,392,548,416"/>
+<area href="classvafmcircuits___filters_1_1_active_band_pass.html" title="Active Band Pass Filter circuit. " alt="vafmcircuits_Filters.ActiveBandPass" shape="rect" coords="279,448,548,472"/>
+<area href="classvafmcircuits___filters_1_1_active_high_pass.html" title="Active High Pass Filter circuit. " alt="vafmcircuits_Filters.ActiveHighPass" shape="rect" coords="279,504,548,528"/>
+<area href="classvafmcircuits___filters_1_1_active_low_pass.html" title="Active Low Pass Filter circuit. " alt="vafmcircuits_Filters.ActiveLowPass" shape="rect" coords="279,560,548,584"/>
+<area href="classvafmcircuits___filters_1_1_passive_high_pass.html" title="Passive High Pass Filter circuit. " alt="vafmcircuits_Filters.PassiveHighPass" shape="rect" coords="279,616,548,640"/>
+<area href="classvafmcircuits___filters_1_1_passive_low_pass.html" title="Passive Low Pass Filter circuit. " alt="vafmcircuits_Filters.PassiveLowPass" shape="rect" coords="279,672,548,696"/>
+<area href="classvafmcircuits___flip_flop_1_1_d_flip_flop.html" title="D Flip Flop circuit. " alt="vafmcircuits_FlipFlop.DFlipFlop" shape="rect" coords="279,728,548,752"/>
+<area href="classvafmcircuits___flip_flop_1_1_d_r_flip_flop.html" title="DR Flip Flop circuit. " alt="vafmcircuits_FlipFlop.DRFlipFlop" shape="rect" coords="279,784,548,808"/>
+<area href="classvafmcircuits___flip_flop_1_1_j_k_flip_flop.html" title="SR Flip Flop circuit. " alt="vafmcircuits_FlipFlop.JKFlipFlop" shape="rect" coords="279,840,548,864"/>
+<area href="classvafmcircuits___flip_flop_1_1_s_r_flip_flop.html" title="SR Flip Flop circuit. " alt="vafmcircuits_FlipFlop.SRFlipFlop" shape="rect" coords="279,896,548,920"/>
+<area href="classvafmcircuits___logic_1_1_and.html" title="And Gate Takes any amount of incoming signals and output 1 if they are all strictily positve..." alt="vafmcircuits_Logic.And" shape="rect" coords="279,952,548,976"/>
+<area href="classvafmcircuits___logic_1_1_n_o_r_gate.html" title="NOR Gate Takes in an Input Signal and will output 1 if in1 and in2 are negative. " alt="vafmcircuits_Logic.NORGate" shape="rect" coords="279,1008,548,1032"/>
+<area href="classvafmcircuits___logic_1_1_not.html" title="Not Gate Takes in an Input Signal and if this is greater than 0 it will output a 1. " alt="vafmcircuits_Logic.Not" shape="rect" coords="279,1064,548,1088"/>
+<area href="classvafmcircuits___logic_1_1_or_gate.html" title="Or Gate Takes in an Input Signal and will output 1 if in1 or in2 are positve numbers. " alt="vafmcircuits_Logic.OrGate" shape="rect" coords="279,1120,548,1144"/>
+<area href="classvafmcircuits___logic_1_1_x_or_gate.html" title="XOr Gate Takes in an Input Signal and will output 1 if in1 or in2 are positve numbers but will output..." alt="vafmcircuits_Logic.XOrGate" shape="rect" coords="279,1176,548,1200"/>
+<area href="classvafmcircuits__math_1_1_op_abs.html" title="Absolute value circuit. " alt="vafmcircuits_math.OpAbs" shape="rect" coords="279,1232,548,1256"/>
+<area href="classvafmcircuits__math_1_1op_add.html" title="Arithmetic sum circuit. " alt="vafmcircuits_math.opAdd" shape="rect" coords="279,1288,548,1312"/>
+<area href="classvafmcircuits__math_1_1op_div.html" title="Arithmetic division circuit. " alt="vafmcircuits_math.opDiv" shape="rect" coords="279,1344,548,1368"/>
+<area href="classvafmcircuits__math_1_1op_lin_c.html" title="Arithmetic linear-combo circuit. " alt="vafmcircuits_math.opLinC" shape="rect" coords="279,1400,548,1424"/>
+<area href="classvafmcircuits__math_1_1op_mul.html" title="Arithmetic multiplier circuit. " alt="vafmcircuits_math.opMul" shape="rect" coords="279,1456,548,1480"/>
+<area href="classvafmcircuits__math_1_1_op_power.html" title="Power value circuit. " alt="vafmcircuits_math.OpPower" shape="rect" coords="279,1512,548,1536"/>
+<area href="classvafmcircuits__math_1_1op_sub.html" title="Arithmetic subtraction circuit. " alt="vafmcircuits_math.opSub" shape="rect" coords="279,1568,548,1592"/>
+<area href="classvafmcircuits__signal__processing_1_1_delay.html" title="Delay circuit. " alt="vafmcircuits_signal_processing.Delay" shape="rect" coords="279,1624,548,1648"/>
+<area href="classvafmcircuits__signal__processing_1_1derivative.html" title="Differentation circuit. " alt="vafmcircuits_signal_processing.derivative" shape="rect" coords="279,1680,548,1704"/>
+<area href="classvafmcircuits__signal__processing_1_1_flip.html" title="Flip circuit. " alt="vafmcircuits_signal_processing.Flip" shape="rect" coords="279,1736,548,1760"/>
+<area href="classvafmcircuits__signal__processing_1_1_gain.html" title="Gain circuit. " alt="vafmcircuits_signal_processing.Gain" shape="rect" coords="279,1792,548,1816"/>
+<area href="classvafmcircuits__signal__processing_1_1integral.html" title="Integration circuit. " alt="vafmcircuits_signal_processing.integral" shape="rect" coords="279,1848,548,1872"/>
+<area href="classvafmcircuits__signal__processing_1_1minmax.html" title="Min/Max value circuit. " alt="vafmcircuits_signal_processing.minmax" shape="rect" coords="279,1904,548,1928"/>
+<area href="classvafmcircuits__signal__processing_1_1_peak_detector.html" title="Peak Detector circuit. " alt="vafmcircuits_signal_processing.PeakDetector" shape="rect" coords="279,1960,548,1984"/>
+<area href="classvafmcircuits__signal__processing_1_1_phasor.html" title="Phasor circuit. " alt="vafmcircuits_signal_processing.Phasor" shape="rect" coords="279,2016,548,2040"/>
 </map>
  </div></div>
 <table class="memberdecls">
@@ -457,7 +475,7 @@ Public Attributes</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><b>vafmbase</b></li><li class="navelem"><a class="el" href="classvafmbase_1_1_circuit.html">Circuit</a></li>
-    <li class="footer">Generated on Mon Sep 30 2013 11:12:08 for pyVAFM by
+    <li class="footer">Generated on Tue Oct 15 2013 17:28:21 for pyVAFM by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.5 </li>
   </ul>

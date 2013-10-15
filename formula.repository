@@ -24,3 +24,45 @@
 \form#23:$inf$ -$
 \form#24:$max = maximum value over the given peroid $ - $
 \form#25:$amp = \frac{max-min}{2} $ - $
+\form#26:$sawtooth$
+\form#27:$ = amp\cdot( freq*f(t) - floor(freq*f(t) ) + offset $
+\form#28:$out =$
+\form#29:$inf$\f -$
+\form#30:$max = maximum value over the given peroid $\f - $
+\form#31:$amp = \frac{max-min}{2} $\f - $
+\form#32:$inf$ \f - Output channels:\n - $
+\form#33:$inf$ \f - $
+\form#34:$in1f$\f -$
+\form#35:$Gain = integer$
+\form#36:$ tick = $
+\form#37:$ peak = $
+\form#38:$ delay = $
+\form#39:$up = 1|0 $
+\form#40:$in1$
+\form#41:$in2$$
+\form#42:$saw$
+\form#43:$speed$
+\form#44:$signal$
+\form#45:$Kp$
+\form#46:$Ki$
+\form#47:$set$
+\form#48:$S$
+\form#49:$R$
+\form#50:$ out = Q $\f - $
+\form#51:$J$
+\form#52:$K$
+\form#53:$D$
+\form#54:$ out = in \cdot gain $
+\form#55:$inf$
+\form#56:$CheckTime = integer$
+\form#57:$max = maximum value over the given peroid $
+\form#58:$max = minimum value over the given peroid $
+\form#59:$amp = \frac{max-min}{2} $
+\form#60:$out = \frac{din}{dt} $
+\form#61:$out = \int_a^\b \mathrm{in}\,\mathrm{d}t $
+\form#62:$DelayTime$
+\form#63:$out = In_{t-DelayTime}$
+\form#64:$in1f$
+\form#65:$in2$
+\form#66:$ tick =$
+\form#67:$ delay =$

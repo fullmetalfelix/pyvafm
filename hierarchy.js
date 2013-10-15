@@ -1,10 +1,22 @@
 var hierarchy =
 [
     [ "vafmbase.Circuit", "classvafmbase_1_1_circuit.html", [
+      [ "vafmcircuits.Average", "classvafmcircuits_1_1_average.html", null ],
+      [ "vafmcircuits.Limiter", "classvafmcircuits_1_1_limiter.html", null ],
       [ "vafmcircuits.Machine", "classvafmcircuits_1_1_machine.html", null ],
       [ "vafmcircuits.output", "classvafmcircuits_1_1output.html", null ],
+      [ "vafmcircuits.PI", "classvafmcircuits_1_1_p_i.html", null ],
+      [ "vafmcircuits.PID", "classvafmcircuits_1_1_p_i_d.html", null ],
       [ "vafmcircuits.waver", "classvafmcircuits_1_1waver.html", null ],
-      [ "vafmcircuits_composite.composite", "classvafmcircuits__composite_1_1composite.html", null ],
+      [ "vafmcircuits_Filters.ActiveBandPass", "classvafmcircuits___filters_1_1_active_band_pass.html", null ],
+      [ "vafmcircuits_Filters.ActiveHighPass", "classvafmcircuits___filters_1_1_active_high_pass.html", null ],
+      [ "vafmcircuits_Filters.ActiveLowPass", "classvafmcircuits___filters_1_1_active_low_pass.html", null ],
+      [ "vafmcircuits_Filters.PassiveHighPass", "classvafmcircuits___filters_1_1_passive_high_pass.html", null ],
+      [ "vafmcircuits_Filters.PassiveLowPass", "classvafmcircuits___filters_1_1_passive_low_pass.html", null ],
+      [ "vafmcircuits_FlipFlop.DFlipFlop", "classvafmcircuits___flip_flop_1_1_d_flip_flop.html", null ],
+      [ "vafmcircuits_FlipFlop.DRFlipFlop", "classvafmcircuits___flip_flop_1_1_d_r_flip_flop.html", null ],
+      [ "vafmcircuits_FlipFlop.JKFlipFlop", "classvafmcircuits___flip_flop_1_1_j_k_flip_flop.html", null ],
+      [ "vafmcircuits_FlipFlop.SRFlipFlop", "classvafmcircuits___flip_flop_1_1_s_r_flip_flop.html", null ],
       [ "vafmcircuits_Logic.And", "classvafmcircuits___logic_1_1_and.html", null ],
       [ "vafmcircuits_Logic.NORGate", "classvafmcircuits___logic_1_1_n_o_r_gate.html", null ],
       [ "vafmcircuits_Logic.Not", "classvafmcircuits___logic_1_1_not.html", null ],
@@ -17,9 +29,14 @@ var hierarchy =
       [ "vafmcircuits_math.opMul", "classvafmcircuits__math_1_1op_mul.html", null ],
       [ "vafmcircuits_math.OpPower", "classvafmcircuits__math_1_1_op_power.html", null ],
       [ "vafmcircuits_math.opSub", "classvafmcircuits__math_1_1op_sub.html", null ],
+      [ "vafmcircuits_signal_processing.Delay", "classvafmcircuits__signal__processing_1_1_delay.html", null ],
       [ "vafmcircuits_signal_processing.derivative", "classvafmcircuits__signal__processing_1_1derivative.html", null ],
+      [ "vafmcircuits_signal_processing.Flip", "classvafmcircuits__signal__processing_1_1_flip.html", null ],
+      [ "vafmcircuits_signal_processing.Gain", "classvafmcircuits__signal__processing_1_1_gain.html", null ],
       [ "vafmcircuits_signal_processing.integral", "classvafmcircuits__signal__processing_1_1integral.html", null ],
-      [ "vafmcircuits_signal_processing.minmax", "classvafmcircuits__signal__processing_1_1minmax.html", null ]
+      [ "vafmcircuits_signal_processing.minmax", "classvafmcircuits__signal__processing_1_1minmax.html", null ],
+      [ "vafmcircuits_signal_processing.PeakDetector", "classvafmcircuits__signal__processing_1_1_peak_detector.html", null ],
+      [ "vafmcircuits_signal_processing.Phasor", "classvafmcircuits__signal__processing_1_1_phasor.html", null ]
     ] ],
     [ "vafmbase.Feed", "classvafmbase_1_1_feed.html", null ]
 ];

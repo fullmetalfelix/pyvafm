@@ -44,6 +44,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
+      <li><a href="pages.html"><span>Related&#160;Pages</span></a></li>
       <li class="current"><a href="annotated.html"><span>Classes</span></a></li>
       <li><a href="files.html"><span>Files</span></a></li>
       <li><a href="examples.html"><span>Examples</span></a></li>
@@ -93,7 +94,7 @@ $(document).ready(function(){initNavTree('classvafmcircuits__signal__processing_
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Pages</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -164,7 +165,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Min/Max value circuit. </p>
-<p>Takes in an input and a CheckTime value then it will output the max and min value over that given time period and repeat until the total program time has elapsed</p>
+<p>Takes in an input and a CheckTime value then it will output the max and min value over that given time period and repeat until the total program time has elapsed.</p>
 <ul>
 <li>Initialisation parameters:<br/>
 <ul>
@@ -174,18 +175,21 @@ Additional Inherited Members</h2></td></tr>
 </li>
 <li>Input channels:<br/>
 <ul>
-<li><img class="formulaInl" alt="$inf$ -$" src="form_23.png"/> = integer$</li>
+<li><img class="formulaInl" alt="$inf$" src="form_55.png"/></li>
+<li><img class="formulaInl" alt="$CheckTime = integer$" src="form_56.png"/></li>
 </ul>
 </li>
 <li>Output channels:<br/>
 <ul>
-<li><img class="formulaInl" alt="$max = maximum value over the given peroid $ - $" src="form_24.png"/> = minimum value over the given peroid $</li>
-<li><img class="formulaInl" alt="$amp = \frac{max-min}{2} $ - $" src="form_25.png"/> = {max-min}{2} $ </li>
+<li><img class="formulaInl" alt="$max = maximum value over the given peroid $" src="form_57.png"/></li>
+<li><img class="formulaInl" alt="$max = minimum value over the given peroid $" src="form_58.png"/></li>
+<li><img class="formulaInl" alt="$amp = \frac{max-min}{2} $" src="form_59.png"/></li>
+<li><img class="formulaInl" alt="$amp = \frac{max-min}{2} $" src="form_59.png"/> </li>
 </ul>
 </li>
 </ul>
 
-<p>Definition at line <a class="el" href="vafmcircuits__signal__processing_8py_source.html#l00022">22</a> of file <a class="el" href="vafmcircuits__signal__processing_8py_source.html">vafmcircuits_signal_processing.py</a>.</p>
+<p>Definition at line <a class="el" href="vafmcircuits__signal__processing_8py_source.html#l00072">72</a> of file <a class="el" href="vafmcircuits__signal__processing_8py_source.html">vafmcircuits_signal_processing.py</a>.</p>
 </div><hr/>The documentation for this class was generated from the following file:<ul>
 <li><a class="el" href="vafmcircuits__signal__processing_8py_source.html">vafmcircuits_signal_processing.py</a></li>
 </ul>
@@ -195,7 +199,7 @@ Additional Inherited Members</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><b>vafmcircuits_signal_processing</b></li><li class="navelem"><a class="el" href="classvafmcircuits__signal__processing_1_1minmax.html">minmax</a></li>
-    <li class="footer">Generated on Mon Sep 30 2013 11:12:08 for pyVAFM by
+    <li class="footer">Generated on Tue Oct 15 2013 17:28:21 for pyVAFM by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.5 </li>
   </ul>

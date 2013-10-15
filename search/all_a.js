@@ -1,5 +1,6 @@
 var searchData=
 [
-  ['push',['Push',['../classvafmbase_1_1_circuit.html#a87a2532550d65bfada3c3aceb413acad',1,'vafmbase::Circuit']]],
-  ['pushed',['pushed',['../classvafmbase_1_1_circuit.html#aa3b0af8b8cf580f712b2a7ad4c166334',1,'vafmbase::Circuit']]]
+  ['name',['name',['../classvafmbase_1_1_circuit.html#a7d7090783a4c7f01b6d215284e1fab3f',1,'vafmbase::Circuit']]],
+  ['norgate',['NORGate',['../classvafmcircuits___logic_1_1_n_o_r_gate.html',1,'vafmcircuits_Logic']]],
+  ['not',['Not',['../classvafmcircuits___logic_1_1_not.html',1,'vafmcircuits_Logic']]]
 ];

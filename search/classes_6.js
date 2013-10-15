@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['norgate',['NORGate',['../classvafmcircuits___logic_1_1_n_o_r_gate.html',1,'vafmcircuits_Logic']]],
-  ['not',['Not',['../classvafmcircuits___logic_1_1_not.html',1,'vafmcircuits_Logic']]]
+  ['jkflipflop',['JKFlipFlop',['../classvafmcircuits___flip_flop_1_1_j_k_flip_flop.html',1,'vafmcircuits_FlipFlop']]]
 ];
