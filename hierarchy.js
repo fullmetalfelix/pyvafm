@@ -1,11 +1,11 @@
 var hierarchy =
 [
     [ "vafmbase.Circuit", "classvafmbase_1_1_circuit.html", [
-      [ "vafmcircuits.Limiter", "classvafmcircuits_1_1_limiter.html", null ],
       [ "vafmcircuits.Machine", "classvafmcircuits_1_1_machine.html", null ],
       [ "vafmcircuits.output", "classvafmcircuits_1_1output.html", null ],
       [ "vafmcircuits.waver", "classvafmcircuits_1_1waver.html", null ],
       [ "vafmcircuits_avg.avg", "classvafmcircuits__avg_1_1avg.html", null ],
+      [ "vafmcircuits_control.limiter", "classvafmcircuits__control_1_1limiter.html", null ],
       [ "vafmcircuits_control.PI", "classvafmcircuits__control_1_1_p_i.html", null ],
       [ "vafmcircuits_control.PID", "classvafmcircuits__control_1_1_p_i_d.html", null ],
       [ "vafmcircuits_Filters.ActiveBandPass", "classvafmcircuits___filters_1_1_active_band_pass.html", null ],

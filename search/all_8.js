@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['limiter',['Limiter',['../classvafmcircuits_1_1_limiter.html',1,'vafmcircuits']]]
+  ['limiter',['limiter',['../classvafmcircuits__control_1_1limiter.html',1,'vafmcircuits_control']]]
 ];

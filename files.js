@@ -4,6 +4,7 @@ var files =
     [ "logictest.py", "logictest_8py_source.html", null ],
     [ "test.py", "test_8py_source.html", null ],
     [ "test_avg.py", "test__avg_8py_source.html", null ],
+    [ "test_pi.py", "test__pi_8py_source.html", null ],
     [ "vafmbase.py", "vafmbase_8py_source.html", null ],
     [ "vafmcircuits.py", "vafmcircuits_8py_source.html", null ],
     [ "vafmcircuits_avg.py", "vafmcircuits__avg_8py.html", [
@@ -13,7 +14,8 @@ var files =
     [ "vafmcircuits_Comparison.py", "vafmcircuits___comparison_8py_source.html", null ],
     [ "vafmcircuits_control.py", "vafmcircuits__control_8py.html", [
       [ "PI", "classvafmcircuits__control_1_1_p_i.html", null ],
-      [ "PID", "classvafmcircuits__control_1_1_p_i_d.html", null ]
+      [ "PID", "classvafmcircuits__control_1_1_p_i_d.html", null ],
+      [ "limiter", "classvafmcircuits__control_1_1limiter.html", null ]
     ] ],
     [ "vafmcircuits_Filters.py", "vafmcircuits___filters_8py_source.html", null ],
     [ "vafmcircuits_FlipFlop.py", "vafmcircuits___flip_flop_8py_source.html", null ],

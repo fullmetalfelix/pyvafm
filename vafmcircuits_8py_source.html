@@ -44,7 +44,6 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
-      <li><a href="pages.html"><span>Related&#160;Pages</span></a></li>
       <li><a href="annotated.html"><span>Classes</span></a></li>
       <li class="current"><a href="files.html"><span>Files</span></a></li>
       <li><a href="examples.html"><span>Examples</span></a></li>
@@ -91,7 +90,7 @@ $(document).ready(function(){initNavTree('vafmcircuits_8py_source.html','');});
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Pages</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -793,63 +792,6 @@ $(document).ready(function(){initNavTree('vafmcircuits_8py_source.html','');});
 <div class="line"><a name="l00686"></a><span class="lineno">  686</span>&#160;</div>
 <div class="line"><a name="l00687"></a><span class="lineno">  687</span>&#160;</div>
 <div class="line"><a name="l00688"></a><span class="lineno">  688</span>&#160;</div>
-<div class="line"><a name="l00689"></a><span class="lineno">  689</span>&#160;<span class="comment">## Limiter circuit.</span></div>
-<div class="line"><a name="l00690"></a><span class="lineno">  690</span>&#160;<span class="comment">#</span></div>
-<div class="line"><a name="l00691"></a><span class="lineno">  691</span>&#160;<span class="comment"># This circuit will limit a signal from going above the max and below the min values.</span></div>
-<div class="line"><a name="l00692"></a><span class="lineno">  692</span>&#160;<span class="comment">#</span></div>
-<div class="line"><a name="l00693"></a><span class="lineno">  693</span>&#160;<span class="comment"># - Initialisation parameters:\n</span></div>
-<div class="line"><a name="l00694"></a><span class="lineno">  694</span>&#160;<span class="comment">#             - pushed = True|False  push the output buffer immediately if True</span></div>
-<div class="line"><a name="l00695"></a><span class="lineno">  695</span>&#160;<span class="comment">#             - min = the min threshold value</span></div>
-<div class="line"><a name="l00696"></a><span class="lineno">  696</span>&#160;<span class="comment">#             - max = the max threshold value</span></div>
-<div class="line"><a name="l00697"></a><span class="lineno">  697</span>&#160;<span class="comment">#</span></div>
-<div class="line"><a name="l00698"></a><span class="lineno">  698</span>&#160;<span class="comment"># - Input channels:\n</span></div>
-<div class="line"><a name="l00699"></a><span class="lineno">  699</span>&#160;<span class="comment">#             - \f$in\f$</span></div>
-<div class="line"><a name="l00700"></a><span class="lineno">  700</span>&#160;<span class="comment">#</span></div>
-<div class="line"><a name="l00701"></a><span class="lineno">  701</span>&#160;<span class="comment"># - Output channels:\n</span></div>
-<div class="line"><a name="l00702"></a><span class="lineno">  702</span>&#160;<span class="comment">#             - \f$out\f$</span></div>
-<div class="line"><a name="l00703"></a><span class="lineno">  703</span>&#160;<span class="comment">#</span></div>
-<div class="line"><a name="l00704"></a><span class="lineno"><a class="line" href="classvafmcircuits_1_1_limiter.html">  704</a></span>&#160;<span class="keyword">class </span><a class="code" href="classvafmcircuits_1_1_limiter.html">Limiter</a>(<a class="code" href="classvafmbase_1_1_circuit.html">Circuit</a>):</div>
-<div class="line"><a name="l00705"></a><span class="lineno">  705</span>&#160;    </div>
-<div class="line"><a name="l00706"></a><span class="lineno">  706</span>&#160;    </div>
-<div class="line"><a name="l00707"></a><span class="lineno">  707</span>&#160;              <span class="keyword">def </span>__init__(self, machine, name, **keys):</div>
-<div class="line"><a name="l00708"></a><span class="lineno">  708</span>&#160;</div>
-<div class="line"><a name="l00709"></a><span class="lineno">  709</span>&#160;                            super(self.__class__, self).__init__( machine, name )</div>
-<div class="line"><a name="l00710"></a><span class="lineno">  710</span>&#160;</div>
-<div class="line"><a name="l00711"></a><span class="lineno">  711</span>&#160;                            self.<a class="code" href="classvafmbase_1_1_circuit.html#a60c3a2fc29e6ae2172ab8015082079d5">AddInput</a>(<span class="stringliteral">&quot;in&quot;</span>)</div>
-<div class="line"><a name="l00712"></a><span class="lineno">  712</span>&#160;                            self.<a class="code" href="classvafmbase_1_1_circuit.html#a60c3a2fc29e6ae2172ab8015082079d5">AddInput</a>(<span class="stringliteral">&quot;min&quot;</span>)</div>
-<div class="line"><a name="l00713"></a><span class="lineno">  713</span>&#160;                            self.<a class="code" href="classvafmbase_1_1_circuit.html#a60c3a2fc29e6ae2172ab8015082079d5">AddInput</a>(<span class="stringliteral">&quot;max&quot;</span>)</div>
-<div class="line"><a name="l00714"></a><span class="lineno">  714</span>&#160;                            self.<a class="code" href="classvafmbase_1_1_circuit.html#a5d0148cfd41ea0e3039afc677b3186ad">AddOutput</a>(<span class="stringliteral">&quot;out&quot;</span>)</div>
-<div class="line"><a name="l00715"></a><span class="lineno">  715</span>&#160;</div>
-<div class="line"><a name="l00716"></a><span class="lineno">  716</span>&#160;                            self.<a class="code" href="classvafmcircuits_1_1_limiter.html#a81845762da1e281f98de3758b96819c7">min</a> = 0</div>
-<div class="line"><a name="l00717"></a><span class="lineno">  717</span>&#160;                            self.<a class="code" href="classvafmcircuits_1_1_limiter.html#ae4a9cb2d90d216c772ad113c714f5610">max</a> = 0</div>
-<div class="line"><a name="l00718"></a><span class="lineno">  718</span>&#160;                            </div>
-<div class="line"><a name="l00719"></a><span class="lineno">  719</span>&#160;                            <span class="comment"># @todo if min/max are channels, they do not need to be initialised as parameters!</span></div>
-<div class="line"><a name="l00720"></a><span class="lineno">  720</span>&#160;                            <span class="comment">#if &#39;Min&#39; in keys.keys():</span></div>
-<div class="line"><a name="l00721"></a><span class="lineno">  721</span>&#160;                                          <span class="comment">#self.min = keys[&#39;Min&#39;]</span></div>
-<div class="line"><a name="l00722"></a><span class="lineno">  722</span>&#160;                            <span class="comment">#else:</span></div>
-<div class="line"><a name="l00723"></a><span class="lineno">  723</span>&#160;                                          <span class="comment">#raise NameError(&quot;Missing min input!&quot;)</span></div>
-<div class="line"><a name="l00724"></a><span class="lineno">  724</span>&#160;</div>
-<div class="line"><a name="l00725"></a><span class="lineno">  725</span>&#160;                            <span class="comment">#if &#39;Max&#39; in keys.keys():</span></div>
-<div class="line"><a name="l00726"></a><span class="lineno">  726</span>&#160;                                          <span class="comment">#self.max = keys[&#39;Max&#39;]</span></div>
-<div class="line"><a name="l00727"></a><span class="lineno">  727</span>&#160;                            <span class="comment">#else:</span></div>
-<div class="line"><a name="l00728"></a><span class="lineno">  728</span>&#160;                                          <span class="comment">#raise NameError(&quot;Missing max input!&quot;)</span></div>
-<div class="line"><a name="l00729"></a><span class="lineno">  729</span>&#160;</div>
-<div class="line"><a name="l00730"></a><span class="lineno">  730</span>&#160;</div>
-<div class="line"><a name="l00731"></a><span class="lineno">  731</span>&#160;                            self.<a class="code" href="classvafmbase_1_1_circuit.html#ab8ffc3f4428dec41f9e6958a1a16d8c1">SetInputs</a>(**keys)</div>
-<div class="line"><a name="l00732"></a><span class="lineno">  732</span>&#160;</div>
-<div class="line"><a name="l00733"></a><span class="lineno">  733</span>&#160;              <span class="keyword">def </span>Initialize (self):</div>
-<div class="line"><a name="l00734"></a><span class="lineno">  734</span>&#160;</div>
-<div class="line"><a name="l00735"></a><span class="lineno">  735</span>&#160;                            <span class="keywordflow">pass</span></div>
-<div class="line"><a name="l00736"></a><span class="lineno">  736</span>&#160;</div>
-<div class="line"><a name="l00737"></a><span class="lineno">  737</span>&#160;</div>
-<div class="line"><a name="l00738"></a><span class="lineno">  738</span>&#160;</div>
-<div class="line"><a name="l00739"></a><span class="lineno">  739</span>&#160;</div>
-<div class="line"><a name="l00740"></a><span class="lineno">  740</span>&#160;              <span class="keyword">def </span>Update (self):</div>
-<div class="line"><a name="l00741"></a><span class="lineno">  741</span>&#160;              </div>
-<div class="line"><a name="l00742"></a><span class="lineno">  742</span>&#160;                            self.O[<span class="stringliteral">&quot;out&quot;</span>].value =  max(min(self.I[<span class="stringliteral">&quot;in&quot;</span>].value, self.I[<span class="stringliteral">&quot;max&quot;</span>].value), </div>
-<div class="line"><a name="l00743"></a><span class="lineno">  743</span>&#160;                                          self.I[<span class="stringliteral">&quot;min&quot;</span>].value)</div>
-<div class="line"><a name="l00744"></a><span class="lineno">  744</span>&#160;</div>
-<div class="line"><a name="l00745"></a><span class="lineno">  745</span>&#160;</div>
 <div class="ttc" id="classvafmcircuits_1_1_machine_html_aa646ed99ee97628cff9f9bd25b1b4fe4"><div class="ttname"><a href="classvafmcircuits_1_1_machine.html#aa646ed99ee97628cff9f9bd25b1b4fe4">vafmcircuits.Machine.Update</a></div><div class="ttdeci">def Update</div><div class="ttdoc">Update cycle. </div><div class="ttdef"><b>Definition:</b> <a href="vafmcircuits_8py_source.html#l00435">vafmcircuits.py:435</a></div></div>
 <div class="ttc" id="classvafmcircuits_1_1_machine_html_a2ff1f29d27f025edd7c7045ffa14f8ad"><div class="ttname"><a href="classvafmcircuits_1_1_machine.html#a2ff1f29d27f025edd7c7045ffa14f8ad">vafmcircuits.Machine.circuits</a></div><div class="ttdeci">circuits</div><div class="ttdoc">Ordered dictionary of the circuits in the setup. </div><div class="ttdef"><b>Definition:</b> <a href="vafmcircuits_8py_source.html#l00040">vafmcircuits.py:40</a></div></div>
 <div class="ttc" id="classvafmbase_1_1_circuit_html_a5d0148cfd41ea0e3039afc677b3186ad"><div class="ttname"><a href="classvafmbase_1_1_circuit.html#a5d0148cfd41ea0e3039afc677b3186ad">vafmbase.Circuit.AddOutput</a></div><div class="ttdeci">def AddOutput</div><div class="ttdoc">Create an output channel with the given name. </div><div class="ttdef"><b>Definition:</b> <a href="vafmbase_8py_source.html#l00138">vafmbase.py:138</a></div></div>
@@ -861,7 +803,6 @@ $(document).ready(function(){initNavTree('vafmcircuits_8py_source.html','');});
 <div class="ttc" id="classvafmcircuits_1_1_machine_html_a2a042c3dea9c211b4c358126dbd5170b"><div class="ttname"><a href="classvafmcircuits_1_1_machine.html#a2a042c3dea9c211b4c358126dbd5170b">vafmcircuits.Machine._idt</a></div><div class="ttdeci">_idt</div><div class="ttdoc">Integer number of update steps so far. </div><div class="ttdef"><b>Definition:</b> <a href="vafmcircuits_8py_source.html#l00050">vafmcircuits.py:50</a></div></div>
 <div class="ttc" id="classvafmcircuits_1_1_machine_html_a0e5801525d4a7e4ee670ea5440fb9f6d"><div class="ttname"><a href="classvafmcircuits_1_1_machine.html#a0e5801525d4a7e4ee670ea5440fb9f6d">vafmcircuits.Machine.AddOutput</a></div><div class="ttdeci">def AddOutput</div><div class="ttdoc">Create an output channel with the given name. </div><div class="ttdef"><b>Definition:</b> <a href="vafmcircuits_8py_source.html#l00147">vafmcircuits.py:147</a></div></div>
 <div class="ttc" id="classvafmcircuits_1_1_machine_html_a638fdd20e7cef4c9f2868972ee450a83"><div class="ttname"><a href="classvafmcircuits_1_1_machine.html#a638fdd20e7cef4c9f2868972ee450a83">vafmcircuits.Machine._MetaO</a></div><div class="ttdeci">_MetaO</div><div class="ttdef"><b>Definition:</b> <a href="vafmcircuits_8py_source.html#l00055">vafmcircuits.py:55</a></div></div>
-<div class="ttc" id="classvafmcircuits_1_1_limiter_html_ae4a9cb2d90d216c772ad113c714f5610"><div class="ttname"><a href="classvafmcircuits_1_1_limiter.html#ae4a9cb2d90d216c772ad113c714f5610">vafmcircuits.Limiter.max</a></div><div class="ttdeci">max</div><div class="ttdef"><b>Definition:</b> <a href="vafmcircuits_8py_source.html#l00717">vafmcircuits.py:717</a></div></div>
 <div class="ttc" id="classvafmcircuits_1_1_machine_html_af967c3307cb9c6cc58de5db9cb427e55"><div class="ttname"><a href="classvafmcircuits_1_1_machine.html#af967c3307cb9c6cc58de5db9cb427e55">vafmcircuits.Machine.GetChannel</a></div><div class="ttdeci">def GetChannel</div><div class="ttdoc">Find a channel by tag. </div><div class="ttdef"><b>Definition:</b> <a href="vafmcircuits_8py_source.html#l00307">vafmcircuits.py:307</a></div></div>
 <div class="ttc" id="classvafmcircuits_1_1_machine_html_a3c6139c60479b61585653b2b9b6024ce"><div class="ttname"><a href="classvafmcircuits_1_1_machine.html#a3c6139c60479b61585653b2b9b6024ce">vafmcircuits.Machine._IsGlobal</a></div><div class="ttdeci">def _IsGlobal</div><div class="ttdoc">Checks whether the given channel tag points to a global channel. </div><div class="ttdef"><b>Definition:</b> <a href="vafmcircuits_8py_source.html#l00341">vafmcircuits.py:341</a></div></div>
 <div class="ttc" id="classvafmbase_1_1_circuit_html_a50ad09fd57c1eca9cbd5516d6da92b20"><div class="ttname"><a href="classvafmbase_1_1_circuit.html#a50ad09fd57c1eca9cbd5516d6da92b20">vafmbase.Circuit.I</a></div><div class="ttdeci">I</div><div class="ttdoc">Dictionary of input channels. </div><div class="ttdef"><b>Definition:</b> <a href="vafmbase_8py_source.html#l00100">vafmbase.py:100</a></div></div>
@@ -877,7 +818,6 @@ $(document).ready(function(){initNavTree('vafmcircuits_8py_source.html','');});
 <div class="ttc" id="classvafmcircuits_1_1output_html_adf913b8388dc4e6d4db29255399a8478"><div class="ttname"><a href="classvafmcircuits_1_1output.html#adf913b8388dc4e6d4db29255399a8478">vafmcircuits.output._cnt</a></div><div class="ttdeci">_cnt</div><div class="ttdef"><b>Definition:</b> <a href="vafmcircuits_8py_source.html#l00598">vafmcircuits.py:598</a></div></div>
 <div class="ttc" id="classvafmcircuits_1_1output_html_a8222b0473f7b872f8abdb580a93c2eb0"><div class="ttname"><a href="classvafmcircuits_1_1output.html#a8222b0473f7b872f8abdb580a93c2eb0">vafmcircuits.output.channels</a></div><div class="ttdeci">channels</div><div class="ttdoc">List of channels to dump in the file. </div><div class="ttdef"><b>Definition:</b> <a href="vafmcircuits_8py_source.html#l00591">vafmcircuits.py:591</a></div></div>
 <div class="ttc" id="classvafmcircuits_1_1_machine_html"><div class="ttname"><a href="classvafmcircuits_1_1_machine.html">vafmcircuits.Machine</a></div><div class="ttdoc">Virtual Machine main class. </div><div class="ttdef"><b>Definition:</b> <a href="vafmcircuits_8py_source.html#l00032">vafmcircuits.py:32</a></div></div>
-<div class="ttc" id="classvafmcircuits_1_1_limiter_html_a81845762da1e281f98de3758b96819c7"><div class="ttname"><a href="classvafmcircuits_1_1_limiter.html#a81845762da1e281f98de3758b96819c7">vafmcircuits.Limiter.min</a></div><div class="ttdeci">min</div><div class="ttdef"><b>Definition:</b> <a href="vafmcircuits_8py_source.html#l00716">vafmcircuits.py:716</a></div></div>
 <div class="ttc" id="classvafmcircuits_1_1output_html_a8a3aad954e78f98c989b567e1c6781c7"><div class="ttname"><a href="classvafmcircuits_1_1output.html#a8a3aad954e78f98c989b567e1c6781c7">vafmcircuits.output.dump</a></div><div class="ttdeci">dump</div><div class="ttdoc">Dump rate. </div><div class="ttdef"><b>Definition:</b> <a href="vafmcircuits_8py_source.html#l00594">vafmcircuits.py:594</a></div></div>
 <div class="ttc" id="classvafmcircuits_1_1_machine_html_a36af8dfa55b1f958e7d3dc940529e3cc"><div class="ttname"><a href="classvafmcircuits_1_1_machine.html#a36af8dfa55b1f958e7d3dc940529e3cc">vafmcircuits.Machine._GetMetaChannel</a></div><div class="ttdeci">def _GetMetaChannel</div><div class="ttdef"><b>Definition:</b> <a href="vafmcircuits_8py_source.html#l00270">vafmcircuits.py:270</a></div></div>
 <div class="ttc" id="classvafmcircuits_1_1_machine_html_afdb52206688b7258ce77e815c86baead"><div class="ttname"><a href="classvafmcircuits_1_1_machine.html#afdb52206688b7258ce77e815c86baead">vafmcircuits.Machine.dt</a></div><div class="ttdeci">dt</div><div class="ttdoc">Integration timestep. </div><div class="ttdef"><b>Definition:</b> <a href="vafmcircuits_8py_source.html#l00043">vafmcircuits.py:43</a></div></div>
@@ -890,14 +830,13 @@ $(document).ready(function(){initNavTree('vafmcircuits_8py_source.html','');});
 <div class="ttc" id="classvafmcircuits_1_1_machine_html_a172358fe26509a897cdc0d4192509948"><div class="ttname"><a href="classvafmcircuits_1_1_machine.html#a172358fe26509a897cdc0d4192509948">vafmcircuits.Machine._MetaI</a></div><div class="ttdeci">_MetaI</div><div class="ttdef"><b>Definition:</b> <a href="vafmcircuits_8py_source.html#l00053">vafmcircuits.py:53</a></div></div>
 <div class="ttc" id="classvafmcircuits_1_1_machine_html_adfb65ef3a38875e2bece188204e83999"><div class="ttname"><a href="classvafmcircuits_1_1_machine.html#adfb65ef3a38875e2bece188204e83999">vafmcircuits.Machine.Disconnect</a></div><div class="ttdeci">def Disconnect</div><div class="ttdoc">Disconnect one or more input channels. </div><div class="ttdef"><b>Definition:</b> <a href="vafmcircuits_8py_source.html#l00410">vafmcircuits.py:410</a></div></div>
 <div class="ttc" id="classvafmcircuits_1_1_machine_html_a8f6d79d162cffa8d5d1b570cda661f2f"><div class="ttname"><a href="classvafmcircuits_1_1_machine.html#a8f6d79d162cffa8d5d1b570cda661f2f">vafmcircuits.Machine._PostUpdate</a></div><div class="ttdeci">def _PostUpdate</div><div class="ttdoc">Post Update cycle. </div><div class="ttdef"><b>Definition:</b> <a href="vafmcircuits_8py_source.html#l00466">vafmcircuits.py:466</a></div></div>
-<div class="ttc" id="classvafmcircuits_1_1_limiter_html"><div class="ttname"><a href="classvafmcircuits_1_1_limiter.html">vafmcircuits.Limiter</a></div><div class="ttdoc">Limiter circuit. </div><div class="ttdef"><b>Definition:</b> <a href="vafmcircuits_8py_source.html#l00704">vafmcircuits.py:704</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><b>vafmcircuits.py</b></li>
-    <li class="footer">Generated on Wed Oct 16 2013 10:52:05 for pyVAFM by
+    <li class="footer">Generated on Wed Oct 16 2013 11:43:11 for pyVAFM by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.5 </li>
   </ul>

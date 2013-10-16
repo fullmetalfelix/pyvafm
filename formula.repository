@@ -70,3 +70,11 @@
 \form#69:$tick$
 \form#70:$Kd$
 \form#71:$out = K_p (set-signal) + K_i \int dt $
+\form#72:$out = K_p (set-signal) + K_i \int (set-signal) dt +K_i\frac{d(set-signal)}{dt}$
+\form#73:$out = K_p (set-signal) + K_i \int (set-signal) dt $
+\form#74:$out = K_p (set-signal) + K_i \int (set-signal) dt +K_d\frac{d(set-signal)}{dt}$
+\form#75:$out = |in|$
+\form#76:$min$
+\form#77:$max$
+\form#78:$out = max(min(in, max), min)$
+\form#79:$out = Max(Min(in, max), min)$

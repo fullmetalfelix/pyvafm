@@ -11,8 +11,7 @@ var indexSectionsWithContent =
   1: "acdfgijlmnopswx",
   2: "v",
   3: "_acdgiprstu",
-  4: "cdfimnop",
-  5: "t"
+  4: "cdfimnop"
 };
 
 var indexSectionNames =
@@ -21,8 +20,7 @@ var indexSectionNames =
   1: "classes",
   2: "files",
   3: "functions",
-  4: "variables",
-  5: "pages"
+  4: "variables"
 };
 
 function convertToId(search)

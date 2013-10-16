@@ -1,7 +1,6 @@
 var NAVTREE =
 [
   [ "pyVAFM", "index.html", [
-    [ "Todo List", "todo.html", null ],
     [ "Classes", null, [
       [ "Class List", "annotated.html", "annotated" ],
       [ "Class Index", "classes.html", null ],
