@@ -484,119 +484,120 @@ $(document).ready(function(){initNavTree('vafmcircuits__signal__processing_8py_s
 <div class="line"><a name="l00377"></a><span class="lineno">  377</span>&#160;</div>
 <div class="line"><a name="l00378"></a><span class="lineno">  378</span>&#160;<span class="comment">## Phasor circuit.</span></div>
 <div class="line"><a name="l00379"></a><span class="lineno">  379</span>&#160;<span class="comment">#</span></div>
-<div class="line"><a name="l00380"></a><span class="lineno">  380</span>&#160;<span class="comment"># Takes in two inputs and will measure the legnth of time between the first input becoming postive and the second also becoming positive.</span></div>
-<div class="line"><a name="l00381"></a><span class="lineno">  381</span>&#160;<span class="comment"># - Initialisation parameters:\n</span></div>
-<div class="line"><a name="l00382"></a><span class="lineno">  382</span>&#160;<span class="comment">#             - pushed = True|False  push the output buffer immediately if True</span></div>
-<div class="line"><a name="l00383"></a><span class="lineno">  383</span>&#160;<span class="comment">#</span></div>
-<div class="line"><a name="l00384"></a><span class="lineno">  384</span>&#160;<span class="comment"># - Input channels:\n</span></div>
-<div class="line"><a name="l00385"></a><span class="lineno">  385</span>&#160;<span class="comment">#             - \f$in1f\f$</span></div>
-<div class="line"><a name="l00386"></a><span class="lineno">  386</span>&#160;<span class="comment">#             -\f$in2\f$</span></div>
-<div class="line"><a name="l00387"></a><span class="lineno">  387</span>&#160;<span class="comment">#</span></div>
-<div class="line"><a name="l00388"></a><span class="lineno">  388</span>&#160;<span class="comment"># - Output channels:\n</span></div>
-<div class="line"><a name="l00389"></a><span class="lineno">  389</span>&#160;<span class="comment">#             - \f$ tick =\f$ 1 when input 2 becomes positve assuming input 1 has alreayd become postive before it</span></div>
-<div class="line"><a name="l00390"></a><span class="lineno">  390</span>&#160;<span class="comment">#             - \f$ delay =\f$ time difference between input 1 and input 2 becoming positve </span></div>
-<div class="line"><a name="l00391"></a><span class="lineno">  391</span>&#160;</div>
-<div class="line"><a name="l00392"></a><span class="lineno"><a class="line" href="classvafmcircuits__signal__processing_1_1_phasor.html">  392</a></span>&#160;<span class="keyword">class </span><a class="code" href="classvafmcircuits__signal__processing_1_1_phasor.html">Phasor</a>(<a class="code" href="classvafmbase_1_1_circuit.html">Circuit</a>):</div>
-<div class="line"><a name="l00393"></a><span class="lineno">  393</span>&#160;    </div>
+<div class="line"><a name="l00380"></a><span class="lineno">  380</span>&#160;<span class="comment"># Takes in two inputs and will measure the legnth of time between the first</span></div>
+<div class="line"><a name="l00381"></a><span class="lineno">  381</span>&#160;<span class="comment"># input becoming postive and the second also becoming positive.</span></div>
+<div class="line"><a name="l00382"></a><span class="lineno">  382</span>&#160;<span class="comment"># - Initialisation parameters:\n</span></div>
+<div class="line"><a name="l00383"></a><span class="lineno">  383</span>&#160;<span class="comment">#             - pushed = True|False  push the output buffer immediately if True</span></div>
+<div class="line"><a name="l00384"></a><span class="lineno">  384</span>&#160;<span class="comment">#</span></div>
+<div class="line"><a name="l00385"></a><span class="lineno">  385</span>&#160;<span class="comment"># - Input channels:\n</span></div>
+<div class="line"><a name="l00386"></a><span class="lineno">  386</span>&#160;<span class="comment">#             - \f$in1f\f$</span></div>
+<div class="line"><a name="l00387"></a><span class="lineno">  387</span>&#160;<span class="comment">#             -\f$in2\f$</span></div>
+<div class="line"><a name="l00388"></a><span class="lineno">  388</span>&#160;<span class="comment">#</span></div>
+<div class="line"><a name="l00389"></a><span class="lineno">  389</span>&#160;<span class="comment"># - Output channels:\n</span></div>
+<div class="line"><a name="l00390"></a><span class="lineno">  390</span>&#160;<span class="comment">#             - \f$ tick =\f$ 1 when input 2 becomes positve assuming input 1 has alreayd become postive before it</span></div>
+<div class="line"><a name="l00391"></a><span class="lineno">  391</span>&#160;<span class="comment">#             - \f$ delay =\f$ time difference between input 1 and input 2 becoming positve </span></div>
+<div class="line"><a name="l00392"></a><span class="lineno">  392</span>&#160;</div>
+<div class="line"><a name="l00393"></a><span class="lineno"><a class="line" href="classvafmcircuits__signal__processing_1_1_phasor.html">  393</a></span>&#160;<span class="keyword">class </span><a class="code" href="classvafmcircuits__signal__processing_1_1_phasor.html">Phasor</a>(<a class="code" href="classvafmbase_1_1_circuit.html">Circuit</a>):</div>
 <div class="line"><a name="l00394"></a><span class="lineno">  394</span>&#160;    </div>
-<div class="line"><a name="l00395"></a><span class="lineno">  395</span>&#160;              <span class="keyword">def </span>__init__(self, machine, name, **keys):</div>
-<div class="line"><a name="l00396"></a><span class="lineno">  396</span>&#160;</div>
-<div class="line"><a name="l00397"></a><span class="lineno">  397</span>&#160;                            super(self.__class__, self).__init__( machine, name )</div>
-<div class="line"><a name="l00398"></a><span class="lineno">  398</span>&#160;                            self.<a class="code" href="classvafmbase_1_1_circuit.html#a60c3a2fc29e6ae2172ab8015082079d5">AddInput</a>(<span class="stringliteral">&quot;in1&quot;</span>)</div>
-<div class="line"><a name="l00399"></a><span class="lineno">  399</span>&#160;                            self.<a class="code" href="classvafmbase_1_1_circuit.html#a60c3a2fc29e6ae2172ab8015082079d5">AddInput</a>(<span class="stringliteral">&quot;in2&quot;</span>)</div>
-<div class="line"><a name="l00400"></a><span class="lineno">  400</span>&#160;                            self.<a class="code" href="classvafmbase_1_1_circuit.html#a5d0148cfd41ea0e3039afc677b3186ad">AddOutput</a>(<span class="stringliteral">&quot;tick&quot;</span>)</div>
-<div class="line"><a name="l00401"></a><span class="lineno">  401</span>&#160;                            self.<a class="code" href="classvafmbase_1_1_circuit.html#a5d0148cfd41ea0e3039afc677b3186ad">AddOutput</a>(<span class="stringliteral">&quot;delay&quot;</span>)</div>
-<div class="line"><a name="l00402"></a><span class="lineno">  402</span>&#160;</div>
-<div class="line"><a name="l00403"></a><span class="lineno">  403</span>&#160;                            self.<a class="code" href="classvafmcircuits__signal__processing_1_1_phasor.html#ae8916b6418e1f33eac77f53d4d36f1f2">counter</a>= 0</div>
-<div class="line"><a name="l00404"></a><span class="lineno">  404</span>&#160;                            self.<a class="code" href="classvafmcircuits__signal__processing_1_1_phasor.html#abf6b5e92d0a9874b68cb9b8457530a08">check</a> = <span class="keyword">False</span></div>
-<div class="line"><a name="l00405"></a><span class="lineno">  405</span>&#160;</div>
+<div class="line"><a name="l00395"></a><span class="lineno">  395</span>&#160;    </div>
+<div class="line"><a name="l00396"></a><span class="lineno">  396</span>&#160;              <span class="keyword">def </span>__init__(self, machine, name, **keys):</div>
+<div class="line"><a name="l00397"></a><span class="lineno">  397</span>&#160;</div>
+<div class="line"><a name="l00398"></a><span class="lineno">  398</span>&#160;                            super(self.__class__, self).__init__( machine, name )</div>
+<div class="line"><a name="l00399"></a><span class="lineno">  399</span>&#160;                            self.<a class="code" href="classvafmbase_1_1_circuit.html#a60c3a2fc29e6ae2172ab8015082079d5">AddInput</a>(<span class="stringliteral">&quot;in1&quot;</span>)</div>
+<div class="line"><a name="l00400"></a><span class="lineno">  400</span>&#160;                            self.<a class="code" href="classvafmbase_1_1_circuit.html#a60c3a2fc29e6ae2172ab8015082079d5">AddInput</a>(<span class="stringliteral">&quot;in2&quot;</span>)</div>
+<div class="line"><a name="l00401"></a><span class="lineno">  401</span>&#160;                            self.<a class="code" href="classvafmbase_1_1_circuit.html#a5d0148cfd41ea0e3039afc677b3186ad">AddOutput</a>(<span class="stringliteral">&quot;tick&quot;</span>)</div>
+<div class="line"><a name="l00402"></a><span class="lineno">  402</span>&#160;                            self.<a class="code" href="classvafmbase_1_1_circuit.html#a5d0148cfd41ea0e3039afc677b3186ad">AddOutput</a>(<span class="stringliteral">&quot;delay&quot;</span>)</div>
+<div class="line"><a name="l00403"></a><span class="lineno">  403</span>&#160;</div>
+<div class="line"><a name="l00404"></a><span class="lineno">  404</span>&#160;                            self.<a class="code" href="classvafmcircuits__signal__processing_1_1_phasor.html#ae8916b6418e1f33eac77f53d4d36f1f2">counter</a>= 0</div>
+<div class="line"><a name="l00405"></a><span class="lineno">  405</span>&#160;                            self.<a class="code" href="classvafmcircuits__signal__processing_1_1_phasor.html#abf6b5e92d0a9874b68cb9b8457530a08">check</a> = <span class="keyword">False</span></div>
 <div class="line"><a name="l00406"></a><span class="lineno">  406</span>&#160;</div>
 <div class="line"><a name="l00407"></a><span class="lineno">  407</span>&#160;</div>
-<div class="line"><a name="l00408"></a><span class="lineno">  408</span>&#160;              <span class="keyword">def </span>Initialize (self):</div>
-<div class="line"><a name="l00409"></a><span class="lineno">  409</span>&#160;</div>
-<div class="line"><a name="l00410"></a><span class="lineno">  410</span>&#160;                            <span class="keywordflow">pass</span></div>
-<div class="line"><a name="l00411"></a><span class="lineno">  411</span>&#160;</div>
+<div class="line"><a name="l00408"></a><span class="lineno">  408</span>&#160;</div>
+<div class="line"><a name="l00409"></a><span class="lineno">  409</span>&#160;              <span class="keyword">def </span>Initialize (self):</div>
+<div class="line"><a name="l00410"></a><span class="lineno">  410</span>&#160;</div>
+<div class="line"><a name="l00411"></a><span class="lineno">  411</span>&#160;                            <span class="keywordflow">pass</span></div>
 <div class="line"><a name="l00412"></a><span class="lineno">  412</span>&#160;</div>
 <div class="line"><a name="l00413"></a><span class="lineno">  413</span>&#160;</div>
 <div class="line"><a name="l00414"></a><span class="lineno">  414</span>&#160;</div>
-<div class="line"><a name="l00415"></a><span class="lineno">  415</span>&#160;              <span class="keyword">def </span>Update (self):</div>
-<div class="line"><a name="l00416"></a><span class="lineno">  416</span>&#160;                            </div>
-<div class="line"><a name="l00417"></a><span class="lineno">  417</span>&#160;                            <span class="keywordflow">if</span>            self.I[<span class="stringliteral">&quot;in1&quot;</span>].value &gt; 0 <span class="keywordflow">and</span> self.I[<span class="stringliteral">&quot;in2&quot;</span>].value &lt; 0:</div>
-<div class="line"><a name="l00418"></a><span class="lineno">  418</span>&#160;                                          self.counter = self.counter +1</div>
-<div class="line"><a name="l00419"></a><span class="lineno">  419</span>&#160;                                          self.check= <span class="keyword">True</span></div>
-<div class="line"><a name="l00420"></a><span class="lineno">  420</span>&#160;</div>
-<div class="line"><a name="l00421"></a><span class="lineno">  421</span>&#160;                            <span class="comment">#@todo are you sure these 2 lines should not be indented under the if?</span></div>
-<div class="line"><a name="l00422"></a><span class="lineno">  422</span>&#160;                            self.O[<span class="stringliteral">&quot;tick&quot;</span>].value = 0</div>
-<div class="line"><a name="l00423"></a><span class="lineno">  423</span>&#160;                            self.O[<span class="stringliteral">&quot;delay&quot;</span>].value = 0</div>
-<div class="line"><a name="l00424"></a><span class="lineno">  424</span>&#160;</div>
-<div class="line"><a name="l00425"></a><span class="lineno">  425</span>&#160;                            <span class="keywordflow">if</span> self.I[<span class="stringliteral">&quot;in2&quot;</span>].value &gt; 0 <span class="keywordflow">and</span> self.check == <span class="keyword">True</span>:</div>
-<div class="line"><a name="l00426"></a><span class="lineno">  426</span>&#160;                                          self.O[<span class="stringliteral">&quot;tick&quot;</span>].value = 1</div>
-<div class="line"><a name="l00427"></a><span class="lineno">  427</span>&#160;                                          self.O[<span class="stringliteral">&quot;delay&quot;</span>].value = self.counter * self.machine.dt</div>
-<div class="line"><a name="l00428"></a><span class="lineno">  428</span>&#160;                                          self.counter = 0</div>
-<div class="line"><a name="l00429"></a><span class="lineno">  429</span>&#160;                                          self.check = <span class="keyword">False</span></div>
-<div class="line"><a name="l00430"></a><span class="lineno">  430</span>&#160;</div>
+<div class="line"><a name="l00415"></a><span class="lineno">  415</span>&#160;</div>
+<div class="line"><a name="l00416"></a><span class="lineno">  416</span>&#160;              <span class="keyword">def </span>Update (self):</div>
+<div class="line"><a name="l00417"></a><span class="lineno">  417</span>&#160;                            </div>
+<div class="line"><a name="l00418"></a><span class="lineno">  418</span>&#160;                            <span class="keywordflow">if</span>            self.I[<span class="stringliteral">&quot;in1&quot;</span>].value &gt; 0 <span class="keywordflow">and</span> self.I[<span class="stringliteral">&quot;in2&quot;</span>].value &lt; 0:</div>
+<div class="line"><a name="l00419"></a><span class="lineno">  419</span>&#160;                                          self.counter = self.counter +1</div>
+<div class="line"><a name="l00420"></a><span class="lineno">  420</span>&#160;                                          self.check= <span class="keyword">True</span></div>
+<div class="line"><a name="l00421"></a><span class="lineno">  421</span>&#160;</div>
+<div class="line"><a name="l00422"></a><span class="lineno">  422</span>&#160;                            <span class="comment">#@todo are you sure these 2 lines should not be indented under the if?</span></div>
+<div class="line"><a name="l00423"></a><span class="lineno">  423</span>&#160;                            self.O[<span class="stringliteral">&quot;tick&quot;</span>].value = 0</div>
+<div class="line"><a name="l00424"></a><span class="lineno">  424</span>&#160;                            self.O[<span class="stringliteral">&quot;delay&quot;</span>].value = 0</div>
+<div class="line"><a name="l00425"></a><span class="lineno">  425</span>&#160;</div>
+<div class="line"><a name="l00426"></a><span class="lineno">  426</span>&#160;                            <span class="keywordflow">if</span> self.I[<span class="stringliteral">&quot;in2&quot;</span>].value &gt; 0 <span class="keywordflow">and</span> self.check == <span class="keyword">True</span>:</div>
+<div class="line"><a name="l00427"></a><span class="lineno">  427</span>&#160;                                          self.O[<span class="stringliteral">&quot;tick&quot;</span>].value = 1</div>
+<div class="line"><a name="l00428"></a><span class="lineno">  428</span>&#160;                                          self.O[<span class="stringliteral">&quot;delay&quot;</span>].value = self.counter * self.machine.dt</div>
+<div class="line"><a name="l00429"></a><span class="lineno">  429</span>&#160;                                          self.counter = 0</div>
+<div class="line"><a name="l00430"></a><span class="lineno">  430</span>&#160;                                          self.check = <span class="keyword">False</span></div>
 <div class="line"><a name="l00431"></a><span class="lineno">  431</span>&#160;</div>
-<div class="line"><a name="l00432"></a><span class="lineno">  432</span>&#160;<span class="comment">## Flip circuit.</span></div>
-<div class="line"><a name="l00433"></a><span class="lineno">  433</span>&#160;<span class="comment">#</span></div>
-<div class="line"><a name="l00434"></a><span class="lineno">  434</span>&#160;<span class="comment"># Takes in and input and will output a tick everytime the signal changes </span></div>
-<div class="line"><a name="l00435"></a><span class="lineno">  435</span>&#160;<span class="comment"># from negative to positive.</span></div>
-<div class="line"><a name="l00436"></a><span class="lineno">  436</span>&#160;<span class="comment">#</span></div>
-<div class="line"><a name="l00437"></a><span class="lineno">  437</span>&#160;<span class="comment"># - Initialisation parameters:\n</span></div>
-<div class="line"><a name="l00438"></a><span class="lineno">  438</span>&#160;<span class="comment">#             - pushed = True|False  push the output buffer immediately if True</span></div>
-<div class="line"><a name="l00439"></a><span class="lineno">  439</span>&#160;<span class="comment">#</span></div>
-<div class="line"><a name="l00440"></a><span class="lineno">  440</span>&#160;<span class="comment"># - Input channels:\n</span></div>
-<div class="line"><a name="l00441"></a><span class="lineno">  441</span>&#160;<span class="comment">#             -\f$inf\f$</span></div>
-<div class="line"><a name="l00442"></a><span class="lineno">  442</span>&#160;<span class="comment">#</span></div>
-<div class="line"><a name="l00443"></a><span class="lineno">  443</span>&#160;<span class="comment"># - Output channels:\n</span></div>
-<div class="line"><a name="l00444"></a><span class="lineno">  444</span>&#160;<span class="comment">#             - \f out = 1 when f(t-1) &lt;= 0 and f(t) &gt;0 \f$</span></div>
-<div class="line"><a name="l00445"></a><span class="lineno">  445</span>&#160;</div>
-<div class="line"><a name="l00446"></a><span class="lineno">  446</span>&#160;</div>
-<div class="line"><a name="l00447"></a><span class="lineno"><a class="line" href="classvafmcircuits__signal__processing_1_1_flip.html">  447</a></span>&#160;<span class="keyword">class </span><a class="code" href="classvafmcircuits__signal__processing_1_1_flip.html">Flip</a>(<a class="code" href="classvafmbase_1_1_circuit.html">Circuit</a>):</div>
-<div class="line"><a name="l00448"></a><span class="lineno">  448</span>&#160;    </div>
+<div class="line"><a name="l00432"></a><span class="lineno">  432</span>&#160;</div>
+<div class="line"><a name="l00433"></a><span class="lineno">  433</span>&#160;<span class="comment">## Flip circuit.</span></div>
+<div class="line"><a name="l00434"></a><span class="lineno">  434</span>&#160;<span class="comment">#</span></div>
+<div class="line"><a name="l00435"></a><span class="lineno">  435</span>&#160;<span class="comment"># Takes in and input and will output a tick everytime the signal changes </span></div>
+<div class="line"><a name="l00436"></a><span class="lineno">  436</span>&#160;<span class="comment"># from negative to positive.</span></div>
+<div class="line"><a name="l00437"></a><span class="lineno">  437</span>&#160;<span class="comment">#</span></div>
+<div class="line"><a name="l00438"></a><span class="lineno">  438</span>&#160;<span class="comment"># - Initialisation parameters:\n</span></div>
+<div class="line"><a name="l00439"></a><span class="lineno">  439</span>&#160;<span class="comment">#             - pushed = True|False  push the output buffer immediately if True</span></div>
+<div class="line"><a name="l00440"></a><span class="lineno">  440</span>&#160;<span class="comment">#</span></div>
+<div class="line"><a name="l00441"></a><span class="lineno">  441</span>&#160;<span class="comment"># - Input channels:\n</span></div>
+<div class="line"><a name="l00442"></a><span class="lineno">  442</span>&#160;<span class="comment">#             -\f$inf\f$</span></div>
+<div class="line"><a name="l00443"></a><span class="lineno">  443</span>&#160;<span class="comment">#</span></div>
+<div class="line"><a name="l00444"></a><span class="lineno">  444</span>&#160;<span class="comment"># - Output channels:\n</span></div>
+<div class="line"><a name="l00445"></a><span class="lineno">  445</span>&#160;<span class="comment">#             - \f$ out = 1 when f(t-1) &lt;= 0 and f(t) &gt;0 \f$</span></div>
+<div class="line"><a name="l00446"></a><span class="lineno">  446</span>&#160;<span class="comment">#</span></div>
+<div class="line"><a name="l00447"></a><span class="lineno">  447</span>&#160;</div>
+<div class="line"><a name="l00448"></a><span class="lineno"><a class="line" href="classvafmcircuits__signal__processing_1_1_flip.html">  448</a></span>&#160;<span class="keyword">class </span><a class="code" href="classvafmcircuits__signal__processing_1_1_flip.html">Flip</a>(<a class="code" href="classvafmbase_1_1_circuit.html">Circuit</a>):</div>
 <div class="line"><a name="l00449"></a><span class="lineno">  449</span>&#160;    </div>
-<div class="line"><a name="l00450"></a><span class="lineno">  450</span>&#160;              <span class="keyword">def </span>__init__(self, machine, name, **keys):</div>
-<div class="line"><a name="l00451"></a><span class="lineno">  451</span>&#160;</div>
-<div class="line"><a name="l00452"></a><span class="lineno">  452</span>&#160;                            super(self.__class__, self).__init__( machine, name )</div>
-<div class="line"><a name="l00453"></a><span class="lineno">  453</span>&#160;                            self.<a class="code" href="classvafmbase_1_1_circuit.html#a60c3a2fc29e6ae2172ab8015082079d5">AddInput</a>(<span class="stringliteral">&quot;in&quot;</span>)</div>
-<div class="line"><a name="l00454"></a><span class="lineno">  454</span>&#160;                            self.<a class="code" href="classvafmbase_1_1_circuit.html#a5d0148cfd41ea0e3039afc677b3186ad">AddOutput</a>(<span class="stringliteral">&quot;out&quot;</span>)</div>
-<div class="line"><a name="l00455"></a><span class="lineno">  455</span>&#160;                            self.<a class="code" href="classvafmcircuits__signal__processing_1_1_flip.html#a0f2236bc84177dcabd2c0122ecefef2b">yo</a>= 0</div>
-<div class="line"><a name="l00456"></a><span class="lineno">  456</span>&#160;</div>
-<div class="line"><a name="l00457"></a><span class="lineno">  457</span>&#160;              <span class="keyword">def </span>Initialize (self):</div>
-<div class="line"><a name="l00458"></a><span class="lineno">  458</span>&#160;</div>
-<div class="line"><a name="l00459"></a><span class="lineno">  459</span>&#160;                            <span class="keywordflow">pass</span></div>
-<div class="line"><a name="l00460"></a><span class="lineno">  460</span>&#160;              </div>
-<div class="line"><a name="l00461"></a><span class="lineno">  461</span>&#160;                            </div>
+<div class="line"><a name="l00450"></a><span class="lineno">  450</span>&#160;    </div>
+<div class="line"><a name="l00451"></a><span class="lineno">  451</span>&#160;              <span class="keyword">def </span>__init__(self, machine, name, **keys):</div>
+<div class="line"><a name="l00452"></a><span class="lineno">  452</span>&#160;</div>
+<div class="line"><a name="l00453"></a><span class="lineno">  453</span>&#160;                            super(self.__class__, self).__init__( machine, name )</div>
+<div class="line"><a name="l00454"></a><span class="lineno">  454</span>&#160;                            self.<a class="code" href="classvafmbase_1_1_circuit.html#a60c3a2fc29e6ae2172ab8015082079d5">AddInput</a>(<span class="stringliteral">&quot;in&quot;</span>)</div>
+<div class="line"><a name="l00455"></a><span class="lineno">  455</span>&#160;                            self.<a class="code" href="classvafmbase_1_1_circuit.html#a5d0148cfd41ea0e3039afc677b3186ad">AddOutput</a>(<span class="stringliteral">&quot;out&quot;</span>)</div>
+<div class="line"><a name="l00456"></a><span class="lineno">  456</span>&#160;                            self.<a class="code" href="classvafmcircuits__signal__processing_1_1_flip.html#a0f2236bc84177dcabd2c0122ecefef2b">yo</a>= 0</div>
+<div class="line"><a name="l00457"></a><span class="lineno">  457</span>&#160;</div>
+<div class="line"><a name="l00458"></a><span class="lineno">  458</span>&#160;              <span class="keyword">def </span>Initialize (self):</div>
+<div class="line"><a name="l00459"></a><span class="lineno">  459</span>&#160;</div>
+<div class="line"><a name="l00460"></a><span class="lineno">  460</span>&#160;                            <span class="keywordflow">pass</span></div>
+<div class="line"><a name="l00461"></a><span class="lineno">  461</span>&#160;              </div>
 <div class="line"><a name="l00462"></a><span class="lineno">  462</span>&#160;                            </div>
-<div class="line"><a name="l00463"></a><span class="lineno">  463</span>&#160;              </div>
-<div class="line"><a name="l00464"></a><span class="lineno">  464</span>&#160;              <span class="keyword">def </span>Update (self):</div>
-<div class="line"><a name="l00465"></a><span class="lineno">  465</span>&#160;                            </div>
-<div class="line"><a name="l00466"></a><span class="lineno">  466</span>&#160;                            self.O[<span class="stringliteral">&quot;out&quot;</span>].value = 0</div>
-<div class="line"><a name="l00467"></a><span class="lineno">  467</span>&#160;                            </div>
-<div class="line"><a name="l00468"></a><span class="lineno">  468</span>&#160;                            <span class="keywordflow">if</span>            self.I[<span class="stringliteral">&quot;in&quot;</span>].value &gt; 0 <span class="keywordflow">and</span> self.yo &lt; 0:</div>
-<div class="line"><a name="l00469"></a><span class="lineno">  469</span>&#160;                                          self.O[<span class="stringliteral">&quot;out&quot;</span>].value = 1</div>
-<div class="line"><a name="l00470"></a><span class="lineno">  470</span>&#160;                            </div>
-<div class="line"><a name="l00471"></a><span class="lineno">  471</span>&#160;                            self.yo=self.I[<span class="stringliteral">&quot;in&quot;</span>].value</div>
-<div class="line"><a name="l00472"></a><span class="lineno">  472</span>&#160;</div>
+<div class="line"><a name="l00463"></a><span class="lineno">  463</span>&#160;                            </div>
+<div class="line"><a name="l00464"></a><span class="lineno">  464</span>&#160;              </div>
+<div class="line"><a name="l00465"></a><span class="lineno">  465</span>&#160;              <span class="keyword">def </span>Update (self):</div>
+<div class="line"><a name="l00466"></a><span class="lineno">  466</span>&#160;                            </div>
+<div class="line"><a name="l00467"></a><span class="lineno">  467</span>&#160;                            self.O[<span class="stringliteral">&quot;out&quot;</span>].value = 0</div>
+<div class="line"><a name="l00468"></a><span class="lineno">  468</span>&#160;                            </div>
+<div class="line"><a name="l00469"></a><span class="lineno">  469</span>&#160;                            <span class="keywordflow">if</span>            self.I[<span class="stringliteral">&quot;in&quot;</span>].value &gt; 0 <span class="keywordflow">and</span> self.yo &lt; 0:</div>
+<div class="line"><a name="l00470"></a><span class="lineno">  470</span>&#160;                                          self.O[<span class="stringliteral">&quot;out&quot;</span>].value = 1</div>
+<div class="line"><a name="l00471"></a><span class="lineno">  471</span>&#160;                            </div>
+<div class="line"><a name="l00472"></a><span class="lineno">  472</span>&#160;                            self.yo=self.I[<span class="stringliteral">&quot;in&quot;</span>].value</div>
 <div class="line"><a name="l00473"></a><span class="lineno">  473</span>&#160;</div>
 <div class="line"><a name="l00474"></a><span class="lineno">  474</span>&#160;</div>
+<div class="line"><a name="l00475"></a><span class="lineno">  475</span>&#160;</div>
 <div class="ttc" id="classvafmcircuits__signal__processing_1_1_gain_html"><div class="ttname"><a href="classvafmcircuits__signal__processing_1_1_gain.html">vafmcircuits_signal_processing.Gain</a></div><div class="ttdoc">Gain circuit. </div><div class="ttdef"><b>Definition:</b> <a href="vafmcircuits__signal__processing_8py_source.html#l00024">vafmcircuits_signal_processing.py:24</a></div></div>
 <div class="ttc" id="classvafmcircuits__signal__processing_1_1minmax_html_af3ad8f846c59c2e244320e1c51ac8608"><div class="ttname"><a href="classvafmcircuits__signal__processing_1_1minmax.html#af3ad8f846c59c2e244320e1c51ac8608">vafmcircuits_signal_processing.minmax.max</a></div><div class="ttdeci">max</div><div class="ttdef"><b>Definition:</b> <a href="vafmcircuits__signal__processing_8py_source.html#l00099">vafmcircuits_signal_processing.py:99</a></div></div>
 <div class="ttc" id="classvafmbase_1_1_circuit_html_a5d0148cfd41ea0e3039afc677b3186ad"><div class="ttname"><a href="classvafmbase_1_1_circuit.html#a5d0148cfd41ea0e3039afc677b3186ad">vafmbase.Circuit.AddOutput</a></div><div class="ttdeci">def AddOutput</div><div class="ttdoc">Create an output channel with the given name. </div><div class="ttdef"><b>Definition:</b> <a href="vafmbase_8py_source.html#l00138">vafmbase.py:138</a></div></div>
 <div class="ttc" id="classvafmcircuits__signal__processing_1_1_peak_detector_html_a6831a9fac6bd1f4ab81d054e693218ec"><div class="ttname"><a href="classvafmcircuits__signal__processing_1_1_peak_detector.html#a6831a9fac6bd1f4ab81d054e693218ec">vafmcircuits_signal_processing.PeakDetector.yoo</a></div><div class="ttdeci">yoo</div><div class="ttdef"><b>Definition:</b> <a href="vafmcircuits__signal__processing_8py_source.html#l00338">vafmcircuits_signal_processing.py:338</a></div></div>
-<div class="ttc" id="classvafmcircuits__signal__processing_1_1_flip_html"><div class="ttname"><a href="classvafmcircuits__signal__processing_1_1_flip.html">vafmcircuits_signal_processing.Flip</a></div><div class="ttdoc">Flip circuit. </div><div class="ttdef"><b>Definition:</b> <a href="vafmcircuits__signal__processing_8py_source.html#l00447">vafmcircuits_signal_processing.py:447</a></div></div>
+<div class="ttc" id="classvafmcircuits__signal__processing_1_1_flip_html"><div class="ttname"><a href="classvafmcircuits__signal__processing_1_1_flip.html">vafmcircuits_signal_processing.Flip</a></div><div class="ttdoc">Flip circuit. </div><div class="ttdef"><b>Definition:</b> <a href="vafmcircuits__signal__processing_8py_source.html#l00448">vafmcircuits_signal_processing.py:448</a></div></div>
 <div class="ttc" id="classvafmcircuits__signal__processing_1_1_delay_html_a4e80333131875ec3b760c074a3b8e229"><div class="ttname"><a href="classvafmcircuits__signal__processing_1_1_delay.html#a4e80333131875ec3b760c074a3b8e229">vafmcircuits_signal_processing.Delay.delaytime</a></div><div class="ttdeci">delaytime</div><div class="ttdef"><b>Definition:</b> <a href="vafmcircuits__signal__processing_8py_source.html#l00260">vafmcircuits_signal_processing.py:260</a></div></div>
 <div class="ttc" id="classvafmcircuits__signal__processing_1_1_peak_detector_html_a501d9c54ffde019484ce493d4fe20ad8"><div class="ttname"><a href="classvafmcircuits__signal__processing_1_1_peak_detector.html#a501d9c54ffde019484ce493d4fe20ad8">vafmcircuits_signal_processing.PeakDetector.up</a></div><div class="ttdeci">up</div><div class="ttdef"><b>Definition:</b> <a href="vafmcircuits__signal__processing_8py_source.html#l00322">vafmcircuits_signal_processing.py:322</a></div></div>
 <div class="ttc" id="classvafmcircuits__signal__processing_1_1integral_html_a20810f904dc6980f2e250a07092815ca"><div class="ttname"><a href="classvafmcircuits__signal__processing_1_1integral.html#a20810f904dc6980f2e250a07092815ca">vafmcircuits_signal_processing.integral.result</a></div><div class="ttdeci">result</div><div class="ttdef"><b>Definition:</b> <a href="vafmcircuits__signal__processing_8py_source.html#l00218">vafmcircuits_signal_processing.py:218</a></div></div>
 <div class="ttc" id="classvafmcircuits__signal__processing_1_1integral_html"><div class="ttname"><a href="classvafmcircuits__signal__processing_1_1integral.html">vafmcircuits_signal_processing.integral</a></div><div class="ttdoc">Integration circuit. </div><div class="ttdef"><b>Definition:</b> <a href="vafmcircuits__signal__processing_8py_source.html#l00201">vafmcircuits_signal_processing.py:201</a></div></div>
-<div class="ttc" id="classvafmcircuits__signal__processing_1_1_phasor_html_abf6b5e92d0a9874b68cb9b8457530a08"><div class="ttname"><a href="classvafmcircuits__signal__processing_1_1_phasor.html#abf6b5e92d0a9874b68cb9b8457530a08">vafmcircuits_signal_processing.Phasor.check</a></div><div class="ttdeci">check</div><div class="ttdef"><b>Definition:</b> <a href="vafmcircuits__signal__processing_8py_source.html#l00404">vafmcircuits_signal_processing.py:404</a></div></div>
+<div class="ttc" id="classvafmcircuits__signal__processing_1_1_phasor_html_abf6b5e92d0a9874b68cb9b8457530a08"><div class="ttname"><a href="classvafmcircuits__signal__processing_1_1_phasor.html#abf6b5e92d0a9874b68cb9b8457530a08">vafmcircuits_signal_processing.Phasor.check</a></div><div class="ttdeci">check</div><div class="ttdef"><b>Definition:</b> <a href="vafmcircuits__signal__processing_8py_source.html#l00405">vafmcircuits_signal_processing.py:405</a></div></div>
 <div class="ttc" id="classvafmcircuits__signal__processing_1_1derivative_html_aa31b149a31ac4344c104e1df8e476c7c"><div class="ttname"><a href="classvafmcircuits__signal__processing_1_1derivative.html#aa31b149a31ac4344c104e1df8e476c7c">vafmcircuits_signal_processing.derivative.y</a></div><div class="ttdeci">y</div><div class="ttdef"><b>Definition:</b> <a href="vafmcircuits__signal__processing_8py_source.html#l00167">vafmcircuits_signal_processing.py:167</a></div></div>
 <div class="ttc" id="classvafmcircuits__signal__processing_1_1_delay_html_a287b412db1d0434b83a8ddf8d784f449"><div class="ttname"><a href="classvafmcircuits__signal__processing_1_1_delay.html#a287b412db1d0434b83a8ddf8d784f449">vafmcircuits_signal_processing.Delay.counter</a></div><div class="ttdeci">counter</div><div class="ttdef"><b>Definition:</b> <a href="vafmcircuits__signal__processing_8py_source.html#l00265">vafmcircuits_signal_processing.py:265</a></div></div>
 <div class="ttc" id="classvafmcircuits__signal__processing_1_1minmax_html_aa64035a533a311b97b4457ab648a222d"><div class="ttname"><a href="classvafmcircuits__signal__processing_1_1minmax.html#aa64035a533a311b97b4457ab648a222d">vafmcircuits_signal_processing.minmax.timesteps</a></div><div class="ttdeci">timesteps</div><div class="ttdef"><b>Definition:</b> <a href="vafmcircuits__signal__processing_8py_source.html#l00084">vafmcircuits_signal_processing.py:84</a></div></div>
-<div class="ttc" id="classvafmcircuits__signal__processing_1_1_phasor_html"><div class="ttname"><a href="classvafmcircuits__signal__processing_1_1_phasor.html">vafmcircuits_signal_processing.Phasor</a></div><div class="ttdoc">Phasor circuit. </div><div class="ttdef"><b>Definition:</b> <a href="vafmcircuits__signal__processing_8py_source.html#l00392">vafmcircuits_signal_processing.py:392</a></div></div>
-<div class="ttc" id="classvafmcircuits__signal__processing_1_1_phasor_html_ae8916b6418e1f33eac77f53d4d36f1f2"><div class="ttname"><a href="classvafmcircuits__signal__processing_1_1_phasor.html#ae8916b6418e1f33eac77f53d4d36f1f2">vafmcircuits_signal_processing.Phasor.counter</a></div><div class="ttdeci">counter</div><div class="ttdef"><b>Definition:</b> <a href="vafmcircuits__signal__processing_8py_source.html#l00403">vafmcircuits_signal_processing.py:403</a></div></div>
+<div class="ttc" id="classvafmcircuits__signal__processing_1_1_phasor_html"><div class="ttname"><a href="classvafmcircuits__signal__processing_1_1_phasor.html">vafmcircuits_signal_processing.Phasor</a></div><div class="ttdoc">Phasor circuit. </div><div class="ttdef"><b>Definition:</b> <a href="vafmcircuits__signal__processing_8py_source.html#l00393">vafmcircuits_signal_processing.py:393</a></div></div>
+<div class="ttc" id="classvafmcircuits__signal__processing_1_1_phasor_html_ae8916b6418e1f33eac77f53d4d36f1f2"><div class="ttname"><a href="classvafmcircuits__signal__processing_1_1_phasor.html#ae8916b6418e1f33eac77f53d4d36f1f2">vafmcircuits_signal_processing.Phasor.counter</a></div><div class="ttdeci">counter</div><div class="ttdef"><b>Definition:</b> <a href="vafmcircuits__signal__processing_8py_source.html#l00404">vafmcircuits_signal_processing.py:404</a></div></div>
 <div class="ttc" id="classvafmcircuits__signal__processing_1_1minmax_html_ad2565365e9535d9f612df9d3782a19b5"><div class="ttname"><a href="classvafmcircuits__signal__processing_1_1minmax.html#ad2565365e9535d9f612df9d3782a19b5">vafmcircuits_signal_processing.minmax.checktime</a></div><div class="ttdeci">checktime</div><div class="ttdef"><b>Definition:</b> <a href="vafmcircuits__signal__processing_8py_source.html#l00080">vafmcircuits_signal_processing.py:80</a></div></div>
 <div class="ttc" id="classvafmbase_1_1_circuit_html_a50ad09fd57c1eca9cbd5516d6da92b20"><div class="ttname"><a href="classvafmbase_1_1_circuit.html#a50ad09fd57c1eca9cbd5516d6da92b20">vafmbase.Circuit.I</a></div><div class="ttdeci">I</div><div class="ttdoc">Dictionary of input channels. </div><div class="ttdef"><b>Definition:</b> <a href="vafmbase_8py_source.html#l00100">vafmbase.py:100</a></div></div>
-<div class="ttc" id="classvafmcircuits__signal__processing_1_1_flip_html_a0f2236bc84177dcabd2c0122ecefef2b"><div class="ttname"><a href="classvafmcircuits__signal__processing_1_1_flip.html#a0f2236bc84177dcabd2c0122ecefef2b">vafmcircuits_signal_processing.Flip.yo</a></div><div class="ttdeci">yo</div><div class="ttdef"><b>Definition:</b> <a href="vafmcircuits__signal__processing_8py_source.html#l00455">vafmcircuits_signal_processing.py:455</a></div></div>
+<div class="ttc" id="classvafmcircuits__signal__processing_1_1_flip_html_a0f2236bc84177dcabd2c0122ecefef2b"><div class="ttname"><a href="classvafmcircuits__signal__processing_1_1_flip.html#a0f2236bc84177dcabd2c0122ecefef2b">vafmcircuits_signal_processing.Flip.yo</a></div><div class="ttdeci">yo</div><div class="ttdef"><b>Definition:</b> <a href="vafmcircuits__signal__processing_8py_source.html#l00456">vafmcircuits_signal_processing.py:456</a></div></div>
 <div class="ttc" id="classvafmbase_1_1_circuit_html_ab8ffc3f4428dec41f9e6958a1a16d8c1"><div class="ttname"><a href="classvafmbase_1_1_circuit.html#ab8ffc3f4428dec41f9e6958a1a16d8c1">vafmbase.Circuit.SetInputs</a></div><div class="ttdeci">def SetInputs</div><div class="ttdoc">Default input channels initialisation. </div><div class="ttdef"><b>Definition:</b> <a href="vafmbase_8py_source.html#l00110">vafmbase.py:110</a></div></div>
 <div class="ttc" id="classvafmcircuits__signal__processing_1_1_peak_detector_html_ad3ac65c8cf8583f0c5ef6bb22a1595ba"><div class="ttname"><a href="classvafmcircuits__signal__processing_1_1_peak_detector.html#ad3ac65c8cf8583f0c5ef6bb22a1595ba">vafmcircuits_signal_processing.PeakDetector.upordown</a></div><div class="ttdeci">upordown</div><div class="ttdef"><b>Definition:</b> <a href="vafmcircuits__signal__processing_8py_source.html#l00324">vafmcircuits_signal_processing.py:324</a></div></div>
 <div class="ttc" id="classvafmcircuits__signal__processing_1_1_gain_html_ae2530223bd172d8cd7fb276bf17cd31f"><div class="ttname"><a href="classvafmcircuits__signal__processing_1_1_gain.html#ae2530223bd172d8cd7fb276bf17cd31f">vafmcircuits_signal_processing.Gain.gain</a></div><div class="ttdeci">gain</div><div class="ttdef"><b>Definition:</b> <a href="vafmcircuits__signal__processing_8py_source.html#l00035">vafmcircuits_signal_processing.py:35</a></div></div>
@@ -625,7 +626,7 @@ $(document).ready(function(){initNavTree('vafmcircuits__signal__processing_8py_s
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="vafmcircuits__signal__processing_8py.html">vafmcircuits_signal_processing.py</a></li>
-    <li class="footer">Generated on Tue Oct 15 2013 17:28:21 for pyVAFM by
+    <li class="footer">Generated on Wed Oct 16 2013 10:52:05 for pyVAFM by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.5 </li>
   </ul>

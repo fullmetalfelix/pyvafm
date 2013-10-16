@@ -8,10 +8,14 @@ var annotated =
       [ "Machine", "classvafmcircuits_1_1_machine.html", "classvafmcircuits_1_1_machine" ],
       [ "waver", "classvafmcircuits_1_1waver.html", null ],
       [ "output", "classvafmcircuits_1_1output.html", "classvafmcircuits_1_1output" ],
-      [ "Average", "classvafmcircuits_1_1_average.html", null ],
-      [ "Limiter", "classvafmcircuits_1_1_limiter.html", null ],
-      [ "PI", "classvafmcircuits_1_1_p_i.html", null ],
-      [ "PID", "classvafmcircuits_1_1_p_i_d.html", null ]
+      [ "Limiter", "classvafmcircuits_1_1_limiter.html", null ]
+    ] ],
+    [ "vafmcircuits_avg", null, [
+      [ "avg", "classvafmcircuits__avg_1_1avg.html", null ]
+    ] ],
+    [ "vafmcircuits_control", null, [
+      [ "PI", "classvafmcircuits__control_1_1_p_i.html", null ],
+      [ "PID", "classvafmcircuits__control_1_1_p_i_d.html", null ]
     ] ],
     [ "vafmcircuits_Filters", null, [
       [ "ActiveLowPass", "classvafmcircuits___filters_1_1_active_low_pass.html", null ],

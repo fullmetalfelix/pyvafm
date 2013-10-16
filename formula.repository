@@ -66,3 +66,7 @@
 \form#65:$in2$
 \form#66:$ tick =$
 \form#67:$ delay =$
+\form#68:$ out = 1 when f(t-1) <= 0 and f(t) >0 $
+\form#69:$tick$
+\form#70:$Kd$
+\form#71:$out = K_p (set-signal) + K_i \int dt $

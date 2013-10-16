@@ -8,5 +8,5 @@ var searchData=
   ['addoutput',['AddOutput',['../classvafmbase_1_1_circuit.html#a5d0148cfd41ea0e3039afc677b3186ad',1,'vafmbase.Circuit.AddOutput()'],['../classvafmcircuits_1_1_machine.html#a0e5801525d4a7e4ee670ea5440fb9f6d',1,'vafmcircuits.Machine.AddOutput()']]],
   ['and',['And',['../classvafmcircuits___logic_1_1_and.html',1,'vafmcircuits_Logic']]],
   ['assemble',['Assemble',['../classvafmcircuits_1_1_machine.html#a9e4f2b7032280f63cb240a234b775e93',1,'vafmcircuits::Machine']]],
-  ['average',['Average',['../classvafmcircuits_1_1_average.html',1,'vafmcircuits']]]
+  ['avg',['avg',['../classvafmcircuits__avg_1_1avg.html',1,'vafmcircuits_avg']]]
 ];
