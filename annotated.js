@@ -43,8 +43,8 @@ var annotated =
       [ "opMul", "classvafmcircuits__math_1_1op_mul.html", null ],
       [ "opDiv", "classvafmcircuits__math_1_1op_div.html", null ],
       [ "opLinC", "classvafmcircuits__math_1_1op_lin_c.html", null ],
-      [ "OpAbs", "classvafmcircuits__math_1_1_op_abs.html", null ],
-      [ "OpPower", "classvafmcircuits__math_1_1_op_power.html", null ]
+      [ "opAbs", "classvafmcircuits__math_1_1op_abs.html", null ],
+      [ "opPow", "classvafmcircuits__math_1_1op_pow.html", null ]
     ] ],
     [ "vafmcircuits_signal_processing", null, [
       [ "Gain", "classvafmcircuits__signal__processing_1_1_gain.html", null ],

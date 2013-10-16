@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.5"/>
-<title>pyVAFM: vafmcircuits_signal_processing.integral Class Reference</title>
+<title>pyVAFM: vafmcircuits_math.opPow Class Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -85,7 +85,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   </div>
 </div>
 <script type="text/javascript">
-$(document).ready(function(){initNavTree('classvafmcircuits__signal__processing_1_1integral.html','');});
+$(document).ready(function(){initNavTree('classvafmcircuits__math_1_1op_pow.html','');});
 </script>
 <div id="doc-content">
 <!-- window showing the filter options -->
@@ -104,21 +104,21 @@ $(document).ready(function(){initNavTree('classvafmcircuits__signal__processing_
 
 <div class="header">
   <div class="summary">
-<a href="classvafmcircuits__signal__processing_1_1integral-members.html">List of all members</a>  </div>
+<a href="classvafmcircuits__math_1_1op_pow-members.html">List of all members</a>  </div>
   <div class="headertitle">
-<div class="title">vafmcircuits_signal_processing.integral Class Reference</div>  </div>
+<div class="title">vafmcircuits_math.opPow Class Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
 
-<p>Integration circuit.  
- <a href="classvafmcircuits__signal__processing_1_1integral.html#details">More...</a></p>
+<p>Power value circuit.  
+ <a href="classvafmcircuits__math_1_1op_pow.html#details">More...</a></p>
 <div class="dynheader">
-Inheritance diagram for vafmcircuits_signal_processing.integral:</div>
+Inheritance diagram for vafmcircuits_math.opPow:</div>
 <div class="dyncontent">
  <div class="center">
-  <img src="classvafmcircuits__signal__processing_1_1integral.png" usemap="#vafmcircuits_signal_processing.integral_map" alt=""/>
-  <map id="vafmcircuits_signal_processing.integral_map" name="vafmcircuits_signal_processing.integral_map">
-<area href="classvafmbase_1_1_circuit.html" title="Abstract circuit class. " alt="vafmbase.Circuit" shape="rect" coords="0,0,235,24"/>
+  <img src="classvafmcircuits__math_1_1op_pow.png" usemap="#vafmcircuits_math.opPow_map" alt=""/>
+  <map id="vafmcircuits_math.opPow_map" name="vafmcircuits_math.opPow_map">
+<area href="classvafmbase_1_1_circuit.html" title="Abstract circuit class. " alt="vafmbase.Circuit" shape="rect" coords="0,0,155,24"/>
 </map>
  </div></div>
 <table class="memberdecls">
@@ -163,12 +163,13 @@ Additional Inherited Members</h2></td></tr>
 <tr class="separator:ac4eee26b1ca7587ec960e311f86113ec inherit pub_attribs_classvafmbase_1_1_circuit"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Integration circuit. </p>
-<p>Takes in a input and returns the integral</p>
+<div class="textblock"><p>Power value circuit. </p>
+<p>Takes in an inpute and returns the result raised to a given power</p>
 <ul>
 <li>Initialisation parameters:<br/>
 <ul>
 <li>pushed = True|False push the output buffer immediately if True</li>
+<li>power = integer The value the function result will be raised by</li>
 </ul>
 </li>
 <li>Input channels:<br/>
@@ -178,21 +179,21 @@ Additional Inherited Members</h2></td></tr>
 </li>
 <li>Output channels:<br/>
 <ul>
-<li><img class="formulaInl" alt="$out = \int_a^\b \mathrm{in}\,\mathrm{d}t $" src="form_61.png"/> </li>
+<li><img class="formulaInl" alt="$out = in^{power}$" src="form_80.png"/> </li>
 </ul>
 </li>
 </ul>
 
-<p>Definition at line <a class="el" href="vafmcircuits__signal__processing_8py_source.html#l00201">201</a> of file <a class="el" href="vafmcircuits__signal__processing_8py_source.html">vafmcircuits_signal_processing.py</a>.</p>
+<p>Definition at line <a class="el" href="vafmcircuits__math_8py_source.html#l00321">321</a> of file <a class="el" href="vafmcircuits__math_8py_source.html">vafmcircuits_math.py</a>.</p>
 </div><hr/>The documentation for this class was generated from the following file:<ul>
-<li><a class="el" href="vafmcircuits__signal__processing_8py_source.html">vafmcircuits_signal_processing.py</a></li>
+<li><a class="el" href="vafmcircuits__math_8py_source.html">vafmcircuits_math.py</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><b>vafmcircuits_signal_processing</b></li><li class="navelem"><a class="el" href="classvafmcircuits__signal__processing_1_1integral.html">integral</a></li>
+    <li class="navelem"><b>vafmcircuits_math</b></li><li class="navelem"><a class="el" href="classvafmcircuits__math_1_1op_pow.html">opPow</a></li>
     <li class="footer">Generated on Wed Oct 16 2013 11:48:17 for pyVAFM by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.5 </li>

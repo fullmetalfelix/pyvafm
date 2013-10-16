@@ -78,3 +78,4 @@
 \form#77:$max$
 \form#78:$out = max(min(in, max), min)$
 \form#79:$out = Max(Min(in, max), min)$
+\form#80:$out = in^{power}$
