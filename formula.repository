@@ -1,81 +1,64 @@
 \form#0:$amp$
 \form#1:$freq$
 \form#2:$offset$
-\form#3:$sin$
-\form#4:$ = amp\cdot\sin(2 \pi freq\cdot t) + offset $
-\form#5:$cos$
-\form#6:$ = amp\cdot\cos(2 \pi freq\cdot t) + offset $
-\form#7:$record$
-\form#8:$in$
-\form#9:$out = !in$
-\form#10:$in1, in2, ..., inx$
-\form#11:$out = in_1 \land in_2 \land ... \land in_x $
-\form#12:$in1 in2$
-\form#13:$out$
-\form#14:$out = \sum_i^{factors} in_i $
-\form#15:$in1, in2$
-\form#16:$out = in_1 - in_2 $
-\form#17:$out = \prod_i^{factors} in_i $
-\form#18:$out = in_1 / in_2 $
-\form#19:$ina1, ina2, ..., inax$
-\form#20:$inb1, inb2, ..., inbx$
-\form#21:$out = \sum_i^{factors} ina_i\times inb_i $
-\form#22:$inf$ - Output channels:\n - $
-\form#23:$inf$ -$
-\form#24:$max = maximum value over the given peroid $ - $
-\form#25:$amp = \frac{max-min}{2} $ - $
-\form#26:$sawtooth$
-\form#27:$ = amp\cdot( freq*f(t) - floor(freq*f(t) ) + offset $
-\form#28:$out =$
-\form#29:$inf$\f -$
-\form#30:$max = maximum value over the given peroid $\f - $
-\form#31:$amp = \frac{max-min}{2} $\f - $
-\form#32:$inf$ \f - Output channels:\n - $
-\form#33:$inf$ \f - $
-\form#34:$in1f$\f -$
-\form#35:$Gain = integer$
-\form#36:$ tick = $
-\form#37:$ peak = $
-\form#38:$ delay = $
-\form#39:$up = 1|0 $
-\form#40:$in1$
-\form#41:$in2$$
-\form#42:$saw$
-\form#43:$speed$
-\form#44:$signal$
-\form#45:$Kp$
-\form#46:$Ki$
-\form#47:$set$
-\form#48:$S$
-\form#49:$R$
-\form#50:$ out = Q $\f - $
-\form#51:$J$
-\form#52:$K$
-\form#53:$D$
-\form#54:$ out = in \cdot gain $
-\form#55:$inf$
-\form#56:$CheckTime = integer$
-\form#57:$max = maximum value over the given peroid $
-\form#58:$max = minimum value over the given peroid $
-\form#59:$amp = \frac{max-min}{2} $
-\form#60:$out = \frac{din}{dt} $
-\form#61:$out = \int_a^\b \mathrm{in}\,\mathrm{d}t $
-\form#62:$DelayTime$
-\form#63:$out = In_{t-DelayTime}$
-\form#64:$in1f$
-\form#65:$in2$
-\form#66:$ tick =$
-\form#67:$ delay =$
-\form#68:$ out = 1 when f(t-1) <= 0 and f(t) >0 $
-\form#69:$tick$
-\form#70:$Kd$
-\form#71:$out = K_p (set-signal) + K_i \int dt $
-\form#72:$out = K_p (set-signal) + K_i \int (set-signal) dt +K_i\frac{d(set-signal)}{dt}$
-\form#73:$out = K_p (set-signal) + K_i \int (set-signal) dt $
-\form#74:$out = K_p (set-signal) + K_i \int (set-signal) dt +K_d\frac{d(set-signal)}{dt}$
-\form#75:$out = |in|$
-\form#76:$min$
-\form#77:$max$
-\form#78:$out = max(min(in, max), min)$
-\form#79:$out = Max(Min(in, max), min)$
-\form#80:$out = in^{power}$
+\form#3:$ sin = amp\cdot sin(2 \pi freq\cdot t) + offset $
+\form#4:$ cos = amp\cdot cos(2 \pi freq\cdot t) + offset $
+\form#5:$ saw = amp\cdot( freq*f(t) - floor(freq*f(t) ) + offset $
+\form#6:$record$
+\form#7:$in$
+\form#8:$out$
+\form#9:$signal$
+\form#10:$set$
+\form#11:$Kp$
+\form#12:$Ki$
+\form#13:$out = K_p (set-signal) + K_i \int (set-signal) dt $
+\form#14:$Kd$
+\form#15:$out = K_p (set-signal) + K_i \int (set-signal) dt +K_d\frac{d(set-signal)}{dt}$
+\form#16:$min$
+\form#17:$max$
+\form#18:$out = Max(Min(in, max), min)$
+\form#19:$out =$
+\form#20:$S$
+\form#21:$R$
+\form#22:$Q = $
+\form#23:$Qbar = $
+\form#24:$J$
+\form#25:$K$
+\form#26:$ out = Q $
+\form#27:$ out = Qbar $
+\form#28:$D$
+\form#29:$ Q $
+\form#30:$ Qbar $
+\form#31:$out = !in$
+\form#32:$in1, in2, ..., inx$
+\form#33:$out = in_1 \land in_2 \land ... \land in_x $
+\form#34:$in1 in2$
+\form#35:$out = \sum_i^{factors} in_i $
+\form#36:$in1, in2$
+\form#37:$out = in_1 - in_2 $
+\form#38:$out = \prod_i^{factors} in_i $
+\form#39:$out = in_1 / in_2 $
+\form#40:$ina1, ina2, ..., inax$
+\form#41:$inb1, inb2, ..., inbx$
+\form#42:$out = \sum_i^{factors} ina_i\times inb_i $
+\form#43:$out = |in|$
+\form#44:$out = in^{power}$
+\form#45:$ out = in \cdot gain $
+\form#46:$inf$
+\form#47:$CheckTime = integer$
+\form#48:$max = maximum value over the given peroid $
+\form#49:$max = minimum value over the given peroid $
+\form#50:$amp = \frac{max-min}{2} $
+\form#51:$out = \frac{din}{dt} $
+\form#52:$out = \int_0^t in dt $
+\form#53:$DelayTime$
+\form#54:$out = In_{t-DelayTime}$
+\form#55:$up = 1|0 $
+\form#56:$ tick = $
+\form#57:$ peak = $
+\form#58:$ delay = $
+\form#59:$in1$
+\form#60:$in2$
+\form#61:$ tick =$
+\form#62:$ delay =$
+\form#63:$ out = 1 when f(t-1) <= 0 and f(t) >0 $
