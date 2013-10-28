@@ -62,3 +62,8 @@
 \form#61:$ tick =$
 \form#62:$ delay =$
 \form#63:$ out = 1 when f(t-1) <= 0 and f(t) >0 $
+\form#64:$amp\cdot sin(2 \pi freq\cdot t) + offset $
+\form#65:$amp\cdot cos(2 \pi freq\cdot t) + offset $
+\form#66:$amp\cdot( freq*f(t) - floor(freq*f(t) ) + offset $
+\form#67:$amp\cdot \sin(2 \pi freq\cdot t) + offset $
+\form#68:$amp\cdot \cos(2 \pi freq\cdot t) + offset $

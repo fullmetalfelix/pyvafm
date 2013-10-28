@@ -24,7 +24,7 @@ body {
 	margin: 0; padding: 0;
 	font: small Arial, Sans-Serif;
 	color: #333; 
-	background: #FFF url(../images/bg.gif) repeat-x;	
+	background: #FFF url(.//bg.gif) repeat-x;	
 }
 
 /* links */
@@ -650,11 +650,11 @@ Begin default doxygen style
 }
 
 #maincol span.stringliteral {
-	color: #002080
+	color: #800020
 }
 
 #maincol span.charliteral {
-	color: #008080
+	color: #800020
 }
 
 #maincol span.vhdldigit { 
@@ -724,6 +724,30 @@ input.search {
 #maincol table.memberdecls {
 	border-spacing: 0px;
 	padding: 0px;
+}
+
+.memSeparator {
+        border-bottom: 0px solid #DEE4F0;
+        line-height: 0px;
+        margin: 0px;
+        padding: 0px;
+}
+
+.memberdecls td, .fieldtable tr {
+	-webkit-transition-property: background-color, box-shadow;
+	-webkit-transition-duration: 0.5s;
+	-moz-transition-property: background-color, box-shadow;
+	-moz-transition-duration: 0.5s;
+	-ms-transition-property: background-color, box-shadow;
+	-ms-transition-duration: 0.5s;
+	-o-transition-property: background-color, box-shadow;
+	-o-transition-duration: 0.5s;
+	transition-property: background-color, box-shadow;
+	transition-duration: 0.5s;
+}
+.memberdecls td.glow, .fieldtable tr.glow {
+	background-color: cyan;
+	box-shadow: 0 0 15px cyan;
 }
 
 #maincol .mdescLeft, .mdescRight,
@@ -1111,7 +1135,7 @@ proper pixel height of your image.
 
 #maincol dl.note
 {
-        border-color: #D0D000;
+        border-color: #00D000;
 }
 
 #maincol dl.warning, dl.attention
@@ -1143,6 +1167,29 @@ proper pixel height of your image.
 {
         border-color: #C08050;
 }
+
+span.mlabel {
+        background-color: #728DC1;
+        border-top:1px solid #5373B4;
+        border-left:1px solid #5373B4;
+        border-right:1px solid #C4CFE5;
+        border-bottom:1px solid #C4CFE5;
+	text-shadow: none;
+	color: white;
+	margin-right: 4px;
+	padding: 2px 3px;
+	border-radius: 3px;
+	font-size: 7pt;
+	white-space: nowrap;
+	vertical-align: middle;
+}
+
+
+div.image img[src="apll.png"]{ 
+    width:400px; 
+}
+
+
 
 #projectlogo
 {
