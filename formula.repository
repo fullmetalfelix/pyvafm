@@ -1,69 +1,67 @@
-\form#0:$amp$
-\form#1:$freq$
-\form#2:$offset$
-\form#3:$ sin = amp\cdot sin(2 \pi freq\cdot t) + offset $
-\form#4:$ cos = amp\cdot cos(2 \pi freq\cdot t) + offset $
-\form#5:$ saw = amp\cdot( freq*f(t) - floor(freq*f(t) ) + offset $
-\form#6:$record$
-\form#7:$in$
-\form#8:$out$
-\form#9:$signal$
-\form#10:$set$
-\form#11:$Kp$
-\form#12:$Ki$
-\form#13:$out = K_p (set-signal) + K_i \int (set-signal) dt $
-\form#14:$Kd$
-\form#15:$out = K_p (set-signal) + K_i \int (set-signal) dt +K_d\frac{d(set-signal)}{dt}$
-\form#16:$min$
-\form#17:$max$
-\form#18:$out = Max(Min(in, max), min)$
-\form#19:$out =$
-\form#20:$S$
-\form#21:$R$
-\form#22:$Q = $
-\form#23:$Qbar = $
-\form#24:$J$
-\form#25:$K$
-\form#26:$ out = Q $
-\form#27:$ out = Qbar $
-\form#28:$D$
-\form#29:$ Q $
-\form#30:$ Qbar $
-\form#31:$out = !in$
-\form#32:$in1, in2, ..., inx$
-\form#33:$out = in_1 \land in_2 \land ... \land in_x $
-\form#34:$in1 in2$
-\form#35:$out = \sum_i^{factors} in_i $
-\form#36:$in1, in2$
-\form#37:$out = in_1 - in_2 $
-\form#38:$out = \prod_i^{factors} in_i $
-\form#39:$out = in_1 / in_2 $
-\form#40:$ina1, ina2, ..., inax$
-\form#41:$inb1, inb2, ..., inbx$
-\form#42:$out = \sum_i^{factors} ina_i\times inb_i $
-\form#43:$out = |in|$
-\form#44:$out = in^{power}$
-\form#45:$ out = in \cdot gain $
-\form#46:$inf$
-\form#47:$CheckTime = integer$
-\form#48:$max = maximum value over the given peroid $
-\form#49:$max = minimum value over the given peroid $
-\form#50:$amp = \frac{max-min}{2} $
-\form#51:$out = \frac{din}{dt} $
-\form#52:$out = \int_0^t in dt $
-\form#53:$DelayTime$
-\form#54:$out = In_{t-DelayTime}$
-\form#55:$up = 1|0 $
-\form#56:$ tick = $
-\form#57:$ peak = $
-\form#58:$ delay = $
-\form#59:$in1$
-\form#60:$in2$
-\form#61:$ tick =$
-\form#62:$ delay =$
-\form#63:$ out = 1 when f(t-1) <= 0 and f(t) >0 $
-\form#64:$amp\cdot sin(2 \pi freq\cdot t) + offset $
-\form#65:$amp\cdot cos(2 \pi freq\cdot t) + offset $
-\form#66:$amp\cdot( freq*f(t) - floor(freq*f(t) ) + offset $
-\form#67:$amp\cdot \sin(2 \pi freq\cdot t) + offset $
-\form#68:$amp\cdot \cos(2 \pi freq\cdot t) + offset $
+\form#0:$in$
+\form#1:$out$
+\form#2:$signal$
+\form#3:$set$
+\form#4:$Kp$
+\form#5:$Ki$
+\form#6:$out = K_p (set-signal) + K_i \int (set-signal) dt $
+\form#7:$Kd$
+\form#8:$out = K_p (set-signal) + K_i \int (set-signal) dt +K_d\frac{d(set-signal)}{dt}$
+\form#9:$min$
+\form#10:$max$
+\form#11:$out = Max(Min(in, max), min)$
+\form#12:$out =$
+\form#13:$S$
+\form#14:$R$
+\form#15:$Q = $
+\form#16:$Qbar = $
+\form#17:$J$
+\form#18:$K$
+\form#19:$ out = Q $
+\form#20:$ out = Qbar $
+\form#21:$D$
+\form#22:$ Q $
+\form#23:$ Qbar $
+\form#24:$ \land $
+\form#25:$ \land$
+\form#26:$in1 in2$
+\form#27:$ \sum_i^{factors} in_i $
+\form#28:$ in_1 - in_2 $
+\form#29:$ \prod_i^{factors} in_i $
+\form#30:$ in_1 / in_2 $
+\form#31:$ \sum_i^{factors} ina_i\times inb_i $
+\form#32:$|in|$
+\form#33:$ signal^{power} $
+\form#34:$amp\cdot \sin(2 \pi freq\cdot t) + offset $
+\form#35:$amp\cdot \cos(2 \pi freq\cdot t) + offset $
+\form#36:$amp\cdot( freq*f(t) - floor(freq*f(t) ) + offset $
+\form#37:$ \cdot $
+\form#38:$ \frac{max - min}{2}$
+\form#39:$ \frac{max + min}{2}$
+\form#40:$ \frac{din}{dt} $
+\form#41:$ \frac{f(t)-f(t-1)}{dt} $
+\form#42:$ \int_0^t in$
+\form#43:$dt $
+\form#44:$ (b-a) * \frac{f(a) + f(b)}{2} $
+\form#45:$In_{t-DelayTime}$
+\form#46:$(t-2)$
+\form#47:$<$
+\form#48:$f(t-1)$
+\form#49:$>$
+\form#50:$f(t)$
+\form#51:$<=$
+\form#52:$ \geq $
+\form#53:$ \leq $
+\form#54:$ = $
+\form#55:$ K_p (set-signal) + K_i \int (set-signal) dt $
+\form#56:$ K_p (set-signal) + K_i \int (set-signal) dt +K_d\frac{d(set-signal)}{dt}$
+\form#57:$ Max(Min(in, max), min)$
+\form#58:$ G \cdot \frac{x(s)}{s^{2} + \frac{ \omega_{c} }{Q} \cdot s + \omega^{2}_{c} } $
+\form#59:$ x $
+\form#60:$ \omega_{c} = 2 \pi f_c $
+\form#61:$ G $
+\form#62:$ \frac{\omega ^2 _c \cdot x(t) - \frac {y \cdot (t-2dt) - 2 \cdot y \cdot (t-dt)}{dt^2} + \frac{\omega ^2 _c}{2 \cdot Q \cdot dt} y \cdot (t-2dt) }{ \frac{1}{dt^2} + \frac{\omega ^2 _c}{2 \cdot Q \cdot dt} + \omega ^2 _c }$
+\form#63:$ dt $
+\form#64:$ G\frac{Band \cdot dt\cdot(x(t) - x(t-2dt)) + band \cdot dt \cdot (2 \cdot y \cdot (t-dt) - y \cdot (t-2 \cdot dt)) }{ 1 + band \cdot dt + \omega ^2 _c } $
+\form#65:$ y $
+\form#66:$ in_1 \land in_2 \land ... \land in_x $

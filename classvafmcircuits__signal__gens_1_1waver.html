@@ -71,22 +71,44 @@ schema</div></div>
 </ul>
 <p><b>Output</b> <b>channels:</b> </p>
 <ul>
-<li><em>sin</em> = <img class="formulaInl" alt="$amp\cdot \sin(2 \pi freq\cdot t) + offset $" src="form_67.png"/> sine wave</li>
-<li><em>cos</em> = <img class="formulaInl" alt="$amp\cdot \cos(2 \pi freq\cdot t) + offset $" src="form_68.png"/> cosine wave</li>
-<li><em>saw</em> = <img class="formulaInl" alt="$amp\cdot( freq*f(t) - floor(freq*f(t) ) + offset $" src="form_66.png"/> sawtooth wave</li>
+<li><em>sin</em> = <img class="formulaInl" alt="$amp\cdot \sin(2 \pi freq\cdot t) + offset $" src="form_34.png"/> sine wave</li>
+<li><em>cos</em> = <img class="formulaInl" alt="$amp\cdot \cos(2 \pi freq\cdot t) + offset $" src="form_35.png"/> cosine wave</li>
+<li><em>saw</em> = <img class="formulaInl" alt="$amp\cdot( freq*f(t) - floor(freq*f(t) ) + offset $" src="form_36.png"/> sawtooth wave</li>
 </ul>
 <p><b>Example:</b> </p>
 <div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;machine.AddCircuit(type=<span class="stringliteral">&#39;waver&#39;</span>, name=<span class="stringliteral">&#39;wgen&#39;</span>)</div>
 <div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;machine.AddCircuit(type=<span class="stringliteral">&#39;waver&#39;</span>, name=<span class="stringliteral">&#39;wgen&#39;</span>, amp=1.2, freq=12000)</div>
 </div><!-- fragment --> </div>
 <p>Inherits Circuit.</p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="inherited"></a>
+Additional Inherited Members</h2></td></tr>
+<tr class="inherit_header pub_attribs_classvafmbase_1_1Circuit"><td colspan="2" onclick="javascript:toggleInherit('pub_attribs_classvafmbase_1_1Circuit')"><img src="closed.png" alt="-"/>&#160;Public Attributes inherited from <a class="el" href="classvafmbase_1_1Circuit.html">Circuit</a></td></tr>
+<tr class="memitem:ab74e6bf80237ddc4109968cedc58c151 inherit pub_attribs_classvafmbase_1_1Circuit"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><b>name</b></td></tr>
+<tr class="memdesc:ab74e6bf80237ddc4109968cedc58c151 inherit pub_attribs_classvafmbase_1_1Circuit"><td class="mdescLeft">&#160;</td><td class="mdescRight">Name of the circuit.  <a href="#ab74e6bf80237ddc4109968cedc58c151">More...</a><br/></td></tr>
+<tr class="separator:ab74e6bf80237ddc4109968cedc58c151 inherit pub_attribs_classvafmbase_1_1Circuit"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6a9ee8dc9ee5944948c1b555462cbde0 inherit pub_attribs_classvafmbase_1_1Circuit"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><b>machine</b></td></tr>
+<tr class="memdesc:a6a9ee8dc9ee5944948c1b555462cbde0 inherit pub_attribs_classvafmbase_1_1Circuit"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reference to the virtual machine to which this circuit belongs.  <a href="#a6a9ee8dc9ee5944948c1b555462cbde0">More...</a><br/></td></tr>
+<tr class="separator:a6a9ee8dc9ee5944948c1b555462cbde0 inherit pub_attribs_classvafmbase_1_1Circuit"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab0a92011c6993904ec6981eb1b1ff4f9 inherit pub_attribs_classvafmbase_1_1Circuit"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><b>pushed</b></td></tr>
+<tr class="memdesc:ab0a92011c6993904ec6981eb1b1ff4f9 inherit pub_attribs_classvafmbase_1_1Circuit"><td class="mdescLeft">&#160;</td><td class="mdescRight">Push output buffer at the end of Update.  <a href="#ab0a92011c6993904ec6981eb1b1ff4f9">More...</a><br/></td></tr>
+<tr class="separator:ab0a92011c6993904ec6981eb1b1ff4f9 inherit pub_attribs_classvafmbase_1_1Circuit"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a66cc12e3c6d68de3fef6de89cf033f67 inherit pub_attribs_classvafmbase_1_1Circuit"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a66cc12e3c6d68de3fef6de89cf033f67"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>I</b></td></tr>
+<tr class="memdesc:a66cc12e3c6d68de3fef6de89cf033f67 inherit pub_attribs_classvafmbase_1_1Circuit"><td class="mdescLeft">&#160;</td><td class="mdescRight">Dictionary of input channels. <br/></td></tr>
+<tr class="separator:a66cc12e3c6d68de3fef6de89cf033f67 inherit pub_attribs_classvafmbase_1_1Circuit"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae48bf9dad3f5d442f9d14d931be6f43e inherit pub_attribs_classvafmbase_1_1Circuit"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ae48bf9dad3f5d442f9d14d931be6f43e"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>O</b></td></tr>
+<tr class="memdesc:ae48bf9dad3f5d442f9d14d931be6f43e inherit pub_attribs_classvafmbase_1_1Circuit"><td class="mdescLeft">&#160;</td><td class="mdescRight">Dictionary of output channels. <br/></td></tr>
+<tr class="separator:ae48bf9dad3f5d442f9d14d931be6f43e inherit pub_attribs_classvafmbase_1_1Circuit"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
 </div><!-- contents -->
 
 <hr size="1"><address style="text-align: right;">
 <div class="float-left">Documentation for pyVAFM </div>
 <div class="float-right">
 <small>
-Generated on Fri Oct 25 2013 18:37:47 for pyVAFM by&nbsp;<a href="http://www.doxygen.org/index.html"><img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.8.5</small></address>
+Generated on Tue Oct 29 2013 10:43:13 for pyVAFM by&nbsp;<a href="http://www.doxygen.org/index.html"><img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.8.5</small></address>
 </div>
 <!-- top ends here -->
 <!-- </div> -->
