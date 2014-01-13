@@ -93,7 +93,9 @@ class Machine(Circuit):
 		
 		## Integer number of update steps so far.
 		self._idt = 0;
-
+		
+		if(machine == None):
+			Circuit.cCore.SetTimeStep(c_double(self.dt))
 		
 		self._MetaI = OrderedDict()
 		self.cCoreI = []
@@ -121,6 +123,7 @@ class Machine(Circuit):
 		if 'assembly' in keys.keys():
 			self.Assemble = keys['assembly']
 			self.Assemble(self,**keys)
+
 
 		self.SetInputs(**keys)
 
@@ -634,6 +637,16 @@ class Machine(Circuit):
 		
 		ch = self.GetChannel(channel)
 		ch.Set(value)
+		circ = ch.owner
+		
+		key = ch.name
+		
+		if ch.isInput == True:
+			idx = circ.I.keys().index(key) #find the position of the key
+		else:
+			idx = circ.O.keys().index(key)
+		print "PY: setinput "+circ.name+"."+key+": "+str(value),circ.cCoreID,idx
+		Circuit.cCore.SetInput(circ.cCoreID, idx, c_double(value))
 		
 		#print tag,val,ch
 

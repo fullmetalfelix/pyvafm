@@ -15,6 +15,7 @@ Circuits container definitions.
 
 int Add_Container(int owner) {
 	
+	printf("cCore: adding container...\n");
 	
 	circuit c = NewCircuit();
 	c.isContainer = 1;
@@ -40,7 +41,7 @@ void ExternalRelay( circuit *c ) {
  * ********************************************************************/
 int Add_Dummy( int container ) {
     
-    printf("adding dummy\n");
+    printf("cCore: adding dummy\n");
     
     circuit c = NewCircuit();
 	

@@ -48,18 +48,14 @@ class avg(Circuit):
 			self._time = float(keys['time'])
 		else:
 			raise NameError("Missing time parameter!")
-
-		self.cCoreID = Circuit.cCore.Add_AVG(self.machine.cCoreID,"Add_AVG",
-			c_double(self.time))
-		self.SetInputs(**keys)
-
-
+		
 		self._steps = math.floor(self._time/self.machine.dt)
 		self._buffer = numpy.zeros(self._steps)
 		
 		if 'moving' in keys.keys():
 			self._moving = bool(keys['moving'])
 
+		self.SetInputs(**keys)
 
 		self.tot = 0
 

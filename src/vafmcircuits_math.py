@@ -339,6 +339,9 @@ class opAbs(Circuit):
 		#create output channels
 		self.AddOutput("out")
 		
+		
+		self.cCoreID = Circuit.cCore.Add_Math(self.machine.cCoreID,"opABS",1)
+		
 		self.SetInputs(**keys)
 
 	def Initialize (self):
@@ -395,6 +398,8 @@ class opPow(Circuit):
 		
 		#create output channels
 		self.AddOutput("out")
+		
+		self.cCoreID = Circuit.cCore.Add_Math(self.machine.cCoreID,"opPOW",2)
 		
 		self.SetInputs(**keys)
 

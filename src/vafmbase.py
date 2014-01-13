@@ -108,6 +108,7 @@ class Channel(object):
 	def Set(self, value):
 		self.signal.PushValue(value)
 
+
 	## Renew the Feed object so that it is disconnected from everything.
 	def Disconnect(self):
 		self.signal = Feed(self.owner)

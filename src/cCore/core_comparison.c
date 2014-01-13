@@ -40,7 +40,6 @@ int Add_Comparison(int owner, char* type, int ni) {
         errorflag++;
     }
     
-    //c.update = template;
     c.updatef = ufunctions[template];
     
     int index = AddToCircuits(c,owner);
@@ -75,11 +74,11 @@ void LessOrEqual( circuit *c ) {
 
 void Equal( circuit *c ) {
   
-  double result = 0;
-  if ( GlobalSignals[c->inputs[0]] == GlobalSignals[c->inputs[1]]){
-    result = 1;
-  }
-
-
+    double result = 0;
+    
+    if ( GlobalSignals[c->inputs[0]] == GlobalSignals[c->inputs[1]]){
+        result = 1;
+    }
+    //printf("equals: %i %i - %i %lf\n",c->inputs[0],c->inputs[1],c->outputs[0],result);
     GlobalBuffers[c->outputs[0]] = result;
 }

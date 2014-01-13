@@ -1,8 +1,7 @@
 from vafmbase import Circuit
+from ctypes import *
 import math
 import vafmcircuits
-from ctypes import c_double
-
 
 ## \package vafmcircuits_signal_processing
 # This file contains the signal processing circuits for example min/max and delay.
@@ -46,9 +45,9 @@ class gain(Circuit):
 		else:
 			raise NameError("Missing gain parameter!")
 
-		self.cCoreID = Circuit.cCore.Add_Gain(self.machine.cCoreID,"Gain", c_double(self.gain) )
+		self.cCoreID = Circuit.cCore.Add_Gain(self.machine.cCoreID, c_double(self.gain))
+		
 		self.SetInputs(**keys)
-
 
 	def Initialize (self):
 
@@ -110,18 +109,21 @@ class minmax(Circuit):
 		self.AddOutput("amp")
 		self.AddOutput("offset")
 
-		self.cCoreID = Circuit.cCore.Add_minmax(self.machine.cCoreID,"minmax" )
+		self.cCoreID = Circuit.cCore.Add_minmax(self.machine.cCoreID, c_double(self.checktime))
+
 		self.SetInputs(**keys)
 
 		#setting min and max to the first value in the input file
-		self.min=self.I["signal"].value
-		self.max=self.I["signal"].value
+		#self.min=self.I["signal"].value
+		#self.max=self.I["signal"].value
 
 	def Initialize (self):
 
 		pass
 
 	def Update (self):
+		pass
+		"""
 		#if the value is greater or less than min or max then reassign the max and min values
 		if self.I["signal"].value > self.max:
 			self.max=self.I["signal"].value
@@ -148,7 +150,7 @@ class minmax(Circuit):
 
 
 			self.counter=0
-    
+		"""
 
 
 ## \brief Differentation circuit.
@@ -183,7 +185,6 @@ class derivative(Circuit):
 		#create output channels
 		self.AddOutput("out")
 
-		self.cCoreID = Circuit.cCore.Add_derivative(self.machine.cCoreID,"derivative" )
 		self.SetInputs(**keys)
 
 
@@ -239,7 +240,6 @@ class integral(Circuit):
 		#create output channels
 		self.AddOutput("out")
 
-		self.cCoreID = Circuit.cCore.Add_integral(self.machine.cCoreID,"integral" )
 		self.SetInputs(**keys)
 
 
@@ -296,9 +296,6 @@ class delay(Circuit):
 			self.delaytime = keys['DelayTime']
 		else:
 			raise NameError("Missing DelayTime input!")
-
-		self.cCoreID = Circuit.cCore.Add_delay(self.machine.cCoreID,"delay", c_double(self.delaytime) )
-		self.SetInputs(**keys)
 
 		self.steps = self.delaytime/self.machine.dt
 		self.counter = 0
@@ -371,9 +368,6 @@ class peaksdetector(Circuit):
 
 		else:
 			raise NameError("Missing up or down selection!")
-
-		self.cCoreID = Circuit.cCore.Add_peaksdetector(self.machine.cCoreID,"peaksdetector", c_double(self.up) )
-		self.SetInputs(**keys)
 		
 		self.AddInput("signal")
 		self.AddOutput("tick")
@@ -457,8 +451,7 @@ class phasor(Circuit):
 		self.counter= 0
 		self.check = False
 
-		self.cCoreID = Circuit.cCore.Add_phasor(self.machine.cCoreID,"phasor" )
-		self.SetInputs(**keys)
+
 
 	def Initialize (self):
 
@@ -519,7 +512,6 @@ class limiter(Circuit):
 		self.AddInput("max")
 		self.AddOutput("out")
 
-		self.cCoreID = Circuit.cCore.Add_limiter(self.machine.cCoreID,"limiter" )
 		self.SetInputs(**keys)
 
 	def Initialize (self):
@@ -563,9 +555,6 @@ class flip(Circuit):
 		self.AddInput("signal")
 		self.AddOutput("out")
 		self.yo= 0
-
-		self.cCoreID = Circuit.cCore.Add_flip(self.machine.cCoreID,"flip" )
-		self.SetInputs(**keys)
 
 	def Initialize (self):
 

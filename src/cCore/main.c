@@ -46,7 +46,6 @@ int INIT(void);
 
 int INIT(void) {
   
-    dt = 0.01;
 
     AllocateCircuits();
   
@@ -91,7 +90,13 @@ int INIT(void) {
     return 0;
 }
 
-
+int SetTimeStep(double value) {
+    
+    printf("cCore: setting dt: %lf \n",value);
+    dt = value;
+    
+    return 0;
+}
 
 int AllocateCircuits() {
 
@@ -133,7 +138,7 @@ int QUIT() {
 ***********************************************************************/
 int AddChannels( circuit *c ) {
   
-  //printf("cCore: adding channels: %i %i\n",c->nI,c->nO);
+  printf("cCore: adding channels: %i %i\n",c->nI,c->nO);
   
   if(c->nI > 0) {
     c->inputs = (int*)calloc(c->nI,sizeof(int));
@@ -158,7 +163,7 @@ int AddChannels( circuit *c ) {
     GlobalSignals[GlobalChannelCounter-1] = 0;
     GlobalBuffers[GlobalChannelCounter-1] = 0;
 
-    //printf("cCore: Global signals tot: %i\n",GlobalChannelCounter);
+    printf("cCore: Global signals tot: %i\n",GlobalChannelCounter);
 
   return 0;
 }

@@ -37,6 +37,7 @@ class GreaterOrEqual(Circuit):
 		self.AddOutput("out")
 
 		self.cCoreID = Circuit.cCore.Add_Comparison(self.machine.cCoreID,"GreaterOrEqual",2)
+
 		self.SetInputs(**keys)
 
 	def Initialize (self):
@@ -80,10 +81,10 @@ class LessOrEqual(Circuit):
 		self.AddInput("in2")
 
 		self.AddOutput("out")
-
+		
 		self.cCoreID = Circuit.cCore.Add_Comparison(self.machine.cCoreID,"LessOrEqual",2)
-		self.SetInputs(**keys)
 
+		self.SetInputs(**keys)
 
 	def Initialize (self):
 
@@ -126,8 +127,9 @@ class Equal(Circuit):
 		self.AddInput("in2")
 
 		self.AddOutput("out")
-
+		
 		self.cCoreID = Circuit.cCore.Add_Comparison(self.machine.cCoreID,"Equal",2)
+		
 		self.SetInputs(**keys)
 
 	def Initialize (self):

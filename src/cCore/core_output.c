@@ -34,17 +34,17 @@ int Add_output(int owner, char* filename, int dump) {
     c.nI = 1;
     c.nO = 0;
 
-    c.iplen = 2;
-    c.iparams = (int*)calloc(2,sizeof(int));
+    c.iplen = 3;
+    c.iparams = (int*)calloc(c.iplen,sizeof(int));
     c.iparams[0] = dump;
-    c.iparams[1] = 0;
+    c.iparams[1] = 0; //step counter
+    c.iparams[2] = 0; //number of channels to print
 
     c.vplen = 1;
     c.vpparams = (void**)malloc(sizeof(FILE*));//one element
     c.vpparams[0] = (void*)fopen(filename, "w");
 
     c.updatef = output;
-    //c.update = ID_output;
 
     //*** ALLOCATE IN LIST *********************
     int index = AddToCircuits(c, owner);
@@ -70,16 +70,33 @@ int output_register(int outer, int c, int chout) {
 
 int output_register_feed(int outer, int feedid) {
 
-    circuits[outer].iparams[1]++;
+    circuits[outer].iparams[2]++;
     circuits[outer].iplen++;
     circuits[outer].iparams = (int*)realloc(circuits[outer].iparams,
-            (2+circuits[outer].iparams[1])*sizeof(int));
+            circuits[outer].iplen*sizeof(int));
 
     circuits[outer].iparams[circuits[outer].iplen-1] = feedid;
     
     return 0;
 }
 
+void output_dump( int index ) {
+    
+    //circuits[index].updatef(&(circuits[index]));
+    output_printout( &(circuits[index]) );
+}
+
+void output_printout( circuit *c ) {
+    
+    for(int i=3; i < c->iplen; i++){
+        
+        //printf("%lf ",GlobalSignals[c->iparams[i]]);
+        fprintf((c->vpparams[0]), "%15.8lf ", GlobalSignals[c->iparams[i]]);
+        
+    }
+    //printf("\n");
+    fprintf((c->vpparams[0]), "\n");
+}
 
 int output_close(int outer) {
   
@@ -90,14 +107,18 @@ int output_close(int outer) {
 
 void output( circuit *c ) {
 
-  for(int i=2; i < c->iparams[1]+2; i++){
-    //printf("%lf ",GlobalSignals[c->iparams[i]]);
-    fprintf((c->vpparams[0]), "%15.8lf ", GlobalSignals[c->iparams[i]]);
+    if(c->iparams[0] <= 0)
+        return;
     
-  }
-  //printf("\n");
-  fprintf((c->vpparams[0]), "\n");
-  //printf();
+    c->iparams[1]++;
+    
+    if(c->iparams[1] >= c->iparams[0]) {
+        
+        output_printout(c); //do the print out
+        c->iparams[1] = 0;
+    
+    }
+
 }
 
 
