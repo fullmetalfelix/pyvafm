@@ -379,7 +379,7 @@ int Update(int steps) {
         //GlobalSignals[0] = GlobalBuffers[0];
 
     }
-    printf("steps %d\n",steps);
+    //printf("steps %d\n",steps);
 
     return 0;
 }

@@ -1,0 +1,1 @@
+plot "log.dat" using 1:2 title "output", "log.dat" using 1:3 title "input"

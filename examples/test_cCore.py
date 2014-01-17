@@ -1,4 +1,8 @@
 #!/usr/bin/env python
+import sys
+sys.path.append('/Users/johntracey/Desktop/C and Py/src')
+
+
 
 from vafmbase import ChannelType
 from vafmcircuits import Machine

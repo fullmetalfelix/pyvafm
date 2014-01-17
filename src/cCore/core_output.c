@@ -107,8 +107,14 @@ int output_close(int outer) {
 
 void output( circuit *c ) {
 
-    if(c->iparams[0] <= 0)
+    if(c->iparams[0] <= 0) {
+        //printf("asd!\n");
+        if(GlobalSignals[c->inputs[0]] > 0) {
+            output_printout(c); //do the print out
+        }
+        
         return;
+    }
     
     c->iparams[1]++;
     
