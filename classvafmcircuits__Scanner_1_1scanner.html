@@ -59,16 +59,15 @@
 <div class="textblock"><p>This is the circuit that allows the user to control the cantilever placement.</p>
 <ul>
 <li><b>Initialisation</b> <b>parameters:</b> <ul>
-<li><em>process</em> = Name of the object which was used to initiate the machine.<br/>
-</li>
+<li><em>process</em> = Name of the object which was used to initiate the machine.</li>
 </ul>
 </li>
-<li><b>Input</b> <b>channels:</b> <br/>
-<ul>
+<li><b>Input</b> <b>channels:</b> <ul>
 <li>This circuit has no input channels.</li>
 </ul>
 </li>
-<li><b>Output</b> <b>channels:</b>  - <em>pos:</em> The position of the cantilever.<ul>
+<li><b>Output</b> <b>channels:</b> <ul>
+<li><em>pos:</em> The position of the cantilever.</li>
 <li><em>ScanPos:</em> The positon of the cantilever when using the Scan function</li>
 <li><em>Record:</em> This is either True or False and works in conjunction with the cantilever output signal, this is used to control when you want the cantilever to output a signal, by default this is set to True</li>
 </ul>
@@ -78,7 +77,7 @@
 <div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;machine = Machine(machine=<span class="keywordtype">None</span>, name=<span class="stringliteral">&#39;machine&#39;</span>, dt=0.01, pushed=<span class="keyword">True</span>);</div>
 <div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;scan = machine.AddCircuit(type=<span class="stringliteral">&#39;scanner&#39;</span>,name=<span class="stringliteral">&#39;scann&#39;</span>, Process = machine, pushed=<span class="keyword">True</span>)</div>
 </div><!-- fragment --> </div>
-<p>Inherits Circuit.</p>
+<p>Inherits <a class="el" href="classvafmbase_1_1Circuit.html">Circuit</a>.</p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
@@ -101,23 +100,30 @@ Public Member Functions</h2></td></tr>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="inherited"></a>
 Additional Inherited Members</h2></td></tr>
 <tr class="inherit_header pub_attribs_classvafmbase_1_1Circuit"><td colspan="2" onclick="javascript:toggleInherit('pub_attribs_classvafmbase_1_1Circuit')"><img src="closed.png" alt="-"/>&#160;Public Attributes inherited from <a class="el" href="classvafmbase_1_1Circuit.html">Circuit</a></td></tr>
-<tr class="memitem:ab74e6bf80237ddc4109968cedc58c151 inherit pub_attribs_classvafmbase_1_1Circuit"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><b>name</b></td></tr>
+<tr class="memitem:ab74e6bf80237ddc4109968cedc58c151 inherit pub_attribs_classvafmbase_1_1Circuit"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvafmbase_1_1Circuit.html#ab74e6bf80237ddc4109968cedc58c151">name</a></td></tr>
 <tr class="memdesc:ab74e6bf80237ddc4109968cedc58c151 inherit pub_attribs_classvafmbase_1_1Circuit"><td class="mdescLeft">&#160;</td><td class="mdescRight">Name of the circuit.  <a href="#ab74e6bf80237ddc4109968cedc58c151">More...</a><br/></td></tr>
 <tr class="separator:ab74e6bf80237ddc4109968cedc58c151 inherit pub_attribs_classvafmbase_1_1Circuit"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6a9ee8dc9ee5944948c1b555462cbde0 inherit pub_attribs_classvafmbase_1_1Circuit"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><b>machine</b></td></tr>
+<tr class="memitem:a91b39549c797bd5646357c8b6eecad0f inherit pub_attribs_classvafmbase_1_1Circuit"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvafmbase_1_1Circuit.html#a91b39549c797bd5646357c8b6eecad0f">enabled</a></td></tr>
+<tr class="memdesc:a91b39549c797bd5646357c8b6eecad0f inherit pub_attribs_classvafmbase_1_1Circuit"><td class="mdescLeft">&#160;</td><td class="mdescRight">if it is working...  <a href="#a91b39549c797bd5646357c8b6eecad0f">More...</a><br/></td></tr>
+<tr class="separator:a91b39549c797bd5646357c8b6eecad0f inherit pub_attribs_classvafmbase_1_1Circuit"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6a9ee8dc9ee5944948c1b555462cbde0 inherit pub_attribs_classvafmbase_1_1Circuit"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvafmbase_1_1Circuit.html#a6a9ee8dc9ee5944948c1b555462cbde0">machine</a></td></tr>
 <tr class="memdesc:a6a9ee8dc9ee5944948c1b555462cbde0 inherit pub_attribs_classvafmbase_1_1Circuit"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reference to the virtual machine to which this circuit belongs.  <a href="#a6a9ee8dc9ee5944948c1b555462cbde0">More...</a><br/></td></tr>
 <tr class="separator:a6a9ee8dc9ee5944948c1b555462cbde0 inherit pub_attribs_classvafmbase_1_1Circuit"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab0a92011c6993904ec6981eb1b1ff4f9 inherit pub_attribs_classvafmbase_1_1Circuit"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><b>pushed</b></td></tr>
+<tr class="memitem:ab0a92011c6993904ec6981eb1b1ff4f9 inherit pub_attribs_classvafmbase_1_1Circuit"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvafmbase_1_1Circuit.html#ab0a92011c6993904ec6981eb1b1ff4f9">pushed</a></td></tr>
 <tr class="memdesc:ab0a92011c6993904ec6981eb1b1ff4f9 inherit pub_attribs_classvafmbase_1_1Circuit"><td class="mdescLeft">&#160;</td><td class="mdescRight">Push output buffer at the end of Update.  <a href="#ab0a92011c6993904ec6981eb1b1ff4f9">More...</a><br/></td></tr>
 <tr class="separator:ab0a92011c6993904ec6981eb1b1ff4f9 inherit pub_attribs_classvafmbase_1_1Circuit"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a66cc12e3c6d68de3fef6de89cf033f67 inherit pub_attribs_classvafmbase_1_1Circuit"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a66cc12e3c6d68de3fef6de89cf033f67"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>I</b></td></tr>
+&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvafmbase_1_1Circuit.html#a66cc12e3c6d68de3fef6de89cf033f67">I</a></td></tr>
 <tr class="memdesc:a66cc12e3c6d68de3fef6de89cf033f67 inherit pub_attribs_classvafmbase_1_1Circuit"><td class="mdescLeft">&#160;</td><td class="mdescRight">Dictionary of input channels. <br/></td></tr>
 <tr class="separator:a66cc12e3c6d68de3fef6de89cf033f67 inherit pub_attribs_classvafmbase_1_1Circuit"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae48bf9dad3f5d442f9d14d931be6f43e inherit pub_attribs_classvafmbase_1_1Circuit"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ae48bf9dad3f5d442f9d14d931be6f43e"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>O</b></td></tr>
+&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvafmbase_1_1Circuit.html#ae48bf9dad3f5d442f9d14d931be6f43e">O</a></td></tr>
 <tr class="memdesc:ae48bf9dad3f5d442f9d14d931be6f43e inherit pub_attribs_classvafmbase_1_1Circuit"><td class="mdescLeft">&#160;</td><td class="mdescRight">Dictionary of output channels. <br/></td></tr>
 <tr class="separator:ae48bf9dad3f5d442f9d14d931be6f43e inherit pub_attribs_classvafmbase_1_1Circuit"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad29858f6d8ab73f2970f41cb21a76b84 inherit pub_attribs_classvafmbase_1_1Circuit"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad29858f6d8ab73f2970f41cb21a76b84"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvafmbase_1_1Circuit.html#ad29858f6d8ab73f2970f41cb21a76b84">events</a></td></tr>
+<tr class="memdesc:ad29858f6d8ab73f2970f41cb21a76b84 inherit pub_attribs_classvafmbase_1_1Circuit"><td class="mdescLeft">&#160;</td><td class="mdescRight">Dictionary of events. <br/></td></tr>
+<tr class="separator:ad29858f6d8ab73f2970f41cb21a76b84 inherit pub_attribs_classvafmbase_1_1Circuit"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Member Function Documentation</h2>
 <a class="anchor" id="a4a3af43e70b0e09f35187b8e5eb550f9"></a>
@@ -328,9 +334,7 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">x</td><td>y and z is the direction the cnatilever will move in. <br/>
-length is the distance the cantilever will travel. <br/>
-v is the speed, v=1 means the scan will be complete in 1 second, for example if the speed is increased to 2 then the scan will be completed in 0.5 seconds. pts is how many iterations of the loop will be compleed until an output is produced. This is determined by the step size so for example if you wanted a output every 0.5 seconds with a step size of 0.1 then you must set pts = 5 as 5 iterations of the loop will be completed before reaching 0.5 seconds.</td></tr>
+    <tr><td class="paramname">x</td><td>y and z is the direction the cnatilever will move in. length is the distance the cantilever will travel. v is the speed, v=1 means the scan will be complete in 1 second, for example if the speed is increased to 2 then the scan will be completed in 0.5 seconds. pts is how many iterations of the loop will be compleed until an output is produced. This is determined by the step size so for example if you wanted a output every 0.5 seconds with a step size of 0.1 then you must set pts = 5 as 5 iterations of the loop will be completed before reaching 0.5 seconds.</td></tr>
   </table>
   </dd>
 </dl>
@@ -381,7 +385,7 @@ v is the speed, v=1 means the scan will be complete in 1 second, for example if 
 <div class="float-left">Documentation for pyVAFM </div>
 <div class="float-right">
 <small>
-Generated on Tue Oct 29 2013 10:54:23 for pyVAFM by&nbsp;<a href="http://www.doxygen.org/index.html"><img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.8.5</small></address>
+Generated on Mon Nov 25 2013 12:51:00 for pyVAFM by&nbsp;<a href="http://www.doxygen.org/index.html"><img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.8.5</small></address>
 </div>
 <!-- top ends here -->
 <!-- </div> -->

@@ -64,18 +64,35 @@ Signal Generators</h1>
 Signal Processing</h1>
 <ul>
 <li>Filters<ul>
-<li><a class="el" href="classvafmcircuits__Filters_1_1ActiveLowPass.html">ActiveLowPass</a> - <em>second order lowpass filter</em></li>
-<li><a class="el" href="classvafmcircuits__Filters_1_1ActiveHighPass.html">ActiveHighPass</a> - <em>second order highpass filter</em></li>
-<li><a class="el" href="classvafmcircuits__Filters_1_1ActiveBandPass.html">ActiveBandPass</a> - <em>second order bandpass filter</em></li>
-<li><a class="el" href="classvafmcircuits__Filters_1_1PassiveLowPass.html">PassiveLowPass</a> - <em>first order lowpass filter (RC)</em></li>
-<li><a class="el" href="classvafmcircuits__Filters_1_1PassiveHighPass.html">PassiveHighPass</a> - <em>first order highpass filter (RL)</em></li>
+<li><a class="el" href="classvafmcircuits__Filters_1_1SKLP.html">ActiveLowPass</a> - <em>second order lowpass filter</em></li>
+<li><a class="el" href="classvafmcircuits__Filters_1_1SKHP.html">ActiveHighPass</a> - <em>second order highpass filter</em></li>
+<li><a class="el" href="classvafmcircuits__Filters_1_1SKBP.html">ActiveBandPass</a> - <em>second order bandpass filter</em></li>
+<li><a class="el" href="">PassiveLowPass</a> - <em>first order lowpass filter (RC)</em></li>
+<li><a class="el" href="">PassiveHighPass</a> - <em>first order highpass filter (RL)</em></li>
 <li><a class="el" href="">PassiveBandPass</a> - <em>first order bandpass filter (RCL)</em></li>
+</ul>
+</li>
+<li>Averagers<ul>
+<li><a class="el" href="classvafmcircuits__avg_1_1avg.html">avg</a> - <em>Averager circuit.</em></li>
+</ul>
+</li>
+<li>Misc<ul>
+<li><a class="el" href="classvafmcircuits__signal__processing_1_1gain.html">gain</a> - <em>applies a given gain to a signal</em></li>
+<li><a class="el" href="classvafmcircuits__signal__processing_1_1limiter.html">limiter</a> - <em>clamps a signal between two values.</em></li>
+<li><a class="el" href="classvafmcircuits__signal__processing_1_1minmax.html">minmax</a> - <em>outputs max and min values of a signal over a certain time</em></li>
+<li><a class="el" href="classvafmcircuits__signal__processing_1_1derivative.html">derivative</a> - <em>computes the derivative of a signal</em></li>
+<li><a class="el" href="classvafmcircuits__signal__processing_1_1integral.html">integral</a> - <em>outputs the integral of a signal</em></li>
+<li><a class="el" href="classvafmcircuits__signal__processing_1_1delay.html">delay</a> - <em>delays the signal by a given amount of time</em></li>
+<li><a class="el" href="">peaksdetector</a> - <em>detects the peaks in a signal</em></li>
+<li><a class="el" href="classvafmcircuits__signal__processing_1_1phasor.html">phasor</a> - <em>computes the delay between one signal becoming positive and the other signal becoming positive</em></li>
+<li><a class="el" href="classvafmcircuits__signal__processing_1_1flip.html">flip</a> - <em>outputs a tick when the signal changes from negative to positive.</em></li>
 </ul>
 </li>
 </ul>
 <h1><a class="anchor" id="sec_math"></a>
-Arithmetics</h1>
+Mathematics</h1>
 <ul>
+<li>Arithmetics<ul>
 <li><a class="el" href="classvafmcircuits__math_1_1opAdd.html">opAdd</a> - <em>sum operator</em></li>
 <li><a class="el" href="classvafmcircuits__math_1_1opSub.html">opSub</a> - <em>subtraction operator</em></li>
 <li><a class="el" href="classvafmcircuits__math_1_1opMul.html">opMul</a> - <em>multiplication operator</em></li>
@@ -84,14 +101,27 @@ Arithmetics</h1>
 <li><a class="el" href="classvafmcircuits__math_1_1opPow.html">opPow</a> - <em>power operator</em></li>
 <li><a class="el" href="classvafmcircuits__math_1_1opAbs.html">opAbs</a> - <em>absolute value operator</em></li>
 </ul>
-<h1><a class="anchor" id="sec_logic"></a>
-Logic</h1>
+</li>
+<li>Comparison<ul>
+<li><a class="el" href="classvafmcircuits__Comparison_1_1GreaterOrEqual.html">GreaterOrEqual</a> - <em>Greater or equal to circuit.</em></li>
+<li><a class="el" href="classvafmcircuits__Comparison_1_1LessOrEqual.html">LessOrEqual</a> - <em>Less or equal to circuit.</em></li>
+<li><a class="el" href="classvafmcircuits__Comparison_1_1Equal.html">Equal</a> - <em>equal to circuit.</em></li>
+</ul>
+</li>
+<li>Logic<ul>
+<li><a class="el" href="classvafmcircuits__Logic_1_1NOT.html">NOT</a> - <em>Not gate circuit.</em></li>
+<li><a class="el" href="classvafmcircuits__Logic_1_1AND.html">AND</a> - <em>And gate circuit.</em></li>
+<li><a class="el" href="classvafmcircuits__Logic_1_1OR.html">OR</a> - <em>Or gate circuit.</em></li>
+<li><a class="el" href="classvafmcircuits__Logic_1_1XOR.html">XOR</a> - <em>XOrGate gate circuit.</em></li>
+<li><a class="el" href="classvafmcircuits__Logic_1_1NOR.html">NOR</a> - <em>NOrGate gate circuit.</em></li>
+</ul>
+</li>
+</ul>
+<h1><a class="anchor" id="sec_control"></a>
+Controllers</h1>
 <ul>
-<li><a class="el" href="classvafmcircuits__Logic_1_1Not.html">Not</a> - <em>Not gate circuit.</em></li>
-<li><a class="el" href="classvafmcircuits__Logic_1_1And.html">And</a> - <em>And gate circuit.</em></li>
-<li><a class="el" href="classvafmcircuits__Logic_1_1OrGate.html">OrGate</a> - <em>Or gate circuit.</em></li>
-<li><a class="el" href="classvafmcircuits__Logic_1_1XOrGate.html">XOrGate</a> - <em>XOrGate gate circuit.</em></li>
-<li><a class="el" href="classvafmcircuits__Logic_1_1NORGate.html">NORGate</a> - <em>NORGate gate circuit.</em></li>
+<li><a class="el" href="classvafmcircuits__control_1_1PI.html">PI</a> - <em>Proportional-Integral controller</em></li>
+<li><a class="el" href="classvafmcircuits__control_1_1PID.html">PID</a> - <em>Proportional-Integral-Derivative controller</em></li>
 </ul>
 <h1><a class="anchor" id="sec_out"></a>
 Output</h1>
@@ -105,7 +135,6 @@ Composites</h1>
 </ul>
 <p>''</p>
 <ul>
-<li><a class="el" href="classvafmcircuits__avg_1_1avg.html">avg</a> - <em>Averager circuit.</em></li>
 <li><a class="el" href="namespacevafmcircuits__Cantilever.html#ad4ee87efe63bf6ba30c06e748aad7c49">InputQV</a> - <em>Q factor in the vertical mode.</em></li>
 <li><a class="el" href="namespacevafmcircuits__Cantilever.html#ad831ecb73149bb417d35ca64190bc1c2">InputKV</a> - <em>K value in the vertical mode.</em></li>
 <li><a class="el" href="namespacevafmcircuits__Cantilever.html#a0ec9fc6c892ddc3fc16561c5729d7104">InputFV</a> - <em>fundemental eigen frequency in the vertical mode.</em></li>
@@ -115,12 +144,6 @@ Composites</h1>
 <li><a class="el" href="namespacevafmcircuits__Cantilever.html#a4c52f54ea21fc45733e3653a0a746b49">StartingPos</a> - <em>The starting pos of the tip.</em></li>
 <li><a class="el" href="namespacevafmcircuits__Cantilever.html#ac00aa71cfd9780d7a11aa794f763e20c">MassV</a> - <em>Mass of the vertical mode.</em></li>
 <li><a class="el" href="namespacevafmcircuits__Cantilever.html#aee149c25416e48e8cc785d32dba65efb">MassL</a> - <em>Mass of the lateral mode.</em></li>
-<li><a class="el" href="classvafmcircuits__Comparison_1_1GreaterOrEqual.html">GreaterOrEqual</a> - <em>Greater or equal to circuit.</em></li>
-<li><a class="el" href="classvafmcircuits__Comparison_1_1LessOrEqual.html">LessOrEqual</a> - <em>Less or equal to circuit.</em></li>
-<li><a class="el" href="classvafmcircuits__Comparison_1_1Equal.html">Equal</a> - <em>equal to circuit.</em></li>
-<li><a class="el" href="classvafmcircuits__control_1_1PI.html">PI</a> - <em>PI circuit.</em></li>
-<li><a class="el" href="classvafmcircuits__control_1_1PID.html">PID</a> - <em>PID circuit.</em></li>
-<li><a class="el" href="classvafmcircuits__control_1_1limiter.html">limiter</a> - <em>Limiter circuit.</em></li>
 <li><a class="el" href="classvafmcircuits__FlipFlop_1_1SRFlipFlop.html">SRFlipFlop</a> - <em>SRFlipFlop circuit.</em></li>
 <li><a class="el" href="classvafmcircuits__FlipFlop_1_1JKFlipFlop.html">JKFlipFlop</a> - <em>JKFlipFlop circuit.</em></li>
 <li><a class="el" href="classvafmcircuits__FlipFlop_1_1DFlipFlop.html">DFlipFlop</a> - <em>DFlipFlop circuit.</em></li>
@@ -132,14 +155,6 @@ Composites</h1>
 <li><a class="el" href="">MoveTo</a> - <em>Place the cantilever to a position at a given speed.</em></li>
 <li><a class="el" href="">Wait</a> - <em>Make the cantilever hold position for a given time.</em></li>
 <li><a class="el" href="">Scan</a> - <em>Scans the cantilever along a given distane, in a given direction with a given speed and records points at a given interval.</em></li>
-<li><a class="el" href="classvafmcircuits__signal__processing_1_1gain.html">gain</a> - <em>applies a given gain to a signal</em></li>
-<li><a class="el" href="classvafmcircuits__signal__processing_1_1minmax.html">minmax</a> - <em>outputs max and min values of a signal</em></li>
-<li><a class="el" href="classvafmcircuits__signal__processing_1_1derivative.html">derivative</a> - <em>outputs the derivative of a signal</em></li>
-<li><a class="el" href="classvafmcircuits__signal__processing_1_1integral.html">integral</a> - <em>outputs the integral of a signal</em></li>
-<li><a class="el" href="classvafmcircuits__signal__processing_1_1delay.html">delay</a> - <em>delays the signal by a given amount</em></li>
-<li><a class="el" href="classvafmcircuits__signal__processing_1_1peaksdetector.html">peaksdetector</a> - <em>outputs the peaks in a signal</em></li>
-<li><a class="el" href="classvafmcircuits__signal__processing_1_1phasor.html">phasor</a> - <em>outputs the legnth time between one signal becoming positive and the other signal becoming positive</em></li>
-<li><a class="el" href="classvafmcircuits__signal__processing_1_1flip.html">flip</a> - <em>Takes in an input and will output a tick everytime the signal changes from negative to positive.</em></li>
 <li><a class="el" href="classvafmcircuits__Interpolation_1_1Interpolate.html">Interpolate</a> - <em>Multi-linear interpolation circuit.</em> </li>
 </ul>
 </div></div><!-- contents -->
@@ -148,7 +163,7 @@ Composites</h1>
 <div class="float-left">Documentation for pyVAFM </div>
 <div class="float-right">
 <small>
-Generated on Tue Oct 29 2013 10:54:23 for pyVAFM by&nbsp;<a href="http://www.doxygen.org/index.html"><img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.8.5</small></address>
+Generated on Mon Jan 27 2014 14:44:42 for pyVAFM by&nbsp;<a href="http://www.doxygen.org/index.html"><img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.8.5</small></address>
 </div>
 <!-- top ends here -->
 <!-- </div> -->

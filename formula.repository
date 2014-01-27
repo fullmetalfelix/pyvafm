@@ -65,3 +65,12 @@
 \form#64:$ G\frac{Band \cdot dt\cdot(x(t) - x(t-2dt)) + band \cdot dt \cdot (2 \cdot y \cdot (t-dt) - y \cdot (t-2 \cdot dt)) }{ 1 + band \cdot dt + \omega ^2 _c } $
 \form#65:$ y $
 \form#66:$ in_1 \land in_2 \land ... \land in_x $
+\form#67:$ \mbox{Max}(\mbox{Min}(in, max), min)$
+\form#68:$ \mbox{Max}(\mbox{Min}(signal, max), min)$
+\form#69:$ \lor $
+\form#70:$ \lveebar $
+\form#71:$ \veebar $
+\form#72:$ \oplus $
+\form#73:$ G\frac{band \cdot dt\cdot(x(t) - x(t-2dt)) + band \cdot dt \cdot (2 \cdot y \cdot (t-dt) - y \cdot (t-2 \cdot dt)) }{ 1 + band \cdot dt + \omega ^2 _c } $
+\form#74:$sin(in)$
+\form#75:$cos(in)$

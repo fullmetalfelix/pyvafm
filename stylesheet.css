@@ -370,15 +370,6 @@ pre {
 Begin default doxygen style
 */
 
-#maincol span.lineno {
-	padding-right: 4px;
-	text-align: right;
-	border-right: 2px solid #0F0;
-	background-color: #E8E8E8;
-    white-space: pre;
-    visibility:hidden;
-}
-
 
 /* The standard CSS for doxygen */
 
@@ -512,20 +503,80 @@ Begin default doxygen style
 	margin-left: -1cm;
 }
 
-#maincol .fragment {
-	font-family: monospace, fixed;
-	font-size: 105%;
-    padding: 4px 6px;
-    margin: 4px 8px 4px 2px;
+/*
+pre.fragment {
+        border: 1px solid #C4CFE5;
+        background-color: #FBFCFD;
+        padding: 4px 6px;
+        margin: 4px 8px 4px 2px;
+        overflow: auto;
+        word-wrap: break-word;
+        font-size:  9pt;
+        line-height: 125%;
+        font-family: monospace, fixed;
+        font-size: 105%;
+}
+
+div.fragment {
+        padding: 4px 6px;
+        margin: 4px 8px 4px 2px;
 	background-color: #FBFCFD;
 	border: 1px solid #C4CFE5;
+}
+
+div.line {
+	font-family: monospace, fixed;
+        font-size: 13px;
+	min-height: 13px;
+	line-height: 1.0;
+	text-wrap: unrestricted;
+	white-space: -moz-pre-wrap; 
+	white-space: -pre-wrap;     
+	white-space: -o-pre-wrap;   
+	white-space: pre-wrap;      
+	word-wrap: break-word;      
+	text-indent: -53px;
+	padding-left: 53px;
+	padding-bottom: 0px;
+	margin: 0px;
+	-webkit-transition-property: background-color, box-shadow;
+	-webkit-transition-duration: 0.5s;
+	-moz-transition-property: background-color, box-shadow;
+	-moz-transition-duration: 0.5s;
+	-ms-transition-property: background-color, box-shadow;
+	-ms-transition-duration: 0.5s;
+	-o-transition-property: background-color, box-shadow;
+	-o-transition-duration: 0.5s;
+	transition-property: background-color, box-shadow;
+	transition-duration: 0.5s;
+}
+
+
+span.lineno {
+	/*padding-right: 4px;
+	text-align: right;
+	border-right: 2px solid #0F0;
+	background-color: #E8E8E8;
+        white-space: pre;
+	visibility:hidden;
+}
+*/
+
+#maincol .fragment {
+    font-family: monospace, fixed;
+    font-size: 105%;
+    padding: 4px 6px;
+    margin: 4px 8px 4px 2px;
+    background-color: #FBFCFD;
+    border: 1px solid #C4CFE5;
+    /*white-space: pre;*/
 }
 
 #maincol pre.fragment {
         font-family: monospace, fixed;
         font-size: 105%;
         padding: 4px 6px;
-        margin: 4px 8px 4px 2px;
+        /*margin: 4px 8px 4px 2px;*/
         background-color: #FBFCFD;
         border: 1px solid #C4CFE5;
         overflow: auto;
@@ -533,6 +584,43 @@ Begin default doxygen style
         /*font-size:  9pt;*/
         line-height: 125%;
 }
+
+#maincol div.line {
+	font-family: monospace, fixed;
+        font-size: 13px;
+	min-height: 14px;
+	line-height: 1.0;
+	text-wrap: suppress;
+	white-space: -moz-pre-wrap; 
+	white-space: -pre-wrap;     
+	white-space: -o-pre-wrap;   
+	white-space: pre-wrap;      
+	word-wrap: break-word;      
+	text-indent: -53px;
+	padding-left: 10px;
+	padding-bottom: 0px;
+	margin: 0px;
+	-webkit-transition-property: background-color, box-shadow;
+	-webkit-transition-duration: 0.5s;
+	-moz-transition-property: background-color, box-shadow;
+	-moz-transition-duration: 0.5s;
+	-ms-transition-property: background-color, box-shadow;
+	-ms-transition-duration: 0.5s;
+	-o-transition-property: background-color, box-shadow;
+	-o-transition-duration: 0.5s;
+	transition-property: background-color, box-shadow;
+	transition-duration: 0.5s;
+}
+
+#maincol span.lineno {
+	/*padding-right: 4px;
+	text-align: right;
+	border-right: 2px solid #0F0;
+	background-color: #E8E8E8;*/
+        white-space: pre;
+	visibility:hidden;
+}
+
 
 #maincol div.ah {
 	background-color: black;
