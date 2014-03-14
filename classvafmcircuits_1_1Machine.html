@@ -19,6 +19,21 @@
     var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
   })();
 </script>
+<script type="text/javascript">
+function toggleMenu(objID, button) {
+    if (!document.getElementById) return;
+    var ob = document.getElementById(objID).style;
+    if(ob.display == 'block') {
+	ob.display = 'none';
+	button.innerHTML = "+";
+    }
+    else {
+	ob.display = 'block';
+	button.innerHTML = "-";
+    }
+    //ob.display = (ob.display == 'block')?'none': 'block';
+}
+</script>
 </head><body>
 <a name="top"></a>
 <!-- wrap starts here -->
@@ -57,13 +72,28 @@
 </div><!--header-->
 <div class="contents">
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>The vitual machine is effectively a <a class="el" href="classvafmbase_1_1Circuit.html">circuit </a>, with input/output channels, but it also contains an internal assembly of circuits that run during the Update cycle. Every machine always has the output channel <em>'time'</em> created during initialisation.</p>
+<div class="textblock"><p>The vitual machine is effectively a <a class="el" href="classvafmbase_1_1Circuit.html">circuit </a>, with input/output channels, but it also contains an internal assembly of circuits that run during the <a class="el" href="classvafmcircuits_1_1Machine.html#afdbc5a5ae82700ff3fa74014409cadba">Update</a> cycle. Every machine always has the output channel <em>'time'</em> created during initialisation.</p>
+<p><b>Initialisation</b> <b>parameters:</b> </p>
+<ul>
+<li><em>dt</em> = timestep (only for main machine)</li>
+<li><em>assembly</em> = constructor function (only for composites)</li>
+<li><em>pushed</em> = True|False push the output buffer immediately if True</li>
+</ul>
+<p><b>Input</b> <b>channels:</b> </p>
+<ul>
+<li>custom inputs (only for composites)</li>
+</ul>
+<p><b>Output</b> <b>channels:</b> </p>
+<ul>
+<li><em>time</em> = global simulation time</li>
+<li>custom outputs (only for composites)</li>
+</ul>
 <p><b>Example:</b> </p>
 <div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">#create the main virtual machine</span></div>
 <div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;machine = Machine(name=<span class="stringliteral">&#39;machine&#39;</span>, dt=1.0e-8)</div>
 <div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;</div>
 <div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment">#create a machine circuit inside the main machine</span></div>
-<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;composite = machine.AddCircuit(type=<span class="stringliteral">&quot;Machine&quot;</span>, name=<span class="stringliteral">&#39;pll&#39;</span>, ...)</div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;composite = machine.AddCircuit(type=<span class="stringliteral">&quot;Machine&quot;</span>, name=<span class="stringliteral">&#39;pll&#39;</span>, assembly=PLL, ...)</div>
 </div><!-- fragment --> </div>
 <p>Inherits <a class="el" href="classvafmbase_1_1Circuit.html">Circuit</a>.</p>
 <table class="memberdecls">
@@ -81,18 +111,27 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:ac7f4b9e5aa50435a071e02c109d1a59a"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvafmcircuits_1_1Machine.html#ac7f4b9e5aa50435a071e02c109d1a59a">AddOutput</a></td></tr>
 <tr class="memdesc:ac7f4b9e5aa50435a071e02c109d1a59a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create an output channel with the given name.  <a href="#ac7f4b9e5aa50435a071e02c109d1a59a">More...</a><br/></td></tr>
 <tr class="separator:ac7f4b9e5aa50435a071e02c109d1a59a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a50a27c5aa085c02f2f5599e8bf7a945f"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvafmcircuits_1_1Machine.html#a50a27c5aa085c02f2f5599e8bf7a945f">Connect_OLD</a></td></tr>
-<tr class="memdesc:a50a27c5aa085c02f2f5599e8bf7a945f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Connect the output of a circuit to the input of another.  <a href="#a50a27c5aa085c02f2f5599e8bf7a945f">More...</a><br/></td></tr>
-<tr class="separator:a50a27c5aa085c02f2f5599e8bf7a945f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a18ddf47cec2f34a9d9af5228ca10e910"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvafmcircuits_1_1Machine.html#a18ddf47cec2f34a9d9af5228ca10e910">AddCircuit</a></td></tr>
+<tr class="memdesc:a18ddf47cec2f34a9d9af5228ca10e910"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add a circuit of type 'ctype' named 'name' to the setup.  <a href="#a18ddf47cec2f34a9d9af5228ca10e910">More...</a><br/></td></tr>
+<tr class="separator:a18ddf47cec2f34a9d9af5228ca10e910"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5f59da765e8e62083840984f77024346"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvafmcircuits_1_1Machine.html#a5f59da765e8e62083840984f77024346">Connect</a></td></tr>
+<tr class="memdesc:a5f59da765e8e62083840984f77024346"><td class="mdescLeft">&#160;</td><td class="mdescRight">Connect the output of a circuit to the input of another.  <a href="#a5f59da765e8e62083840984f77024346">More...</a><br/></td></tr>
+<tr class="separator:a5f59da765e8e62083840984f77024346"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab8d42e4585f399ff0de73cb28b0e745f"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvafmcircuits_1_1Machine.html#ab8d42e4585f399ff0de73cb28b0e745f">Disconnect</a></td></tr>
 <tr class="memdesc:ab8d42e4585f399ff0de73cb28b0e745f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Disconnect one or more input channels.  <a href="#ab8d42e4585f399ff0de73cb28b0e745f">More...</a><br/></td></tr>
 <tr class="separator:ab8d42e4585f399ff0de73cb28b0e745f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5cd8550854a44f5a14505ceac7c834cf"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvafmcircuits_1_1Machine.html#a5cd8550854a44f5a14505ceac7c834cf">SetInput</a></td></tr>
 <tr class="memdesc:a5cd8550854a44f5a14505ceac7c834cf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the value of an input channel.  <a href="#a5cd8550854a44f5a14505ceac7c834cf">More...</a><br/></td></tr>
 <tr class="separator:a5cd8550854a44f5a14505ceac7c834cf"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9aa6c02fe4ad6f555c42e9cfc751185b"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvafmcircuits_1_1Machine.html#a9aa6c02fe4ad6f555c42e9cfc751185b">UpdateOLD</a></td></tr>
-<tr class="memdesc:a9aa6c02fe4ad6f555c42e9cfc751185b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Update cycle.  <a href="#a9aa6c02fe4ad6f555c42e9cfc751185b">More...</a><br/></td></tr>
-<tr class="separator:a9aa6c02fe4ad6f555c42e9cfc751185b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afdbc5a5ae82700ff3fa74014409cadba"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvafmcircuits_1_1Machine.html#afdbc5a5ae82700ff3fa74014409cadba">Update</a></td></tr>
+<tr class="memdesc:afdbc5a5ae82700ff3fa74014409cadba"><td class="mdescLeft">&#160;</td><td class="mdescRight">Update cycle.  <a href="#afdbc5a5ae82700ff3fa74014409cadba">More...</a><br/></td></tr>
+<tr class="separator:afdbc5a5ae82700ff3fa74014409cadba"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af860bb99c56ef48268d9478f28a8e96c"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvafmcircuits_1_1Machine.html#af860bb99c56ef48268d9478f28a8e96c">Wait</a></td></tr>
+<tr class="memdesc:af860bb99c56ef48268d9478f28a8e96c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Integrate the machine.  <a href="#af860bb99c56ef48268d9478f28a8e96c">More...</a><br/></td></tr>
+<tr class="separator:af860bb99c56ef48268d9478f28a8e96c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:addf427b938baf2bbef887a6d25063df7"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvafmcircuits_1_1Machine.html#addf427b938baf2bbef887a6d25063df7">WaitSteps</a></td></tr>
+<tr class="memdesc:addf427b938baf2bbef887a6d25063df7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Integrate the machine.  <a href="#addf427b938baf2bbef887a6d25063df7">More...</a><br/></td></tr>
+<tr class="separator:addf427b938baf2bbef887a6d25063df7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
@@ -173,6 +212,63 @@ Public Attributes</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
+<a class="anchor" id="a18ddf47cec2f34a9d9af5228ca10e910"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">def AddCircuit </td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>self</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>argkw</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>This looks into all the loaded modules whose name starts with 'vafmcircuits' and finds the first class named 'ctype'. It then instantiate the class.</p>
+<ul>
+<li>Mandatory arguments:<br/>
+<ul>
+<li>type = string: type name of the circuit class<br/>
+</li>
+<li>name = string: name to use for the new instance of the circuit<br/>
+</li>
+<li>others: specific arguments depending on the particular circuit to add.</li>
+</ul>
+</li>
+<li>Optional arguments:<br/>
+<ul>
+<li>pushed = bool: defined the output behaviour model.<br/>
+</li>
+<li>others: specific arguments depending on the particular circuit to add.</li>
+</ul>
+</li>
+</ul>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">**argkw</td><td>Keyworded arguments for circuit initialisation.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Reference to the created circuit.</dd></dl>
+<p><b>Example:</b> </p>
+<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;machine = Machine(name=<span class="stringliteral">&#39;machine&#39;</span>, dt=0.01);</div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;</div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;machine.AddCircuit(type=<span class="stringliteral">&#39;opAdd&#39;</span>,name=<span class="stringliteral">&#39;adder&#39;</span>,factors=2, pushed=<span class="keyword">True</span>)</div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;machine.AddCircuit(type=<span class="stringliteral">&#39;output&#39;</span>,name=<span class="stringliteral">&#39;log&#39;</span>,file=<span class="stringliteral">&#39;log.log&#39;</span>, dump=1)</div>
+</div><!-- fragment --> 
+</div>
+</div>
 <a class="anchor" id="aef67ee7709a3efdbe4cb1b1bb65bd944"></a>
 <div class="memitem">
 <div class="memproto">
@@ -289,12 +385,12 @@ Public Attributes</h2></td></tr>
 </div><!-- fragment --> 
 </div>
 </div>
-<a class="anchor" id="a50a27c5aa085c02f2f5599e8bf7a945f"></a>
+<a class="anchor" id="a5f59da765e8e62083840984f77024346"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">def Connect_OLD </td>
+          <td class="memname">def Connect </td>
           <td>(</td>
           <td class="paramtype">&#160;</td>
           <td class="paramname"><em>self</em>, </td>
@@ -326,7 +422,7 @@ Public Attributes</h2></td></tr>
 <div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;main.AddCircuit(type=<span class="stringliteral">&#39;opAdd&#39;</span>, name=<span class="stringliteral">&#39;adder&#39;</span>, factors=3)</div>
 <div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;</div>
 <div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;main.Connect(<span class="stringliteral">&quot;osc.sin&quot;</span>, <span class="stringliteral">&quot;adder.in1&quot;</span>)</div>
-<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;main.Connect(<span class="stringliteral">&quot;osc.cos&quot;</span>, <span class="stringliteral">&quot;adder.in2&quot;</span>, adder.in3)</div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;main.Connect(<span class="stringliteral">&quot;osc.cos&quot;</span>, <span class="stringliteral">&quot;adder.in2&quot;</span>, <span class="stringliteral">&quot;adder.in3&quot;</span>)</div>
 </div><!-- fragment --> 
 </div>
 </div>
@@ -353,7 +449,7 @@ Public Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>This is the same as Disconnect, but it can take multiple "circuit.channel" arguments.</p>
+<p>Disconnects the input channels listed in the arguments. Each channel must be given as a string in the format "circuit.channel".</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">*args</td><td>Input channels given as list of strings of format: "circuit.channel"</td></tr>
@@ -408,12 +504,12 @@ Public Attributes</h2></td></tr>
 </div><!-- fragment --> 
 </div>
 </div>
-<a class="anchor" id="a9aa6c02fe4ad6f555c42e9cfc751185b"></a>
+<a class="anchor" id="afdbc5a5ae82700ff3fa74014409cadba"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">def UpdateOLD </td>
+          <td class="memname">def Update </td>
           <td>(</td>
           <td class="paramtype">&#160;</td>
           <td class="paramname"><em>self</em></td><td>)</td>
@@ -422,6 +518,60 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 <p>Calls the update routine of each circuit in the setup. </p>
+
+</div>
+</div>
+<a class="anchor" id="af860bb99c56ef48268d9478f28a8e96c"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">def Wait </td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>self</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>dtime</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Calls the update routine of each circuit in the setup for a given amount of time. </p>
+
+</div>
+</div>
+<a class="anchor" id="addf427b938baf2bbef887a6d25063df7"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">def WaitSteps </td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>self</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>nsteps</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Calls the update routine of each circuit in the setup for a given amount of steps. </p>
 
 </div>
 </div>
@@ -447,7 +597,7 @@ Public Attributes</h2></td></tr>
 <div class="float-left">Documentation for pyVAFM </div>
 <div class="float-right">
 <small>
-Generated on Fri Mar 14 2014 11:11:42 for pyVAFM by&nbsp;<a href="http://www.doxygen.org/index.html"><img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.8.5</small></address>
+Generated on Fri Mar 14 2014 15:41:52 for pyVAFM by&nbsp;<a href="http://www.doxygen.org/index.html"><img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.8.5</small></address>
 </div>
 <!-- top ends here -->
 <!-- </div> -->

@@ -20,6 +20,19 @@ this will need to be updated whenever the main site one changes
 /* top elements */
 /* #sidebar * { margin: 0;	padding: 0; }*/
 
+span.foldbt { 
+    display: block; 
+    float: left; 
+    clear: left; 
+    width: 15px; 
+    cursor: hand;
+}
+
+div.title {
+    font: medium Arial, Sans-Serif;
+    font-weight:bold;
+}
+
 body {
 	margin: 0; padding: 0;
 	font: small Arial, Sans-Serif;

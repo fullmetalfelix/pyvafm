@@ -19,6 +19,21 @@
     var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
   })();
 </script>
+<script type="text/javascript">
+function toggleMenu(objID, button) {
+    if (!document.getElementById) return;
+    var ob = document.getElementById(objID).style;
+    if(ob.display == 'block') {
+	ob.display = 'none';
+	button.innerHTML = "+";
+    }
+    else {
+	ob.display = 'block';
+	button.innerHTML = "-";
+    }
+    //ob.display = (ob.display == 'block')?'none': 'block';
+}
+</script>
 </head><body>
 <a name="top"></a>
 <!-- wrap starts here -->
@@ -52,45 +67,15 @@
 <div class="textblock"><h1><a class="anchor" id="sec_main"></a>
 Generic</h1>
 <ul>
-<li><a class="el" href="classvafmcircuits_1_1Machine.html">Machine</a> - <em>main virtual machine</em></li>
+<li><a class="el" href="classvafmcircuits_1_1Machine.html">Machine</a> - <em>main virtual machine and composites</em></li>
 </ul>
-<h1><a class="anchor" id="sec_gens"></a>
-Signal Generators</h1>
-<ul>
-<li><a class="el" href="classvafmcircuits__signal__gens_1_1waver.html">waver</a> - <em>sinusoidal wave generator</em></li>
-<li><a class="el" href="classvafmcircuits__signal__gens_1_1square.html">square</a> - <em>square wave generator</em></li>
-</ul>
-<h1><a class="anchor" id="sec_sigproc"></a>
-Signal Processing</h1>
-<ul>
-<li>Filters<ul>
-<li><a class="el" href="classvafmcircuits__Filters_1_1SKLP.html">ActiveLowPass</a> - <em>second order lowpass filter</em></li>
-<li><a class="el" href="classvafmcircuits__Filters_1_1SKHP.html">ActiveHighPass</a> - <em>second order highpass filter</em></li>
-<li><a class="el" href="classvafmcircuits__Filters_1_1SKBP.html">ActiveBandPass</a> - <em>second order bandpass filter</em></li>
-<li><a class="el" href="">PassiveLowPass</a> - <em>first order lowpass filter (RC)</em></li>
-<li><a class="el" href="">PassiveHighPass</a> - <em>first order highpass filter (RL)</em></li>
-<li><a class="el" href="">PassiveBandPass</a> - <em>first order bandpass filter (RCL)</em></li>
-</ul>
-</li>
-<li>Averagers<ul>
-<li><a class="el" href="classvafmcircuits__avg_1_1avg.html">avg</a> - <em>Averager circuit.</em></li>
-</ul>
-</li>
-<li>Misc<ul>
-<li><a class="el" href="classvafmcircuits__signal__processing_1_1gain.html">gain</a> - <em>applies a given gain to a signal</em></li>
-<li><a class="el" href="classvafmcircuits__signal__processing_1_1limiter.html">limiter</a> - <em>clamps a signal between two values.</em></li>
-<li><a class="el" href="classvafmcircuits__signal__processing_1_1minmax.html">minmax</a> - <em>outputs max and min values of a signal over a certain time</em></li>
-<li><a class="el" href="classvafmcircuits__signal__processing_1_1derivative.html">derivative</a> - <em>computes the derivative of a signal</em></li>
-<li><a class="el" href="classvafmcircuits__signal__processing_1_1integral.html">integral</a> - <em>outputs the integral of a signal</em></li>
-<li><a class="el" href="classvafmcircuits__signal__processing_1_1delay.html">delay</a> - <em>delays the signal by a given amount of time</em></li>
-<li><a class="el" href="">peaksdetector</a> - <em>detects the peaks in a signal</em></li>
-<li><a class="el" href="classvafmcircuits__signal__processing_1_1phasor.html">phasor</a> - <em>computes the delay between one signal becoming positive and the other signal becoming positive</em></li>
-<li><a class="el" href="classvafmcircuits__signal__processing_1_1flip.html">flip</a> - <em>outputs a tick when the signal changes from negative to positive.</em></li>
-</ul>
-</li>
-</ul>
-<h1><a class="anchor" id="sec_math"></a>
-Mathematics</h1>
+ 
+<div class="menuBT" >
+    <a class="anchor" id="sec_math" ></a>
+    <h1>
+    <span class="foldbt" onclick="toggleMenu('lMath',this)">-</span>Mathematics</h1>
+</div>
+<div id="lMath">
 <ul>
 <li>Arithmetics<ul>
 <li><a class="el" href="classvafmcircuits__math_1_1opAdd.html">opAdd</a> - <em>sum operator</em></li>
@@ -117,6 +102,49 @@ Mathematics</h1>
 </ul>
 </li>
 </ul>
+ 
+</div><!-- end of math list -->
+<h1><a class="anchor" id="sec_gens"></a>
+Signal Generators</h1>
+<ul>
+<li><a class="el" href="classvafmcircuits__signal__gens_1_1waver.html">waver</a> - <em>sinusoidal wave generator</em></li>
+<li><a class="el" href="classvafmcircuits__signal__gens_1_1square.html">square</a> - <em>square wave generator</em></li>
+</ul>
+ 
+<div>
+    <a class="anchor" id="sec_sigproc" ></a>
+    <h1>
+    <span class="foldbt" onclick="toggleMenu('lSigProc',this)">-</span>Signal Processing</h1>
+</div>
+<div id="lSigProc">
+<ul>
+<li>Filters<ul>
+<li><a class="el" href="classvafmcircuits__Filters_1_1SKLP.html">SKLP</a> - <em>Sallen-Key lowpass filter</em></li>
+<li><a class="el" href="classvafmcircuits__Filters_1_1SKHP.html">SKHP</a> - <em>Sallen-Key highpass filter</em></li>
+<li><a class="el" href="classvafmcircuits__Filters_1_1SKBP.html">SKBP</a> - <em>Sallen-Key bandpass filter</em></li>
+<li><a class="el" href="classvafmcircuits__Filters_1_1RCLP.html">RCLP</a> - <em>RC lowpass filter</em></li>
+<li><a class="el" href="classvafmcircuits__Filters_1_1RCHP.html">RCHP</a> - <em>RC highpass filter</em></li>
+</ul>
+</li>
+<li>Averagers<ul>
+<li><a class="el" href="classvafmcircuits__avg_1_1avg.html">avg</a> - <em>averager circuit.</em></li>
+</ul>
+</li>
+<li>Misc<ul>
+<li><a class="el" href="classvafmcircuits__signal__processing_1_1gain.html">gain</a> - <em>applies a given gain to a signal</em></li>
+<li><a class="el" href="classvafmcircuits__signal__processing_1_1minmax.html">minmax</a> - <em>outputs max and min values of a signal over a give timespan</em></li>
+<li><a class="el" href="classvafmcircuits__signal__processing_1_1limiter.html">limiter</a> - <em>clamps a signal between two values</em></li>
+<li><a class="el" href="classvafmcircuits__signal__processing_1_1derivative.html">derivative</a> - <em>computes the derivative of a signal</em></li>
+<li><a class="el" href="classvafmcircuits__signal__processing_1_1integral.html">integral</a> - <em>outputs the integral of a signal</em></li>
+<li><a class="el" href="classvafmcircuits__signal__processing_1_1delay.html">delay</a> - <em>delays the signal by a given amount of time</em></li>
+<li><a class="el" href="classvafmcircuits__signal__processing_1_1peaker.html">peaker</a> - <em>detects the peaks in a signal</em></li>
+<li><a class="el" href="classvafmcircuits__signal__processing_1_1phasor.html">phasor</a> - <em>computes the delay between one signal becoming positive and the other signal becoming positive</em></li>
+<li><a class="el" href="classvafmcircuits__signal__processing_1_1flip.html">flip</a> - <em>outputs a tick when the signal changes from negative to positive.</em>  
+</div><!-- end of sigproc list -->
+</li>
+</ul>
+</li>
+</ul>
 <h1><a class="anchor" id="sec_control"></a>
 Controllers</h1>
 <ul>
@@ -128,8 +156,23 @@ Output</h1>
 <ul>
 <li><a class="el" href="classvafmcircuits__output_1_1output.html">output</a> - <em>output to file</em></li>
 </ul>
+ 
+<div>
+    <a class="anchor" id="sec_flips" ></a>
+    <h1>
+    <span class="foldbt" onclick="toggleMenu('lflips',this)">-</span>Flip-flops</h1>
+</div>
+<div id="lflips">
+<ul>
+<li><a class="el" href="classvafmcircuits__FlipFlop_1_1SRFlipFlop.html">SRFlipFlop</a> - <em>SRFlipFlop circuit.</em></li>
+<li><a class="el" href="classvafmcircuits__FlipFlop_1_1JKFlipFlop.html">JKFlipFlop</a> - <em>JKFlipFlop circuit.</em></li>
+<li><a class="el" href="classvafmcircuits__FlipFlop_1_1DFlipFlop.html">DFlipFlop</a> - <em>DFlipFlop circuit.</em></li>
+<li><a class="el" href="classvafmcircuits__FlipFlop_1_1DRFlipFlop.html">DRFlipFlop</a> - <em>DRFlipFlop circuit.</em>  
+</div><!-- end of flipflop list -->
+</li>
+</ul>
 <h1><a class="anchor" id="sec_compos"></a>
-Composites</h1>
+Custom composites</h1>
 <ul>
 <li><a class="el" href="namespacecustoms__pll.html#a3146b17af98ddc221f7404f1dd60148d">aPLL</a> - <em> analog PLL</em></li>
 </ul>
@@ -144,10 +187,6 @@ Composites</h1>
 <li><a class="el" href="">StartingPos</a> - <em>The starting pos of the tip.</em></li>
 <li><a class="el" href="">MassV</a> - <em>Mass of the vertical mode.</em></li>
 <li><a class="el" href="">MassL</a> - <em>Mass of the lateral mode.</em></li>
-<li><a class="el" href="classvafmcircuits__FlipFlop_1_1SRFlipFlop.html">SRFlipFlop</a> - <em>SRFlipFlop circuit.</em></li>
-<li><a class="el" href="classvafmcircuits__FlipFlop_1_1JKFlipFlop.html">JKFlipFlop</a> - <em>JKFlipFlop circuit.</em></li>
-<li><a class="el" href="classvafmcircuits__FlipFlop_1_1DFlipFlop.html">DFlipFlop</a> - <em>DFlipFlop circuit.</em></li>
-<li><a class="el" href="classvafmcircuits__FlipFlop_1_1DRFlipFlop.html">DRFlipFlop</a> - <em>DRFlipFlop circuit.</em></li>
 <li><a class="el" href="">Maxboundary</a> - <em>Setting the maximum x y and z value of the force field..</em></li>
 <li><a class="el" href="">Minboundary</a> - <em>Setting the minimum x y and z value of the force field..</em></li>
 <li><a class="el" href="">Place</a> - <em>Place the cantilever to a position instantly.</em></li>
@@ -163,7 +202,7 @@ Composites</h1>
 <div class="float-left">Documentation for pyVAFM </div>
 <div class="float-right">
 <small>
-Generated on Fri Mar 14 2014 11:11:42 for pyVAFM by&nbsp;<a href="http://www.doxygen.org/index.html"><img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.8.5</small></address>
+Generated on Fri Mar 14 2014 15:41:52 for pyVAFM by&nbsp;<a href="http://www.doxygen.org/index.html"><img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.8.5</small></address>
 </div>
 <!-- top ends here -->
 <!-- </div> -->

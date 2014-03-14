@@ -19,6 +19,21 @@
     var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
   })();
 </script>
+<script type="text/javascript">
+function toggleMenu(objID, button) {
+    if (!document.getElementById) return;
+    var ob = document.getElementById(objID).style;
+    if(ob.display == 'block') {
+	ob.display = 'none';
+	button.innerHTML = "+";
+    }
+    else {
+	ob.display = 'block';
+	button.innerHTML = "-";
+    }
+    //ob.display = (ob.display == 'block')?'none': 'block';
+}
+</script>
 </head><body>
 <a name="top"></a>
 <!-- wrap starts here -->
@@ -49,6 +64,9 @@
 <li>__init__()
 : <a class="el" href="classvafmcircuits_1_1Machine.html#ac775ee34451fdfa742b318538164070e">Machine</a>
 </li>
+<li>AddCircuit()
+: <a class="el" href="classvafmcircuits_1_1Machine.html#a18ddf47cec2f34a9d9af5228ca10e910">Machine</a>
+</li>
 <li>AddInput()
 : <a class="el" href="classvafmcircuits_1_1Machine.html#aef67ee7709a3efdbe4cb1b1bb65bd944">Machine</a>
 </li>
@@ -64,8 +82,8 @@
 <li>circuits
 : <a class="el" href="classvafmcircuits_1_1Machine.html#a10e492b9001a11cce3e14426c9cf23b6">Machine</a>
 </li>
-<li>Connect_OLD()
-: <a class="el" href="classvafmcircuits_1_1Machine.html#a50a27c5aa085c02f2f5599e8bf7a945f">Machine</a>
+<li>Connect()
+: <a class="el" href="classvafmcircuits_1_1Machine.html#a5f59da765e8e62083840984f77024346">Machine</a>
 </li>
 <li>Disconnect()
 : <a class="el" href="classvafmcircuits_1_1Machine.html#ab8d42e4585f399ff0de73cb28b0e745f">Machine</a>
@@ -106,8 +124,14 @@
 <li>Unregister()
 : <a class="el" href="classvafmcircuits__output_1_1output.html#a987eaee23392f656858586d7d12c0ed3">output</a>
 </li>
-<li>UpdateOLD()
-: <a class="el" href="classvafmcircuits_1_1Machine.html#a9aa6c02fe4ad6f555c42e9cfc751185b">Machine</a>
+<li>Update()
+: <a class="el" href="classvafmcircuits_1_1Machine.html#afdbc5a5ae82700ff3fa74014409cadba">Machine</a>
+</li>
+<li>Wait()
+: <a class="el" href="classvafmcircuits_1_1Machine.html#af860bb99c56ef48268d9478f28a8e96c">Machine</a>
+</li>
+<li>WaitSteps()
+: <a class="el" href="classvafmcircuits_1_1Machine.html#addf427b938baf2bbef887a6d25063df7">Machine</a>
 </li>
 </ul>
 </div><!-- contents -->
@@ -116,7 +140,7 @@
 <div class="float-left">Documentation for pyVAFM </div>
 <div class="float-right">
 <small>
-Generated on Fri Mar 14 2014 11:11:43 for pyVAFM by&nbsp;<a href="http://www.doxygen.org/index.html"><img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.8.5</small></address>
+Generated on Fri Mar 14 2014 15:41:52 for pyVAFM by&nbsp;<a href="http://www.doxygen.org/index.html"><img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.8.5</small></address>
 </div>
 <!-- top ends here -->
 <!-- </div> -->

@@ -19,6 +19,21 @@
     var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
   })();
 </script>
+<script type="text/javascript">
+function toggleMenu(objID, button) {
+    if (!document.getElementById) return;
+    var ob = document.getElementById(objID).style;
+    if(ob.display == 'block') {
+	ob.display = 'none';
+	button.innerHTML = "+";
+    }
+    else {
+	ob.display = 'block';
+	button.innerHTML = "-";
+    }
+    //ob.display = (ob.display == 'block')?'none': 'block';
+}
+</script>
 </head><body>
 <a name="top"></a>
 <!-- wrap starts here -->
@@ -119,7 +134,7 @@ Additional Inherited Members</h2></td></tr>
 <div class="float-left">Documentation for pyVAFM </div>
 <div class="float-right">
 <small>
-Generated on Fri Mar 14 2014 11:11:42 for pyVAFM by&nbsp;<a href="http://www.doxygen.org/index.html"><img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.8.5</small></address>
+Generated on Fri Mar 14 2014 15:41:52 for pyVAFM by&nbsp;<a href="http://www.doxygen.org/index.html"><img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.8.5</small></address>
 </div>
 <!-- top ends here -->
 <!-- </div> -->
