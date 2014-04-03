@@ -42,7 +42,7 @@ function toggleMenu(objID, button) {
 	<a name="top"></a>
 	<!-- header -->
 	<div id="topheader">
-		<div id="logo"><img src="../images/hoomd_logo.png" alt="pyVAFM" /></div>
+		<div id="logo"><img src="../images/logo.jpg" alt="pyVAFM" /></div>
 		<!-- tabs -->
 		<ul>
 			<li><a href="../index.html"><span>Home</span></a></li>
@@ -117,9 +117,6 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a5f59da765e8e62083840984f77024346"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvafmcircuits_1_1Machine.html#a5f59da765e8e62083840984f77024346">Connect</a></td></tr>
 <tr class="memdesc:a5f59da765e8e62083840984f77024346"><td class="mdescLeft">&#160;</td><td class="mdescRight">Connect the output of a circuit to the input of another.  <a href="#a5f59da765e8e62083840984f77024346">More...</a><br/></td></tr>
 <tr class="separator:a5f59da765e8e62083840984f77024346"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab8d42e4585f399ff0de73cb28b0e745f"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvafmcircuits_1_1Machine.html#ab8d42e4585f399ff0de73cb28b0e745f">Disconnect</a></td></tr>
-<tr class="memdesc:ab8d42e4585f399ff0de73cb28b0e745f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Disconnect one or more input channels.  <a href="#ab8d42e4585f399ff0de73cb28b0e745f">More...</a><br/></td></tr>
-<tr class="separator:ab8d42e4585f399ff0de73cb28b0e745f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5cd8550854a44f5a14505ceac7c834cf"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvafmcircuits_1_1Machine.html#a5cd8550854a44f5a14505ceac7c834cf">SetInput</a></td></tr>
 <tr class="memdesc:a5cd8550854a44f5a14505ceac7c834cf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the value of an input channel.  <a href="#a5cd8550854a44f5a14505ceac7c834cf">More...</a><br/></td></tr>
 <tr class="separator:a5cd8550854a44f5a14505ceac7c834cf"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -422,43 +419,23 @@ Public Attributes</h2></td></tr>
 <div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;main.AddCircuit(type=<span class="stringliteral">&#39;opAdd&#39;</span>, name=<span class="stringliteral">&#39;adder&#39;</span>, factors=3)</div>
 <div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;</div>
 <div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;main.Connect(<span class="stringliteral">&quot;osc.sin&quot;</span>, <span class="stringliteral">&quot;adder.in1&quot;</span>)</div>
-<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;main.Connect(<span class="stringliteral">&quot;osc.cos&quot;</span>, <span class="stringliteral">&quot;adder.in2&quot;</span>, <span class="stringliteral">&quot;adder.in3&quot;</span>)</div>
-</div><!-- fragment --> 
-</div>
-</div>
-<a class="anchor" id="ab8d42e4585f399ff0de73cb28b0e745f"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">def Disconnect </td>
-          <td>(</td>
-          <td class="paramtype">&#160;</td>
-          <td class="paramname"><em>self</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">&#160;</td>
-          <td class="paramname"><em>args</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p>Disconnects the input channels listed in the arguments. Each channel must be given as a string in the format "circuit.channel".</p>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;main.Connect(<span class="stringliteral">&quot;osc.cos&quot;</span>, <span class="stringliteral">&quot;adder.in2&quot;</span>, adder.in3)</div>
+</div><!-- fragment --><p> Connect the output of a circuit to the input of another.</p>
+<p>The I/O channels to connect are specified with the syntax: "circuit.channel", in the *args arguments array. The first element has to be the output channel to use as source, while all the following elements refer to the destination channels.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">*args</td><td>Input channels given as list of strings of format: "circuit.channel"</td></tr>
+    <tr><td class="paramname">*args</td><td>Name of the channels to connect: "circuit.channel"</td></tr>
   </table>
   </dd>
 </dl>
 <p><b>Example:</b> </p>
-<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;machine.Disconnect(<span class="stringliteral">&#39;waver.amp&#39;</span>)</div>
-<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;machine.Disconnect(<span class="stringliteral">&#39;adder.in1&#39;</span>, <span class="stringliteral">&#39;adder.in2&#39;</span>)</div>
+<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;main = Machine(name=<span class="stringliteral">&#39;machine&#39;</span>, dt=0.01, pushed=<span class="keyword">True</span>);</div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;</div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;main.AddCircuit(type=<span class="stringliteral">&#39;waver&#39;</span>, name=<span class="stringliteral">&#39;osc&#39;</span>, amp=1, freq=1)</div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;main.AddCircuit(type=<span class="stringliteral">&#39;opAdd&#39;</span>, name=<span class="stringliteral">&#39;adder&#39;</span>, factors=3)</div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;</div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;main.Connect(<span class="stringliteral">&quot;osc.sin&quot;</span>, <span class="stringliteral">&quot;adder.in1&quot;</span>)</div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;main.Connect(<span class="stringliteral">&quot;osc.cos&quot;</span>, <span class="stringliteral">&quot;adder.in2&quot;</span>, <span class="stringliteral">&quot;adder.in3&quot;</span>)</div>
 </div><!-- fragment --> 
 </div>
 </div>
@@ -597,7 +574,7 @@ Public Attributes</h2></td></tr>
 <div class="float-left">Documentation for pyVAFM </div>
 <div class="float-right">
 <small>
-Generated on Fri Mar 14 2014 15:41:52 for pyVAFM by&nbsp;<a href="http://www.doxygen.org/index.html"><img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.8.5</small></address>
+Generated on Thu Apr 3 2014 13:25:48 for pyVAFM by&nbsp;<a href="http://www.doxygen.org/index.html"><img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.8.5</small></address>
 </div>
 <!-- top ends here -->
 <!-- </div> -->

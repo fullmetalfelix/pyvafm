@@ -42,7 +42,7 @@ function toggleMenu(objID, button) {
 	<a name="top"></a>
 	<!-- header -->
 	<div id="topheader">
-		<div id="logo"><img src="../images/hoomd_logo.png" alt="pyVAFM" /></div>
+		<div id="logo"><img src="../images/logo.jpg" alt="pyVAFM" /></div>
 		<!-- tabs -->
 		<ul>
 			<li><a href="../index.html"><span>Home</span></a></li>
@@ -69,25 +69,56 @@ function toggleMenu(objID, button) {
 </div><!--header-->
 <div class="contents">
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>This is the circuit that calculates the interpolation of the provided force field. The force field must be in the following format, but plese note that the interpolation circuit is capable of taking any number of dimensions and components in, but for a case where there is an unequal amount of dimensions and components the unused components column must be filled with zeros. Except in the case of 3 dimensions and 1 component, this can be left as it is. Examples of how the force fields must be formated is shown below.: <br/>
+<div class="textblock"><div class="image">
+<img src="i3dlin.png" alt="i3dlin.png"/>
+<div class="caption">
+schema</div></div>
+<p> Trilinear interpolation of a 3D volumetric field, scalar or vector with any amount of components.</p>
+<p>Examples of how the force fields must be formated is shown below.: <br/>
  </p>
 <pre> x y z Fx Fy Fz or x y z F or x y z Fx 0 0 or x y Fx 0 </p>
 <pre></pre></pre><pre><pre><ul>
-<li><b>Initialisation</b> <b>parameters:</b> </li>
-<li><em>Filename</em> = Filename of the force field input file.</li>
-<li><em>Dimensions</em> = Number of dimensons in the force field.</li>
-<li><em>Components</em> = Number of components of force in the force field.</li>
+<li><b>Initialisation</b> <b>parameters:</b> <ul>
+<li><em>components</em> = number of components of force in the force field</li>
+</ul>
+</li>
 </ul>
 </pre></pre><pre><pre><ul>
-<li><b>Input</b> <b>channels:</b> </li>
-<li><em>coord</em> : this is the coordiante to calcualte the interpolation.</li>
+<li><b>Initialisation</b> <b>commands:</b> <ul>
+<li>Configure(steps=array, npoints=integer, pbc=True|False, ForceMultipler=float)<ul>
+<li><em>steps</em> = step size of the force field must be specfied in this format [x,y,z]</li>
+<li><em>npoints</em> = number of points in each dimension must be specfied in this format [xn,yn,zn]</li>
+<li><em>pbc</em> = Perodic boundray conditions for each dimenson, must be specfied in this format [True|False,True|False,True|False]</li>
+<li><em>ForceMultipler</em> = A global multipler for all the force field values, use this to change the units of the force field into what ever units are desired.</li>
+</ul>
+</li>
+<li>ReadData(filename = string)<ul>
+<li><em>Filename</em> is the force field being interpolated.</li>
+</ul>
+</li>
+</ul>
+</li>
 </ul>
 </pre></pre><pre><pre><ul>
-<li><b>Output</b> <b>channels:</b> </li>
-<li><em>Fx:</em> The interpolated forces where x is the component for example F1 would be first first component.</li>
+<li><b>Input</b> <b>channels:</b> <ul>
+<li><em>x</em> : x position for extrapolation</li>
+<li><em>y</em> : y position for extrapolation</li>
+<li><em>z</em> : z position for extrapolation</li>
+</ul>
+</li>
+</ul>
+</pre></pre><pre><pre><ul>
+<li><b>Output</b> <b>channels:</b> <ul>
+<li><em>Fc:</em> c component of the interpolated field, c from 1 to  components</li>
+</ul>
+</li>
 </ul>
 </pre></pre><pre><pre> <b>Example:</b> </p>
-<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;inter = machine.AddCircuit(type=<span class="stringliteral">&#39;Interpolate&#39;</span>,name=<span class="stringliteral">&#39;inter&#39;</span>, Filename = <span class="stringliteral">&#39;Force.dat&#39;</span>, Dimensions = 3, Components = 3 ,pushed=<span class="keyword">True</span>)</div>
+<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;inter = machine.AddCircuit(type=<span class="stringliteral">&#39;i3Dlin&#39;</span>,name=<span class="stringliteral">&#39;inter&#39;</span>, components=1, pushed=<span class="keyword">True</span>)</div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;inter.Configure(steps=[0.805714285714286,0.805714285714286,0.1], npoints=[8,8,171])</div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;inter.Configure(pbc=[<span class="keyword">True</span>,<span class="keyword">True</span>,<span class="keyword">False</span>])</div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;inter.Configure(ForceMultiplier=1e10)</div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;inter.ReadData(<span class="stringliteral">&#39;NaClforces.dat&#39;</span>)</div>
 </div><!-- fragment -->
 </pre></pre></div>
 <p>Inherits <a class="el" href="classvafmbase_1_1Circuit.html">Circuit</a>.</p>
@@ -126,7 +157,7 @@ Additional Inherited Members</h2></td></tr>
 <div class="float-left">Documentation for pyVAFM </div>
 <div class="float-right">
 <small>
-Generated on Fri Mar 14 2014 15:41:52 for pyVAFM by&nbsp;<a href="http://www.doxygen.org/index.html"><img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.8.5</small></address>
+Generated on Thu Apr 3 2014 13:25:49 for pyVAFM by&nbsp;<a href="http://www.doxygen.org/index.html"><img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.8.5</small></address>
 </div>
 <!-- top ends here -->
 <!-- </div> -->
