@@ -42,8 +42,8 @@ function toggleMenu(objID, button) {
 	<a name="top"></a>
 	<!-- header -->
 	<div id="topheader">
-		<div id="logo"><img src="./logo.jpg" alt="pyVAFM" /></div>
-		<!-- tabs -->
+		<div id="logo"><img src="logo.jpg" alt="pyVAFM" /></div>
+		<!-- tabs 
 		<ul>
 			<li><a href="../index.html"><span>Home</span></a></li>
 			<li><a href="./credits.html"><span>About</span></a></li>
@@ -51,6 +51,7 @@ function toggleMenu(objID, button) {
 			<li><a href="../download.html"><span>Download</span></a></li>
 			<li><a href="../contact.html"><span>Contact</span></a></li>
 		</ul>
+		-->
 	</div>
 	<div id="header-slogan">
 	<span id="slogan">Pythonic Virtual Machine</span>
@@ -71,7 +72,7 @@ function toggleMenu(objID, button) {
 </div><!-- fragment --><p>The first line imports the main pyVAFM object, <a class="el" href="classvafmcircuits_1_1Machine.html">Machine</a>, into the python console. The latter initialises a virtual machine with a timestep of 0.01, and stores it in a variable called <em>machine</em>. Having a reference to the machine is essential to make it execute instructions.</p>
 <p>We now add a wave generator to the setup: </p>
 <div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;machine.AddCircuit(type=<span class="stringliteral">&#39;waver&#39;</span>, name=<span class="stringliteral">&#39;osc&#39;</span>, freq=1.2, amp=1)</div>
-</div><!-- fragment --><p> The <a class="el" href="classvafmcircuits_1_1Machine.html#a18ddf47cec2f34a9d9af5228ca10e910">AddCircuit</a> function tells <em>machine</em> to insert a new circuit of type <a class="el" href="classvafmcircuits__signal__gens_1_1waver.html">waver</a> in the scene. The newly created circuit will be called <em>osc</em>, which must be a unique identifier. The <a class="el" href="classvafmcircuits__signal__gens_1_1waver.html">waver</a> circuit exposes the <em>freq</em> and <em>amp</em> input channels that are used to control the shape of the generated signal. In this case, we are happy with constant frequency of 1.2 and amplitude of 1 (units are arbitrary), so we append their values to the initialisation arguments.</p>
+</div><!-- fragment --><p> The <a class="el" href="">AddCircuit</a> function tells <em>machine</em> to insert a new circuit of type <a class="el" href="classvafmcircuits__signal__gens_1_1waver.html">waver</a> in the scene. The newly created circuit will be called <em>osc</em>, which must be a unique identifier. The <a class="el" href="classvafmcircuits__signal__gens_1_1waver.html">waver</a> circuit exposes the <em>freq</em> and <em>amp</em> input channels that are used to control the shape of the generated signal. In this case, we are happy with constant frequency of 1.2 and amplitude of 1 (units are arbitrary), so we append their values to the initialisation arguments.</p>
 <p>In the same way, we create the <a class="el" href="classvafmcircuits__math_1_1opAdd.html">opAdd</a> circuit: </p>
 <div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;machine.AddCircuit(type=<span class="stringliteral">&#39;opAdd&#39;</span>, name=<span class="stringliteral">&#39;adder&#39;</span>, factors=2)</div>
 </div><!-- fragment --><p> The <em>factors</em> argument determines how many input signals can be connected to <em>adder</em>, to be summed out.</p>
@@ -112,7 +113,7 @@ function toggleMenu(objID, button) {
 <div class="float-left">Documentation for pyVAFM </div>
 <div class="float-right">
 <small>
-Generated on Thu Apr 3 2014 15:22:38 for pyVAFM by&nbsp;<a href="http://www.doxygen.org/index.html"><img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.8.5</small></address>
+Generated on Wed Jun 11 2014 13:16:44 for pyVAFM by&nbsp;<a href="http://www.doxygen.org/index.html"><img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.8.5</small></address>
 </div>
 <!-- top ends here -->
 <!-- </div> -->
